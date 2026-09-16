@@ -4,7 +4,7 @@
 
 **8 base cases** with **3 polarity expansions on spatial cases** = **18 nominal inflectional forms**.
 
-Applicatives (INST, BEN) marked on verb after root; meanings derive from **case × polarity × applicative × argument role**.
+COM reinterprets as INST or BEN based on **animacy + polarity**. No dedicated applicative morphology.
 
 ---
 
@@ -59,13 +59,19 @@ Applied to LOC, SUPER, INE, PATH, COM: each takes **i- (toward), Ø (neutral), a
 | i- | i-...-ra | PATH+i- | toward along / across |
 | a- | a-...-ra | PATH+a- | away along / back |
 
-### COM series
+### COM series: Polysemy via Animacy + Polarity
 
-| Polarity | Form | Function | Meaning |
-|----------|------|----------|---------|
-| Ø | -me | COM | with / alongside |
-| i- | i-...-me | COM+i- | toward in company |
-| a- | a-...-me | COM+a- | away / apart |
+| Polarity | Animate arg | Inanimate arg | Semantic gloss |
+|----------|---|---|---|
+| Ø-me | COM | INST | with / alongside (COM); with / using (INST) |
+| i-...-me | BEN | INST | toward for / on behalf of (BEN); toward via / using (INST) |
+| a-...-me | BEN | INST | away for / on behalf of (BEN); away via / using (INST) |
+
+**Example:**
+- *John-COM* = with John (animate → comitative)
+- *knife-COM* = with a knife (inanimate → instrumental)
+- *she-i-COM* = for her / on her behalf (animate + toward → benefactive)
+- *river-i-COM* = toward via the river (inanimate + toward → instrumental)
 
 ---
 
@@ -76,36 +82,21 @@ Applied to LOC, SUPER, INE, PATH, COM: each takes **i- (toward), Ø (neutral), a
 | PART | GEN (partitive use) | -se in divisible/mass contexts |
 | COMP | COM (comitative + locative anchoring) | -me + context |
 | DAT | LOC + i- (recipient / goal participant) | i-...-te in dative-like contexts |
-| PURP | goal/benefactive construction | ALLATIVEor BEN applicative + context |
 | ESSIVE | LOC + stative predicate | -te in copular/state construction |
 | TRANSLATIVE | ESSIVE + i-ra | -te + i-ra "become" |
-
----
-
-## Verbal Applicatives
-
-Marked on **verb after root**. Generate meanings in combination with nominal case + polarity:
-
-| Applicative | Host | Typical meaning |
-|---|---|---|
-| INST | Any patient-like argument | means / instrument / manner |
-| BEN | Recipient / goal arguments | beneficiary / on behalf of |
-
-**Examples (compositional):**
-- COM + INST applicative = instrumental means (tool, method)
-- LOC + i- + BEN applicative = toward for someone's benefit (benefactive)
-- PATH + INST applicative = via means / along using X
 
 ---
 
 ## Economy & Restrictions
 
 **Total nominal forms:** 18
-**Theoretical combinations:** 18 cases × 3 polarities (verb) × 3 applicative states × 2 argument roles = 324
-**Actual functions:** ~20–25 (due to syncretism, semantic overlap, and restrictions)
+**Productive semantic functions:** 20–25
+**Applicative morphology:** 0 (eliminated; meanings emerge from COM polysemy)
 
 **Natural restrictions (no dedicated morphology needed):**
 - ABS/ERG never directionalizes
 - GEN never directionalizes
-- INST/BEN never stack (mutually exclusive)
-- Some applicative + case combinations are defective (blocked semantically)
+- COM + inanimate consistently reads INST
+- COM + animate + i- consistently reads BEN
+- COM + animate + a- consistently reads BEN
+
