@@ -74,6 +74,8 @@ Use matched examples to distinguish competing analyses. Prefer the smallest chan
 
 ### `LEXICON.tsv`
 
+Surface lexical forms in `form` must not contain hyphens. Hyphens belong to morphological analysis fields, not surface lexical forms.
+
 Required columns:
 
 ```text
@@ -83,6 +85,8 @@ id\tform\tipa\ttype\tpos\tgloss\tderived_from\tstatus\tnotes
 Use established controlled vocabularies. Use `?` for unknown/unresolved information and `—` for not applicable.
 
 ### `EXAMPLES.tsv`
+
+Surface example text in `text` must not contain hyphens. Hyphens are permitted in `segmentation` for morpheme boundaries.
 
 Required columns:
 
