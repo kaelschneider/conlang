@@ -127,7 +127,7 @@ The following light roots occur in the AUX/DERIV slot and take the linking `-e-`
 | `*k` | hold | `-ke-` | continuative | `CONT` |
 | `*m` | live / dwell / stay | `-me-` | habitual | `HAB` |
 | `*s` | cut / remove | `-se-` | inchoative | `INCH` |
-| `*t` | transfer | `-te-` | opposite of inchoative | `TE` |
+| `*t` | transfer | `-te-` | analyzed; semantic value unresolved | `TE` |
 
 AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur.
 
@@ -252,15 +252,39 @@ The case system also supports the following constructional readings without intr
 
 These are constructional readings, not additional nominal cases.
 
-### G-MORPH-16 — Converbs and participles
+### G-MORPH-16 — GEN + spatial stacking
 
-Converbs are intended to derive through nominalizers and case endings. Independent conjunctions are not currently established as the primary clause-combining strategy.
+GEN + spatial stacking is established as restricted constructional morphology. The following domains are established:
 
-Participial relatives use the existing stem grades supplemented by dedicated participial morphology. The exact nominalizer inventory, converb-to-case mapping, and dedicated participial forms remain unresolved.
+| Stacking | Function | Status |
+|---|---|---|
+| `GEN + LOC` | at / in X's domain | established |
+| `GEN + SUPER` | on X's surface / domain | established |
+| `GEN + INE` | inside X's domain | established |
 
-`kerande` is an established nominalized+cased form of `kera`, analyzed as `kera + NOM + CASE`. The exact independent exponent boundaries of NOM and CASE remain to be formalized.
+These stacked constructions are not assumed to be freely productive over all nominal cases. Productivity limits remain under testing.
 
-### G-MORPH-17 — Established complex verbal forms
+### G-MORPH-17 — Converbs, participles, and nominalization
+
+Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. The inventory of case-to-relation mappings and same-subject versus switch-reference behavior remains unresolved. Independent conjunctions are not currently established as the primary clause-combining strategy.
+
+Participial morphology is analyzed as follows, but has not yet been promoted to full rule-level canon:
+
+| Form | Function | Status |
+|---|---|---|
+| `-ri` | agentive participle | ANALYZED |
+| `-na` | patientive participle | ANALYZED |
+| `-mu` | resultative participle | ANALYZED |
+
+`-nu` is the recovered nominalizer. The working derivational family is:
+
+- `keranu` = carrying / carrying event
+- `keranka` = carrier / person associated with carrying
+- `kerande` = container / place, instrument, or means associated with carrying
+
+`kerande` remains the canonical CONTAINER lexeme. Its synchronic analysis is `kera + -nu + -te` with surface fusion/reduction; the exact independent exponent boundaries and phonological pathway remain unresolved.
+
+### G-MORPH-18 — Established complex verbal forms
 
 `kerurekin` = `keru-re-k-i-n` (CARRY.REAL-PROG-1-NONPAST-PERF). It demonstrates co-occurrence of AUX/DERIV, agreement, tense, and aspect.
 
@@ -296,11 +320,13 @@ A stative predicate follows its subject: `Kerande sarui` = 'the container is lar
 
 ### G-SYN-04 — Alignment
 
-The language has a mixed Split-S system. Speech-act participants are strongly agentive; among third persons, animacy and volitionality condition the alignment pattern. Exact conditioning remains unresolved.
+The language is analyzed as active-stative / Split-S. Speech-act participants are strongly agentive; among third persons, animacy and volitionality condition the alignment pattern. Exact conditioning remains unresolved.
 
 ### G-SYN-05 — Pronouns
 
-Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). Verbal agreement marks person but not number.
+Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
+
+Plural case developments include established `mente > mende` and `menta > menda`. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/`; their conditioning remains unresolved. Formal `sese` and reduced `sa/si` variants remain unresolved in distribution.
 
 ### G-SYN-06 — Questions
 
