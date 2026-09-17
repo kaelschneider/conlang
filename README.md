@@ -19,15 +19,15 @@ Current work includes:
 - lexical derivation, compounds, and lexicalized complexes;
 - a developing historical account based on conditioned sound change, reduction, reanalysis, analogy, and lexicalization.
 
-Exact rules, forms, and unresolved conditions belong in the source files below.
+Exact rules, forms, and unresolved conditions belong in `GRAMMAR.md`, with lexical/data structures in the TSV files and project-state notes in `STATUS.md`.
 
 ## Repository structure
 
 | File | Role |
 |---|---|
-| `PHONOLOGY.md` | Current synchronic phonology, prosody, and consolidated historical sound change. |
-| `MORPHOLOGY.md` | Current morphology, including verbal/nominal inflection and derivation. |
-| `SYNTAX.md` | Current syntax and syntactic constructions. |
+| `GRAMMAR.md` | Current synchronic phonology, prosody, and consolidated historical sound change. |
+| `GRAMMAR.md` | Current morphology, including verbal/nominal inflection and derivation. |
+| `GRAMMAR.md` | Current syntax and syntactic constructions. |
 | `LEXICON.tsv` | Canonical lexical and root inventory, including lexical relationships and status. |
 | `EXAMPLES.tsv` | Provenance-bearing examples and test corpus. |
 | `STATUS.md` | Current development state, uncertainty, and testing priorities. |
@@ -38,9 +38,9 @@ The repository is intentionally small and flat. Repository structure must not be
 
 ## Source authority
 
-1. `PHONOLOGY.md` is authoritative for phonology, prosody, and historical sound change.
-2. `MORPHOLOGY.md` is authoritative for morphology.
-3. `SYNTAX.md` is authoritative for syntax.
+1. `GRAMMAR.md` is authoritative for phonology, prosody, and historical sound change.
+2. `GRAMMAR.md` is authoritative for morphology.
+3. `GRAMMAR.md` is authoritative for syntax.
 4. `LEXICON.tsv` is authoritative for lexical entries and root data.
 5. `EXAMPLES.tsv` records evidence and testing; examples do not override established grammar.
 6. `STATUS.md` records development state and uncertainty; it is not itself grammar.
