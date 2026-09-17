@@ -48,6 +48,23 @@ Prefer interacting systems with plausible acquisition, processing, lexicalizatio
 
 Do not add isolated exotic features merely to increase typological novelty.
 
+### Decision-oriented creative development
+
+When the language is underdetermined, **make concrete design decisions rather than expanding the methodology indefinitely**. Methodology is a tool for reaching a language decision, not an end product.
+
+For open design questions:
+
+1. Present a small set of genuinely distinct options, normally 3–5.
+2. For each option, state its typological/naturalistic motivation and its creative consequence for the language.
+3. **Recommend one option** based on typological plausibility, internal coherence, and the established creative direction of the language.
+4. Keep the recommendation appropriately bounded: it is a well-motivated design proposal, not an objectively required answer, and it must not override the user's creative authority.
+5. Once a choice is adequately supported, record it and move forward. Do not reopen the same methodological question merely to obtain a more elaborate framework.
+6. Use tests, matrices, and additional analytical machinery only when they can distinguish viable alternatives, expose contradictions, or materially improve a concrete decision.
+7. Prefer a simple, explicitly provisional canon over a large collection of unresolved methodological scaffolding when the remaining uncertainty is low-stakes.
+
+The project should **avoid getting bogged down in methodology at the expense of creative development**. When evidence does not uniquely determine the answer, a typologically motivated and creatively fitting choice is often more useful than another round of abstract parameterization. Mark the result as a design decision or working rule when appropriate rather than manufacturing false certainty.
+
+
 ### Synchrony and diachrony
 
 Keep modern grammar separate from historical explanation. Historical forms may motivate an analysis, but historical reconstruction does not by itself create a modern productive rule.
