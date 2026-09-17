@@ -16,15 +16,21 @@ The synchronic vowel inventory is `/a e i u/`. Long vowels are written `aa ee ii
 
 The synchronic consonant inventory is `/p t k c m n s h w j r/`. In IPA, orthographic `c` represents `/ts/` under the established `ts = c` convention, and orthographic `j` represents `/j/`. Conditioned allophony is not exhaustively specified.
 
-### G-PHON-04 — Established historical developments
+### G-PHON-04 — Historical developments
+
+The following developments are established:
 
 - Word-initial `*p > h`.
+- Historical `*p` is distinct from historical `*h`, despite overlap in some modern reflexes.
 - `t, k > c` before `/i/`.
-- `tc > c`.
-- `-wu` is repaired as `-u`.
-- `-yi` is prohibited; `yi > ye` in the established example `ku-t-y-i > kutyi > kutye`.
-- `ku-p-i > kupi > kuhi > kui`.
-- `mente > mende`; `menta > menda`.
+- `tc > c`, paralleling reduction of complex coronal sequences.
+- `*ndt > nt:` is attested in historical development such as `kerande-te > kerant:e`; this is historical/lexicalized, not a productive synchronic rule.
+- `-yi` is prohibited; `ku-t-y-i > kutyi > kutye` is an established repair. The final `-i` remains NONPAST; `e` in `kutye` is not a tense substitution.
+- `-wu` is prohibited and repaired as `-u`.
+- `ku-p-i > kupi > kuhi > kui` is an established development.
+- `mente > mende` and `menta > menda` are established developments.
+- `menme` may surface as `/menme/` or `/mem:e/` pending finer conditioning.
+- `menra` may surface as `/menra/` or `/men:a/` pending finer conditioning.
 
 Historical developments are not automatically productive synchronic rules.
 
@@ -34,7 +40,7 @@ The established orthography uses `w = v`, `j = y`, and `ts = c`. IPA records pro
 
 ### G-PHON-06 — Prosody
 
-Stress is predictable and weight-sensitive: stress falls on the rightmost heavy syllable; if there is no heavy syllable, stress falls on the penultimate syllable. The exact definition of heavy remains unresolved. IPA stress marks should not be added to lexical entries until the relevant stress assignment is established.
+Stress is predictable rather than contrastive and weight-sensitive: stress falls on the rightmost heavy syllable; if there is no heavy syllable, stress falls on the penultimate syllable. The exact definition of heavy remains unresolved, including the interaction of vowel length and coda weight. IPA stress marks should not be added to lexical entries until the relevant stress assignment is established.
 
 ## G-MORPH — Morphology
 
@@ -59,6 +65,8 @@ There is no dedicated verbal applicative slot.
 | REALIS | `-u-` | realis | `REAL` |
 | IRREALIS | `-i-` | irrealis | `IRR` |
 
+The alternating stem vowel is final in the root/stem. A lexical root such as `kat` becomes verbal `kata`; subsequent grades produce forms such as `kate`, not an internally altered root followed by another stem-vowel suffix.
+
 These grades are independent of directional `i-` and `a-`.
 
 For the HOLD lexeme, the citation/nonfinite form is `ka`. The realis stem is `ku`; adding nonpast `-i` gives `kui`:
@@ -73,13 +81,22 @@ The predictable inflected forms `ku` and `kui` are not separate lexemes.
 
 Leipzig gloss: `DIR` for the directional prefix when its specific polarity is recoverable from context; use a more specific project gloss only if one is established.
 
-Directional morphology is verbal. In spatial case constructions the noun retains its spatial suffix:
+Directional morphology is verbal. It is not a prefix attached to the noun. In spatial case constructions the noun retains its spatial suffix:
 
 `S O-SPATIAL-CASE i-/a-VERB`
 
-For example, `O-te i-VERB` is allative and `O-te a-VERB` is ablative.
+For example:
+
+- ALL: `S O-LOC i-VERB`
+- ABL: `S O-LOC a-VERB`
+
+Thus `O-te i-VERB` is allative and `O-te a-VERB` is ablative.
+
+If a vowel is required for NONLOCAL without direction, `e-` may serve as support.
 
 ### G-MORPH-05 — Object slot
+
+There is exactly one object slot:
 
 | Marker | Function | Leipzig gloss |
 |---|---|---|
@@ -88,70 +105,152 @@ For example, `O-te i-VERB` is allative and `O-te a-VERB` is ablative.
 | `s-` | reflexive | `REFL` |
 | `r-` | reciprocal | `RECP` |
 
-The overt object remains a separate noun phrase.
+The overt object remains a separate noun phrase in SOV clauses. Directional case suffixes likewise remain on the overt noun phrase.
 
 ### G-MORPH-06 — AUX/DERIV
 
-| Form | Value | Leipzig gloss |
-|---|---|---|
-| `-re-` | progressive | `PROG` |
-| `-ke-` | continuative | `CONT` |
-| `-me-` | habitual | `HAB` |
-| `-se-` | inchoative | `INCH` |
-| `-te-` | opposite of inchoative | `TE` |
+The following light roots occur in the AUX/DERIV slot and take the linking `-e-` grade:
 
-`-we-` is unresolved and therefore not canonical.
+| Root | Basic lexical meaning | AUX form | Semantic value | Leipzig gloss |
+|---|---|---|---|---|
+| `*r` | go | `-re-` | progressive | `PROG` |
+| `*k` | hold | `-ke-` | continuative | `CONT` |
+| `*m` | live / dwell / stay | `-me-` | habitual | `HAB` |
+| `*s` | cut / remove | `-se-` | inchoative | `INCH` |
+| `*t` | transfer | `-te-` | opposite of inchoative | `TE` |
+
+AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur.
+
+`-we-` and productive `-w-` were considered during development but are dropped from the canonical system.
 
 ### G-MORPH-07 — Agreement
 
-| Marker | Value | Leipzig gloss |
+| Person | Marker | Leipzig gloss |
 |---|---|---|
-| `-k-` | 1SG | `1SG` |
-| `-t-` | 2SG | `2SG` |
-| `-p-` | 3SG | `3SG` |
+| 1SG | `-k-` | `1SG` |
+| 2SG | `-t-` | `2SG` |
+| 3SG | `-p-` | `3SG` |
 
-There is no verbal plural agreement. Plural number is expressed by pronouns.
+There is no verbal plural agreement. Plural number is expressed through pronouns.
 
 ### G-MORPH-08 — Discourse / mood
 
-`-h-` = exclamative; `-y-` = interrogative. Leipzig gloss: `EXCL` for exclamative and `INT` for interrogative. `-h-` is historically associated with `*h` 'say/blow'.
+| Marker | Function | Leipzig gloss |
+|---|---|---|
+| `-h-` | exclamative | `EXCL` |
+| `-y-` | interrogative | `INT` |
+
+`-h-` is historically associated with `*h` 'say/blow'; it is not a realis marker.
 
 ### G-MORPH-09 — Tense
 
-`-i-` = nonpast; `-a-` = past. Leipzig gloss: `NPST` and `PST` respectively.
+`-i-` = nonpast (`NPST`); `-a-` = past (`PST`).
 
 ### G-MORPH-10 — Aspect
 
-`Ø` = imperfective; `-n` = perfect. Leipzig gloss: `IPFV` and `PRF` respectively.
+`Ø` = imperfective (`IPFV`); `-n` = perfect (`PRF`).
 
 ### G-MORPH-11 — Noun cases
 
-| Case | Suffix | Core meaning | Leipzig gloss |
+| Case | Suffix | Core meaning | Semantic domain | Leipzig gloss |
+|---|---|---|---|---|
+| ABS | `Ø` | patient / S | core argument | `ABS` |
+| ERG | `-ku` | agent / A | core argument | `ERG` |
+| GEN | `-se` | possessor / dependent | relational | `GEN` |
+| LOC | `-te` | at / in / static | spatial | `LOC` |
+| SUPER | `-ta` | on / against / surface | spatial | `SUPER` |
+| INE | `-ci` | inside / containment | spatial | `INE` |
+| PATH | `-ra` | along / through / medium | spatial | `PATH` |
+| COM | `-me` | with / associate | participant | `COM` |
+
+### G-MORPH-12 — Spatial polarity and directional expansion
+
+LOC, SUPER, INE, PATH, and COM can combine with verbal direction. Each spatial case has three clause-level polarities: `Ø` neutral, `i-` toward, and `a-` away. ABS, ERG, and GEN do not directionalize.
+
+The directional polarity is compositional, not nominal prefixation: the noun keeps its ordinary spatial suffix and the finite verb carries `i-` or `a-`.
+
+#### LOC series
+
+| Polarity | Construction | Function | Meaning |
 |---|---|---|---|
-| ABS | `Ø` | patient / S | `ABS` |
-| ERG | `-ku` | agent / A | `ERG` |
-| GEN | `-se` | possessor / dependent | `GEN` |
-| LOC | `-te` | at / in / static | `LOC` |
-| SUPER | `-ta` | on / against / surface | `SUPER` |
-| INE | `-ci` | inside / containment | `INE` |
-| PATH | `-ra` | along / through / medium | `PATH` |
-| COM | `-me` | with / associate | `COM` |
+| Ø | `O-te` | LOC | at / in |
+| i- | `O-te i-VERB` | ALL | to / toward |
+| a- | `O-te a-VERB` | ABL | from / away |
 
-### G-MORPH-12 — Spatial polarity
+#### SUPER series
 
-LOC, SUPER, INE, PATH, and COM can combine compositionally with verbal direction. ABS, ERG, and GEN do not directionalize.
+| Polarity | Construction | Function | Meaning |
+|---|---|---|---|
+| Ø | `O-ta` | SUPER | on / against |
+| i- | `O-ta i-VERB` | SUBLATIVE | onto / up to surface |
+| a- | `O-ta a-VERB` | DELATIVE | off / from surface |
+
+#### INE series
+
+| Polarity | Construction | Function | Meaning |
+|---|---|---|---|
+| Ø | `O-ci` | INE | inside / within |
+| i- | `O-ci i-VERB` | ILLATIVE | into / in through |
+| a- | `O-ci a-VERB` | ELATIVE | out of |
+
+#### PATH series
+
+| Polarity | Construction | Function | Meaning |
+|---|---|---|---|
+| Ø | `O-ra` | PATH | along / through |
+| i- | `O-ra i-VERB` | PATH+i- | toward along / across |
+| a- | `O-ra a-VERB` | PATH+a- | away along / back |
 
 ### G-MORPH-13 — COM polysemy
 
-COM is interpreted through animacy and polarity: animate neutral `-me` is comitative; inanimate `-me` is instrumental; animate `-me` with directional `i-` or `a-` can be benefactive. Exact semantic boundaries remain subject to testing.
+COM is interpreted through animacy and polarity:
+
+| Polarity | Animate argument | Inanimate argument | Semantic reading |
+|---|---|---|---|
+| Ø | COM | INST | with / alongside (COM); with / using (INST) |
+| i- | BEN | INST | toward for / on behalf of (BEN); toward via / using (INST) |
+| a- | BEN | INST | away for / on behalf of (BEN); away via / using (INST) |
+
+Examples:
+
+- `John-me` = with John (animate → comitative)
+- `knife-me` = with a knife (inanimate → instrumental)
+- `she-me i-VERB` = for her / on her behalf (animate + toward → benefactive)
+- `river-me i-VERB` = toward via the river (inanimate + toward → instrumental)
+
+The exact semantic boundaries remain subject to testing.
 
 ### G-MORPH-14 — Applicatives
 
-Dedicated verbal applicatives have been eliminated. Instrumental and benefactive meanings are expressed through the nominal case system.
+Dedicated verbal applicatives have been eliminated. Instrumental and benefactive meanings are expressed through the nominal case system; no dedicated verbal applicative morphology remains.
 
-### G-MORPH-15 — Converbs and participles
+### G-MORPH-15 — Constructional functions
 
-Converbs are intended to derive through nominalizers and case endings. Dedicated participial morphology supplements the existing stem grades. Exact inventories remain unresolved.
+The case system also supports the following constructional readings without introducing separate cases:
+
+| Function | Source | Realization |
+|---|---|---|
+| PART | GEN, partitive use | `-se` in divisible/mass contexts |
+| COMP | COM, comitative + locative anchoring | `-me` + context |
+| DAT | LOC + `i-`, recipient / goal participant | `O-te i-VERB` in dative-like contexts |
+| ESSIVE | LOC + stative predicate | `-te` in copular/state constructions |
+| TRANSLATIVE | ESSIVE + `i-ra` | `-te` + `i-ra` meaning 'become' |
+
+### G-MORPH-16 — Converbs and participles
+
+Converbs are intended to derive through nominalizers and case endings. Independent conjunctions are not currently established as the primary clause-combining strategy.
+
+Participial relatives use the existing stem grades supplemented by dedicated participial morphology. The exact nominalizer inventory, converb-to-case mapping, and dedicated participial forms remain unresolved.
+
+### G-MORPH-17 — Established complex verbal forms
+
+`kerurekin` = `keru-re-k-i-n` (CARRY.REAL-PROG-1SG-NONPAST-PERF). It demonstrates co-occurrence of AUX/DERIV, agreement, tense, and aspect.
+
+`ku-p-i > kupi > kuhi > kui` demonstrates the 3SG realis/nonpast form `kui`.
+
+`ku-t-y-i > kutyi > kutye` demonstrates interrogative `-y-` plus NONPAST `-i`, with phonological repair because `-yi` is prohibited.
+
+`hukka < hu-k-h-a` is an established example of the discourse slot; its exact lexical/derivational interpretation remains tied to the relevant root history.
 
 ## G-GLOSS — Glossing conventions
 
@@ -187,7 +286,7 @@ Established plural pronouns include `men` (1PL), `sen` (2PL), and `en` (3PL). Ve
 
 ### G-SYN-06 — Questions
 
-Interrogation is marked by verbal `-y-` in the discourse slot.
+Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku kerande kutye?`
 
 ### G-SYN-07 — Negation
 
@@ -199,7 +298,7 @@ Participial relatives precede the noun; finite relative clauses follow the noun.
 
 ### G-SYN-09 — Clause combining
 
-Converbs and nominalized clauses are the primary intended strategy. Exact converb behavior remains unresolved.
+Converbs and nominalized clauses are the primary intended strategy for clause combining. Independent conjunctions are not currently established as the primary strategy.
 
 ### G-SYN-10 — Adpositions
 
