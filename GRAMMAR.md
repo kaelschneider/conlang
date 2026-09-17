@@ -301,7 +301,7 @@ There is exactly one object slot:
 | `s-` | reflexive | `REFL` |
 | `r-` | reciprocal | `RECP` |
 
-The overt object remains a separate noun phrase in SOV clauses. Nominal case suffixes likewise remain on the overt noun phrase. LOCAL/NLOC in this section refers to object status in the verbal object slot and is distinct from nominal LOC case (`-te`).
+The overt object remains a separate noun phrase in SOV clauses. Nominal case suffixes likewise remain on the overt noun phrase. LOCAL/NLOC in this section refers to object status in the verbal object slot and is distinct from nominal LOC case (`-te`). The LOCAL marker `n-` is underlyingly consonant-initial; before a consonant-initial verb stem, `n- + C → enC` to avoid an onset cluster. Before a vowel-initial stem, `n-` remains `n-`.
 
 ### G-MORPH-06 — AUX/DERIV
 
