@@ -2,37 +2,198 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/kaelschneider/conlang/blob/main/SCHEMA.json",
   "title": "Conlang Lexicon and Examples JSON Schema",
-  "description": "Draft 7 schema for row-oriented JSON representations of LEXICON.tsv and EXAMPLES.tsv. Convert TSV rows to JSON objects before validation. The schema enforces field presence, controlled vocabularies, identifier syntax, IPA character inventory, and conditional lexical derivation rules. Cross-row uniqueness, cross-file references, grammar-section existence, segmentation/gloss token-count alignment, predictable-inflection detection, and semantic restrictions require validation code outside JSON Schema draft 7.",
+  "description": "Draft 7 schema for row-oriented JSON representations of LEXICON.tsv and EXAMPLES.tsv. Convert TSV rows to JSON objects before validation. This schema is designed to be TEI-compatible. Properties map to standard TEI elements; conversion via XSLT or programmatic transformation should be straightforward. The schema enforces field presence, controlled vocabularies, identifier syntax, IPA character inventory, and conditional lexical derivation rules. Cross-row uniqueness, cross-file references, grammar-section existence, segmentation/gloss token-count alignment, predictable-inflection detection, semantic restrictions, and ID immutability across repository history require validation code outside JSON Schema draft 7.",
   "oneOf": [
     { "$ref": "#/definitions/LEXICON" },
     { "$ref": "#/definitions/EXAMPLES" },
     { "$ref": "#/definitions/LEXICON_ARRAY" },
     { "$ref": "#/definitions/EXAMPLES_ARRAY" }
   ],
+  "teiMapping": {
+    "description": "Documentation-only mapping from JSON/TSV properties to TEI P5 dictionary and text structures. This metadata does not affect JSON Schema validation.",
+    "lexicon": {
+      "id": {
+        "tei": "@xml:id",
+        "description": "Use the stable lexical entry identifier as the TEI xml:id on the entry element, for example <entry xml:id=\"L-0001\">."
+      },
+      "form": {
+        "tei": "<form>",
+        "description": "Map the lexical form to the TEI form element, typically using <orth> inside <form>."
+      },
+      "ipa": {
+        "tei": "<pron>",
+        "description": "Map the phonemic transcription to TEI pron, normally under the appropriate form/pronunciation structure."
+      },
+      "pos": {
+        "tei": "<gramGrp><pos>",
+        "description": "Map the part-of-speech value to pos inside a grammatical group."
+      },
+      "gloss": {
+        "tei": "<sense><gloss>",
+        "description": "Map the English lexical gloss to gloss within the relevant sense element."
+      },
+      "type": {
+        "tei": "<note type=\"lexicalType\">",
+        "description": "Preserve the lexical classification as a typed note when it is not represented by a more specific TEI structural element."
+      },
+      "derived_from": {
+        "tei": "<etym> or <note type=\"derivedFrom\">",
+        "description": "Map a lexical parent or parent list to etym when an etymological analysis is appropriate; otherwise preserve it in a typed note. Multiple semicolon-separated parents should become multiple references."
+      },
+      "status": {
+        "tei": "<note type=\"status\">",
+        "description": "Preserve the development/status value as a typed note so established, analyzed, experimental, unresolved, deprecated, and legacy stable states are not lost during conversion."
+      },
+      "notes": {
+        "tei": "<note>",
+        "description": "Map free-text annotations to TEI note elements, preserving provenance and analytical qualifications."
+      }
+    },
+    "examples": {
+      "id": {
+        "tei": "@xml:id",
+        "description": "Use the stable example identifier as xml:id on the TEI example or containing element."
+      },
+      "text": {
+        "tei": "<quote xml:lang=\"conlang\">",
+        "description": "Map the conlang example text to quote with xml:lang=\"conlang\"."
+      },
+      "ipa": {
+        "tei": "<pron>",
+        "description": "Map the phonemic transcription to pron associated with the quoted example."
+      },
+      "translation": {
+        "tei": "<quote xml:lang=\"en\">",
+        "description": "Map the English translation to quote with xml:lang=\"en\"."
+      },
+      "segmentation": {
+        "tei": "<w> (with morpheme-level markup)",
+        "description": "Map word-level segmentation to w elements and represent morpheme boundaries with nested or adjacent TEI markup appropriate to the conversion workflow."
+      },
+      "gloss": {
+        "tei": "<gramGrp> (grammatical gloss)",
+        "description": "Map the aligned grammatical gloss to a grammatical group, retaining Leipzig-style labels and alignment with segmented morphemes."
+      },
+      "grammar_refs": {
+        "tei": "<ref target=\"#grammar-section\">",
+        "description": "Convert each semicolon-separated grammar reference to a TEI ref whose target resolves to a grammar section identifier."
+      },
+      "entry_refs": {
+        "tei": "<ref target=\"#lexical-id\">",
+        "description": "Convert each semicolon-separated lexical ID to a TEI ref targeting the corresponding lexical entry xml:id."
+      },
+      "status": {
+        "tei": "<note type=\"status\">",
+        "description": "Preserve the example development status as a typed note."
+      },
+      "notes": {
+        "tei": "<note>",
+        "description": "Map provenance, uncertainty, testing notes, and other free-text annotations to TEI note."
+      }
+    }
+  },
   "definitions": {
+    "ID": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$",
+      "description": "Stable identifier: alphanumeric segments separated by single hyphens. Existing L-/E- identifiers are retained."
+    },
+    "IPA": {
+      "type": "string",
+      "oneOf": [
+        { "const": "?" },
+        { "pattern": "^/?[aeiuptkcmnshwjr:ː]+/?$" }
+      ],
+      "description": "Phonemic transcription using only the established segment inventory /a e i u p t k c m n s h w j r/ plus length marks : or ː. Optional slash delimiters are accepted. '?' is reserved for intentionally unresolved examples/data."
+    },
     "LEXICON": {
       "title": "LEXICON.tsv single row",
       "description": "Schema for one lexical row after parsing the tab-separated file into a JSON object.",
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "pattern": "^[A-Za-z0-9]+$", "description": "Unique, immutable alphanumeric identifier for the lexical entry. No spaces or punctuation. Uniqueness and immutability across repository history must be checked by the validation script." },
-        "form": { "type": "string", "minLength": 1, "description": "Orthographic form in the established project orthography. This field should represent the lexical form, not a merely predictable inflected form." },
-        "ipa": { "type": "string", "minLength": 1, "pattern": "^/?[aeiuptkcmnshwjr:ː]+/?$", "description": "Phonemic transcription using only the project's established phoneme symbols /a e i u p t k c m n s h w j r/ plus IPA length marks ː or the project's keyboard substitute :. Optional / delimiters are accepted because they are used by existing repository data. This does not permit unestablished phonetic detail or stress marks." },
-        "type": { "type": "string", "enum": ["root", "derived", "compound", "lexicalized", "reconstructed"], "description": "Lexical classification: root, derived form, compound, lexicalized form, or reconstructed form." },
-        "pos": { "type": "string", "enum": ["n", "v", "adj", "adv", "adp", "cconj", "sconj", "pron", "det", "num", "intj", "part"], "description": "Part-of-speech tag using the project's controlled lowercase vocabulary." },
-        "gloss": { "type": "string", "minLength": 1, "description": "Human-readable English gloss of the lexical item." },
-        "derived_from": { "type": "string", "pattern": "^(?:[A-Za-z0-9]+|\\?|—)$", "description": "Immediate lexical parent. Use one alphanumeric lexical ID, ? when unresolved, or — when no parent applies. Cross-entry validity must be checked against LEXICON.tsv by the validation script." },
-        "status": { "type": "string", "enum": ["established", "analyzed", "experimental", "unresolved", "deprecated"], "description": "Current development status of the lexical entry." },
-        "notes": { "type": "string", "description": "Free-text annotations, including historical information, irregularities, provenance, or reasons for unresolved analyses. Deprecated entries should state when and why they were deprecated." }
+        "id": { "$ref": "#/definitions/ID" },
+        "form": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Orthographic form in established project orthography. This should represent a lexical form, not a merely predictable inflected form."
+        },
+        "ipa": { "$ref": "#/definitions/IPA" },
+        "type": {
+          "type": "string",
+          "enum": ["root", "lexeme", "pronoun", "derived", "compound", "lexicalized", "reconstructed"],
+          "description": "Lexical classification. 'lexeme' and 'pronoun' are retained because they occur in the current repository; compound supports multiple lexical parents when appropriate."
+        },
+        "pos": {
+          "type": "string",
+          "enum": ["n", "v", "adj", "adv", "adp", "cconj", "sconj", "pron", "det", "num", "intj", "part", "N", "V", "ADJ", "ADV", "ADP", "CCONJ", "SCONJ", "PRON", "DET", "NUM", "INTJ", "PART", "—"],
+          "description": "Part-of-speech tag. Lowercase values are preferred; existing uppercase values and — are accepted for compatibility with the current repository."
+        },
+        "gloss": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable English gloss."
+        },
+        "derived_from": {
+          "type": "string",
+          "oneOf": [
+            { "const": "—" },
+            { "const": "?" },
+            { "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?:;[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)*$" }
+          ],
+          "description": "Immediate lexical parent. Use — when no parent applies, ? when unresolved, or one or more lexical IDs separated by semicolons for compounds."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["established", "stable", "analyzed", "experimental", "unresolved", "deprecated"],
+          "description": "Current development status. 'stable' is retained as a legacy repository value; 'established' is the preferred canonical term."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text annotations, including provenance, historical information, irregularities, or reasons for unresolved/deprecated analyses."
+        }
       },
       "required": ["id", "form", "ipa", "type", "pos", "gloss", "status"],
       "allOf": [
-        { "if": { "properties": { "type": { "const": "root" } }, "required": ["type"] }, "then": { "required": ["derived_from"], "properties": { "derived_from": { "const": "—" } } } },
-        { "if": { "properties": { "type": { "enum": ["derived", "lexicalized"] } }, "required": ["type"] }, "then": { "required": ["derived_from"], "properties": { "derived_from": { "pattern": "^(?:[A-Za-z0-9]+|\\?)$" } } } },
-        { "if": { "properties": { "status": { "const": "deprecated" } }, "required": ["status"] }, "then": { "required": ["notes"], "properties": { "notes": { "minLength": 1 } } } }
+        {
+          "if": {
+            "properties": { "type": { "const": "root" } },
+            "required": ["type"]
+          },
+          "then": {
+            "required": ["derived_from"],
+            "properties": { "derived_from": { "const": "—" } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "type": { "enum": ["derived", "lexicalized"] } },
+            "required": ["type"]
+          },
+          "then": {
+            "required": ["derived_from"],
+            "properties": {
+              "derived_from": {
+                "oneOf": [
+                  { "const": "?" },
+                  { "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$" }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "status": { "const": "deprecated" } },
+            "required": ["status"]
+          },
+          "then": {
+            "required": ["notes"],
+            "properties": { "notes": { "minLength": 1 } }
+          }
+        }
       ],
-      "$comment": "JSON Schema cannot determine whether a derived_from ID exists in the same LEXICON.tsv file or whether form is a predictable inflection of another entry. Those checks belong in the repository validation script."
+      "$comment": "Cross-entry validity of derived_from, duplicate-ID detection, and ID immutability across repository history must be checked by the validation script. Compound parent lists are valid only for compound analyses."
     },
     "EXAMPLES": {
       "title": "EXAMPLES.tsv single row",
@@ -40,33 +201,79 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "pattern": "^[A-Za-z0-9]+$", "description": "Unique, immutable alphanumeric identifier for the example. No spaces or punctuation. Uniqueness and immutability across repository history must be checked by the validation script." },
-        "text": { "type": "string", "minLength": 1, "description": "Example sentence or utterance in the established orthography." },
-        "ipa": { "type": "string", "minLength": 1, "pattern": "^/?[aeiuptkcmnshwjr:ː]+(?: +[aeiuptkcmnshwjr:ː]+)*\\/?$", "description": "Phonemic transcription of the whole example. Uses only the project's established phoneme symbols plus length marks; optional /.../ delimiters are accepted. Word boundaries are represented by spaces." },
-        "translation": { "type": "string", "minLength": 1, "description": "English translation or whole-example gloss." },
-        "segmentation": { "type": "string", "minLength": 1, "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$", "description": "Morpheme-by-morpheme segmentation. Morphemes within a word are separated by hyphens and words by spaces. Token-count and alignment checks belong in the validation script." },
-        "gloss": { "type": "string", "minLength": 1, "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$", "description": "Leipzig-style grammatical gloss aligned with segmentation. Periods may occur inside grammatical glosses according to project conventions. Token-count and alignment checks belong in the validation script." },
-        "grammar_refs": { "type": "string", "pattern": "^[^;\\r\\n]+(?:;[ \\t]*[^;\\r\\n]+)*$", "description": "Optional semicolon-separated references to documented sections of GRAMMAR.md. The validation script must verify that each reference resolves to an actual documented section." },
-        "entry_refs": { "type": "string", "pattern": "^[A-Za-z0-9]+(?:;[ \\t]*[A-Za-z0-9]+)*$", "description": "Optional semicolon-separated lexical entry IDs that occur in the example. The validation script must verify that every ID exists in LEXICON.tsv." },
-        "status": { "type": "string", "enum": ["established", "analyzed", "experimental", "unresolved"], "description": "Current development status of the example." },
-        "notes": { "type": "string", "description": "Optional provenance, ambiguity, testing, or analysis notes. Use this field to flag unclear grammar references or other issues that the schema cannot resolve." }
+        "id": { "$ref": "#/definitions/ID" },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Example sentence or utterance in established orthography. '?' is permitted as an explicit unresolved placeholder."
+        },
+        "ipa": {
+          "$ref": "#/definitions/IPA",
+          "description": "Phonemic transcription of the whole example. Word boundaries are represented by spaces; '?' is reserved for intentionally unresolved examples."
+        },
+        "translation": {
+          "type": "string",
+          "minLength": 1,
+          "description": "English translation or whole-example gloss. '?' is permitted as an explicit unresolved placeholder."
+        },
+        "segmentation": {
+          "type": "string",
+          "oneOf": [
+            { "const": "?" },
+            { "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$" }
+          ],
+          "description": "Morpheme-by-morpheme segmentation: hyphens within words, spaces between words. '?' is permitted as an explicit unresolved placeholder."
+        },
+        "gloss": {
+          "type": "string",
+          "oneOf": [
+            { "const": "?" },
+            { "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$" }
+          ],
+          "description": "Leipzig-style grammatical gloss aligned with segmentation. '?' is permitted as an explicit unresolved placeholder."
+        },
+        "grammar_refs": {
+          "type": "string",
+          "oneOf": [
+            { "const": "?" },
+            { "pattern": "^[^;\\r\\n]+(?:;[ \\t]*[^;\\r\\n]+)*$" }
+          ],
+          "description": "Optional semicolon-separated references to documented sections of GRAMMAR.md; validation code must verify resolution."
+        },
+        "entry_refs": {
+          "type": "string",
+          "oneOf": [
+            { "const": "?" },
+            { "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?:;[ \\t]*[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)*$" }
+          ],
+          "description": "Optional semicolon-separated lexical IDs; validation code must verify each ID exists in LEXICON.tsv."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["established", "stable", "analyzed", "experimental", "unresolved"],
+          "description": "Current development status. 'stable' is retained as a legacy repository value; 'established' is preferred."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Optional provenance, ambiguity, testing, or analysis notes."
+        }
       },
       "required": ["id", "text", "ipa", "translation", "segmentation", "gloss", "status"],
-      "$comment": "JSON Schema cannot compare segmentation and gloss token counts or determine whether grammar_refs support an established rule. Validation code must enforce those cross-field conditions."
+      "$comment": "JSON Schema cannot compare segmentation/gloss token counts, verify reference existence, or determine whether an experimental example supports an established rule. Validation code must enforce those cross-field and cross-file conditions."
     },
     "LEXICON_ARRAY": {
       "title": "LEXICON.tsv file as an array",
-      "description": "Array schema for a complete parsed LEXICON.tsv file. Each item is one LEXICON row.",
+      "description": "Array schema for a complete parsed LEXICON.tsv file. Each item is one lexical row.",
       "type": "array",
       "items": { "$ref": "#/definitions/LEXICON" },
-      "$comment": "Draft 7 cannot express uniqueness of id across objects in an array. The validation script must reject duplicate IDs and preserve ID immutability across revisions."
+      "$comment": "Draft 7 cannot directly enforce uniqueness of id across array objects; the validation script must reject duplicates and preserve ID immutability."
     },
     "EXAMPLES_ARRAY": {
       "title": "EXAMPLES.tsv file as an array",
-      "description": "Array schema for a complete parsed EXAMPLES.tsv file. Each item is one EXAMPLES row.",
+      "description": "Array schema for a complete parsed EXAMPLES.tsv file. Each item is one example row.",
       "type": "array",
       "items": { "$ref": "#/definitions/EXAMPLES" },
-      "$comment": "Draft 7 cannot express uniqueness of id across objects in an array. The validation script must reject duplicate IDs and perform cross-file, reference, and alignment checks."
+      "$comment": "The validation script must perform duplicate-ID, cross-file reference, grammar-reference, and alignment checks."
     }
   }
 }
