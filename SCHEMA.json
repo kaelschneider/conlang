@@ -113,7 +113,7 @@
           "const": "?"
         },
         {
-          "pattern": "^/?[aeiuptkdmnshwjrɕt͡]+/?$"
+          "pattern": "^/?[ˈaeiuptkdmnshwjrɕt͡]+/?$"
         }
       ],
       "description": "Phonemic transcription using only established segments /a e i u p t k m n s h w j r ɕ t͡ɕ/ plus length marks : or ː and primary-stress mark ˈ. Optional slash delimiters are accepted. '?' is reserved for intentionally unresolved examples/data."
