@@ -115,7 +115,11 @@ Keep orthographic, phonemic, phonetic, and reconstructed forms distinctly labele
 9. Keep productive morphology distinct from lexicalized or historical material.
 10. Update all affected examples when a grammatical rule changes.
 11. Update `STATUS.md` when a question is resolved, reopened, or materially changed.
-12. Avoid unrelated cleanup unless necessary to prevent a real contradiction.
+12. After pushing any repository change, re-check `STATUS.md` against the resulting repository state. If the push changes project status, open questions, testing priorities, or recovered decisions, update `STATUS.md` in a follow-up change before treating the work as complete.
+13. When `GRAMMAR.md` changes, always inspect `LEXICON.tsv` and `EXAMPLES.tsv` for affected forms, analyses, segmentations, references, and IPA; update them when required by the grammar change.
+14. When adding or modifying rows in `LEXICON.tsv` or `EXAMPLES.tsv`, always validate the complete file against `SCHEMA.json` before committing. Structural validation is required in addition to linguistic cross-checking.
+15. Review `README.md` for every substantive repository update and revise it when the change affects the public description, orthography, typological profile, repository structure, or current established grammar.
+16. Avoid unrelated cleanup unless necessary to prevent a real contradiction.
 13. **Do not alter repository file structure unless the user explicitly instructs the agent to do so.**
 
 ## Red flags: When not to commit
@@ -149,11 +153,20 @@ Update the applicable domain source first, then affected `LEXICON.tsv` or `EXAMP
 
 ### 5. Check downstream effects
 
-Look for broken segmentation, invalid forms, stale grammar references, changed lexical relationships, and historical analyses that no longer fit.
+Apply the repository-wide cross-check rules explicitly:
+
+- **If `GRAMMAR.md` changed:** inspect `LEXICON.tsv` and `EXAMPLES.tsv` for affected forms, analyses, segmentations, references, IPA, and historical derivations.
+- **If `LEXICON.tsv` or `EXAMPLES.tsv` changed:** validate the complete modified TSV against `SCHEMA.json`, then perform the linguistic checks against `GRAMMAR.md`.
+- **For every substantive update:** review `README.md` for stale public-facing descriptions and update it when affected.
+- Look for broken segmentation, invalid forms, stale grammar references, changed lexical relationships, and historical analyses that no longer fit.
 
 ### 6. Review the diff before committing
 
 Verify that the diff contains only the intended changes. Confirm that no experimental material was promoted accidentally, IDs were preserved, conflicts were documented, and no unauthorized structural changes were made.
+
+### 7. Post-push status check
+
+After the change is pushed, re-read `STATUS.md` and compare it with the resulting repository state. If the change affects established decisions, unresolved questions, testing priorities, or development phase, update `STATUS.md` in a follow-up commit. A change is not complete until this post-push status check has been performed.
 
 ## IPA analysis requirement
 
@@ -184,3 +197,13 @@ The desired outcome is not maximal regularity. Naturalistic irregularity is welc
 ## For automation and coding agents
 
 All automated validation should use `SCHEMA.json` as the authoritative specification for valid `LEXICON.tsv` and `EXAMPLES.tsv` structure. Cross-row and cross-file checks remain validation-script responsibilities.
+
+The minimum required dependency checks are:
+
+`GRAMMAR.md change → inspect LEXICON.tsv + EXAMPLES.tsv`
+
+`LEXICON.tsv or EXAMPLES.tsv row addition/modification → validate complete TSV against SCHEMA.json + check against GRAMMAR.md`
+
+`Any substantive repository change → review README.md`
+
+`Any pushed repository change → re-check STATUS.md`
