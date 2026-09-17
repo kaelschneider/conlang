@@ -6,11 +6,11 @@ A naturalistic a priori constructed language project. The repository is intentio
 
 | File | Role |
 |---|---|
-| `README.md` | Repository rules, schemas, and editing protocol |
+| `README.md` | Repository rules, schemas, conventions, and editing protocol |
 | `STATUS.md` | Current state, unresolved questions, decisions, and next actions |
 | `GRAMMAR.md` | Canonical synchronic grammar |
 | `LEXICON.tsv` | Canonical lexical and historical-root data |
-| `EXAMPLES.tsv` | Canonical/example sentence data and analysis |
+| `EXAMPLES.tsv` | Canonical example/test corpus and analysis |
 
 Do not create another file unless one of these becomes a real retrieval or editing bottleneck.
 
@@ -22,7 +22,30 @@ Do not create another file unless one of these becomes a real retrieval or editi
 4. `STATUS.md` records uncertainty and development state; it is not itself grammar.
 5. Git history records change history.
 
-If sources conflict, do not silently choose one. Record the conflict in `STATUS.md` and resolve it explicitly.
+When sources conflict, do not silently choose one. Preserve the conflict and record it in `STATUS.md` until explicitly resolved.
+
+## Evidence levels
+
+Keep these distinct:
+
+- **OBSERVED** — directly attested in the existing corpus, historical material, or explicit project decisions.
+- **ANALYZED** — an interpretation supported by observations but not yet established as a rule.
+- **RULE** — explicitly established by the project and recorded in `GRAMMAR.md`.
+
+Never silently promote an analysis to a rule.
+
+Do not treat typological expectations, similarity to another language, frequency, or what “would make sense” as evidence that a form or rule is canonical.
+
+When multiple analyses remain compatible with the evidence, preserve the ambiguity rather than selecting one.
+
+## Scope lock
+
+For every edit:
+
+- Change only what is necessary to fulfill the user's request.
+- Do not opportunistically normalize unrelated inconsistencies.
+- Do not rewrite older material merely to fit a newer preferred analysis unless normalization is explicitly requested.
+- Preserve historical evidence even when the current analysis changes.
 
 ## IDs
 
@@ -33,74 +56,101 @@ IDs are permanent and must never be reused.
 - `E-*` = example
 - `Q-*` = open question in `STATUS.md`
 
+Preserve existing IDs when editing.
+
 ## General data conventions
 
 - TSV files are UTF-8, tab-separated, with one header row.
 - Do not leave cells blank: use `?` for unknown/unresolved and `—` for not applicable.
-- Use `;` to separate multiple IDs in a reference field.
+- Use `;` to separate multiple IDs in reference fields.
 - Do not use `;` inside an individual reference or free-text field.
 - `Ø` means zero expression.
-- IPA is enclosed in `/slashes/` for phonemic forms and `[brackets]` for phonetic forms.
-- IPA is explicit data: do not infer or silently generate it from the orthography.
-- Grammatical glosses use uppercase (`ERG`, `GEN`, `NONPST`, `1SG`).
+- Orthography, phonemic IPA, phonetic IPA, and historical reconstruction are distinct representations.
+- IPA is explicit data; never silently infer or invent IPA.
+- Phonemic IPA uses `/slashes/`; phonetic IPA uses `[brackets]`.
+- Grammatical glosses use uppercase (`ERG`, `GEN`, `REAL`, `NONPST`, `1SG`).
 
 ## Leipzig Glossing Rules
 
-Interlinear glosses follow the Leipzig Glossing Rules as the default analytical convention. The project uses hyphens for morpheme boundaries, `=` for clitics, and `.` inside a gloss for fused/portmanteau grammatical meanings where a single morph expresses multiple categories. A colon `:` may be used for phonological/grammatical fusion where appropriate.
+Interlinear glosses follow the Leipzig Glossing Rules as the default analytical convention.
 
-Project-specific gloss abbreviations are controlled by `GRAMMAR.md`. Use established Leipzig abbreviations where they fit; do not invent a new abbreviation when a standard one is adequate. Glosses should be aligned one-to-one with segmented morphemes whenever possible.
+- `-` = morpheme boundary
+- `=` = clitic boundary
+- `.` = multiple grammatical meanings expressed by one morph
+- `:` = morphophonological/grammatical fusion where appropriate
 
-Examples:
+Segmentation and gloss must correspond as closely as possible one-to-one.
+
+Example:
 
 ```text
 ne-ku   k-u-i
-1SG-ERG hold-REAL-NPST
+1SG-ERG HOLD-REAL-NONPST
 ```
 
-A fused form should instead be represented according to its actual morphology, e.g. `X.Y` in the gloss if one morph expresses two grammatical values. Do not use punctuation merely to make a gloss look compact.
+Do not add punctuation merely to make a gloss compact. Use a standard Leipzig abbreviation when one exists rather than inventing a new abbreviation. Project-specific abbreviations may be defined in `GRAMMAR.md` when the language requires them.
 
 ## LEXICON.tsv
 
 Exact columns:
 
 ```text
-id\tform\tipA\ttype\tpos\tgloss\tderived_from\tstatus\tnotes
+id\tform\tipa\ttype\tpos\tgloss\tderived_from\tstatus\tnotes
 ```
 
-`form` is the canonical orthographic citation form. `ipa` is its phonemic IPA citation form when established.
+`form` = canonical orthographic citation form.  
+`ipa` = established phonemic IPA citation form.
 
 ### `type` controlled vocabulary
 
-`root` = historical/root-level base  
-`lexeme` = independent modern lexical item  
-`pronoun` = independent pronoun  
-`proper` = proper name
+- `root` = historical/root-level base
+- `lexeme` = independent modern lexical item
+- `pronoun` = independent pronoun
+- `proper` = proper name
 
 ### `pos` controlled vocabulary
 
-`N` noun; `V` verb; `ADJ` adjective; `ADV` adverb; `PRON` pronoun; `NUM` numeral; `PART` particle; `CONJ` conjunction; `ADP` adposition; `INTJ` interjection; `—` not applicable.
+`N`, `V`, `ADJ`, `ADV`, `PRON`, `NUM`, `PART`, `CONJ`, `ADP`, `INTJ`, `—`
 
 ### `status` controlled vocabulary
 
-`stable` = current canonical data  
-`experimental` = used for testing but not canonical  
-`deprecated` = retained historically but no longer current
+- `stable` = current canonical data
+- `experimental` = used for testing but not canonical
+- `deprecated` = retained historically but no longer current
 
-`derived_from` contains `L-*` IDs separated by `;`; use `—` for no parent and `?` when the relationship is unknown.
+`derived_from` contains `L-*` IDs separated by `;`, `—` for no parent, or `?` when unknown.
 
-### Lexeme vs. inflected form
+### Lexemes vs. forms
 
-Do not create a lexicon entry for a predictable inflected form. The lexeme/citation form is stored once; productive forms are analyzed in `EXAMPLES.tsv` and `GRAMMAR.md`.
+Do not create a lexicon entry for a predictable inflected form.
 
-For example, the HOLD lexeme is `ka`. Its relationship to forms found in clauses is grammatical:
+First attempt to derive a surface form from an existing lexeme plus established morphology.
+
+For example:
 
 ```text
-ka    citation/nonfinite lexeme
-ku    k-u     HOLD-REAL
-kui   k-u-i   HOLD-REAL-NPST
+ka      citation/nonfinite lexeme
+ku      k-u       HOLD-REAL
+kui     k-u-i     HOLD-REAL-NONPST
 ```
 
-Thus `ku` and `kui` are not separate `L-*` entries unless later evidence shows that they are independent lexicalized forms.
+Here `ka` is the lexeme; `ku` and `kui` are grammatical forms, not separate lexemes.
+
+Create a separate `L-*` entry only when evidence indicates that a form is lexicalized, irregular, historically independent, or otherwise not predictably derived.
+
+## Grammar and morphological analysis
+
+When analyzing a form:
+
+1. Identify the lexical base.
+2. Apply established morphological rules.
+3. Apply established phonological rules.
+4. Distinguish productive morphology from historical developments.
+5. Mark any unresolved step with `?` rather than inventing an explanation.
+
+Do not use historical reconstruction to justify a synchronic rule unless the project has explicitly established that rule as productive.
+
+Keep phonological repair distinct from morphological substitution or deletion.
 
 ## EXAMPLES.tsv
 
@@ -110,30 +160,69 @@ Exact columns:
 id\ttext\tipa\ttranslation\tsegmentation\tgloss\tgrammar_refs\tentry_refs\tstatus\tnotes
 ```
 
-`text` is the orthographic sentence. `ipa` is the phonemic pronunciation of the complete sentence when established. `grammar_refs` contains `G-*` IDs. `entry_refs` contains `L-*` IDs. Multiple references are separated by `;`.
+`text` = orthographic sentence.  
+`ipa` = phonemic IPA of the complete sentence when established.
 
-`segmentation` should show morpheme boundaries using `-` and clitic boundaries using `=`. `gloss` should follow Leipzig conventions and correspond to the segmentation.
+`grammar_refs` contains `G-*` IDs.  
+`entry_refs` contains `L-*` IDs.
 
-Use `stable` only when the example is compatible with the current canonical grammar. Use `experimental` when it tests an unresolved analysis or contains unresolved lexical structure.
+Use `stable` only when the example is compatible with current canonical grammar.
+
+Use `experimental` when it tests an unresolved analysis or contains unresolved lexical structure.
+
+Examples are evidence and tests, not independent sources of grammar.
 
 ## IPA conventions
 
-IPA is phonemic unless a field explicitly requires phonetic transcription. Use the phoneme inventory established in `GRAMMAR.md`; do not introduce IPA symbols that are not supported by the current phonological analysis. Historical forms may be transcribed separately when relevant, but historical reconstruction must not be confused with the synchronic IPA of the modern language.
+Use the established phoneme inventory in `GRAMMAR.md`.
+
+Do not infer phonetic detail that the project has not established.
+
+For every transcription, keep these conceptually separate:
+
+```text
+orthography: y
+phonemic IPA: /j/
+historical reconstruction: *j
+```
+
+Do not treat orthographic symbols, IPA symbols, and reconstructed forms as interchangeable.
+
+Historical forms may receive their own transcription when relevant, but historical reconstruction must not be confused with modern synchronic IPA.
 
 ## Editing protocol
 
-1. Read `README.md` and `STATUS.md` before editing.
-2. Read the relevant grammar sections and lexical rows before changing examples.
-3. Preserve all existing IDs.
-4. Change the smallest possible unit.
-5. Never infer a missing fact when the repository marks it `?`.
-6. When a rule changes, inspect and update affected examples and references in the same change.
-7. Never silently promote experimental material to stable.
-8. Keep synchronic grammar separate from historical explanation.
-9. Keep phonological repair distinct from morphological substitution.
-10. Preserve Leipzig-style segmentation/glossing when editing examples.
-11. Prefer targeted edits over broad rewrites.
+Before editing:
+
+1. Read `README.md` and `STATUS.md`.
+2. Read the relevant grammar sections and lexical rows.
+3. Identify whether each relevant fact is OBSERVED, ANALYZED, or RULE.
+
+While editing:
+
+4. Preserve all existing IDs.
+5. Make the smallest necessary change.
+6. Preserve `?` when something remains unresolved.
+7. Do not silently promote experimental material to stable.
+8. Preserve the distinction between synchronic grammar and historical explanation.
+9. Preserve Leipzig segmentation/glossing.
+10. Preserve explicit IPA rather than inventing new transcription.
+11. Update affected examples and references when a canonical rule changes.
+12. Do not normalize unrelated material.
+
+Before finishing, verify:
+
+- Did I change only the requested scope?
+- Did I introduce any unsupported rule?
+- Did I accidentally turn `?` into a fact?
+- Do segmentation and gloss correspond?
+- Does the IPA match the established phonology?
+- Did I preserve all IDs?
+- Did I update affected references?
+- Did I accidentally create a lexical entry for a predictable inflected form?
 
 ## Interoperability
 
-The data model is deliberately TSV-first but follows simple relational conventions used by linguistic data standards. It can later be exported to richer standards such as CLDF or CoNLL-U without making those formats the canonical working representation.
+TSV is the canonical working format because it is compact, readable in GitHub, easy for LLMs to retrieve, and easy to diff.
+
+The data model should remain simple enough to export later to standards such as CLDF or CoNLL-U without making those standards the repository's canonical representation.
