@@ -36,7 +36,7 @@ The four classes are evaluated independently. No universal lenition hierarchy is
 
 ### G-PHON-03 — Consonants
 
-The synchronic consonant inventory is `/p t k c m n s h w j r/`. In the established orthography, `c` represents `/ts/`, `v` represents `/w/`, and `y` represents `/j/`.
+The synchronic consonant inventory is `/p t k m n s h w j r t͡s/`. In the established orthography, `c` represents `/t͡s/`, `v` represents `/w/`, and `y` represents `/j/`.
 
 Conditioned phonetic realization is not exhaustively specified. Historical-source distinctions may survive as phonetic traces without creating additional synchronic phonemes.
 
@@ -70,13 +70,13 @@ This matrix is a concrete design completion of cells that are not all directly i
 
 #### Stage I — Pre-/i/ palatalization
 
-**1. `t, k > c / _i`**
+**1. `t, k > t͡s / _i`**
 
 Historical `t` and `k` become `c` before `/i/`. This precedes the general weakening of those consonants, so a resulting `c` is not subsequently treated as historical `t` or `k` by the later lenition series.
 
-**2. `c > tɕ / _i`**
+**2. `t͡s > tɕ / _i`**
 
-The `c` created before `/i/` acquires a palatalized affricate realization.
+The `/t͡s/` created before `/i/` acquires a palatalized affricate realization.
 
 **3. `tɕ > ɕ / _i`**
 
