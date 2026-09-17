@@ -62,7 +62,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Finite verbs require person agreement
 - Stem grades: `-a-` NONFINITE, `-e-` LINKING/ATTRIBUTIVE, `-u-` REALIS, `-i-` IRREALIS
 - Direction: `i-` toward, `a-` away, `Ø` neutral; direction is verbal rather than nominal
-- Object markers: `Ø` local, `n-` nonlocal, `s-` reflexive, `r-` reciprocal
+- Object slot: `n-` local, `Ø` nonlocal, `s-` reflexive, `r-` reciprocal; LOCAL/NLOC is distinct from nominal LOC (`-te`)
 - AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative; `-te-` remains ANALYZED/unresolved
 - Agreement: `-k-` 1, `-t-` 2, `-p-` 3; person-only
 - Discourse: `-h-` exclamative, `-y-` interrogative
@@ -72,6 +72,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Dedicated verbal applicatives eliminated
 - COM `-me` has a core association/accompaniment reading with contextual instrumental, benefactive, and malefactive extensions; `i-` marks the benefactive directional construction and `a-` marks the malefactive directional construction
 - Restricted GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
+- LOC + verbal direction has two distinct constructions: ALL (`O-te i-VERB`) and DAT-like (`O-te i-(LOCAL/NLOC)-VERB`); NLOC DAT-like is zero-marked and therefore segmentally identical to ALL
 - Converbs are nominalization + case; same-subject/switch-reference unresolved
 - Participles `-ri`, `-na`, `-mu` remain ANALYZED
 - `-nu` nominalizer; `keranu`, `keranka`, `kerande` working family
@@ -96,6 +97,8 @@ The previous regression also identified forms whose outcomes under an unconditio
 
 The historical development `ada > da` remains to be placed in the chronology.
 
+The object-status reversal makes existing zero-marked object constructions formally NLOC by default. Their intended discourse status should be checked before introducing overt `n-` into examples. The surface phonology does not yet specify how `n-` combines with consonant-initial verb forms without creating an onset cluster.
+
 ## Open questions
 
 ### Phonology
@@ -119,6 +122,7 @@ The historical development `ada > da` remains to be placed in the chronology.
 - Q-011: independent adposition system, if any
 - Q-013: information-structure mechanisms
 - Q-017: productivity limits of GEN + spatial case stacking
+- Q-020: surface realization of the local object marker `n-` before consonant-initial verbs, given the current `(C)V(C)` surface syllable structure
 
 ## Immediate testing priorities
 
