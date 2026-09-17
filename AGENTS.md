@@ -11,7 +11,6 @@ The repository is deliberately small and flat. **Do not add, remove, rename, mov
 | `PHONOLOGY.md` | Primary source for synchronic phonology, prosody, and historical sound change. |
 | `MORPHOLOGY.md` | Primary source for synchronic morphology and morphological constructions. |
 | `SYNTAX.md` | Primary source for synchronic syntax and syntactic constructions. |
-| `GRAMMAR.md` | Navigation index for the three domain-specific grammar sources; not a duplicate grammar. |
 | `LEXICON.tsv` | Primary lexical/root inventory, including status and historical relationships. |
 | `EXAMPLES.tsv` | Provenance-bearing examples, tests, and analyses. Examples support testing but do not override grammar. |
 | `STATUS.md` | Current development state, open questions, recovered decisions, and testing priorities. Not itself grammar. |
@@ -26,7 +25,6 @@ For grammar questions, use the domain source corresponding to the subject:
 1. `PHONOLOGY.md` — phonology, prosody, and historical sound change.
 2. `MORPHOLOGY.md` — morphology.
 3. `SYNTAX.md` — syntax.
-4. `GRAMMAR.md` — navigation only.
 
 `LEXICON.tsv`, `EXAMPLES.tsv`, and `STATUS.md` retain their respective evidence/status roles.
 
@@ -149,7 +147,7 @@ Generate or inspect representative examples. For larger mechanical systems, test
 
 ### 4. Update authoritative sources
 
-Update the applicable domain source first, then affected `LEXICON.tsv` or `EXAMPLES.tsv` data, then `STATUS.md` when a decision changes development state. Keep `GRAMMAR.md` as an index unless its navigation needs updating.
+Update the applicable domain source first, then affected `LEXICON.tsv` or `EXAMPLES.tsv` data, then `STATUS.md` when a decision changes development state.
 
 ### 5. Check downstream effects
 
