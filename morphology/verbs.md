@@ -25,6 +25,13 @@ These grades are independent of directional `i-` and `a-`.
 - `a-` = away / sourceward
 - `Ø` = neutral
 
+Directional morphology is **verbal**. It is not a prefix attached to the noun. In directional case constructions, the noun carries the relevant spatial case suffix and the finite verb carries `i-` or `a-`. With SOV order, the construction is therefore:
+
+- **ALL:** `S O-LOC i-VERB`
+- **ABL:** `S O-LOC a-VERB`
+
+More generally, spatial case polarity is realized compositionally across the noun and verb: `S O-SPATIAL-CASE i-/a-VERB`.
+
 If a vowel is required for NONLOCAL without direction, `e-` may serve as support.
 
 ## Object slot
@@ -38,7 +45,7 @@ There is exactly one object slot:
 | `s-` | REFLEXIVE |
 | `r-` | RECIPROCAL |
 
-Example: `Sete kerande akerukka` contains a null LOCAL object in the verb; `kerande` is the overt object.
+The overt object remains a separate noun phrase in SOV clauses; the object marker is part of the verb. Directional case suffixes likewise remain on the overt noun phrase.
 
 ## AUX / DERIV roots
 
@@ -49,11 +56,10 @@ The following light roots are available in the AUX/DERIV slot and take the linki
 | `*r` | go | `-re-` | progressive |
 | `*k` | hold | `-ke-` | continuative |
 | `*m` | live / dwell / stay | `-me-` | habitual |
-| `*w` | grow | `-we-` | ? |
 | `*s` | cut / remove | `-se-` | inchoative |
 | `*t` | transfer | `-te-` | opposite of inchoative |
 
-AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur. The semantic value of `-we-` remains unresolved.
+AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur.
 
 ## Agreement
 
@@ -71,7 +77,6 @@ There is no verbal plural agreement. Plural number is distinguished through pron
 |---|---|
 | `-h-` | EXCLAMATIVE |
 | `-y-` | INTERROGATIVE |
-| `-w-` | ? |
 
 `-h-` is historically associated with `*h` 'say/blow'; it is not a realis marker.
 
