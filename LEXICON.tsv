@@ -32,4 +32,4 @@ L-0030	sen	/sen/	pronoun	PRON	2PL	—	stable	plural pronoun
 L-0031	en	/en/	pronoun	PRON	3PL	—	stable	plural pronoun
 L-0032	kerande	/kerande/	lexeme	N	container	?	experimental	established in test clauses; historical/derivational analysis not normalized
 L-0033	sare	/sare/	lexeme	ADJ	large	?	experimental	established in attributive test; derivational analysis not normalized
-L-0034	keru	/keru/	lexeme	V	carry	?	experimental	Appears in established complex form kerurekin; lexical history not normalized
+L-0034	kera	/kera/	lexeme	V	carry	L-0016;L-0019	stable	derived nonfinite stem from ka + ra; REALIS form is keru; established in complex form kerurekin
