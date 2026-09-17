@@ -8,7 +8,7 @@ Status: canonical where stated; unresolved conditions remain in `STATUS.md`.
 
 Surface syllable structure is `(C)V(C)`. Productive onset clusters are not established. Complex sequences may arise historically or morphologically and subsequently reduce or fuse.
 
-For historical conditioning, **OPEN** means a syllable of shape `CV`; **CLOSED** means a syllable of shape `CVC`. The distinction is structural and is not specific to any one coda consonant. Historical syllabification determines which syllable is relevant in a given sound-law environment.
+For historical conditioning, **OPEN** means a target consonant belongs to a syllable of shape `CV`; **CLOSED** means it belongs to a syllable of shape `CVC`. The distinction is structural and is not specific to any one coda consonant. Historical syllabification determines which syllable is relevant at the stage where a sound law applies.
 
 Representative historical shapes for testing include `*pVpV`, `*pVpVn`, `*pVnpV`, and `*pVnpVn`; these are diagnostic configurations rather than separate lexical rules.
 
@@ -30,7 +30,7 @@ Thus the four vowel-transition classes are:
 | `B_F` | back → front |
 | `B_B` | back → back |
 
-The four classes participate in historical conditioning. `F_F` and `B_B` are the stronger lenition class in the current working model; `F_B` and `B_F` are intermediate. This does not by itself determine the outcome of every consonant in every syllable configuration.
+The four classes are evaluated independently. No universal lenition hierarchy is assumed; the concrete outcomes are given by the historical matrix in G-PHON-04/G-PHON-05.
 
 ### G-PHON-03 — Consonants
 
@@ -38,22 +38,33 @@ The synchronic consonant inventory is `/p t k c m n s h w j r/`. In the establis
 
 Conditioned phonetic realization is not exhaustively specified. Historical-source distinctions may survive as phonetic traces without creating additional synchronic phonemes.
 
-### G-PHON-04 — Historical conditioning framework
+### G-PHON-04 — Historical conditioning
 
 The principal historical weakening system is conditioned by the interaction of:
 
-1. syllable structure (**OPEN / CLOSED**), and
+1. the syllable containing the target consonant (**OPEN / CLOSED**), and
 2. the neighboring-vowel transition class (**F_F / F_B / B_F / B_B**).
 
-These factors jointly shape the outcome. Closure is not a universal on/off switch for lenition; its effect is environment-specific.
+OPEN syllables permit a later stage of weakening than CLOSED syllables in the environments where the consonant has more than one weakening stage. The four vowel-transition classes are otherwise independent rather than ordered on a single scale.
 
-The four vowel-transition classes provide a relative lenition hierarchy, while individual consonants follow consonant-specific trajectories after a common initial weakening process.
+The matrix below is the concrete current system. It applies to historical singleton `p, t, k` targets that reach the general weakening stage. A dash for `B_F` with `t/k` means that pre-/i/ palatalization has priority and the consonant does not enter the ordinary lenition path.
 
-The exact outcome of every OPEN/CLOSED × F_F/F_B/B_F/B_B cell remains under corpus testing and should not be filled in by analogy alone.
+| Syllable | Target | `F_F` | `F_B` | `B_F` | `B_B` |
+|---|---|---|---|---|---|
+| OPEN | `p` | `h` | `h` | `Ø` | `Ø` |
+| OPEN | `t` | `d` | `d` | PAL | `d` |
+| OPEN | `k` | `g` | `k` | PAL | `Ø` |
+| CLOSED | `p` | `p` | `p` | `h` | `h` |
+| CLOSED | `t` | `t` | `t` | PAL | `d` |
+| CLOSED | `k` | `k` | `k` | PAL | `g` |
+
+`PAL` is the independently ordered `t, k > c > tɕ > ɕ / _i` pathway in G-PHON-05.
+
+This matrix is a concrete design completion of cells that are not all directly instantiated by the small current corpus. Attested developments constrain the cells containing `reruka`, `reruta`, `rerupa`, `rupi`, `mente`, and `menta`; unsupported cells are completed by extending the same consonant-specific stage logic without introducing a new lenition series.
 
 ### G-PHON-05 — Historical sound laws and relative chronology
 
-`>` denotes a successive historical stage. Later rules apply to the outputs of earlier rules unless an environment explicitly limits the rule. The relative chronology below is a project design decision grounded in established forms and the current regression set; it is not claimed to be recovered historical fact where earlier project history did not specify the ordering.
+`>` denotes a successive historical stage. Later rules apply to the outputs of earlier rules unless an environment explicitly limits the rule.
 
 #### Stage I — Pre-/i/ palatalization
 
@@ -103,7 +114,7 @@ Thus `ku-t-y-i > kutyi > kutye` retains `-i` as NONPAST historically.
 
 #### Stage III — Conditioned consonant weakening
 
-The three voiceless stops participate in one historically related weakening process, but their first-stage outcomes are consonant-specific:
+The three voiceless stops participate in one historically related weakening process, but their first-stage outcomes are consonant-specific. The stage reached is determined by the matrix in G-PHON-04.
 
 **8. `p > h`**
 
@@ -111,13 +122,15 @@ The three voiceless stops participate in one historically related weakening proc
 
 **10. `k > g`**
 
-These first-stage outcomes are then subject to further consonant-specific weakening where the OPEN/CLOSED and vowel-transition environment permits it:
+The later stages are consonant-specific:
 
-**11. `g > ɣ`**
+**11. `h > Ø`** in the matrix cells where `p` reaches complete loss.
 
-**12. `h, ɣ > Ø`**
+**12. `g > ɣ`** in the cells where `k` reaches the fricative stage.
 
-The historical path therefore includes:
+**13. `ɣ > Ø`** in the cells where `k` reaches complete loss.
+
+The historical paths therefore remain:
 
 ```text
 *p > h > Ø
@@ -125,11 +138,9 @@ The historical path therefore includes:
 *k > g > ɣ > Ø
 ```
 
-but the actual endpoint is conditioned by the relevant syllable structure and vowel transition. The old blanket rule `C > ... / V_V` is superseded by this conditioned framework.
+but each consonant reaches only the endpoint permitted by its OPEN/CLOSED × vowel-transition cell.
 
-Word-initial `*p > h` is historically continuous with the broader `p` weakening but has a distinct environment from the intervocalic development. Historical `*p` remains distinct from historical `*h` despite overlap in their modern reflexes.
-
-Established regression paths remain compatible with the framework when their environments permit the indicated endpoint, for example:
+Established regression paths are now fully represented by the matrix:
 
 ```text
 reruka > reruga > reruɣa > rerua
@@ -141,11 +152,46 @@ mente > mende
 menta > menda
 ```
 
-#### Stage IV — Later lexicalized cluster reduction
+`neku`, `seku`, and `keka` also remain unchanged in the general matrix because their `k` occurs in the weak `F_B` environment. Other stable forms whose apparent modern intervocalic stop does not fit the historical exposure of the weakening layer (`apa`, `ita`, and `teta`) are retained as later lexical/structural formations rather than being created as exceptions to the sound law.
 
-**13. `*ndt > nt:`**
+Word-initial `*p > h` is historically continuous with the broader `p` weakening but has a distinct environment from intervocalic weakening. Historical `*p` remains distinct from historical `*h`.
 
-This is an independent later development attested in lexicalized material. It is not part of the general weakening series and is not established as a productive synchronic rule.
+#### Stage IV — Generalized sonorant-cluster reduction
+
+Complex sonorant clusters undergo late simplification with compensatory lengthening of the surviving consonant. The currently established cluster-specific outcomes are:
+
+**14. `nm > m:`**
+
+**15. `nr > n:`**
+
+Thus:
+
+```text
+menme > mem:e
+menra > men:a
+```
+
+These are members of a generalized historical cluster-reduction process, not lexical exceptions.
+
+#### Stage V — Later initial-vowel reduction
+
+**16. `a > Ø / #_dV`**
+
+An initial unstressed `a` is lost before `d`.
+
+Thus the established lexical chain is:
+
+```text
+*ata > ada > da
+```
+
+The later vowel-loss rule is independent of the main stop-weakening matrix and follows `t > d`.
+
+#### Stage VI — Later lexicalized cluster reduction
+
+**17. `*ndt > nt:`**
+
+This is an independent later development attested in lexicalized material. It is not part of either the general weakening series or the generalized sonorant-cluster reduction, and is not established as a productive synchronic rule.
 
 ### G-PHON-06 — Historical/synchronic scope
 
@@ -153,7 +199,7 @@ Historical sound laws explain how modern forms arose; they are not automatically
 
 Lexicalization, morphological reanalysis, analogical restoration, later grammaticalization, and other restructuring may preserve or obscure historical outputs. A modern form should not be changed merely because an older rule could have applied to an earlier stage.
 
-In particular, established modern forms are not to be rewritten until the conditioned sound-law matrix has been tested against the complete corpus.
+The current modern lexical and example forms are retained while their historical derivations are tested against the concrete matrix.
 
 ### G-PHON-07 — Orthography and IPA
 
@@ -165,17 +211,29 @@ When IPA is typed on a standard keyboard, `:` may be used as the plain-text subs
 
 ### G-PHON-08 — Prosody
 
-Stress is predictable rather than contrastive and weight-sensitive: stress falls on the rightmost heavy syllable; if there is no heavy syllable, stress falls on the penultimate syllable. The exact definition of heavy remains unresolved, including the interaction of vowel length and coda weight. IPA stress marks should not be added to lexical entries until the relevant stress assignment is established.
+Stress is predictable rather than contrastive and is mora-weighted:
 
-## Historical regression notes
+- `CV` = light (1 mora)
+- `CVV` = heavy (2 morae)
+- `CVC` = heavy (2 morae)
+- `CVVC` = superheavy but treated as heavy for stress assignment
 
-The current conditioned system was prompted by corpus regression against the existing `LEXICON.tsv` and `EXAMPLES.tsv`. The regression showed that a blanket `V_V` rule would overgenerate changes in established forms and that the historical environment must instead track syllable openness/closure and the F/B transition class.
+Stress falls on the rightmost heavy syllable. If a word contains no heavy syllable, stress falls on the penultimate syllable.
 
-The following issues remain diagnostic rather than silently repaired:
+### Historical regression notes
 
-- possible historical erosion of forms such as `apa`, `ita`, `teta`, and `keka` under a blanket rule;
-- apparent interactions with grammatical forms such as `neku`, `seku`, and `kerande-te`;
-- the separate later reduction `ada > da`, which still requires placement in the chronology;
-- exact modern IPA consequences of the pre-/i/ `c > tɕ > ɕ` pathway in established forms.
+The conditioned system replaces the previous blanket `V_V` analysis. The regression evidence now supports the concrete OPEN/CLOSED × F/F transition matrix rather than an unconditional intervocalic rule.
 
-These are to be resolved from the conditioned historical environment rather than by weakening or exception-listing the core sound changes.
+The principal established diagnostic cells are:
+
+- `reruka` — OPEN `B_B`, `k > g > ɣ > Ø`
+- `reruta` — OPEN `B_B`, `t > d`
+- `rerupa` — OPEN `B_B`, `p > h > Ø`
+- `rupi` / `ku-p-i` — OPEN `B_F`, `p > h > Ø`
+- `mente` — OPEN `F_F`, `t > d`
+- `menta` — OPEN `F_B`, `t > d`
+- `neku`, `seku`, `keka` — weak `F_B` `k` environment, no general weakening
+- `menme`, `menra` — generalized late sonorant-cluster reduction
+- `ada` — later initial-vowel reduction after `t > d`
+
+The stable forms `apa`, `ita`, and `teta` are assigned to a later lexical/structural stratum rather than being used to create exceptions to the productive historical matrix. This preserves the concrete sound laws while allowing historically opaque formations to remain stable.
