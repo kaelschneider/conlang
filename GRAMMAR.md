@@ -463,7 +463,6 @@ Some grammatical functions arise compositionally from existing cases and other e
 |---|---|---|
 | PART | GEN (`-se`) | partitive use in divisible/mass contexts |
 | ESSIVE | LOC (`-te`) + stative predicate | being at/in a state or location |
-| DAT | LOC (`-te`) + `i-` + object slot | recipient / goal participant |
 | TRANSLATIVE | ESSIVE + `i-ra` | become / come into a state |
 
 The dative-like construction is distinct from the allative: allative describes movement to a location, while the dative-like construction introduces a recipient/goal participant through the verbal object slot. Its LOCAL/NLOC distinction is defined in G-MORPH-12.
