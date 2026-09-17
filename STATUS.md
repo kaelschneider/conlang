@@ -7,7 +7,7 @@
 
 ## Summary
 
-Core morphological and phonological systems are established. Syntax is partially specified but requires decisions on alignment, argument structure, and information structure. Lexicon has ~10 historical roots; needs systematic expansion to 50–100+ stems. Ready to enter testing/example-generation phase.
+Core morphological and phonological systems are established. Phase 1 is resolved: `-we-` and `-w-` have been dropped, while detailed allophony and prosody remain deliberately emergent and test-driven. Syntax is partially specified but requires decisions on alignment, argument structure, and information structure. Lexicon has ~10 historical roots; needs systematic expansion to 50–100+ stems. Ready to enter testing/example-generation phase.
 
 ---
 
@@ -17,21 +17,21 @@ Core morphological and phonological systems are established. Syntax is partially
 - ✓ Core inventory (consonants, vowels)
 - ✓ General syllable structure: (C)V(C)
 - ✓ Established sound changes (word-initial *p > h, etc.)
-- ? Precise allophonic realizations
-- ? Syllable weight / stress rules
+- ✓ Allophony policy: environment-driven, historically motivated where relevant, and canonized only after repeated evidence
+- ✓ Stress policy: weight-sensitive, potentially morphologically conditioned, and canonized only after repeated evidence
 
 ### Morphology: Verbs
 - ✓ Finite verb template: (DIR) (OBJ) STEM (AUX) AGENT (DISCOURSE) TENSE (ASPECT)
 - ✓ Direction system: i- (toward), a- (away), Ø (neutral)
 - ✓ Stem grades: -a- (nonfinite), -e- (linking), -u- (realis), -i- (irrealis)
 - ✓ Object marking: Ø (local), n- (nonlocal), s- (reflexive), r- (reciprocal)
-- ✓ AUX/DERIV roots: -re-, -ke-, -me-, -se-, -te- (and -we-?)
+- ✓ AUX/DERIV roots: -re-, -ke-, -me-, -se-, -te-
 - ✓ Agreement: 1SG -k-, 2SG -t-, 3SG -p-; no plural agreement
 - ✓ Discourse/mood: -h- (exclamative), -y- (interrogative)
 - ✓ Tense: -i- (nonpast), -a- (past)
 - ✓ Aspect: Ø (imperfective), -n (perfect)
-- ? Semantic value of -we-
-- ? Value of -w- in discourse slot
+- ✓ `-we-` dropped from the AUX/DERIV inventory
+- ✓ `-w-` dropped from the discourse slot
 
 ### Morphology: Nouns
 - ✓ 8 base cases (ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM)
@@ -83,7 +83,6 @@ Core morphological and phonological systems are established. Syntax is partially
 
 | Blocker | Impact | Phase |
 |---------|--------|-------|
-| Finalize -we- semantic value | Completes AUX inventory | 2 |
 | Specify animacy/person alignment conditions | Validates syntax | 3 |
 | Determine genitive position | Constrains phrase order | 3 |
 | Define negative morphology | Completes verb template | 3 |

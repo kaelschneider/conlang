@@ -6,25 +6,31 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 
 ---
 
-## Phase 1: Phonology Completion (MOSTLY DONE)
+## Phase 1: Phonology Completion (COMPLETE)
 
-**Goal:** Finalize synchronic phonology with tested allophony and prosody.
+**Goal:** Establish the phonological framework while deliberately allowing detailed phonetic rules to emerge through testing.
 
-**Status:** Core inventory and syllable structure established. Edges remain.
+**Decisions:**
+- `-we-` is dropped from the AUX/DERIV inventory.
+- `-w-` is dropped from the discourse slot.
+- Allophony is environment-driven, with historical sound changes used as evidence where relevant; detailed rules are canonized only after repeated examples support them.
+- Stress is weight-sensitive and may be morphologically conditioned; exact rules remain emergent and test-driven.
+
+**Status:** Complete at the framework/decision level. Detailed allophony, stress, and phonotactic edge cases will be resolved opportunistically during example generation rather than in advance.
 
 **Tasks:**
-- [ ] Confirm stress/syllable weight rules (or declare stress-neutral)
-- [ ] Specify complete allophonic realizations (e.g., does /k/ [c] before /i/?)
+- [x] Resolve `-we-` → dropped
+- [x] Resolve `-w-` → dropped
+- [x] Establish allophony policy
+- [x] Establish stress/syllable-weight policy
 - [ ] Test phonotactics against lexicon (are any roots unpronounceable?)
-- [ ] Document any postlexical phonological rules (e.g., sandhi at morpheme boundaries)
+- [ ] Document postlexical phonological rules if repeated testing establishes them
 
 **Deliverables:**
-- `canon/phonology.md` — complete with allophony section
-- `canon/allophony.md` (optional) — if rules are complex
+- `canon/phonology.md` — update with current allophony/prosody policy
+- `canon/allophony.md` (optional) — only if rules become complex enough to warrant a separate file
 
-**Blocking:** Nothing. Can work in parallel with morphology.
-
-**Estimated effort:** 4–8 hours (mostly already done).
+**Blocking:** Nothing. Detailed phonology can develop alongside morphology and syntax.
 
 ---
 
@@ -32,23 +38,21 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 
 ### Phase 2a: Verb Template Completion
 
-**Goal:** Resolve remaining gaps in verb morphology.
+**Goal:** Validate the existing verb template through paradigms and examples rather than add unresolved morphology speculatively.
 
-**Status:** Template structure complete; two slot values unresolved.
+**Status:** Template structure established; `-we-` and `-w-` have been removed.
 
 **Tasks:**
-- [ ] Semantically define `-we-` (AUX/DERIV slot) — consult open questions
-- [ ] Semantically define `-w-` (discourse slot)
-- [ ] Generate full conjugation paradigms for 3 test roots across all tense/aspect/mood combinations
-- [ ] Identify any missing slots or redundancies
+- [ ] Generate full conjugation paradigms for 3 test roots across tense/aspect/agreement combinations
+- [ ] Identify any missing slots or redundancies through example generation
 
 **Deliverables:**
-- `morphology/verbs.md` — update with resolved -we- and -w- values
+- `morphology/verbs.md` — reflect the resolved inventory
 - `morphology/verb-paradigms.md` — 3 full paradigms (test roots)
 
-**Blocking:** Nothing blocks this directly, but needed for Phase 3 testing.
+**Blocking:** Phase 3 testing.
 
-**Estimated effort:** 6–10 hours.
+**Estimated effort:** 4–8 hours.
 
 ---
 
@@ -78,7 +82,7 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 
 **Blocking:** Phase 3 (syntax decisions).
 
-**Estimated effort:** 10–16 hours total.
+**Estimated effort:** 7–14 hours total.
 
 ---
 
@@ -100,7 +104,7 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 - `syntax/word-order.md` — finalized with tested examples
 - `syntax/noun-phrase.md` — genitive, modifier, determiner position
 
-**Estimated effort:** 8–12 hours (needs example testing).
+**Estimated effort:** 8–12 hours.
 
 ---
 
@@ -152,7 +156,7 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 
 ### Phase 3 Subtotal
 
-**Blocking:** Phase 4 (lexicon expansion) + Phase 5 (example generation).
+**Blocking:** Phase 4 (example generation) and later lexicon expansion.
 
 **Estimated effort:** 20–34 hours total.
 
@@ -165,17 +169,18 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 **Status:** No examples yet.
 
 **Tasks:**
-- [ ] **Transitive + intransitive** — Basic SVO / ergative patterns (10 examples)
+- [ ] **Transitive + intransitive** — Basic word-order and argument-structure patterns (10 examples)
 - [ ] **Directional interactions** — Test i-/a-/Ø across different case slots (5 examples)
 - [ ] **COM polysemy** — Test animate vs. inanimate COM with different verbs (5 examples)
-- [ ] **TAM combinations** — Test tense/aspect/mood + agreement stacking (10 examples)
+- [ ] **TAM combinations** — Test tense/aspect/agreement stacking (10 examples)
 - [ ] **Clause combining** — Simple coordination, subordination, if present (10 examples)
+- [ ] **Phonological testing** — Record recurring allophonic, stress, and weight patterns and promote only repeated rules to canon
 
 **Deliverables:**
 - `examples/test-clauses.md` — 20–50 interlinear examples (Leipzig glossing)
-- Flag any morphological gaps or unexpected interactions
+- Flag any morphological or phonological gaps and unexpected interactions
 
-**Blocking:** Phase 5 (comprehensive lexicon).
+**Blocking:** Lexicon expansion and running text.
 
 **Estimated effort:** 8–12 hours.
 
@@ -215,10 +220,11 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 **Status:** No running text yet.
 
 **Tasks:**
-- [ ] **Write 50–200 word passage** in simple narrative or descriptive style (e.g., "A person goes to the forest and finds something.")
+- [ ] **Write 50–200 word passage** in simple narrative or descriptive style
 - [ ] **Stress-test** — Use a variety of case forms, directionals, verb grades, and agreement patterns
 - [ ] **Flag issues** — Any morphosyntactic combinations that feel unnatural or collide?
 - [ ] **Revise canon** as needed based on testing
+- [ ] **Revisit phonology** where running text exposes recurring allophonic/stress patterns
 
 **Deliverables:**
 - `examples/narrative-sample.md` — running text + English translation + grammatical notes
@@ -240,7 +246,7 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 - [ ] **Typological summary** — 1-page overview of language type, unique features, design goals
 - [ ] **Grammar sketch** — 5–10 page overview of phonology/morphology/syntax for quick reference
 - [ ] **Lexicon export** — Consolidated root + derived stem list with glosses
-- [ ] **Sound-law documentation** (optional) — If pursuing diachronic depth, write up Neogrammarian correspondences
+- [ ] **Sound-law documentation** (optional) — If pursuing diachronic depth, write up sound correspondences
 - [ ] **Clean up open-questions.md** — Promote resolved items to canon, archive obsolete questions
 
 **Deliverables:**
@@ -256,15 +262,15 @@ Each phase has hard dependencies on prior phases. Phases are listed in optimal o
 ## Dependency Graph
 
 ```
-Phase 1 (Phonology)
+Phase 1 (Phonology) — COMPLETE
     ↓
-Phase 2a (Verbs) + Phase 2b (Nouns) ← must complete
+Phase 2a (Verbs) + Phase 2b (Nouns)
     ↓
 Phase 3a (Argument structure)
     ├→ Phase 3b (Verb-argument)
     ├→ Phase 3c (Clause combining)
     ├→ Phase 4 (Example testing) [can start in parallel with 3b]
-    ├→ Phase 5 (Lexicon) [can start in parallel with 3c]
+    ├→ Phase 5 (Lexicon) [can start in parallel with 3]
     └→ Phase 6 (Narrative) [depends on 4, 5]
         ↓
         Phase 7 (Polish)
@@ -276,31 +282,31 @@ Phase 3a (Argument structure)
 
 | Phase | Effort | Status | Critical path? |
 |-------|--------|--------|---|
-| 1 | 4–8h | ~90% | No (blocking nothing) |
-| 2 | 10–16h | ~70% | **Yes** (blocks 3) |
+| 1 | — | **Complete** | No |
+| 2 | 7–14h | ~70% | **Yes** (blocks 3) |
 | 3 | 20–34h | ~40% | **Yes** (blocks 4–6) |
 | 4 | 8–12h | 0% | **Yes** (validates 3) |
 | 5 | 8–10h | 0% | No (parallelizable) |
 | 6 | 6–10h | 0% | No (polish, not blocking) |
 | 7 | 8–12h | 0% | No (final pass) |
-| **TOTAL** | **64–102h** | ~38% | |
+| **TOTAL REMAINING** | **57–92h** | | |
 
 **Critical path:** Phase 2 → Phase 3 → Phase 4 → Phase 6 → Phase 7  
-**Parallel tracks:** Phase 1 (any time), Phase 5 (with 3), Phase 6 (with 4–5)
-
-**Realistic timeline (working ~2–4 hours/week):** 4–6 months to completion.
+**Parallel tracks:** Phase 5 can proceed with Phases 3–4; detailed Phase 1 phonology can be refined opportunistically throughout testing.
 
 ---
 
 ## Immediate Next Steps
 
-1. **This week:** Phase 2a + 2b (resolve -we-, generate paradigms)
-2. **Next week:** Phase 3a (genitive, word order, animacy rules via examples)
-3. **Week 3:** Phase 4 (20 test clauses) + Phase 5 (derive 50 stems)
-4. **Week 4+:** Phases 3b–3d + Phase 6
+1. **Next:** Generate 5–10 example sentences using established roots and morphology.
+2. Use those examples to test **alignment, genitive position, word order, and negation**.
+3. Generate complete verb and noun paradigms while testing phonological interactions.
+4. Expand the lexicon to 30–50 stems once productive patterns are clear.
+5. Write a first 1–2 paragraph text to stress-test the resulting grammar.
+6. Promote only repeatedly supported phonological and syntactic patterns to canonical status.
 
 **Commits:**
-- After Phase 2: promote verbs/nouns to canon
+- After Phase 2: promote validated verbs/nouns to canon
 - After Phase 4: move validated syntactic rules from development → canon
 - After Phase 6: finalize all canon files
 - Phase 7: documentation pass
