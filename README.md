@@ -85,7 +85,7 @@ Example:
 
 ```text
 ne-ku   k-u-i
-1SG-ERG HOLD-REAL-NONPST
+1SG-ERG HOLD-REAL-NONPAST
 ```
 
 Do not add punctuation merely to make a gloss compact. Use a standard Leipzig abbreviation when one exists rather than inventing a new abbreviation. Project-specific abbreviations may be defined in `GRAMMAR.md` when the language requires them.
@@ -118,25 +118,38 @@ id\tform\tipa\ttype\tpos\tgloss\tderived_from\tstatus\tnotes
 - `experimental` = used for testing but not canonical
 - `deprecated` = retained historically but no longer current
 
-`derived_from` contains `L-*` IDs separated by `;`, `—` for no parent, or `?` when unknown.
+`derived_from` contains immediate parent `L-*` IDs separated by `;`, `—` for no parent, or `?` when unknown. Multiple parent IDs are allowed.
 
-### Lexemes vs. forms
+### Lexemes, derivation, and inflection
 
 Do not create a lexicon entry for a predictable inflected form.
 
-First attempt to derive a surface form from an existing lexeme plus established morphology.
-
-For example:
+**Inflection** produces a grammatical form of an existing lexeme and normally does not receive its own `L-*` entry. Example:
 
 ```text
-ka      citation/nonfinite lexeme
+ka      lexeme / citation-nonfinite form
 ku      k-u       HOLD-REAL
-kui     k-u-i     HOLD-REAL-NONPST
+kui     k-u-i     HOLD-REAL-NONPAST
 ```
 
 Here `ka` is the lexeme; `ku` and `kui` are grammatical forms, not separate lexemes.
 
-Create a separate `L-*` entry only when evidence indicates that a form is lexicalized, irregular, historically independent, or otherwise not predictably derived.
+**Lexical derivation** produces a new lexical item. When the resulting item functions as an independent lexeme, it receives its own `L-*` entry and its immediate lexical parent(s) are recorded in `derived_from`.
+
+For example:
+
+```text
+ka + ra  →  kera
+L-0016   +  L-0019 → L-0034
+```
+
+`kera` is a derived nonfinite stem/lexeme; its predictable REALIS form `keru` does not receive a separate lexicon entry.
+
+`derived_from` records immediate lexical parents, not every ancestor. Separate parent IDs are separated by `;`.
+
+Create a separate `L-*` entry only when evidence indicates lexicalization, productive or established lexical derivation, irregularity, historical independence, or another reason the form functions as an independent lexical item rather than a predictable grammatical form.
+
+If the derivational relationship itself is uncertain, preserve the form and mark the analysis `?` rather than inventing one.
 
 ## Grammar and morphological analysis
 
