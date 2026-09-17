@@ -70,7 +70,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Aspect: `Ø` imperfective, `-n` perfect
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
 - Dedicated verbal applicatives eliminated
-- COM `-me` has a core association/accompaniment reading with contextual instrumental and directional extensions; `i-/a-` remains verbal
+- COM `-me` has a core association/accompaniment reading with contextual instrumental, benefactive, and malefactive extensions; `i-` marks the benefactive directional construction and `a-` marks the malefactive directional construction
 - Restricted GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
 - Converbs are nominalization + case; same-subject/switch-reference unresolved
 - Participles `-ri`, `-na`, `-mu` remain ANALYZED
@@ -108,7 +108,7 @@ The historical development `ada > da` remains to be placed in the chronology.
 - Q-005: exact converb-to-case mappings and subject-continuity/switch-reference behavior
 - Q-006: whether `-ri`, `-na`, `-mu` can be promoted from ANALYZED to RULE
 - Q-007: whether any additional productive derivational morphology exists
-- Q-019: exact discourse conditions favoring COM accompaniment, benefactive, and instrumental readings in directional constructions
+- Q-019: exact discourse conditions favoring COM accompaniment, instrumental, benefactive, and malefactive readings
 - Q-014: exact phonological fusion and independent exponent boundaries in `kera + -nu + -te > kerande`
 - Q-016: exact semantic value and productivity of AUX/DERIV `-te-`
 
