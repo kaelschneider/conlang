@@ -8,9 +8,9 @@ The repository is deliberately small and flat. **Do not add, remove, rename, mov
 
 | File | Authority / purpose |
 | --- | --- |
-| `PHONOLOGY.md` | Primary source for synchronic phonology, prosody, and historical sound change. |
-| `MORPHOLOGY.md` | Primary source for synchronic morphology and morphological constructions. |
-| `SYNTAX.md` | Primary source for synchronic syntax and syntactic constructions. |
+| `GRAMMAR.md` | Primary source for synchronic phonology, prosody, and historical sound change. |
+| `GRAMMAR.md` | Primary source for synchronic morphology and morphological constructions. |
+| `GRAMMAR.md` | Primary source for synchronic syntax and syntactic constructions. |
 | `LEXICON.tsv` | Primary lexical/root inventory, including status and historical relationships. |
 | `EXAMPLES.tsv` | Provenance-bearing examples, tests, and analyses. Examples support testing but do not override grammar. |
 | `STATUS.md` | Current development state, open questions, recovered decisions, and testing priorities. Not itself grammar. |
@@ -20,11 +20,7 @@ The repository is deliberately small and flat. **Do not add, remove, rename, mov
 
 ### Grammar authority
 
-For grammar questions, use the domain source corresponding to the subject:
-
-1. `PHONOLOGY.md` — phonology, prosody, and historical sound change.
-2. `MORPHOLOGY.md` — morphology.
-3. `SYNTAX.md` — syntax.
+`GRAMMAR.md` is the single authoritative source for established phonology, morphology, syntax, prosody, and historical sound change. Use the relevant `G-PHON`, `G-MORPH`, or `G-SYN` section.
 
 `LEXICON.tsv`, `EXAMPLES.tsv`, and `STATUS.md` retain their respective evidence/status roles.
 
