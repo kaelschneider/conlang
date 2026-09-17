@@ -4,10 +4,18 @@
   "title": "Conlang Lexicon and Examples JSON Schema",
   "description": "Draft 7 schema for row-oriented JSON representations of LEXICON.tsv and EXAMPLES.tsv. Convert TSV rows to JSON objects before validation. This schema is designed to be TEI-compatible. Properties map to standard TEI elements; conversion via XSLT or programmatic transformation should be straightforward. The schema enforces field presence, controlled vocabularies, identifier syntax, IPA character inventory, and conditional lexical derivation rules. Cross-row uniqueness, cross-file references, grammar-section existence, segmentation/gloss token-count alignment, predictable-inflection detection, semantic restrictions, and ID immutability across repository history require validation code outside JSON Schema draft 7.",
   "oneOf": [
-    { "$ref": "#/definitions/LEXICON" },
-    { "$ref": "#/definitions/EXAMPLES" },
-    { "$ref": "#/definitions/LEXICON_ARRAY" },
-    { "$ref": "#/definitions/EXAMPLES_ARRAY" }
+    {
+      "$ref": "#/definitions/LEXICON"
+    },
+    {
+      "$ref": "#/definitions/EXAMPLES"
+    },
+    {
+      "$ref": "#/definitions/LEXICON_ARRAY"
+    },
+    {
+      "$ref": "#/definitions/EXAMPLES_ARRAY"
+    }
   ],
   "teiMapping": {
     "description": "Documentation-only mapping from JSON/TSV properties to TEI P5 dictionary and text structures. This metadata does not affect JSON Schema validation.",
@@ -101,8 +109,12 @@
     "IPA": {
       "type": "string",
       "oneOf": [
-        { "const": "?" },
-        { "pattern": "^/?[aeiuptkcmnshwjr:ː]+/?$" }
+        {
+          "const": "?"
+        },
+        {
+          "pattern": "^/?[aeiuptkcmnshwjr:ː]+/?$"
+        }
       ],
       "description": "Phonemic transcription using only the established segment inventory /a e i u p t k c m n s h w j r/ plus length marks : or ː. Optional slash delimiters are accepted. '?' is reserved for intentionally unresolved examples/data."
     },
@@ -112,21 +124,59 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/ID" },
+        "id": {
+          "$ref": "#/definitions/ID"
+        },
         "form": {
           "type": "string",
           "minLength": 1,
           "description": "Orthographic form in established project orthography. This should represent a lexical form, not a merely predictable inflected form."
         },
-        "ipa": { "$ref": "#/definitions/IPA" },
+        "ipa": {
+          "$ref": "#/definitions/IPA"
+        },
         "type": {
           "type": "string",
-          "enum": ["root", "lexeme", "pronoun", "derived", "compound", "lexicalized", "reconstructed"],
+          "enum": [
+            "root",
+            "lexeme",
+            "pronoun",
+            "derived",
+            "compound",
+            "lexicalized",
+            "reconstructed"
+          ],
           "description": "Lexical classification. 'lexeme' and 'pronoun' are retained because they occur in the current repository; compound supports multiple lexical parents when appropriate."
         },
         "pos": {
           "type": "string",
-          "enum": ["n", "v", "adj", "adv", "adp", "cconj", "sconj", "pron", "det", "num", "intj", "part", "N", "V", "ADJ", "ADV", "ADP", "CCONJ", "SCONJ", "PRON", "DET", "NUM", "INTJ", "PART", "—"],
+          "enum": [
+            "n",
+            "v",
+            "adj",
+            "adv",
+            "adp",
+            "cconj",
+            "sconj",
+            "pron",
+            "det",
+            "num",
+            "intj",
+            "part",
+            "N",
+            "V",
+            "ADJ",
+            "ADV",
+            "ADP",
+            "CCONJ",
+            "SCONJ",
+            "PRON",
+            "DET",
+            "NUM",
+            "INTJ",
+            "PART",
+            "—"
+          ],
           "description": "Part-of-speech tag. Lowercase values are preferred; existing uppercase values and — are accepted for compatibility with the current repository."
         },
         "gloss": {
@@ -137,15 +187,28 @@
         "derived_from": {
           "type": "string",
           "oneOf": [
-            { "const": "—" },
-            { "const": "?" },
-            { "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?:;[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)*$" }
+            {
+              "const": "—"
+            },
+            {
+              "const": "?"
+            },
+            {
+              "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?:;[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)*$"
+            }
           ],
           "description": "Immediate lexical parent. Use — when no parent applies, ? when unresolved, or one or more lexical IDs separated by semicolons for compounds."
         },
         "status": {
           "type": "string",
-          "enum": ["established", "stable", "analyzed", "experimental", "unresolved", "deprecated"],
+          "enum": [
+            "established",
+            "stable",
+            "analyzed",
+            "experimental",
+            "unresolved",
+            "deprecated"
+          ],
           "description": "Current development status. 'stable' is retained as a legacy repository value; 'established' is the preferred canonical term."
         },
         "notes": {
@@ -153,30 +216,65 @@
           "description": "Free-text annotations, including provenance, historical information, irregularities, or reasons for unresolved/deprecated analyses."
         }
       },
-      "required": ["id", "form", "ipa", "type", "pos", "gloss", "status"],
+      "required": [
+        "id",
+        "form",
+        "ipa",
+        "type",
+        "pos",
+        "gloss",
+        "status"
+      ],
       "allOf": [
         {
           "if": {
-            "properties": { "type": { "const": "root" } },
-            "required": ["type"]
+            "properties": {
+              "type": {
+                "const": "root"
+              }
+            },
+            "required": [
+              "type"
+            ]
           },
           "then": {
-            "required": ["derived_from"],
-            "properties": { "derived_from": { "const": "—" } }
+            "required": [
+              "derived_from"
+            ],
+            "properties": {
+              "derived_from": {
+                "const": "—"
+              }
+            }
           }
         },
         {
           "if": {
-            "properties": { "type": { "enum": ["derived", "lexicalized"] } },
-            "required": ["type"]
+            "properties": {
+              "type": {
+                "enum": [
+                  "derived",
+                  "lexicalized"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
           },
           "then": {
-            "required": ["derived_from"],
+            "required": [
+              "derived_from"
+            ],
             "properties": {
               "derived_from": {
                 "oneOf": [
-                  { "const": "?" },
-                  { "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$" }
+                  {
+                    "const": "?"
+                  },
+                  {
+                    "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$"
+                  }
                 ]
               }
             }
@@ -184,12 +282,24 @@
         },
         {
           "if": {
-            "properties": { "status": { "const": "deprecated" } },
-            "required": ["status"]
+            "properties": {
+              "status": {
+                "const": "deprecated"
+              }
+            },
+            "required": [
+              "status"
+            ]
           },
           "then": {
-            "required": ["notes"],
-            "properties": { "notes": { "minLength": 1 } }
+            "required": [
+              "notes"
+            ],
+            "properties": {
+              "notes": {
+                "minLength": 1
+              }
+            }
           }
         }
       ],
@@ -201,14 +311,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/definitions/ID" },
+        "id": {
+          "$ref": "#/definitions/ID"
+        },
         "text": {
           "type": "string",
           "minLength": 1,
           "description": "Example sentence or utterance in established orthography. '?' is permitted as an explicit unresolved placeholder."
         },
         "ipa": {
-          "$ref": "#/definitions/IPA",
+          "$ref": "#/definitions/EXAMPLE_IPA",
           "description": "Phonemic transcription of the whole example. Word boundaries are represented by spaces; '?' is reserved for intentionally unresolved examples."
         },
         "translation": {
@@ -219,38 +331,60 @@
         "segmentation": {
           "type": "string",
           "oneOf": [
-            { "const": "?" },
-            { "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$" }
+            {
+              "const": "?"
+            },
+            {
+              "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$"
+            }
           ],
           "description": "Morpheme-by-morpheme segmentation: hyphens within words, spaces between words. '?' is permitted as an explicit unresolved placeholder."
         },
         "gloss": {
           "type": "string",
           "oneOf": [
-            { "const": "?" },
-            { "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$" }
+            {
+              "const": "?"
+            },
+            {
+              "pattern": "^[^\\s-]+(?:-[^\\s-]+)*(?: +[^\\s-]+(?:-[^\\s-]+)*)*$"
+            }
           ],
           "description": "Leipzig-style grammatical gloss aligned with segmentation. '?' is permitted as an explicit unresolved placeholder."
         },
         "grammar_refs": {
           "type": "string",
           "oneOf": [
-            { "const": "?" },
-            { "pattern": "^[^;\\r\\n]+(?:;[ \\t]*[^;\\r\\n]+)*$" }
+            {
+              "const": "?"
+            },
+            {
+              "pattern": "^[^;\\r\\n]+(?:;[ \\t]*[^;\\r\\n]+)*$"
+            }
           ],
           "description": "Optional semicolon-separated references to documented sections in GRAMMAR.md; validation code must verify resolution."
         },
         "entry_refs": {
           "type": "string",
           "oneOf": [
-            { "const": "?" },
-            { "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?:;[ \\t]*[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)*$" }
+            {
+              "const": "?"
+            },
+            {
+              "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*(?:;[ \\t]*[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)*$"
+            }
           ],
           "description": "Optional semicolon-separated lexical IDs; validation code must verify each ID exists in LEXICON.tsv."
         },
         "status": {
           "type": "string",
-          "enum": ["established", "stable", "analyzed", "experimental", "unresolved"],
+          "enum": [
+            "established",
+            "stable",
+            "analyzed",
+            "experimental",
+            "unresolved"
+          ],
           "description": "Current development status. 'stable' is retained as a legacy repository value; 'established' is preferred."
         },
         "notes": {
@@ -258,22 +392,46 @@
           "description": "Optional provenance, ambiguity, testing, or analysis notes."
         }
       },
-      "required": ["id", "text", "ipa", "translation", "segmentation", "gloss", "status"],
+      "required": [
+        "id",
+        "text",
+        "ipa",
+        "translation",
+        "segmentation",
+        "gloss",
+        "status"
+      ],
       "$comment": "JSON Schema cannot compare segmentation/gloss token counts, verify reference existence, or determine whether an experimental example supports an established rule. Validation code must enforce those cross-field and cross-file conditions."
     },
     "LEXICON_ARRAY": {
       "title": "LEXICON.tsv file as an array",
       "description": "Array schema for a complete parsed LEXICON.tsv file. Each item is one lexical row.",
       "type": "array",
-      "items": { "$ref": "#/definitions/LEXICON" },
+      "items": {
+        "$ref": "#/definitions/LEXICON"
+      },
       "$comment": "Draft 7 cannot directly enforce uniqueness of id across array objects; the validation script must reject duplicates and preserve ID immutability."
     },
     "EXAMPLES_ARRAY": {
       "title": "EXAMPLES.tsv file as an array",
       "description": "Array schema for a complete parsed EXAMPLES.tsv file. Each item is one example row.",
       "type": "array",
-      "items": { "$ref": "#/definitions/EXAMPLES" },
+      "items": {
+        "$ref": "#/definitions/EXAMPLES"
+      },
       "$comment": "The validation script must perform duplicate-ID, cross-file reference, grammar-reference, and alignment checks."
+    },
+    "EXAMPLE_IPA": {
+      "type": "string",
+      "oneOf": [
+        {
+          "const": "?"
+        },
+        {
+          "pattern": "^/?[aeiuptkcmnshwjr:ː]+(?: +[aeiuptkcmnshwjr:ː]+)*/?$"
+        }
+      ],
+      "description": "Phonemic transcription of a whole example using the established segment inventory. Word boundaries are represented by single or multiple spaces; optional slash delimiters may enclose the whole transcription. '?' is reserved for intentionally unresolved examples."
     }
   }
 }
