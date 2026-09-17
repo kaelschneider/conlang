@@ -1,14 +1,14 @@
 id	form	ipa	type	pos	gloss	derived_from	status	notes
-L-0001	p	/p/	root	—	break / bite	—	stable	historical root; modern evidence apa
-L-0002	t	/t/	root	—	transfer	—	stable	historical root; modern evidence ita, da, teta
-L-0003	k	/k/	root	—	hold	—	stable	root underlying modern ka and inflected ku/kui
-L-0004	v	/w/	root	—	grow	—	stable	orthographic v represents /w/; modern va 'grow'
-L-0005	r	/r/	root	—	go	—	stable	modern ra 'go'; rera 'turn'
-L-0006	j	/j/	root	—	see / know	—	stable	modern ya 'see/know'
-L-0007	h	/h/	root	—	say / blow	—	stable	modern ha 'say/blow'; source of exclamative -h-
-L-0008	s	/s/	root	—	cut / remove	—	stable	modern sa 'cut/remove'
-L-0009	m	/m/	root	—	live / dwell / stay	—	stable	modern ma 'live/dwell/stay'
-L-0010	n	/n/	root	—	get / find	—	stable	modern na 'get/find'; nena 'receive/acquire'
+L-0001	p	/ˈp/	root	—	break / bite	—	stable	historical root; modern evidence apa
+L-0002	t	/ˈt/	root	—	transfer	—	stable	historical root; modern evidence ita, da, teta
+L-0003	k	/ˈk/	root	—	hold	—	stable	root underlying modern ka and inflected ku/kui
+L-0004	v	/ˈw/	root	—	grow	—	stable	orthographic v represents /w/; modern va 'grow'
+L-0005	r	/ˈr/	root	—	go	—	stable	modern ra 'go'; rera 'turn'
+L-0006	j	/ˈj/	root	—	see / know	—	stable	modern ya 'see/know'
+L-0007	h	/ˈh/	root	—	say / blow	—	stable	modern ha 'say/blow'; source of exclamative -h-
+L-0008	s	/ˈs/	root	—	cut / remove	—	stable	modern sa 'cut/remove'
+L-0009	m	/ˈm/	root	—	live / dwell / stay	—	stable	modern ma 'live/dwell/stay'
+L-0010	n	/ˈn/	root	—	get / find	—	stable	modern na 'get/find'; nena 'receive/acquire'
 L-0011	apa	/ˈapa/	lexeme	V	eat	L-0001	stable	historical development a-pa > apa
 L-0012	ita	/ˈita/	lexeme	V	give	L-0002	stable	historical development from *t
 L-0013	ada	/ˈada/	lexeme	V	take	L-0002	stable	historical development ata > ada > da
