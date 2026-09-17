@@ -2,7 +2,9 @@
 
 ## Finite template
 
-`(DIRECTION) (OBJECT) STEM (AUX/DERIV) (APPLICATIVE) AGENT (DISCOURSE) TENSE (ASPECT)`
+`(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
+
+There is no dedicated verbal applicative slot: instrumental and benefactive meanings are expressed through the nominal case system.
 
 ## Stem grades
 
@@ -44,18 +46,14 @@ The following light roots are available in the AUX/DERIV slot and take the linki
 
 | Root | Basic lexical meaning | AUX form | Semantic value |
 |---|---|---|---|
-| `*r` | go | `-re-` | ? |
-| `*k` | hold | `-ke-` | ? |
-| `*m` | live / dwell / stay | `-me-` | ? |
+| `*r` | go | `-re-` | progressive |
+| `*k` | hold | `-ke-` | continuative |
+| `*m` | live / dwell / stay | `-me-` | habitual |
 | `*w` | grow | `-we-` | ? |
-| `*s` | cut / remove | `-se-` | ? |
-| `*t` | transfer | `-te-` | ? |
+| `*s` | cut / remove | `-se-` | inchoative |
+| `*t` | transfer | `-te-` | opposite of inchoative |
 
-AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur.
-
-## Applicatives
-
-Current working inventory: `-sen-` instrumental applicative and `-mer-` benefactive applicative. Their exact relationship to the nominal case system is under active reconciliation with `morphology/cases.md`.
+AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur. The semantic value of `-we-` remains unresolved.
 
 ## Agreement
 
