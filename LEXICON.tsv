@@ -1,11 +1,11 @@
 id	form	type	pos	gloss	derived_from	status	notes
 L-0001	p	root	—	break / bite	—	stable	historical root; modern evidence apa
 L-0002	t	root	—	transfer	—	stable	historical root; modern evidence ita, da, teta
-L-0003	k	root	—	hold	—	stable	modern ka 'hold'; keka 'keep'
+L-0003	k	root	—	hold	—	stable	modern evidence ka; some existing examples use ku and this discrepancy is flagged in STATUS.md
 L-0004	w	root	—	grow	—	stable	modern wa 'grow'
 L-0005	r	root	—	go	—	stable	modern ra 'go'; rera 'turn'
 L-0006	j	root	—	see / know	—	stable	modern ya 'see/know'
-L-0007	h	root	—	say / blow	—	stable	modern ha 'say/blow'; historical source of exclamative -h-
+L-0007	h	root	—	say / blow	—	stable	modern ha 'say/blow'; source of exclamative -h-
 L-0008	s	root	—	cut / remove	—	stable	modern sa 'cut/remove'
 L-0009	m	root	—	live / dwell / stay	—	stable	modern ma 'live/dwell/stay'
 L-0010	n	root	—	get / find	—	stable	modern na 'get/find'; nena 'receive/acquire'
@@ -25,6 +25,11 @@ L-0023	sa	lexeme	V	cut / remove	L-0008	stable	modern basic stem
 L-0024	ma	lexeme	V	live / dwell / stay	L-0009	stable	modern basic stem
 L-0025	na	lexeme	V	get / find	L-0010	stable	modern basic stem
 L-0026	nena	lexeme	V	receive / acquire	L-0010	stable	derived from *n
-L-0027	men	pronoun	PRON	1PL	—	stable	plural pronoun
-L-0028	sen	pronoun	PRON	2PL	—	stable	plural pronoun
-L-0029	en	pronoun	PRON	3PL	—	stable	plural pronoun
+L-0027	ne	pronoun	PRON	1SG	—	stable	established through finite clauses
+L-0028	se	pronoun	PRON	2SG	—	stable	established through finite clauses
+L-0029	men	pronoun	PRON	1PL	—	stable	plural pronoun
+L-0030	sen	pronoun	PRON	2PL	—	stable	plural pronoun
+L-0031	en	pronoun	PRON	3PL	—	stable	plural pronoun
+L-0032	kerande	lexeme	N	container	?	experimental	established in test clauses; historical/derivational analysis not normalized
+L-0033	sare	lexeme	ADJ	large	?	experimental	established in attributive test; derivational analysis not normalized
+L-0034	keru	lexeme	V	carry	?	experimental	Appears in established complex form kerurekin; lexical history not normalized
