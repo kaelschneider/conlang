@@ -4,25 +4,27 @@ This file contains unresolved decisions. Items here are not canonical unless exp
 
 ## Phonology
 
-1. What exact conditioning produces the merger of `ti` and `ki` into `c`?
-2. What conditioning determines when sequences such as `/ndt/` produce gemination versus simplification?
-3. What is the repair for prohibited `-wu`?
-4. What is the complete synchronic consonant inventory?
-5. What is the stress/prosody system?
+1. What specific conditioned/allophonic realizations belong to the synchronic consonant inventory?
+2. What is the precise definition of syllable weight for stress, especially the interaction of long vowels and codas?
+3. How are the remaining historical developments such as `menme` and `menra` conditioned?
 
 ## Morphology
 
-6. Reconcile the current verbal applicative analysis (`-sen-`, `-mer-`) with the current case analysis, which presently treats instrumental and benefactive meanings as emerging from COM polysemy.
-7. Determine the exact semantic values of the six AUX/DERIV roots.
-8. Determine the value of `-w-` in the post-agent discourse slot.
-9. Finalize the exact converb and participle morphology.
-10. Finalize nominalization inventory and historical derivations such as `kerande`.
+4. Determine the exact semantic value of `-we-` in the AUX/DERIV system.
+5. Determine the value of `-w-` in the post-agent discourse slot.
+6. Specify the set of nominalizers and the case combinations that derive the different converb functions.
+7. Specify the dedicated participial forms that supplement the existing `-a/-e/-u/-i` stem grades.
+8. Finalize nominalization inventory and historical derivations such as `kerande`.
 
 ## Syntax
 
-11. Establish the precise active/stative vs. ergative/absolutive alignment conditions.
-12. Finalize genitive position, negation, relative clauses, and clause-combining syntax.
+9. Finalize the exact animacy/person conditioning within the mixed Split-S alignment system.
+10. Determine genitive position.
+11. Specify the exact negative morphology and its position within the verbal template.
+12. Determine adposition type, if any, beyond the case system.
+13. Determine converb switch-reference / subject-continuity behavior.
+14. Determine information-structure mechanisms.
 
 ## Documentation
 
-13. Build a machine-readable root and sound-law inventory after the canonical inventories stabilize.
+15. Build a machine-readable root and sound-law inventory after the canonical inventories stabilize.
