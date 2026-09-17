@@ -130,3 +130,23 @@ The historical development `ada > da` remains to be placed in the chronology.
 5. Update affected examples only after the conditioned historical system is explicit.
 6. Test the nominalizer + case structure underlying `kerande`.
 7. Continue syntax testing after the grammar split.
+
+## Lexical derivation generation decisions — 2026-09-17
+
+The lexical-generation strategy was parameterized through the 20-question morphology/lexicon design pass. The resulting model is documented in `MORPHOLOGY.md` as ANALYZED methodology rather than promoted as additional synchronic grammar.
+
+Key decisions:
+
+- Root shapes: C 15%, VC 25%, CVC 60%; CVCC is derived only from CVC + C.
+- Roots are category-neutral by default, with weak category biases and weak root-shape/category correlations.
+- Semantic families are deliberately seeded alongside independently generated roots.
+- Approximately 55% of roots remain morphologically simple; family size has a long tail associated with frequency and semantic centrality.
+- Derivation is balanced between category change and semantic extension; verb → noun is favored.
+- CVC + C → CVCC is primarily verbal/eventive, but may develop secondary lexicalized functions.
+- The productive derivational core is approximately 4–5 mechanisms, with mixed formal mechanisms and limited two-layer composition.
+- Limited noun ↔ verb conversion is permitted.
+- Potential derivatives are candidates rather than automatic lexical entries; lexicalization is selected through staged phonological, morphological, semantic, frequency, and collision filters.
+- The working added-consonant prior for CVCC is t:4, k:4, n:3, p:2, m:2, s:2, r:2.
+- The LLM is used as semantic curator/critic, not as the primary phonological word-form generator.
+
+These decisions do not promote `-ri`, `-na`, `-mu`, `-te-`, or any other currently ANALYZED/UNRESOLVED morphology to RULE status. Existing lexical entries are not retroactively reclassified from this generation model alone.
