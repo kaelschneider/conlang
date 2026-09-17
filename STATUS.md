@@ -2,13 +2,13 @@
 
 **Last updated:** 2026-09-17  
 **Phase:** Morphology established; syntax testing underway  
-**Repository structure:** Split grammar sources; minimal flat structure
+**Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
 
-- `PHONOLOGY.md` — canonical phonology, prosody, and historical sound change
-- `MORPHOLOGY.md` — canonical morphology
-- `SYNTAX.md` — canonical syntax
+- `GRAMMAR.md` — canonical phonology, prosody, and historical sound change
+- `GRAMMAR.md` — canonical morphology
+- `GRAMMAR.md` — canonical syntax
 - `LEXICON.tsv` — canonical lexical/root inventory
 - `EXAMPLES.tsv` — example and test corpus
 - `SCHEMA.json` — structural validation schema
@@ -29,15 +29,14 @@
 
 The exact OPEN/CLOSED × F_F/F_B/B_F/B_B outcomes remain to be determined from corpus testing. Conventional historical sound-law notation should be used when individual conditioned rules are promoted; the matrix is a testing/analysis framework rather than a required final notation.
 
-## Grammar split — 2026-09-17
+## Grammar consolidation — 2026-09-17
 
-The former consolidated `GRAMMAR.md` has been split into:
+The grammar sources have been consolidated into `GRAMMAR.md`:
 
-- `PHONOLOGY.md` — synchronic phonology plus consolidated historical sound change
-- `MORPHOLOGY.md` — morphology
-- `SYNTAX.md` — syntax
+- `GRAMMAR.md` — phonology, morphology, syntax, prosody, and historical sound change
 
 Existing `G-PHON`, `G-MORPH`, and `G-SYN` section IDs are retained so existing `EXAMPLES.tsv` references remain stable.
+
 
 ## Repository structure rule
 
@@ -92,7 +91,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 
 ## Known inconsistencies / cleanup needed
 
-The conditioned historical system is now documented in `PHONOLOGY.md`, but the exact environment-by-environment outcomes have not yet been assigned. Existing lexical and example forms must not be rewritten until those conditions are resolved.
+The conditioned historical system is now documented in `GRAMMAR.md`, but the exact environment-by-environment outcomes have not yet been assigned. Existing lexical and example forms must not be rewritten until those conditions are resolved.
 
 The previous regression also identified forms whose outcomes under an unconditional `V_V` rule were problematic (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms). These remain diagnostic evidence for the conditioned system rather than being declared exceptions.
 
@@ -133,7 +132,7 @@ The historical development `ada > da` remains to be placed in the chronology.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
-The lexical-generation strategy was parameterized through the 20-question morphology/lexicon design pass. The resulting model is documented in `MORPHOLOGY.md` as ANALYZED methodology rather than promoted as additional synchronic grammar.
+The lexical-generation strategy was parameterized through the 20-question morphology/lexicon design pass. The resulting model is documented in `GRAMMAR.md` as ANALYZED methodology rather than promoted as additional synchronic grammar.
 
 Key decisions:
 
