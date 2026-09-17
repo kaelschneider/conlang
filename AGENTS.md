@@ -8,9 +8,7 @@ The repository is deliberately small and flat. **Do not add, remove, rename, mov
 
 | File | Authority / purpose |
 | --- | --- |
-| `GRAMMAR.md` | Primary source for synchronic phonology, prosody, and historical sound change. |
-| `GRAMMAR.md` | Primary source for synchronic morphology and morphological constructions. |
-| `GRAMMAR.md` | Primary source for synchronic syntax and syntactic constructions. |
+| `GRAMMAR.md` | Primary source for synchronic phonology, morphology, syntax, prosody, and historical sound change. |
 | `LEXICON.tsv` | Primary lexical/root inventory, including status and historical relationships. |
 | `EXAMPLES.tsv` | Provenance-bearing examples, tests, and analyses. Examples support testing but do not override grammar. |
 | `STATUS.md` | Current development state, open questions, recovered decisions, and testing priorities. Not itself grammar. |
