@@ -2,7 +2,7 @@
 
 ## Status
 
-**ESTABLISHED where stated; unresolved items are marked ?**
+**ESTABLISHED where stated; TENTATIVE where marked; unresolved items remain ?.**
 
 ## Syllable structure
 
@@ -12,11 +12,30 @@ Surface onset clusters are not an ordinary productive feature. Complex sequences
 
 ## Vowels
 
-`a e i o u` — inventory status: ? for any elements not yet explicitly confirmed in the current canon.
+`a e i o u` — **TENTATIVE synchronic inventory**. The current corpus and morphological system provide no evidence requiring additional vowel phonemes.
+
+Long vowels are written `aa ee ii uu`.
 
 ## Consonants
 
-The complete synchronic inventory is not yet formally recorded here. Confirmed historical/modern material includes `t k m n s h w j r`; historical `*p` has a modern word-initial reflex `h`.
+### TENTATIVE synchronic inventory
+
+| | Labial | Coronal | Dorsal | Glottal / laryngeal |
+|---|---|---|---|---|
+| Stops / affricate | — | `t c` | `k` | — |
+| Nasals | `m` | `n` | — | — |
+| Fricatives | `w` | `s` `j` | — | `h` |
+| Rhotic | — | `r` | — | — |
+
+This gives the provisional phonemic inventory:
+
+`/t k c m n s h w j r/`
+
+The evidence for `c` is its established emergence from `ti`, `ki`, and `tc`, together with the orthographic convention `ts = c`. Its independent phonemic status is **TENTATIVE** rather than fully established.
+
+`d` occurs in established surface forms such as `ada`, `menda`, and `mende`, but the current record does not establish whether /d/ is an independent phoneme, a conditioned realization, or a historical residue. It is therefore excluded from the provisional phoneme inventory pending evidence.
+
+Historical `*p` is distinct from historical `*h`; word-initial `*p > h` means both historical sources can yield modern `h` without requiring modern /p/.
 
 ## Confirmed sound changes / developments
 
