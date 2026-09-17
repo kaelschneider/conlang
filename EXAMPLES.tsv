@@ -1,0 +1,11 @@
+id	text	translation	segmentation	gloss	grammar_refs	entry_refs	status	notes
+E-0001	Neku kerande kui.	I hold the container.	ne-ku kerande ku-i	1SG-ERG container ABS hold.REAL-NONPAST	G-SYN-01;G-MORPH-04;G-MORPH-11;G-MORPH-03;G-MORPH-09	?;L-0016	stable	Existing test clause; lexical entry for kerande remains to be normalized.
+E-0002	Seku kerande kutye?	Do you hold the container?	se-ku kerande ku-t-y-e	2SG-ERG container ABS hold-2SG-INTERROG-LINK	G-SYN-01;G-SYN-06;G-MORPH-03;G-MORPH-07;G-MORPH-08	?;L-0016	stable	Final surface form reflects repair of prohibited -yi sequence.
+E-0003	Kerande sarui.	The container is large.	kerande sar-u-i	container large-REALIS-NONPAST	G-SYN-03;G-MORPH-03;G-MORPH-09	?	stable	Existing stative test.
+E-0004	Neku kerande-te irui.	I go to/toward the container.	ne-ku kerande-te i-ru-i	1SG-ERG container-LOC toward-go.REAL-NONPAST	G-SYN-01;G-MORPH-04;G-MORPH-09;G-MORPH-11	L-0019	stable	Allative construction; directional prefix is verbal.
+E-0005	Neku kerande-te arui.	I go from/away from the container.	ne-ku kerande-te a-ru-i	1SG-ERG container-LOC away-go.REAL-NONPAST	G-SYN-01;G-MORPH-04;G-MORPH-09;G-MORPH-11	L-0019	stable	Ablative construction; directional prefix is verbal.
+E-0006	Neku seme kui.	I hold [it] with you.	ne-ku se-me ku-i	1SG-ERG 2SG-COM hold.REAL-NONPAST	G-SYN-01;G-MORPH-11;G-MORPH-13	L-0016	stable	Existing comitative test; exact object interpretation remains provisional.
+E-0007	?	?	?	?	G-MORPH-13	?	experimental	Reserved for a secure instrumental clause with an established inanimate noun.
+E-0008	Neku kerurekin.	I have been carrying [it].	ne-ku keru-re-k-i-n	1SG-ERG carry.REAL-PROG-1SG-NONPAST-PERF	G-MORPH-03;G-MORPH-06;G-MORPH-07;G-MORPH-09;G-MORPH-10	?	stable	Existing complex-form test; overt object omitted.
+E-0009	Sare kerande.	the large container	sare kerande	large.ATTR container	G-SYN-02;G-MORPH-03	?	experimental	Existing attributive test.
+E-0010	Men kerande kui.	We hold the container.	men kerande ku-i	1PL container ABS hold.REAL-NONPAST	G-SYN-01;G-SYN-05;G-MORPH-03;G-MORPH-09	L-0027;L-0016	stable	Existing plural-pronoun test; no verbal plural agreement.
