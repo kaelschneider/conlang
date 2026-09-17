@@ -160,15 +160,15 @@ Word-initial `*p > h` is historically continuous with the broader `p` weakening 
 
 #### Stage IV — Generalized sonorant-cluster reduction
 
-Homorganic sonorant clusters undergo late simplification, especially across morphological boundaries, with phonetic lengthening of the surviving sonorant. The process is historically favored at morpheme boundaries but may spread into lexicalized material.
+Sonorant clusters with strong similarity undergo late simplification, especially across morphological boundaries, with phonetic lengthening of the surviving sonorant. The process is historically favored at morpheme boundaries but may spread into lexicalized material. The attested `nm` outcome proceeds by ordinary nasal place assimilation, while `nr` proceeds by the nasal-dominant assimilation described below.
 
 The currently established outcomes are:
 
-**14. `nm > m:`**
+**14. `nm > mm > m:`**
 
 **15. `nr > nn > n:`**
 
-The `nr > nn` step is analyzed as nasal-dominant assimilation within a highly similar sonorant cluster rather than as a general rule turning `r` into `n`.
+The `nm > mm` step is ordinary nasal place assimilation; the `nr > nn` step is nasal-dominant assimilation within a highly similar sonorant cluster rather than a general rule turning `r` into `n`.
 
 Thus:
 
