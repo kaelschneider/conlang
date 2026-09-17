@@ -2,7 +2,7 @@
 
 ## Summary
 
-**8 base cases** with **3 polarity expansions on spatial cases** = **18 nominal inflectional forms**.
+**8 base cases** with **3 directional polarity constructions on spatial cases**. Directional meaning is realized compositionally at clause level: the **verb carries the directional prefix** (`i-` toward, `a-` away), while the **noun carries the spatial case suffix**. The `i-...-te` notation therefore does **not** mean a prefix attached to the noun.
 
 COM reinterprets as INST or BEN based on **animacy + polarity**. No dedicated applicative morphology.
 
@@ -27,51 +27,57 @@ COM reinterprets as INST or BEN based on **animacy + polarity**. No dedicated ap
 
 Applied to LOC, SUPER, INE, PATH, COM: each takes **i- (toward), Ø (neutral), a- (away)**.
 
+**Directional realization is compositional, not nominal prefixation:**
+
+`S O-SPATIAL-CASE i-/a-VERB`
+
+The noun keeps its ordinary spatial case suffix; the directional polarity is supplied by the finite verb. Thus, for example, ALL is **`S O-te i-VERB`**, while ABL is **`S O-te a-VERB`**.
+
 ### LOC series
 
-| Polarity | Form | Function | Meaning |
-|----------|------|----------|---------|
-| Ø | -te | LOC | at / in |
-| i- | i-...-te | ALL | to / toward |
-| a- | a-...-te | ABL | from / away |
+| Polarity | Construction | Function | Meaning |
+|----------|-------------|----------|---------|
+| Ø | `O-te` | LOC | at / in |
+| i- | `O-te i-VERB` | ALL | to / toward |
+| a- | `O-te a-VERB` | ABL | from / away |
 
 ### SUPER series
 
-| Polarity | Form | Function | Meaning |
-|----------|------|----------|---------|
-| Ø | -ta | SUPER | on / against |
-| i- | i-...-ta | SUBLATIVE | onto / up to surface |
-| a- | a-...-ta | DELATIVE | off / from surface |
+| Polarity | Construction | Function | Meaning |
+|----------|-------------|----------|---------|
+| Ø | `O-ta` | SUPER | on / against |
+| i- | `O-ta i-VERB` | SUBLATIVE | onto / up to surface |
+| a- | `O-ta a-VERB` | DELATIVE | off / from surface |
 
 ### INE series
 
-| Polarity | Form | Function | Meaning |
-|----------|------|----------|---------|
-| Ø | -ci | INE | inside / within |
-| i- | i-...-ci | ILLATIVE | into / in through |
-| a- | a-...-ci | ELATIVE | out of |
+| Polarity | Construction | Function | Meaning |
+|----------|-------------|----------|---------|
+| Ø | `O-ci` | INE | inside / within |
+| i- | `O-ci i-VERB` | ILLATIVE | into / in through |
+| a- | `O-ci a-VERB` | ELATIVE | out of |
 
 ### PATH series
 
-| Polarity | Form | Function | Meaning |
-|----------|------|----------|---------|
-| Ø | -ra | PATH | along / through |
-| i- | i-...-ra | PATH+i- | toward along / across |
-| a- | a-...-ra | PATH+a- | away along / back |
+| Polarity | Construction | Function | Meaning |
+|----------|-------------|----------|---------|
+| Ø | `O-ra` | PATH | along / through |
+| i- | `O-ra i-VERB` | PATH+i- | toward along / across |
+| a- | `O-ra a-VERB` | PATH+a- | away along / back |
 
 ### COM series: Polysemy via Animacy + Polarity
 
 | Polarity | Animate arg | Inanimate arg | Semantic gloss |
 |----------|---|---|---|
-| Ø-me | COM | INST | with / alongside (COM); with / using (INST) |
-| i-...-me | BEN | INST | toward for / on behalf of (BEN); toward via / using (INST) |
-| a-...-me | BEN | INST | away for / on behalf of (BEN); away via / using (INST) |
+| Ø | COM | INST | with / alongside (COM); with / using (INST) |
+| i- | BEN | INST | toward for / on behalf of (BEN); toward via / using (INST) |
+| a- | BEN | INST | away for / on behalf of (BEN); away via / using (INST) |
 
-**Example:**
-- *John-COM* = with John (animate → comitative)
-- *knife-COM* = with a knife (inanimate → instrumental)
-- *she-i-COM* = for her / on her behalf (animate + toward → benefactive)
-- *river-i-COM* = toward via the river (inanimate + toward → instrumental)
+**Examples:**
+- `John-me` = with John (animate → comitative)
+- `knife-me` = with a knife (inanimate → instrumental)
+- `she-me i-VERB` = for her / on her behalf (animate + toward → benefactive)
+- `river-me i-VERB` = toward via the river (inanimate + toward → instrumental)
 
 ---
 
@@ -81,7 +87,7 @@ Applied to LOC, SUPER, INE, PATH, COM: each takes **i- (toward), Ø (neutral), a
 |----------|--------|-------------|
 | PART | GEN (partitive use) | -se in divisible/mass contexts |
 | COMP | COM (comitative + locative anchoring) | -me + context |
-| DAT | LOC + i- (recipient / goal participant) | i-...-te in dative-like contexts |
+| DAT | LOC + i- (recipient / goal participant) | `O-te i-VERB` in dative-like contexts |
 | ESSIVE | LOC + stative predicate | -te in copular/state construction |
 | TRANSLATIVE | ESSIVE + i-ra | -te + i-ra "become" |
 
@@ -89,14 +95,13 @@ Applied to LOC, SUPER, INE, PATH, COM: each takes **i- (toward), Ø (neutral), a
 
 ## Economy & Restrictions
 
-**Total nominal forms:** 18
-**Productive semantic functions:** 20–25
-**Applicative morphology:** 0 (eliminated; meanings emerge from COM polysemy)
+**Base nominal case inventory:** 8 suffixes.
+**Directional spatial constructions:** 3 polarities (Ø, i-, a-) across 5 spatial cases.
+**Applicative morphology:** 0 (eliminated; meanings emerge from case constructions and COM polysemy)
 
 **Natural restrictions (no dedicated morphology needed):**
-- ABS/ERG never directionalizes
-- GEN never directionalizes
+- ABS/ERG never directionalize
+- GEN never directionalize
 - COM + inanimate consistently reads INST
 - COM + animate + i- consistently reads BEN
 - COM + animate + a- consistently reads BEN
-
