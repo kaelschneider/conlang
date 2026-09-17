@@ -68,7 +68,7 @@ Preserve existing IDs when editing.
 - Orthography, phonemic IPA, phonetic IPA, and historical reconstruction are distinct representations.
 - IPA is explicit data; never silently infer or invent IPA.
 - Phonemic IPA uses `/slashes/`; phonetic IPA uses `[brackets]`.
-- Grammatical glosses use uppercase (`ERG`, `GEN`, `REAL`, `NONPST`, `1SG`).
+- Grammatical glosses use uppercase for grammatical categories; person-only verbal agreement uses `1`, `2`, `3`.
 
 ## Leipzig Glossing Rules
 
@@ -77,15 +77,17 @@ Interlinear glosses follow the Leipzig Glossing Rules as the default analytical 
 - `-` = morpheme boundary
 - `=` = clitic boundary
 - `.` = multiple grammatical meanings expressed by one morph
-- `:` = morphophonological/grammatical fusion where appropriate
+- `:` = morphophonological/grammatical fusion in morphological glossing/segmentation
+
+In an IPA field, a keyboard `:` is the plain-text substitute for IPA `ː`, marking length/gemination.
 
 Segmentation and gloss must correspond as closely as possible one-to-one.
 
 Example:
 
 ```text
-ne-ku   k-u-i
-1SG-ERG HOLD-REAL-NONPAST
+ne-ku   k-u-k-i
+1-ERG   HOLD-REAL-1-NONPAST
 ```
 
 Do not add punctuation merely to make a gloss compact. Use a standard Leipzig abbreviation when one exists rather than inventing a new abbreviation. Project-specific abbreviations may be defined in `GRAMMAR.md` when the language requires them.
@@ -129,10 +131,10 @@ Do not create a lexicon entry for a predictable inflected form.
 ```text
 ka      lexeme / citation-nonfinite form
 ku      k-u       HOLD-REAL
-kui     k-u-i     HOLD-REAL-NONPAST
+kuci    k-u-k-i   HOLD-REAL-1-NONPAST
 ```
 
-Here `ka` is the lexeme; `ku` and `kui` are grammatical forms, not separate lexemes.
+Here `ka` is the lexeme; `ku` and `kuci` are grammatical forms, not separate lexemes.
 
 **Lexical derivation** produces a new lexical item. When the resulting item functions as an independent lexeme, it receives its own `L-*` entry and its immediate lexical parent(s) are recorded in `derived_from`.
 
@@ -159,7 +161,8 @@ When analyzing a form:
 2. Apply established morphological rules.
 3. Apply established phonological rules.
 4. Distinguish productive morphology from historical developments.
-5. Mark any unresolved step with `?` rather than inventing an explanation.
+5. Distinguish lexical stems from subsequent inflectional grades.
+6. Mark any unresolved step with `?` rather than inventing an explanation.
 
 Do not use historical reconstruction to justify a synchronic rule unless the project has explicitly established that rule as productive.
 
@@ -173,8 +176,8 @@ Exact columns:
 id\ttext\tipa\ttranslation\tsegmentation\tgloss\tgrammar_refs\tentry_refs\tstatus\tnotes
 ```
 
-`text` = orthographic sentence.  
-`ipa` = phonemic IPA of the complete sentence when established.
+`text` = orthographic example/utterance.  
+`ipa` = phonemic IPA of the complete example when established.
 
 `grammar_refs` contains `G-*` IDs.  
 `entry_refs` contains `L-*` IDs.
@@ -202,6 +205,8 @@ historical reconstruction: *j
 Do not treat orthographic symbols, IPA symbols, and reconstructed forms as interchangeable.
 
 Historical forms may receive their own transcription when relevant, but historical reconstruction must not be confused with modern synchronic IPA.
+
+When typing IPA on a standard keyboard, `:` may substitute for `ː` for length/gemination.
 
 ## Editing protocol
 
