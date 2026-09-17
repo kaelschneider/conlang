@@ -16,7 +16,7 @@
 - Vowels: `/a e i u/`; long vowels are `aa ee ii uu` when established
 - Consonants: `/p t k c m n s h w j r/` as the synchronic inventory, with `c = /ts/` and `j = /j/`
 - Surface syllable: `(C)V(C)`
-- Historical `*p > h`; historical `*p` remains distinct from `*h`
+- Historical `*p > h`; historical `*p` remains distinct from historical `*h`
 - `t, k > c` before `/i/`; `tc > c`
 - `*ndt > nt:` is attested historically/lexically, not established as a productive synchronic rule
 - `wu > u`; `yi > ye` in established developments
@@ -44,7 +44,7 @@
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
 - Spatial directional expansion: LOC→ALL/ABL, SUPER→SUBLATIVE/DELATIVE, INE→ILLATIVE/ELATIVE, PATH→directional path readings
 - COM polysemy: animate neutral COM, inanimate INST, animate + direction BEN
-- Dedicated verbal applicatives eliminated; instrumental and benefactive meanings use nominal case constructions
+- Dedicated verbal applicatives eliminated; instrumental and benefactive via nominal case
 - Constructional readings include partitive via GEN, dative-like via LOC + `i-`, essive via LOC + stative predicate, and translative via ESSIVE + `i-ra`
 - Converbs are intended through nominalizers + case endings; participial relatives combine stem grades with dedicated participial morphology; exact inventories remain unresolved
 - Established complex forms include `kerurekin`, `kui`, `kutye`, and `hukka`
@@ -69,11 +69,18 @@ The previous `keru` entry was incorrect. The canonical lexical item is `L-0034 k
 - `keru` is the predictable REALIS form of `kera` and is not a separate lexicon entry.
 - `kerurekin` is analyzed from `keru-re-k-i-n`.
 
+### Karande / be.big analysis
+
+The previous `kerande` spelling and unresolved analyses are corrected:
+
+- `L-0032 karande` is the canonical lexical noun meaning CONTAINER, derived from `kera`.
+- `L-0033 sara` is the canonical lexical verb meaning BE.BIG.
+- `sare` is the predictable LINK/attributive form of `sara`, not a separate lexicon entry.
+- The attributive construction is `sare karande` = 'large container'.
+
 ## Known inconsistencies / cleanup needed
 
-### Q-002 — `kerande`, `sare`
-
-These forms occur in the existing test corpus but their lexical/derivational analyses are not yet normalized. They are retained as experimental lexical entries.
+There are no currently known lexical-analysis inconsistencies among the existing test forms addressed above. Further derivational details for `karande` may be specified later if needed; its immediate lexical parent is established as `kera`.
 
 ## Open questions
 
@@ -101,5 +108,4 @@ These forms occur in the existing test corpus but their lexical/derivational ana
 3. Design and test negative morphology.
 4. Test reflexive and reciprocal object marking.
 5. Test all 18 nominal case/polarity forms in natural clauses.
-6. Normalize `kerande` and `sare` lexical analyses.
-7. Expand the lexicon only after productive derivational patterns are sufficiently clear.
+6. Expand the lexicon only after productive derivational patterns are sufficiently clear.
