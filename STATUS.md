@@ -2,28 +2,48 @@
 
 **Last updated:** 2026-09-17  
 **Phase:** Morphology established; syntax testing underway  
-**Repository structure:** Minimal LLM-oriented structure
+**Repository structure:** Split grammar sources; minimal flat structure
 
 ## Canonical files
 
-- `GRAMMAR.md` — current synchronic grammar and established diachronic evidence
+- `PHONOLOGY.md` — canonical phonology, prosody, and historical sound change
+- `MORPHOLOGY.md` — canonical morphology
+- `SYNTAX.md` — canonical syntax
+- `GRAMMAR.md` — navigation index only
 - `LEXICON.tsv` — canonical lexical/root inventory
 - `EXAMPLES.tsv` — example and test corpus
+- `SCHEMA.json` — structural validation schema
+- `AGENTS.md` — repository maintenance instructions
 
-## 10-question recovery audit — 2026-09-17
+## 10-question phonological recovery audit — 2026-09-17
 
-The recovery audit was used to distinguish current decisions from older analyses.
+1. **Generalized weakening:** each `>` is a successive historical stage. The designed regression forms are to be explained by general historical developments, not isolated example-specific rules.
+2. **Unified initial weakening:** historical `*p`, `*t`, and `*k` participate in one related weakening process, with consonant-specific first-stage outcomes: `p > h`, `t > d`, `k > g`.
+3. **Pre-/i/ palatalization precedes general weakening:** `t, k > c / _i`, followed by `c > tɕ / _i` and `tɕ > ɕ / _i`.
+4. **Stop + h fusion precedes general weakening:** `ph > pp`, `th > tt`, `kh > kk`.
+5. **Intervocalic loss is unified at later stages:** `h, ɣ > Ø / V_V` where the conditioned historical environment permits the endpoint.
+6. **Initial `*p > h`:** word-initial `*p > h` is historically continuous with the broader `p` weakening, but remains environmentally distinct from intervocalic weakening. Historical `*p` remains distinct from historical `*h`.
+7. **Early sequence repair:** `wu > u` and `yi > ye` precede the major weakening series.
+8. **Palatalization trace:** orthographic merger to `c` is complete, but former `*t` may retain a transitional [t] component in phonetic realization such as `/ru(t)ɕi/`; this is not a separate phoneme.
+9. **Lexicalized cluster reduction:** `*ndt > nt:` is later and independent of the general weakening series.
+10. **Conditioning model:** the outcome is shaped jointly by syllable structure and neighboring-vowel transition class. **OPEN** means `CV`; **CLOSED** means `CVC`. Vowel classes are `F = /e i/` and `B = /a u/`; `F_F`, `F_B`, `B_F`, and `B_B` identify the transition between the vowels flanking the target. `F_F` and `B_B` are the stronger lenition class in the working hierarchy; `F_B` and `B_F` are intermediate. Closure is a structural factor, not an `n`-specific rule, and its effect is environment-specific.
 
-1. **Applicatives:** dedicated verbal applicatives are eliminated. Instrumental and benefactive meanings remain nominal case constructions.
-2. **`-w-`:** productive `-w-` is dropped from the canonical discourse/mood system.
-3. **Participles:** `-ri` agentive, `-na` patientive, and `-mu` resultative are recovered as ANALYZED, not yet RULE-level morphology.
-4. **Converbs:** converbial clauses are analyzed through nominalization plus case; the case supplies the relation. Same-subject/switch-reference behavior remains unresolved.
-5. **Nominalization:** `-nu` is recovered as the nominalizer. `keranu`, `keranka`, and `kerande` are recovered as the working derivational family; exact fusion remains to be formalized.
-6. **GEN + spatial stacking:** recovered as restricted constructional morphology. GEN+LOC, GEN+SUPER, and GEN+INE are established domains, but free productivity over all cases is not established.
-7. **Sound laws:** relative chronology is recovered where supported; unresolved ordering remains explicitly `?` rather than being invented.
-8. **Pronouns:** full case evidence and plural reductions are recovered; uncertain reduced realizations remain unresolved.
-9. **Examples:** additional examples from the session are recovered as experimental unless their analysis is already secure.
-10. **Alignment/AUX:** active-stative/Split-S analysis is recovered, with exact person/animacy/volitionality conditioning unresolved. `-te-` remains an ANALYZED AUX/DERIV value rather than a settled semantic rule.
+The exact OPEN/CLOSED × F_F/F_B/B_F/B_B outcomes remain to be determined from corpus testing. Conventional historical sound-law notation should be used when individual conditioned rules are promoted; the matrix is a testing/analysis framework rather than a required final notation.
+
+## Grammar split — 2026-09-17
+
+The former consolidated `GRAMMAR.md` has been split into:
+
+- `PHONOLOGY.md` — synchronic phonology plus consolidated historical sound change
+- `MORPHOLOGY.md` — morphology
+- `SYNTAX.md` — syntax
+- `GRAMMAR.md` — navigation index
+
+Existing `G-PHON`, `G-MORPH`, and `G-SYN` section IDs are retained so existing `EXAMPLES.tsv` references remain stable.
+
+## Repository structure rule
+
+Agents must not add, remove, rename, move, split, merge, or otherwise alter repository files or directories unless the user explicitly instructs them to change the repository structure.
 
 ## Established
 
@@ -31,64 +51,62 @@ The recovery audit was used to distinguish current decisions from older analyses
 - Vowels: `/a e i u/`; long vowels are `aa ee ii uu` when established
 - Consonants: `/p t k c m n s h w j r/`; established orthography uses `c = /ts/`, `v = /w/`, and `y = /j/`
 - Surface syllable: `(C)V(C)`
+- Historical conditioning uses OPEN/CLOSED syllable structure plus F_F/F_B/B_F/B_B vowel-transition class
 - Historical `*p > h`; historical `*p` remains distinct from historical `*h`
-- Historical `p > h` before `/i/` in the relevant environment; `h > Ø` between vowels in developments such as `kuhi > kui`
-- `t, k > c` before `/i/`; `tc > c`
+- Pre-/i/ `t, k > c > tɕ > ɕ`
+- `ph > pp`, `th > tt`, `kh > kk`
+- `wu > u`; `yi > ye`
 - `*ndt > nt:` is attested historically/lexically, not established as a productive synchronic rule
-- `wu > u`; `yi > ye` in established developments
 - `ku-p-i > kupi > kuhi > kui` is established
 - `mente > mende`; `menta > menda`
-- `menme` and `menra` have unresolved conditioning and possible reduced realizations
-- Stress is weight-sensitive: rightmost heavy syllable, otherwise penultimate; exact weight definition remains open
+- `menme` and `menra` have unresolved conditioning
+- Stress is weight-sensitive; exact weight definition remains open
 
 ### Morphology
 - Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
 - Finite verbs require person agreement
 - Stem grades: `-a-` NONFINITE, `-e-` LINKING/ATTRIBUTIVE, `-u-` REALIS, `-i-` IRREALIS
-- Stem-grade vowel is final in the root/stem; grades are independent of directional `i-` and `a-`
 - Direction: `i-` toward, `a-` away, `Ø` neutral; direction is verbal rather than nominal
-- Object markers: `Ø` local, `n-` nonlocal, `s-` reflexive, `r-` reciprocal; exactly one object slot
+- Object markers: `Ø` local, `n-` nonlocal, `s-` reflexive, `r-` reciprocal
 - AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative; `-te-` remains ANALYZED/unresolved
-- `-we-` and productive `-w-` dropped from canonical system
-- Agreement: `-k-` 1, `-t-` 2, `-p-` 3; agreement is person-only and does not distinguish singular/plural
+- Agreement: `-k-` 1, `-t-` 2, `-p-` 3; person-only
 - Discourse: `-h-` exclamative, `-y-` interrogative
 - Tense: `-i-` nonpast, `-a-` past
 - Aspect: `Ø` imperfective, `-n` perfect
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
-- Directional readings are compositional constructions rather than additional nominal cases
-- COM polysemy: animate neutral COM, inanimate INST, animate + direction BEN; exact semantic boundaries remain under testing
 - Dedicated verbal applicatives eliminated
-- Constructional readings include partitive via GEN, dative-like via LOC + `i-`, essive via LOC + stative predicate, and translative via ESSIVE + `i-ra`
 - Restricted GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
-- Converbs are nominalization + case; converb relation inventory and switch-reference remain unresolved
-- Participles: `-ri` agentive, `-na` patientive, `-mu` resultative, ANALYZED
-- `-nu` nominalizer recovered; `keranu`, `keranka`, `kerande` are the working derivational family
-- `kerande` remains the canonical CONTAINER lexeme
-- Established complex forms include `kerurekin`, `kui`, `kutye`, and `hukka`
+- Converbs are nominalization + case; same-subject/switch-reference unresolved
+- Participles `-ri`, `-na`, `-mu` remain ANALYZED
+- `-nu` nominalizer; `keranu`, `keranka`, `kerande` working family
 
-### Pronouns
-- `ne` = 1SG
-- `se` = 2SG
-- `er` = 3SG
-- `men` = 1PL
-- `sen` = 2PL
-- `en` = 3PL
-- ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, `enku`
-- `mente > mende`; `menta > menda`
-- `menme` → `/menme/` or `/mem:e/` remains unresolved
-- `menra` → `/menra/` or `/men:a/` remains unresolved
-- Formal `sese` and reduced `sa/si` variants remain unresolved in distribution
+### Syntax
+- Declarative SOV
+- Attributive modifiers precede nouns
+- Stative predicate follows subject
+- Active-stative / Split-S analysis under testing
+- Established pronouns include `ne`, `se`, `er`, `men`, `sen`, `en`; ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, `enku`
+- Questions use verbal `-y-`
+- Participial relatives precede the noun; finite relative clauses follow the noun
+- Converbs and nominalized clauses are intended primary clause-combining strategy
+- Independent adposition system unresolved
+- Genitive position unresolved
 
 ## Known inconsistencies / cleanup needed
 
-The 10-question audit resolves the major case/applicative, discourse-slot, nominalization, participle, converb, case-stacking, chronology, pronoun, and alignment recovery decisions. `GRAMMAR.md` still needs to be synchronized with this audit where its older wording remains.
+The conditioned historical system is now documented in `PHONOLOGY.md`, but the exact environment-by-environment outcomes have not yet been assigned. Existing lexical and example forms must not be rewritten until those conditions are resolved.
+
+The previous regression also identified forms whose outcomes under an unconditional `V_V` rule were problematic (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms). These remain diagnostic evidence for the conditioned system rather than being declared exceptions.
+
+The historical development `ada > da` remains to be placed in the chronology.
 
 ## Open questions
 
 ### Phonology
 - Q-003: precise definition of syllable weight for stress
 - Q-004: conditioning of remaining historical developments such as `menme` and `menra`
-- Q-015: exact relative ordering/conditioning of the recovered historical sound laws where not directly established
+- Q-015: exact OPEN/CLOSED × F_F/F_B/B_F/B_B outcomes and conventional rule formulation
+- Q-018: placement and conditioning of `ada > da`
 
 ### Morphology
 - Q-005: exact converb-to-case mappings and subject-continuity/switch-reference behavior
@@ -107,13 +125,10 @@ The 10-question audit resolves the major case/applicative, discourse-slot, nomin
 
 ## Immediate testing priorities
 
-1. Generate matched Split-S clauses across person, animacy, and volitionality.
-2. Test pre- vs. post-nominal genitives.
-3. Design and test negative morphology.
-4. Test reflexive and reciprocal object marking.
-5. Test all nominal case/polarity constructions in natural clauses.
+1. Build the complete OPEN/CLOSED × F_F/F_B/B_F/B_B regression matrix from `LEXICON.tsv` and `EXAMPLES.tsv`.
+2. Determine which existing forms instantiate each environment.
+3. Infer conditioned historical endpoints without rewriting modern forms prematurely.
+4. Resolve `ada > da` placement.
+5. Update affected examples only after the conditioned historical system is explicit.
 6. Test the nominalizer + case structure underlying `kerande`.
-7. Test `-ri`, `-na`, `-mu` in matched participial relatives.
-8. Test converb case relations and subject continuity.
-9. Test the productivity limits of GEN + spatial stacking.
-10. Expand the lexicon only after productive derivational patterns are sufficiently clear.
+7. Continue syntax testing after the grammar split.
