@@ -20,12 +20,21 @@
 4. **Stop + h fusion precedes general weakening:** `ph > pp`, `th > tt`, `kh > kk`.
 5. **Intervocalic loss is unified at later stages:** `h, ɣ > Ø / V_V` where the conditioned historical environment permits the endpoint.
 6. **Initial `*p > h`:** word-initial `*p > h` is historically continuous with the broader `p` weakening, but remains environmentally distinct from intervocalic weakening. Historical `*p` remains distinct from historical `*h`.
-7. **Early sequence repair:** `wu > u` and `yi > ye` precede the major weakening series.
+7. **Early sequence repair:** `wu > u` is general; morphologically generated `yi > ye` precedes the major weakening series.
 8. **Palatalization trace:** orthographic merger to `c` is complete, but former `*t` may retain a transitional [t] component in phonetic realization such as `/ru(t)ɕi/`; this is not a separate phoneme.
 9. **Lexicalized cluster reduction:** `*ndt > nt:` is later and independent of the general weakening series.
-10. **Conditioning model:** the outcome is shaped jointly by syllable structure and neighboring-vowel transition class. **OPEN** means `CV`; **CLOSED** means `CVC`. Vowel classes are `F = /e i/` and `B = /a u/`; `F_F`, `F_B`, `B_F`, and `B_B` identify the transition between the vowels flanking the target. `F_F` and `B_B` are the stronger lenition class in the working hierarchy; `F_B` and `B_F` are intermediate. Closure is a structural factor, not an `n`-specific rule, and its effect is environment-specific.
+10. **Conditioning model:** the outcome is shaped jointly by syllable structure and neighboring-vowel transition class. **OPEN** means `CV`; **CLOSED** means `CVC`. Vowel classes are `F = /e i/` and `B = /a u/`; `F_F`, `F_B`, `B_F`, and `B_B` identify the transition between the vowels flanking the target. The four classes are independent conditioning environments; there is no universal lenition hierarchy. Closure is a structural factor, not an `n`-specific rule, and its effect is environment-specific.
 
-The exact OPEN/CLOSED × F_F/F_B/B_F/B_B outcomes remain to be determined from corpus testing. Conventional historical sound-law notation should be used when individual conditioned rules are promoted; the matrix is a testing/analysis framework rather than a required final notation.
+### Resolved design decisions — second phonology pass
+
+- Stress is **rightmost heavy, otherwise penultimate**; `CVV` and `CVC` count as heavy.
+- Late sonorant reduction targets **homorganic sonorant clusters**, is favored across morphological boundaries, and can spread into lexicalized material.
+- `nm > m:`; `nr > nn > n:` is treated as nasal-dominant assimilation within the sonorant cluster.
+- Resulting `m:`/`n:` length is phonetic/metrical rather than a new synchronic phonemic contrast.
+- `yi > ye` is a morphologically generated boundary repair; `wu > u` is a general phonological repair.
+- Historical `pp/tt/kk` are not a modern consonant-length contrast; modern surface forms conform to `(C)V(C)`.
+- `ada > da` is ordered as `*ata > ada > da`, with the vowel-loss rule applying after `t > d`.
+
 
 ## Grammar consolidation — 2026-09-17
 
@@ -54,8 +63,8 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - `*ndt > nt:` is attested historically/lexically, not established as a productive synchronic rule
 - `ku-p-i > kupi > kuhi > kui` is established
 - `mente > mende`; `menta > menda`
-- `menme` and `menra` have unresolved conditioning
-- Stress is weight-sensitive; IPA must mark primary stress with `ˈ`
+- Late homorganic sonorant reduction includes `nm > m:` and `nr > nn > n:`, with phonetic rather than phonemic length
+- Stress is rightmost-heavy otherwise penultimate; IPA must mark primary stress with `ˈ`
 
 ### Morphology
 - Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
@@ -91,9 +100,9 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 
 ## Known inconsistencies / cleanup needed
 
-The conditioned historical system is now documented in `GRAMMAR.md`, but the exact environment-by-environment outcomes have not yet been assigned. Existing lexical and example forms must not be rewritten until those conditions are resolved.
+The conditioned historical system is documented in `GRAMMAR.md`, including the resolved OPEN/CLOSED × F_F/F_B/B_F/B_B matrix. Existing lexical and example forms have been checked against the resolved stress and historical rules; no lexical/example rewrite was required by this pass.
 
-The previous regression also identified forms whose outcomes under an unconditional `V_V` rule were problematic (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms). These remain diagnostic evidence for the conditioned system rather than being declared exceptions.
+The earlier regression forms (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms) remain useful diagnostic evidence for historical strata and conditioning rather than being declared exceptions.
 
 The historical development `ada > da` remains to be placed in the chronology.
 
@@ -102,10 +111,6 @@ The object-status reversal makes existing zero-marked object constructions forma
 ## Open questions
 
 ### Phonology
-- Q-003: precise definition of syllable weight for stress
-- Q-004: conditioning of remaining historical developments such as `menme` and `menra`
-- Q-015: exact OPEN/CLOSED × F_F/F_B/B_F/B_B outcomes and conventional rule formulation
-- Q-018: placement and conditioning of `ada > da`
 
 ### Morphology
 - Q-005: exact converb-to-case mappings and subject-continuity/switch-reference behavior
@@ -125,13 +130,9 @@ The object-status reversal makes existing zero-marked object constructions forma
 
 ## Immediate testing priorities
 
-1. Build the complete OPEN/CLOSED × F_F/F_B/B_F/B_B regression matrix from `LEXICON.tsv` and `EXAMPLES.tsv`.
-2. Determine which existing forms instantiate each environment.
-3. Infer conditioned historical endpoints without rewriting modern forms prematurely.
-4. Resolve `ada > da` placement.
-5. Update affected examples only after the conditioned historical system is explicit.
-6. Test the nominalizer + case structure underlying `kerande`.
-7. Continue syntax testing after the grammar split.
+1. Stress-test the resolved historical system against `LEXICON.tsv` and `EXAMPLES.tsv`, especially the generalized sonorant reduction.
+2. Test the nominalizer + case structure underlying `kerande`.
+3. Continue syntax testing after the grammar split.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
