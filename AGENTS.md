@@ -2,12 +2,6 @@
 
 This file describes how to work on the repository. It is a maintainer/development guide, not part of the language grammar.
 
-## Purpose
-
-This repository develops a naturalistic a priori constructed language. The goal is a coherent language system rather than an English-to-word substitution list: phonology, morphology, syntax, lexical structure, historical development, and usage should constrain one another.
-
-Changes should be evaluated both synchronically and diachronically. A form that works mechanically is not automatically a lexical item, and a plausible historical explanation is not automatically a productive modern rule.
-
 ## Repository structure
 
 The repository is deliberately small and flat:
