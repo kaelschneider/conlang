@@ -1,91 +1,85 @@
-# Status Report
-**Last updated:** September 17, 2026  
-**Phase:** 3–4 (morphology complete; syntax testing underway)
+# Status
 
-## Summary
+**Last updated:** 2026-09-17  
+**Phase:** Morphology established; syntax testing underway  
+**Repository structure:** Minimal LLM-oriented structure
 
-Core morphological and phonological systems are established. Ten initial test clauses have now been generated to stress-test SOV order, case marking, agreement, questions, directional morphology, and morphological stacking. Syntax remains partially specified: Split-S conditioning, genitive position, negation, and several clause-combining mechanisms require further testing.
+## Canonical files
 
-## Established (Canonical)
+- `GRAMMAR.md` — current synchronic grammar
+- `LEXICON.tsv` — canonical lexical/root inventory
+- `EXAMPLES.tsv` — example and test corpus
+
+## Established
 
 ### Phonology
-- ✓ Core inventory (consonants, vowels)
-- ✓ General syllable structure: (C)V(C)
-- ✓ Established sound changes (word-initial *p > h, etc.)
-- ~ Allophony: environment-driven; historical sound changes may motivate rules; promote rules to canon only after repeated evidence
-- ~ Stress/prosody: weight-sensitive where relevant, potentially morphologically conditioned; promote rules after repeated testing
+- Vowels: `/a e i u/`
+- Consonants: `/p t k c m n s h w j r/`
+- Surface syllable: `(C)V(C)`
+- Word-initial `*p > h`
+- `t, k > c` before `/i/`
+- `tc > c`
+- `wu > u`
+- `yi > ye`
+- Stress is weight-sensitive: rightmost heavy syllable, otherwise penultimate
 
-### Morphology: Verbs
-- ✓ Finite verb template: (DIR) (OBJ) STEM (AUX) AGENT (DISCOURSE) TENSE (ASPECT)
-- ✓ Direction system: i- (toward), a- (away), Ø (neutral)
-- ✓ Stem grades: -a- (nonfinite), -e- (linking), -u- (realis), -i- (irrealis)
-- ✓ Object marking: Ø (local), n- (nonlocal), s- (reflexive), r- (reciprocal)
-- ✓ AUX/DERIV roots: -re-, -ke-, -me-, -se-, -te-
-- ✓ Agreement: 1SG -k-, 2SG -t-, 3SG -p-; no plural agreement
-- ✓ Discourse/mood: -h- (exclamative), -y- (interrogative)
-- ✓ Tense: -i- (nonpast), -a- (past)
-- ✓ Aspect: Ø (imperfective), -n (perfect)
-- ✓ `-we-` and productive `-w-` dropped from the canonical system
-
-### Morphology: Nouns
-- ✓ 8 base cases (ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM)
-- ✓ 3 directional expansions on spatial cases (Ø, i-, a-)
-- ✓ COM polysemy: animacy + polarity → COM/INST/BEN
-- ✓ No dedicated applicative morphology
-- ✓ 18 total inflectional forms
-
-### Lexicon
-- ✓ 10 historical monoconsonantal roots (*p, *t, *k, *w, *r, *j, *h, *s, *m, *n)
-- ✓ Sound-symbolic semantic clustering
-- ? Complete inventory of productive nominalizers / converbs
-- ? Participial forms beyond stem grades
-
-## In Progress (Not Yet Canonical)
+### Morphology
+- Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
+- Stem grades: `-a-` NONFINITE, `-e-` LINKING/ATTRIBUTIVE, `-u-` REALIS, `-i-` IRREALIS
+- Direction: `i-` toward, `a-` away, `Ø` neutral
+- Object markers: `Ø` local, `n-` nonlocal, `s-` reflexive, `r-` reciprocal
+- AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative, `-te-` opposite of inchoative
+- Agreement: `-k-` 1SG, `-t-` 2SG, `-p-` 3SG; no verbal plural agreement
+- Discourse: `-h-` exclamative, `-y-` interrogative
+- Tense: `-i-` nonpast, `-a-` past
+- Aspect: `Ø` imperfective, `-n` perfect
+- Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
+- Dedicated verbal applicatives eliminated; instrumental/benefactive meanings use nominal case constructions
 
 ### Syntax
-- ~ Basic SOV order is supported by existing examples and the first 10-clause test corpus
-- ~ Split-S / mixed alignment specifics (needs animacy/person/volitionality conditions)
-- ~ Genitive position (pre- or post-nominal?)
-- ~ Adpositions (exist? type?)
-- ~ Negative morphology (position in verb template?)
-- ~ Converb / switch-reference system
-- ~ Information structure / focus mechanisms
-- ~ Relative clause formation
-- ~ Clause combining (coordination, subordination)
+- SOV is the current canonical order.
+- Attributive modifiers precede nouns.
+- Stative predicates follow subjects.
+- Mixed Split-S alignment is established in broad terms, with exact conditioning unresolved.
+- Participial relatives precede nouns; finite relatives follow nouns.
+- Converbs and nominalized clauses are the intended primary clause-combining strategy.
 
-### Testing
-- ✓ Initial 10-clause morphosyntax corpus added at `examples/test-clauses.md`
-- ~ Need matched person/animacy/volitionality clauses for Split-S testing
-- ~ Need matched genitive-position tests
-- ~ Need negative clauses once negative morphology is designed
-- ~ Need all 18 nominal case forms tested in natural examples
-- ~ Need reflexive/reciprocal object tests
+## Known inconsistencies / cleanup needed
 
-## Not Yet Started
+### Q-001 — `ka` vs. `ku` 'hold'
 
-- Comprehensive lexicon expansion (target: 50–100+ stems from 10 roots)
-- Derivational morphology (agent nouns, abstract nouns, etc.)
-- Sound-law documentation (if pursuing diachronic depth)
-- Written text examples (running prose in the language)
-- Typological summary document
+The historical root inventory identifies `*k` with modern `ka` 'hold', while existing test clauses use `ku` as the surface hold stem (`kui`, `kutye`, `kerurekin` contains a separate `keru` 'carry'). This must be resolved rather than inferred.
 
-## Decision Points Blocking Progress
+### Q-002 — `kerande`, `sare`, `keru`
 
-| Blocker | Impact | Phase |
-|---|---|---|
-| Specify animacy/person/volitionality alignment conditions | Validates syntax | 3 |
-| Determine genitive position | Constrains phrase order | 3 |
-| Define negative morphology | Completes verb template | 3 |
-| Test morphosyntax with matched examples | Validates syntax and unlocks lexicon expansion | 4 |
+These forms occur in the existing test corpus but their lexical/derivational analyses were not present in the root inventory. They are retained as experimental lexical entries until their analyses are normalized.
 
-## Next Actions (Ordered by Dependency)
+## Open questions
 
-1. Generate matched Split-S test clauses: 1SG/2SG/3SG, animate/inanimate, intentional/non-intentional
-2. Test pre- vs. post-nominal genitives in matched pairs
-3. Design negative morphology and test its position/scope
-4. Test reflexive and reciprocal object marking
-5. Test all 18 nominal forms in actual clauses
-6. Expand lexicon to 30–50 stems
-7. Build running text → 1–2 paragraphs to stress-test morphosyntax
-8. Finalize participials and derivational patterns
-9. Document validated syntax in canon files
+### Phonology
+- Q-003: precise definition of syllable weight for stress
+- Q-004: conditioning of remaining historical developments such as `menme` and `menra`
+
+### Morphology
+- Q-005: exact nominalizer inventory and converb/case mappings
+- Q-006: dedicated participial forms
+- Q-007: whether any additional productive derivational morphology exists
+
+### Syntax
+- Q-008: exact person/animacy/volitionality conditioning of Split-S
+- Q-009: genitive position
+- Q-010: negative marker and position in the verb template
+- Q-011: independent adposition system, if any
+- Q-012: converb switch-reference / subject continuity
+- Q-013: information-structure mechanisms
+
+## Immediate testing priorities
+
+1. Resolve `ka`/`ku` hold-stem discrepancy.
+2. Generate matched Split-S clauses across person, animacy, and volitionality.
+3. Test pre- vs. post-nominal genitives.
+4. Design and test negative morphology.
+5. Test reflexive and reciprocal object marking.
+6. Test all 18 nominal case/polarity forms in natural clauses.
+7. Normalize `kerande`, `sare`, and `keru` lexical analyses.
+8. Expand the lexicon only after productive derivational patterns are sufficiently clear.
