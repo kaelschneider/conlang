@@ -113,10 +113,10 @@
           "const": "?"
         },
         {
-          "pattern": "^/?[aeiuptkcmnshwjr:ː]+/?$"
+          "pattern": "^/?[aeiuptkcdmnshwjr:ː]+/?$"
         }
       ],
-      "description": "Phonemic transcription using only the established segment inventory /a e i u p t k c m n s h w j r/ plus length marks : or ː. Optional slash delimiters are accepted. '?' is reserved for intentionally unresolved examples/data."
+      "description": "Phonemic transcription using only the established segment inventory /a e i u p t k c d m n s h w j r/ plus length marks : or ː. Optional slash delimiters are accepted. '?' is reserved for intentionally unresolved examples/data."
     },
     "LEXICON": {
       "title": "LEXICON.tsv single row",
@@ -428,10 +428,10 @@
           "const": "?"
         },
         {
-          "pattern": "^/?[aeiuptkcmnshwjr:ː]+(?: +[aeiuptkcmnshwjr:ː]+)*/?$"
+          "pattern": "^/?[aeiuptkcdmnshwjr:ː]+(?: +[aeiuptkcdmnshwjr:ː]+)*/?$"
         }
       ],
-      "description": "Phonemic transcription of a whole example using the established segment inventory. Word boundaries are represented by single or multiple spaces; optional slash delimiters may enclose the whole transcription. '?' is reserved for intentionally unresolved examples."
+      "description": "Phonemic transcription of a whole example using the established segment inventory including historical/surface /d/. Word boundaries are represented by single or multiple spaces; optional slash delimiters may enclose the whole transcription. '?' is reserved for intentionally unresolved examples."
     }
   }
 }
