@@ -14,6 +14,7 @@ The repository is deliberately small and flat:
 | `STATUS.md` | Current development state, open questions, recovered decisions, and testing priorities. Not itself grammar. |
 | `README.md` | Public overview of the language and repository. Descriptive rather than procedural. |
 | `AGENTS.md` | Development and maintenance instructions for contributors and coding/automation agents. |
+| `SCHEMA.json` | Authoritative JSON Schema for the structural representation of LEXICON.tsv and EXAMPLES.tsv used by automated validation. |
 
 Do not add new top-level source files merely for convenience. Extend existing sources unless the project's information architecture has genuinely become a bottleneck.
 
@@ -171,7 +172,7 @@ Separate directly established facts from interpretations or proposals. If eviden
 Write down:
 
 - What examples or data motivated this change?
-- Are there alternative analyses? If so, why did you choose this one?
+- Are there alternative analyses? If so, why did you choose the one you did?
 - What existing rules does this interact with?
 
 ### 3. Stress-test with examples
@@ -245,9 +246,12 @@ The desired outcome is not maximal regularity. Naturalistic irregularity is welc
 
 ## For automation and coding agents
 
+All automated validation should use `SCHEMA.json` as the authoritative specification for valid LEXICON.tsv and EXAMPLES.tsv structure. Reference the schema in any validation scripts, pre-commit hooks, or CI checks.
+
 Validation scripts should enforce:
 
 - TSV syntax and column presence (LEXICON, EXAMPLES)
+- JSON conversion of TSV rows before schema validation
 - IDs are stable and not reused
 - All `grammar_refs` in EXAMPLES point to documented sections in GRAMMAR.md
 - All `entry_refs` in EXAMPLES point to valid IDs in LEXICON.tsv
@@ -261,3 +265,5 @@ Cross-file consistency checks:
 - All morphological processes mentioned in GRAMMAR.md appear in at least one example
 - No deprecated entries are referenced in active examples without a note
 - Conflicts logged in STATUS.md are traceable to diffs in GRAMMAR/LEXICON/EXAMPLES
+
+JSON Schema draft 7 intentionally does not encode repository-wide constraints that require comparing multiple rows or files. Those constraints remain the responsibility of the validation script, which must treat `SCHEMA.json` as the structural authority and add the cross-row/cross-file checks listed above.
