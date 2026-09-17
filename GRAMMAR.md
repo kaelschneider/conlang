@@ -14,7 +14,7 @@ The synchronic vowel inventory is `/a e i u/`. Long vowels are written `aa ee ii
 
 ### G-PHON-03 — Consonants
 
-The synchronic consonant inventory is `/p t k c m n s h w j r/`. In IPA, orthographic `c` represents `/ts/` under the established `ts = c` convention, and orthographic `j` represents `/j/`. Conditioned allophony is not exhaustively specified.
+The synchronic consonant inventory is `/p t k c m n s h w j r/`. In the established orthography, `c` represents `/ts/`, `v` represents `/w/`, and `y` represents `/j/`. Conditioned allophony is not exhaustively specified.
 
 ### G-PHON-04 — Historical developments
 
@@ -22,9 +22,11 @@ The following developments are established:
 
 - Word-initial `*p > h`.
 - Historical `*p` is distinct from historical `*h`, despite overlap in some modern reflexes.
-- `t, k > c` before `/i/`.
+- Historical `*p > h` before `/i/` in the relevant historical environment; this includes established 3rd-person agreement developments such as `ku-p-i > kupi > kuhi`.
+- Historical `h > Ø` between vowels in developments such as `kuhi > kui`.
+- `t, k > c` before `/i/` in established environments.
 - `tc > c`, paralleling reduction of complex coronal sequences.
-- `*ndt > nt:` is attested in historical development such as `karande-te > karant:e`; this is historical/lexicalized, not a productive synchronic rule.
+- `*ndt > nt:` is attested historically/lexically, not established as a productive synchronic rule.
 - `-yi` is prohibited; `ku-t-y-i > kutyi > kutye` is an established repair. The final `-i` remains NONPAST; `e` in `kutye` is not a tense substitution.
 - `-wu` is prohibited and repaired as `-u`.
 - `ku-p-i > kupi > kuhi > kui` is an established development.
@@ -36,7 +38,9 @@ Historical developments are not automatically productive synchronic rules.
 
 ### G-PHON-05 — Orthography and IPA
 
-The established orthography uses `w = v`, `j = y`, and `ts = c`. IPA records pronunciation rather than orthographic spelling. Thus orthographic `y` is transcribed `/j/`, and orthographic `c` is `/ts/`. Long vowels are written doubled and transcribed with IPA length `ː` when established.
+The established orthography uses `v = /w/`, `y = /j/`, and `c = /ts/`. IPA records pronunciation rather than orthographic spelling. Thus orthographic `v` is transcribed `/w/`, orthographic `y` is transcribed `/j/`, and orthographic `c` is `/ts/`. Long vowels are written doubled and transcribed with IPA length `ː` when established.
+
+When IPA is typed on a standard keyboard, `:` may be used as the plain-text substitute for IPA `ː` for length/gemination. In morphological glossing/segmentation, `:` retains its project/Leipzig use for morphophonological or grammatical fusion.
 
 ### G-PHON-06 — Prosody
 
@@ -56,6 +60,8 @@ Finite verbs follow:
 
 There is no dedicated verbal applicative slot.
 
+Finite verbs require an AGENT/person agreement marker.
+
 ### G-MORPH-03 — Stem grades
 
 | Grade | Form | Function | Leipzig gloss |
@@ -69,11 +75,11 @@ The alternating stem vowel is final in the root/stem. A lexical root such as `ka
 
 These grades are independent of directional `i-` and `a-`.
 
-For the HOLD lexeme, the citation/nonfinite form is `ka`. The realis stem is `ku`; adding nonpast `-i` gives `kui`:
+For the HOLD lexeme, the citation/nonfinite form is `ka`. The realis stem is `ku`. Finite forms then take person agreement and tense, for example:
 
-`ka` → `k-u` → `k-u-i`
+`ka` → `k-u` → `k-u-k-i` → `kuci`
 
-The predictable inflected forms `ku` and `kui` are not separate lexemes.
+The 1st-person marker is `-k-`; its number is not specified by the verb.
 
 For the BE.BIG lexeme, the citation/nonfinite form is `sara`. Its linking/attributive form is `sare`:
 
@@ -87,9 +93,7 @@ For the BE.BIG lexeme, the citation/nonfinite form is `sara`. Its linking/attrib
 
 Leipzig gloss: `DIR` for the directional prefix when its specific polarity is recoverable from context; use a more specific project gloss only if one is established.
 
-Directional morphology is verbal. It is not a prefix attached to the noun. In spatial case constructions the noun retains its spatial suffix:
-
-`S O-SPATIAL-CASE i-/a-VERB`
+Directional morphology is verbal. It is not a prefix attached to the noun. In case constructions the noun retains its nominal case suffix and the finite verb carries `i-` or `a-`.
 
 For example:
 
@@ -111,7 +115,7 @@ There is exactly one object slot:
 | `s-` | reflexive | `REFL` |
 | `r-` | reciprocal | `RECP` |
 
-The overt object remains a separate noun phrase in SOV clauses. Directional case suffixes likewise remain on the overt noun phrase.
+The overt object remains a separate noun phrase in SOV clauses. Nominal case suffixes likewise remain on the overt noun phrase.
 
 ### G-MORPH-06 — AUX/DERIV
 
@@ -133,11 +137,13 @@ AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur
 
 | Person | Marker | Leipzig gloss |
 |---|---|---|
-| 1SG | `-k-` | `1SG` |
-| 2SG | `-t-` | `2SG` |
-| 3SG | `-p-` | `3SG` |
+| 1 | `-k-` | `1` |
+| 2 | `-t-` | `2` |
+| 3 | `-p-` | `3` |
 
-There is no verbal plural agreement. Plural number is expressed through pronouns.
+Agreement is **person-only**: the markers do not distinguish singular from plural. Finite verbs require one person marker. Number is expressed independently, including by pronouns.
+
+The 3rd-person marker `-p-` can undergo established historical change before NONPAST `-i`, yielding zero in surface forms such as `kui`.
 
 ### G-MORPH-08 — Discourse / mood
 
@@ -169,53 +175,55 @@ There is no verbal plural agreement. Plural number is expressed through pronouns
 | PATH | `-ra` | along / through / medium | spatial | `PATH` |
 | COM | `-me` | with / associate | participant | `COM` |
 
-### G-MORPH-12 — Spatial polarity and directional expansion
+### G-MORPH-12 — Directional constructions with case
 
-LOC, SUPER, INE, PATH, and COM can combine with verbal direction. Each spatial case has three clause-level polarities: `Ø` neutral, `i-` toward, and `a-` away. ABS, ERG, and GEN do not directionalize.
+Nominal cases remain distinct cases. Directional readings are compositional constructions: the noun keeps its ordinary case suffix and the finite verb carries `i-` toward or `a-` away. These constructions do not create additional nominal cases.
 
-The directional polarity is compositional, not nominal prefixation: the noun keeps its ordinary spatial suffix and the finite verb carries `i-` or `a-`.
+LOC, SUPER, INE, PATH, and COM can participate in directional constructions. ABS, ERG, and GEN do not currently directionalize.
 
 #### LOC series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-te` | LOC | at / in |
-| i- | `O-te i-VERB` | ALL | to / toward |
-| a- | `O-te a-VERB` | ABL | from / away |
+| i- | `O-te i-VERB` | ALL construction | to / toward |
+| a- | `O-te a-VERB` | ABL construction | from / away |
 
 #### SUPER series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-ta` | SUPER | on / against |
-| i- | `O-ta i-VERB` | SUBLATIVE | onto / up to surface |
-| a- | `O-ta a-VERB` | DELATIVE | off / from surface |
+| i- | `O-ta i-VERB` | SUBLATIVE construction | onto / up to surface |
+| a- | `O-ta a-VERB` | DELATIVE construction | off / from surface |
 
 #### INE series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-ci` | INE | inside / within |
-| i- | `O-ci i-VERB` | ILLATIVE | into / in through |
-| a- | `O-ci a-VERB` | ELATIVE | out of |
+| i- | `O-ci i-VERB` | ILLATIVE construction | into / in through |
+| a- | `O-ci a-VERB` | ELATIVE construction | out of |
 
 #### PATH series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-ra` | PATH | along / through |
-| i- | `O-ra i-VERB` | PATH+i- | toward along / across |
-| a- | `O-ra a-VERB` | PATH+a- | away along / back |
+| i- | `O-ra i-VERB` | PATH+i- construction | toward along / across |
+| a- | `O-ra a-VERB` | PATH+a- construction | away along / back |
 
-### G-MORPH-13 — COM polysemy
+COM directional constructions are described separately under G-MORPH-13.
 
-COM is interpreted through animacy and polarity:
+### G-MORPH-13 — COM polysemy and directional construction
+
+COM is a nominal case. Its directional uses are compositional constructions rather than additional cases.
 
 | Polarity | Animate argument | Inanimate argument | Semantic reading |
 |---|---|---|---|
 | Ø | COM | INST | with / alongside (COM); with / using (INST) |
-| i- | BEN | INST | toward for / on behalf of (BEN); toward via / using (INST) |
-| a- | BEN | INST | away for / on behalf of (BEN); away via / using (INST) |
+| i- | BEN construction | INST construction | toward for / on behalf of (BEN); toward via / using (INST) |
+| a- | BEN construction | INST construction | away for / on behalf of (BEN); away via / using (INST) |
 
 Examples:
 
@@ -228,7 +236,7 @@ The exact semantic boundaries remain subject to testing.
 
 ### G-MORPH-14 — Applicatives
 
-Dedicated verbal applicatives have been eliminated. Instrumental and benefactive meanings are expressed through the nominal case system; no dedicated verbal applicative morphology remains.
+Dedicated verbal applicatives have been eliminated. Instrumental and benefactive meanings are expressed through nominal case constructions; no dedicated verbal applicative morphology remains.
 
 ### G-MORPH-15 — Constructional functions
 
@@ -242,17 +250,21 @@ The case system also supports the following constructional readings without intr
 | ESSIVE | LOC + stative predicate | `-te` in copular/state constructions |
 | TRANSLATIVE | ESSIVE + `i-ra` | `-te` + `i-ra` meaning 'become' |
 
+These are constructional readings, not additional nominal cases.
+
 ### G-MORPH-16 — Converbs and participles
 
 Converbs are intended to derive through nominalizers and case endings. Independent conjunctions are not currently established as the primary clause-combining strategy.
 
 Participial relatives use the existing stem grades supplemented by dedicated participial morphology. The exact nominalizer inventory, converb-to-case mapping, and dedicated participial forms remain unresolved.
 
+`kerande` is an established nominalized+cased form of `kera`, analyzed as `kera + NOM + CASE`. The exact independent exponent boundaries of NOM and CASE remain to be formalized.
+
 ### G-MORPH-17 — Established complex verbal forms
 
-`kerurekin` = `keru-re-k-i-n` (CARRY.REAL-PROG-1SG-NONPAST-PERF). It demonstrates co-occurrence of AUX/DERIV, agreement, tense, and aspect.
+`kerurekin` = `keru-re-k-i-n` (CARRY.REAL-PROG-1-NONPAST-PERF). It demonstrates co-occurrence of AUX/DERIV, agreement, tense, and aspect.
 
-`ku-p-i > kupi > kuhi > kui` demonstrates the 3SG realis/nonpast form `kui`.
+`ku-p-i > kupi > kuhi > kui` demonstrates the 3rd-person realis/nonpast form `kui` through historical `p > h > Ø` development.
 
 `ku-t-y-i > kutyi > kutye` demonstrates interrogative `-y-` plus NONPAST `-i`, with phonological repair because `-yi` is prohibited.
 
@@ -262,11 +274,11 @@ Participial relatives use the existing stem grades supplemented by dedicated par
 
 ### G-GLOSS-01 — Leipzig baseline
 
-Interlinear glosses use the Leipzig Glossing Rules as the default. Morpheme boundaries are represented with `-`; clitic boundaries with `=`. A period `.` in a gloss marks multiple grammatical values expressed by a single morph. A colon `:` is reserved for appropriate phonological/grammatical fusion. Do not use punctuation merely to shorten a gloss.
+Interlinear glosses use the Leipzig Glossing Rules as the default. Morpheme boundaries are represented with `-`; clitic boundaries with `=`. A period `.` in a gloss marks multiple grammatical values expressed by a single morph. In morphological glossing/segmentation, a colon `:` marks appropriate morphophonological or grammatical fusion.
 
 ### G-GLOSS-02 — Project abbreviations
 
-The project uses standard Leipzig abbreviations where applicable, including `1SG`, `2SG`, `3SG`, `ERG`, `ABS`, `GEN`, `LOC`, `COM`, `REAL`, `IRR`, `NPST`, `PST`, `PRF`, `IPFV`, `PROG`, `CONT`, `HAB`, `INCH`, `REFL`, and `RECP`. Project-specific categories are used only where necessary.
+The project uses standard Leipzig abbreviations where applicable, including `1SG`, `2SG`, `3SG`, `ERG`, `ABS`, `GEN`, `LOC`, `COM`, `REAL`, `IRR`, `NPST`, `PST`, `PRF`, `IPFV`, `PROG`, `CONT`, `HAB`, `INCH`, `REFL`, and `RECP`. Person-only verbal agreement is glossed `1`, `2`, or `3` because number is not encoded by the verb.
 
 ## G-SYN — Syntax
 
@@ -276,11 +288,11 @@ Declarative clauses use SOV order.
 
 ### G-SYN-02 — Noun phrase modifier order
 
-Attributive modifiers precede the noun: `sare karande` = 'large container'. Here `sare` is the LINK form of `sara` 'be.big'.
+Attributive modifiers precede the noun: `sare kerande` = 'large container'. Here `sare` is the LINK form of `sara` 'be.big'.
 
 ### G-SYN-03 — Predicative statives
 
-A stative predicate follows its subject: `Karande sarui` = 'the container is large'.
+A stative predicate follows its subject: `Kerande sarui` = 'the container is large'.
 
 ### G-SYN-04 — Alignment
 
@@ -288,11 +300,11 @@ The language has a mixed Split-S system. Speech-act participants are strongly ag
 
 ### G-SYN-05 — Pronouns
 
-Established plural pronouns include `men` (1PL), `sen` (2PL), and `en` (3PL). Verbal plural agreement is absent.
+Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). Verbal agreement marks person but not number.
 
 ### G-SYN-06 — Questions
 
-Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku karande kutye?`
+Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku kerande kutye?`
 
 ### G-SYN-07 — Negation
 
