@@ -1,226 +1,144 @@
 # AGENTS.md — Conlang Project Guide
+Maintenance guide for contributors and coding agents. Not part of the language description.
 
-This file describes how to work on the repository. It is a maintainer/development guide, not part of the language grammar.
+**Do not add, remove, rename, move, split, or merge files or directories unless explicitly instructed to change repository structure.** No convenience files, no derived-note files, no self-directed reorganization. This rule has no exceptions elsewhere in this document.
 
-## Repository structure
+## Files
 
-The repository is deliberately small and flat. **Do not add, remove, rename, move, split, merge, or otherwise alter files or directories unless the user explicitly instructs you to change the repository structure.** Do not create new files merely for convenience, to hold derived notes, or to reorganize information on your own.
-
-| File | Authority / purpose |
+| File | Authority |
 | --- | --- |
-| `GRAMMAR.md` | Primary source for synchronic phonology, morphology, syntax, prosody, and historical sound change. |
-| `LEXICON.tsv` | Primary lexical/root inventory, including status and historical relationships. |
-| `EXAMPLES.tsv` | Provenance-bearing examples, tests, and analyses. Examples support testing but do not override grammar. |
-| `STATUS.md` | Current development state, open questions, recovered decisions, and testing priorities. Not itself grammar. |
-| `README.md` | Public overview of the language and repository. Descriptive rather than procedural. |
-| `AGENTS.md` | Development and maintenance instructions for contributors and coding/automation agents. |
-| `SCHEMA.json` | Authoritative JSON Schema for the structural representation of LEXICON.tsv and EXAMPLES.tsv used by automated validation. |
+| `GRAMMAR.md` | Authoritative for phonology, morphology, syntax, prosody, historical sound change. Cite by `G-PHON` / `G-MORPH` / `G-SYN` section. |
+| `LEXICON.tsv` | Authoritative lexical/root inventory: forms, status, historical relationships. |
+| `EXAMPLES.tsv` | Provenance-bearing examples and tests. Evidence only — examples never override grammar. |
+| `STATUS.md` | Current state, open questions, recovered decisions, testing priorities. Not grammar. |
+| `SCHEMA.json` | Authoritative structure spec for the two TSVs. Used by automated validation. |
+| `README.md` | Public overview. Descriptive, not procedural. |
+| `AGENTS.md` | This file. |
 
-### Grammar authority
+## Task routing
 
-`GRAMMAR.md` is the single authoritative source for established phonology, morphology, syntax, prosody, and historical sound change. Use the relevant `G-PHON`, `G-MORPH`, or `G-SYN` section.
+Read only what the task requires initially. Apply mandatory downstream checks when the change affects dependent material. Do not run unrelated parts of the workflow merely for completeness.
 
-`LEXICON.tsv`, `EXAMPLES.tsv`, and `STATUS.md` retain their respective evidence/status roles.
+| Task | Read first | Then |
+| --- | --- | --- |
+| Add / edit a lexeme | `G-PHON` + existing rows of the same `type` | Checklist → commit |
+| Add / edit an example | The `G-` sections it tests + its referenced lexicon rows | Checklist → commit |
+| Change or add a grammar rule | `STATUS.md` + the full affected domain section | Full workflow below |
+| Answer an open design question | `STATUS.md` + relevant `G-` section | 3–5 options → recommend one → record in authoritative source + `STATUS.md` → move on |
+| Resolve a source conflict | Both sources + `STATUS.md` | Document the decision, then apply it |
 
-## Source authority and conflict resolution
+## Dependency checks
 
-Use the applicable domain source as authoritative for established grammar, followed by stable lexical data and established examples for evidence. `STATUS.md` records current decisions and uncertainty; Git history records provenance and superseded analyses.
+Every change triggers its downstream checks. These are mandatory and stated once:
 
-**When sources disagree:** Do not silently resolve the disagreement. Preserve the evidence, identify the conflict, and record it in `STATUS.md` with the label `CONFLICT: [source A] vs [source B] — [brief description]`. Link from affected sections. Do not change either source until the conflict is explicitly resolved via a documented decision.
+```text
+GRAMMAR.md changed         → inspect LEXICON.tsv + EXAMPLES.tsv for affected
+                             forms, analyses, segmentations, refs, IPA, derivations
+LEXICON/EXAMPLES changed   → validate the complete modified file against SCHEMA.json,
+                             then check linguistically against GRAMMAR.md
+any substantive change     → review README.md and STATUS.md before committing
+```
 
-## Development status levels
+## Source authority and conflicts
 
-Keep these analytical levels distinct:
+Domain source is authoritative for established grammar; lexicon and examples supply evidence; `STATUS.md` records decisions and uncertainty; Git history holds provenance and superseded analyses.
 
-- **ESTABLISHED / RULE** — Explicitly adopted as part of the current language description.
-- **ANALYZED** — Supported interpretation not yet promoted to a productive rule.
-- **EXPERIMENTAL** — A form or construction being tested.
-- **UNRESOLVED / `?`** — Evidence is insufficient to choose an analysis.
-- **DEPRECATED** — Retained for historical/provenance reasons but no longer current.
+When sources disagree, **do not silently resolve it.** Preserve both analyses and record the conflict in `STATUS.md` as:
 
-Do not promote an analyzed or experimental feature simply because it is typologically plausible, aesthetically attractive, frequent in generated examples, or easy to implement.
+```text
+CONFLICT: [source A] vs [source B] — [brief description]
+```
 
-## Development principles
+For a factual/source conflict, do not change either source until the conflict has been resolved by a documented decision. For a genuinely creative design question, use the decision process under **Design principles** instead of treating underdetermination as a source conflict.
 
-### Naturalism
+## Status levels
 
-Prefer interacting systems with plausible acquisition, processing, lexicalization, analogy, and historical development. Rare typological features are acceptable when their consequences are coherent.
+Keep these distinct and never blur them:
 
-Do not add isolated exotic features merely to increase typological novelty.
+- **ESTABLISHED / RULE** — adopted as part of the current description.
+- **ANALYZED** — supported interpretation, not yet a productive rule.
+- **EXPERIMENTAL** — under test.
+- **UNRESOLVED / `?`** — evidence insufficient to choose.
+- **DEPRECATED** — retained for provenance, no longer current.
 
-### Decision-oriented creative development
-
-When the language is underdetermined, **make concrete design decisions rather than expanding the methodology indefinitely**. Methodology is a tool for reaching a language decision, not an end product.
-
-For open design questions:
-
-1. Present a small set of genuinely distinct options, normally 3–5.
-2. For each option, state its typological/naturalistic motivation and its creative consequence for the language.
-3. **Recommend one option** based on typological plausibility, internal coherence, and the established creative direction of the language.
-4. Keep the recommendation appropriately bounded: it is a well-motivated design proposal, not an objectively required answer, and it must not override the user's creative authority.
-5. Once a choice is adequately supported, record it and move forward. Do not reopen the same methodological question merely to obtain a more elaborate framework.
-6. Use tests, matrices, and additional analytical machinery only when they can distinguish viable alternatives, expose contradictions, or materially improve a concrete decision.
-7. Prefer a simple, explicitly provisional canon over a large collection of unresolved methodological scaffolding when the remaining uncertainty is low-stakes.
-
-The project should **avoid getting bogged down in methodology at the expense of creative development**. When evidence does not uniquely determine the answer, a typologically motivated and creatively fitting choice is often more useful than another round of abstract parameterization. Mark the result as a design decision or working rule when appropriate rather than manufacturing false certainty.
-
-
-### Synchrony and diachrony
-
-Keep modern grammar separate from historical explanation. Historical forms may motivate an analysis, but historical reconstruction does not by itself create a modern productive rule.
-
-When developing a historical change, prefer ordinary mechanisms such as sound change, conditioned allophony, morphological reanalysis, grammaticalization, analogy, paradigm leveling, lexicalization, semantic specialization, frequency-driven reduction or fusion, and borrowing when supported by the setting.
-
-## Grammar-first testing
-
-Before introducing a new rule, test it against the relevant domain and its dependencies:
-
-- Phonotactics and morphophonology
-- Argument structure and alignment
-- Case marking and agreement
-- Verbal morphology and stem grades
-- NP and clause structure
-- Pronouns and person marking
-- Lexical derivation patterns
-- Historical sound laws
-- Existing examples
-
-Use matched examples to distinguish competing analyses. Prefer the smallest change that explains the evidence without creating new exceptions.
+Do not promote a feature because it is typologically plausible, aesthetically attractive, frequent in generated examples, or easy to implement.
 
 ## Data conventions
 
-### `LEXICON.tsv`
-
-Surface lexical forms in `form` must not contain hyphens. Hyphens belong to morphological analysis fields, not surface lexical forms.
-
-Required columns:
+`LEXICON.tsv` columns:
 
 ```text
-id\tform\tipa\ttype\tpos\tgloss\tderived_from\tstatus\tnotes
+id	form	ipa	type	pos	gloss	derived_from	status	notes
 ```
 
-Use established controlled vocabularies. Use `?` for unknown/unresolved information and `—` for not applicable.
-
-### `EXAMPLES.tsv`
-
-Surface example text in `text` must not contain hyphens. Hyphens are permitted in `segmentation` for morpheme boundaries.
-
-Required columns:
+`EXAMPLES.tsv` columns:
 
 ```text
-id\ttext\tipa\ttranslation\tsegmentation\tgloss\tgrammar_refs\tentry_refs\tstatus\tnotes
+id	text	ipa	translation	segmentation	gloss	grammar_refs	entry_refs	status	notes
 ```
 
-Each example should be traceable to the grammar and lexical material it tests when those references are established.
+- Surface forms (`form`, `text`) contain no hyphens. Hyphens belong in `segmentation` and other analysis fields.
+- `?` = unknown/unresolved. `—` = not applicable. Use established controlled vocabularies.
+- Preserve IDs. Never renumber or reuse.
+- Keep orthographic, phonemic, phonetic, and reconstructed forms distinctly labeled. Orthographic `c` is never an IPA phoneme.
 
-### IPA conventions
+### IPA
 
-Use only established phonemic contrasts and documented surface realizations. Do not manufacture phonetic detail to appear more complete. Historical reconstructions belong in historical analysis, not in modern IPA fields. **Every non-`?` IPA field in `LEXICON.tsv` and `EXAMPLES.tsv` must include primary stress (`ˈ`) according to the current stress rule; validation must analyze each lexical and example IPA transcription against the phonology, including stress placement and context-dependent realizations such as orthographic `c` = `/ɕ/` from `-ki > -ci` or `/tɕ/` from `-ti > -ci`, and the morphophonological repair `n + C → enC` for LOCAL object marking.**
+Every non-`?` IPA field must carry primary stress (`ˈ`) per the current stress rule. Analyze each field against `GRAMMAR.md` — segment legality, stress placement, word boundaries, conditioned realizations — rather than regex-checking characters. Use only established contrasts; invent no phonetic detail. Reconstructions belong in historical analysis, not modern IPA fields.
 
-Keep orthographic, phonemic, phonetic, and reconstructed forms distinctly labeled.
+For conditioned realizations, consult the applicable `G-PHON` section. Do not duplicate grammar rules here.
 
-## Editing rules
+## Pre-commit checklist
 
-1. Read `STATUS.md` and the relevant domain source before making substantive changes.
-2. Inspect relevant lexical rows and examples before changing a lexical or grammatical analysis.
-3. Preserve existing IDs (do not renumber or reuse).
-4. Make the smallest change needed for the requested task.
-5. Do not silently rewrite historical evidence to fit current analysis.
-6. Keep unresolved material explicitly unresolved.
-7. Do not infer IPA, morphology, or historical forms that are not established.
-8. Keep orthographic, phonemic, phonetic, and reconstructed forms distinct.
-9. Keep productive morphology distinct from lexicalized or historical material.
-10. Update all affected examples when a grammatical rule changes.
-11. Update `STATUS.md` when a question is resolved, reopened, or materially changed.
-12. After pushing any repository change, re-check `STATUS.md` against the resulting repository state. If the push changes project status, open questions, testing priorities, or recovered decisions, update `STATUS.md` in a follow-up change before treating the work as complete.
-13. When `GRAMMAR.md` changes, always inspect `LEXICON.tsv` and `EXAMPLES.tsv` for affected forms, analyses, segmentations, references, and IPA; update them when required by the grammar change.
-14. When adding or modifying rows in `LEXICON.tsv` or `EXAMPLES.tsv`, always validate the complete file against `SCHEMA.json` before committing. Structural validation is required in addition to linguistic cross-checking.
-15. Review `README.md` for every substantive repository update and revise it when the change affects the public description, orthography, typological profile, repository structure, or current established grammar.
-16. Avoid unrelated cleanup unless necessary to prevent a real contradiction.
-13. **Do not alter repository file structure unless the user explicitly instructs the agent to do so.**
+Run the applicable portions before every commit. Do not perform unrelated checks merely for completeness.
 
-## Red flags: When not to commit
+- [ ] Form obeys current phonotactics; morphology matches an established template.
+- [ ] If `LEXICON.tsv` or `EXAMPLES.tsv` changed, the complete modified file validates against `SCHEMA.json`; IDs and references preserved.
+- [ ] Every non-`?` IPA field affected by the change is analyzed against the phonology, stress included.
+- [ ] No lexical entry for a form predictable from productive morphology.
+- [ ] No IPA, morphology, or historical form asserted beyond what is established.
+- [ ] Root status changes propagated to all derivatives.
+- [ ] Affected examples updated; no broken segmentation or stale `grammar_refs`.
+- [ ] Nothing experimental promoted by frequency alone; nothing historical rewritten to fit current analysis.
+- [ ] Unresolved material still marked unresolved; any factual/source conflict documented, not resolved silently.
+- [ ] `STATUS.md` updated if a question was resolved, reopened, or materially changed.
+- [ ] Repository structure unchanged unless explicitly authorized.
+- [ ] Diff contains only the intended change. No unrelated cleanup.
 
-- Creating a lexical entry for an inflected form when it is predictable from morphology.
-- Adding IPA or morphology that is not established.
-- Promoting experimental forms by frequency alone.
-- Rewriting historical analysis to fit current grammar.
-- Changing a root's status without updating its derivatives.
-- Breaking example segmentation without updating grammar references.
-- Resolving a conflict silently.
-- Creating or moving files without explicit structural authorization.
+The goal is not maximal regularity. Naturalistic irregularity is welcome when it has a recoverable lexical, morphological, phonological, frequency, or historical motivation.
 
 ## Workflow for substantive changes
 
-### 1. Identify the dependency surface
+For grammar-rule changes and anything with mechanical consequences elsewhere.
 
-Determine which domain and data sources are affected. A change to one system may have mechanical consequences elsewhere.
+1. **Scope.** Identify which domain and data sources the change touches.
+2. **Evidence.** Separate established facts from interpretation. When evidence is insufficient to resolve a factual/source conflict, preserve the competing analyses. When the issue is genuinely a creative design choice, use the decision process below to make a bounded decision.
+3. **Test.** Stress-test against matched examples and the dependencies below. Prefer the smallest change that explains the evidence without creating new exceptions.
+4. **Update.** Apply the documented decision to the authoritative source, then update affected TSVs and `STATUS.md` as required.
+5. **Check.** Run the dependency checks and the applicable pre-commit checklist above.
 
-### 2. Establish the evidence
+Dependencies to test a new rule against: phonotactics and morphophonology; argument structure and alignment; case and agreement; verbal morphology and stem grades; NP and clause structure; pronouns and person marking; derivation patterns; historical sound laws; existing examples.
 
-Separate directly established facts from interpretations or proposals. If evidence underdetermines the result, preserve multiple candidate analyses rather than forcing a single choice.
+## Post-push check
 
-### 3. Stress-test with examples
+After pushing any repository change, re-read `STATUS.md` against the resulting repository state. If the push changes established decisions, open questions, testing priorities, or recovered decisions, update `STATUS.md` in a follow-up change before treating the work as complete.
 
-Generate or inspect representative examples. For larger mechanical systems, test paradigms or balanced lexical samples rather than isolated cases.
+## Design principles
 
-### 4. Update authoritative sources
+### Naturalism
 
-Update the applicable domain source first, then affected `LEXICON.tsv` or `EXAMPLES.tsv` data, then `STATUS.md` when a decision changes development state.
+Prefer interacting systems with plausible acquisition, processing, lexicalization, analogy, and historical development. Rare features are fine when their consequences are coherent. Do not add isolated exotic features to increase typological novelty.
 
-### 5. Check downstream effects
+### Decisions over methodology
 
-Apply the repository-wide cross-check rules explicitly:
+When the language is underdetermined, decide. Present 3–5 genuinely distinct options, each with its typological motivation and its creative consequence; recommend one on grounds of plausibility, internal coherence, and established direction; record it and move on.
 
-- **If `GRAMMAR.md` changed:** inspect `LEXICON.tsv` and `EXAMPLES.tsv` for affected forms, analyses, segmentations, references, IPA, and historical derivations.
-- **If `LEXICON.tsv` or `EXAMPLES.tsv` changed:** validate the complete modified TSV against `SCHEMA.json`, then perform the linguistic checks against `GRAMMAR.md`.
-- **For every substantive update:** review `README.md` for stale public-facing descriptions and update it when affected.
-- Look for broken segmentation, invalid forms, stale grammar references, changed lexical relationships, and historical analyses that no longer fit.
+The recommendation is a well-motivated proposal, not an objectively required answer, and never overrides the user's creative authority. Do not reopen a settled question to build a more elaborate framework. Use tests and matrices only where they can distinguish viable alternatives or expose a contradiction. Prefer a simple, explicitly provisional canon over unresolved scaffolding when the stakes are low. Mark results as design decisions rather than manufacturing certainty.
 
-### 6. Review the diff before committing
+When evidence is insufficient to resolve a factual/source conflict, preserve the competing analyses rather than forcing a decision. When the issue is creative underdetermination, do not mistake the absence of unique evidence for a reason to defer indefinitely.
 
-Verify that the diff contains only the intended changes. Confirm that no experimental material was promoted accidentally, IDs were preserved, conflicts were documented, and no unauthorized structural changes were made.
+### Synchrony and diachrony
 
-### 7. Post-push status check
+Keep modern grammar separate from historical explanation. History may motivate an analysis; reconstruction alone never creates a modern productive rule.
 
-After the change is pushed, re-read `STATUS.md` and compare it with the resulting repository state. If the change affects established decisions, unresolved questions, testing priorities, or development phase, update `STATUS.md` in a follow-up commit. A change is not complete until this post-push status check has been performed.
-
-## IPA analysis requirement
-
-Before committing changes to `LEXICON.tsv` or `EXAMPLES.tsv`, analyze every non-`?` IPA field against `GRAMMAR.md`: verify segment legality, stress placement, word boundaries, and any conditioned realization. Do not merely regex-check the characters. Surface orthography and IPA must be compared separately, and orthographic `c` must never be treated as an IPA phoneme.
-
-## Pre-commit validation checklist
-
-**Fast check:**
-
-- Does the new form obey current phonotactics?
-- Does its morphology match an established template?
-- Are unresolved questions still marked unresolved?
-- Are IDs and references preserved?
-- Is the change minimal and focused?
-- Was repository structure left unchanged unless explicitly authorized?
-
-**Thorough check:**
-
-- Does the analysis require an unsupported new rule?
-- Does an existing example contradict it?
-- Have all affected derivatives been updated?
-- Is the change productive, lexicalized, historical, or experimental?
-- If historical, is the chronology supported or marked uncertain?
-- Are lexical entries limited to genuinely lexical material?
-
-The desired outcome is not maximal regularity. Naturalistic irregularity is welcome when it has a recoverable lexical, morphological, phonological, frequency, or historical motivation.
-
-## For automation and coding agents
-
-All automated validation should use `SCHEMA.json` as the authoritative specification for valid `LEXICON.tsv` and `EXAMPLES.tsv` structure. Cross-row and cross-file checks remain validation-script responsibilities.
-
-The minimum required dependency checks are:
-
-`GRAMMAR.md change → inspect LEXICON.tsv + EXAMPLES.tsv`
-
-`LEXICON.tsv or EXAMPLES.tsv row addition/modification → validate complete TSV against SCHEMA.json + check against GRAMMAR.md`
-
-`Any substantive repository change → review README.md`
-
-`Any pushed repository change → re-check STATUS.md`
+Preferred mechanisms for historical development: sound change, conditioned allophony, morphological reanalysis, grammaticalization, analogy, paradigm leveling, lexicalization, semantic specialization, frequency-driven reduction or fusion, and setting-supported borrowing.
