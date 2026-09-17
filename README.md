@@ -40,15 +40,34 @@ IDs are permanent and must never be reused.
 - Use `;` to separate multiple IDs in a reference field.
 - Do not use `;` inside an individual reference or free-text field.
 - `Ø` means zero expression.
-- Grammatical glosses use uppercase (`ERG`, `GEN`, `NONPAST`, `1SG`).
+- IPA is enclosed in `/slashes/` for phonemic forms and `[brackets]` for phonetic forms.
+- IPA is explicit data: do not infer or silently generate it from the orthography.
+- Grammatical glosses use uppercase (`ERG`, `GEN`, `NONPST`, `1SG`).
+
+## Leipzig Glossing Rules
+
+Interlinear glosses follow the Leipzig Glossing Rules as the default analytical convention. The project uses hyphens for morpheme boundaries, `=` for clitics, and `.` inside a gloss for fused/portmanteau grammatical meanings where a single morph expresses multiple categories. A colon `:` may be used for phonological/grammatical fusion where appropriate.
+
+Project-specific gloss abbreviations are controlled by `GRAMMAR.md`. Use established Leipzig abbreviations where they fit; do not invent a new abbreviation when a standard one is adequate. Glosses should be aligned one-to-one with segmented morphemes whenever possible.
+
+Examples:
+
+```text
+ne-ku   k-u-i
+1SG-ERG hold-REAL-NPST
+```
+
+A fused form should instead be represented according to its actual morphology, e.g. `X.Y` in the gloss if one morph expresses two grammatical values. Do not use punctuation merely to make a gloss look compact.
 
 ## LEXICON.tsv
 
 Exact columns:
 
 ```text
-id	form	type	pos	gloss	derived_from	status	notes
+id\tform\tipA\ttype\tpos\tgloss\tderived_from\tstatus\tnotes
 ```
+
+`form` is the canonical orthographic citation form. `ipa` is its phonemic IPA citation form when established.
 
 ### `type` controlled vocabulary
 
@@ -69,17 +88,37 @@ id	form	type	pos	gloss	derived_from	status	notes
 
 `derived_from` contains `L-*` IDs separated by `;`; use `—` for no parent and `?` when the relationship is unknown.
 
+### Lexeme vs. inflected form
+
+Do not create a lexicon entry for a predictable inflected form. The lexeme/citation form is stored once; productive forms are analyzed in `EXAMPLES.tsv` and `GRAMMAR.md`.
+
+For example, the HOLD lexeme is `ka`. Its relationship to forms found in clauses is grammatical:
+
+```text
+ka    citation/nonfinite lexeme
+ku    k-u     HOLD-REAL
+kui   k-u-i   HOLD-REAL-NPST
+```
+
+Thus `ku` and `kui` are not separate `L-*` entries unless later evidence shows that they are independent lexicalized forms.
+
 ## EXAMPLES.tsv
 
 Exact columns:
 
 ```text
-id	text	translation	segmentation	gloss	grammar_refs	entry_refs	status	notes
+id\ttext\tipa\ttranslation\tsegmentation\tgloss\tgrammar_refs\tentry_refs\tstatus\tnotes
 ```
 
-`grammar_refs` contains `G-*` IDs. `entry_refs` contains `L-*` IDs. Multiple references are separated by `;`.
+`text` is the orthographic sentence. `ipa` is the phonemic pronunciation of the complete sentence when established. `grammar_refs` contains `G-*` IDs. `entry_refs` contains `L-*` IDs. Multiple references are separated by `;`.
+
+`segmentation` should show morpheme boundaries using `-` and clitic boundaries using `=`. `gloss` should follow Leipzig conventions and correspond to the segmentation.
 
 Use `stable` only when the example is compatible with the current canonical grammar. Use `experimental` when it tests an unresolved analysis or contains unresolved lexical structure.
+
+## IPA conventions
+
+IPA is phonemic unless a field explicitly requires phonetic transcription. Use the phoneme inventory established in `GRAMMAR.md`; do not introduce IPA symbols that are not supported by the current phonological analysis. Historical forms may be transcribed separately when relevant, but historical reconstruction must not be confused with the synchronic IPA of the modern language.
 
 ## Editing protocol
 
@@ -92,7 +131,8 @@ Use `stable` only when the example is compatible with the current canonical gram
 7. Never silently promote experimental material to stable.
 8. Keep synchronic grammar separate from historical explanation.
 9. Keep phonological repair distinct from morphological substitution.
-10. Prefer targeted edits over broad rewrites.
+10. Preserve Leipzig-style segmentation/glossing when editing examples.
+11. Prefer targeted edits over broad rewrites.
 
 ## Interoperability
 
