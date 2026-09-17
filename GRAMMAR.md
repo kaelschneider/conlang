@@ -24,7 +24,7 @@ The following developments are established:
 - Historical `*p` is distinct from historical `*h`, despite overlap in some modern reflexes.
 - `t, k > c` before `/i/`.
 - `tc > c`, paralleling reduction of complex coronal sequences.
-- `*ndt > nt:` is attested in historical development such as `kerande-te > kerant:e`; this is historical/lexicalized, not a productive synchronic rule.
+- `*ndt > nt:` is attested in historical development such as `karande-te > karant:e`; this is historical/lexicalized, not a productive synchronic rule.
 - `-yi` is prohibited; `ku-t-y-i > kutyi > kutye` is an established repair. The final `-i` remains NONPAST; `e` in `kutye` is not a tense substitution.
 - `-wu` is prohibited and repaired as `-u`.
 - `ku-p-i > kupi > kuhi > kui` is an established development.
@@ -74,6 +74,12 @@ For the HOLD lexeme, the citation/nonfinite form is `ka`. The realis stem is `ku
 `ka` → `k-u` → `k-u-i`
 
 The predictable inflected forms `ku` and `kui` are not separate lexemes.
+
+For the BE.BIG lexeme, the citation/nonfinite form is `sara`. Its linking/attributive form is `sare`:
+
+`sara` → `sar-e`
+
+`sare` is therefore a predictable grammatical form, not a separate lexeme.
 
 ### G-MORPH-04 — Direction
 
@@ -270,11 +276,11 @@ Declarative clauses use SOV order.
 
 ### G-SYN-02 — Noun phrase modifier order
 
-Attributive modifiers precede the noun: `sare kerande` = 'large container'.
+Attributive modifiers precede the noun: `sare karande` = 'large container'. Here `sare` is the LINK form of `sara` 'be.big'.
 
 ### G-SYN-03 — Predicative statives
 
-A stative predicate follows its subject: `Kerande sarui` = 'the container is large'.
+A stative predicate follows its subject: `Karande sarui` = 'the container is large'.
 
 ### G-SYN-04 — Alignment
 
@@ -286,7 +292,7 @@ Established plural pronouns include `men` (1PL), `sen` (2PL), and `en` (3PL). Ve
 
 ### G-SYN-06 — Questions
 
-Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku kerande kutye?`
+Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku karande kutye?`
 
 ### G-SYN-07 — Negation
 
