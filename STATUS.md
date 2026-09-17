@@ -1,15 +1,10 @@
 # Status Report
-
 **Last updated:** September 17, 2026  
-**Phase:** 3–4 (morphology complete/testing; syntax draft)
-
----
+**Phase:** 3–4 (morphology complete; syntax testing underway)
 
 ## Summary
 
-Core morphological and phonological systems are established. Phase 1 is resolved: `-we-` and `-w-` have been dropped, while detailed allophony and prosody remain deliberately emergent and test-driven. Syntax is partially specified but requires decisions on alignment, argument structure, and information structure. Lexicon has ~10 historical roots; needs systematic expansion to 50–100+ stems. Ready to enter testing/example-generation phase.
-
----
+Core morphological and phonological systems are established. Ten initial test clauses have now been generated to stress-test SOV order, case marking, agreement, questions, directional morphology, and morphological stacking. Syntax remains partially specified: Split-S conditioning, genitive position, negation, and several clause-combining mechanisms require further testing.
 
 ## Established (Canonical)
 
@@ -17,8 +12,8 @@ Core morphological and phonological systems are established. Phase 1 is resolved
 - ✓ Core inventory (consonants, vowels)
 - ✓ General syllable structure: (C)V(C)
 - ✓ Established sound changes (word-initial *p > h, etc.)
-- ✓ Allophony policy: environment-driven, historically motivated where relevant, and canonized only after repeated evidence
-- ✓ Stress policy: weight-sensitive, potentially morphologically conditioned, and canonized only after repeated evidence
+- ~ Allophony: environment-driven; historical sound changes may motivate rules; promote rules to canon only after repeated evidence
+- ~ Stress/prosody: weight-sensitive where relevant, potentially morphologically conditioned; promote rules after repeated testing
 
 ### Morphology: Verbs
 - ✓ Finite verb template: (DIR) (OBJ) STEM (AUX) AGENT (DISCOURSE) TENSE (ASPECT)
@@ -30,8 +25,7 @@ Core morphological and phonological systems are established. Phase 1 is resolved
 - ✓ Discourse/mood: -h- (exclamative), -y- (interrogative)
 - ✓ Tense: -i- (nonpast), -a- (past)
 - ✓ Aspect: Ø (imperfective), -n (perfect)
-- ✓ `-we-` dropped from the AUX/DERIV inventory
-- ✓ `-w-` dropped from the discourse slot
+- ✓ `-we-` and productive `-w-` dropped from the canonical system
 
 ### Morphology: Nouns
 - ✓ 8 base cases (ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM)
@@ -46,13 +40,11 @@ Core morphological and phonological systems are established. Phase 1 is resolved
 - ? Complete inventory of productive nominalizers / converbs
 - ? Participial forms beyond stem grades
 
----
-
 ## In Progress (Not Yet Canonical)
 
 ### Syntax
-- ~ Word order (basic SVO hypothesis, untested)
-- ~ Split-S / mixed alignment specifics (needs animacy/person conditions)
+- ~ Basic SOV order is supported by existing examples and the first 10-clause test corpus
+- ~ Split-S / mixed alignment specifics (needs animacy/person/volitionality conditions)
 - ~ Genitive position (pre- or post-nominal?)
 - ~ Adpositions (exist? type?)
 - ~ Negative morphology (position in verb template?)
@@ -62,12 +54,12 @@ Core morphological and phonological systems are established. Phase 1 is resolved
 - ~ Clause combining (coordination, subordination)
 
 ### Testing
-- No example sentences yet (needed to validate morphosyntax)
-- No full verbal paradigms (conjugations untested across tense/aspect/agreement)
-- No nominal paradigm testing (do all 18 forms actually surface in texts?)
-- No syntax trees or example clauses
-
----
+- ✓ Initial 10-clause morphosyntax corpus added at `examples/test-clauses.md`
+- ~ Need matched person/animacy/volitionality clauses for Split-S testing
+- ~ Need matched genitive-position tests
+- ~ Need negative clauses once negative morphology is designed
+- ~ Need all 18 nominal case forms tested in natural examples
+- ~ Need reflexive/reciprocal object tests
 
 ## Not Yet Started
 
@@ -77,26 +69,23 @@ Core morphological and phonological systems are established. Phase 1 is resolved
 - Written text examples (running prose in the language)
 - Typological summary document
 
----
-
 ## Decision Points Blocking Progress
 
 | Blocker | Impact | Phase |
-|---------|--------|-------|
-| Specify animacy/person alignment conditions | Validates syntax | 3 |
+|---|---|---|
+| Specify animacy/person/volitionality alignment conditions | Validates syntax | 3 |
 | Determine genitive position | Constrains phrase order | 3 |
 | Define negative morphology | Completes verb template | 3 |
-| Test morphosyntax with examples | Unlocks lexicon expansion | 4 |
-
----
+| Test morphosyntax with matched examples | Validates syntax and unlocks lexicon expansion | 4 |
 
 ## Next Actions (Ordered by Dependency)
 
-1. **Generate 5–10 example sentences** using established roots and morphology → validate that verb/noun forms combine as expected
-2. **Resolve syntax blockers** (genitive, negation, alignment) → formalize via test clauses
-3. **Expand lexicon to 30–50 stems** → begin generating productive derivations
-4. **Test nominal paradigm** → do all 18 case forms appear naturally in examples?
-5. **Build running text** → 1–2 paragraphs to stress-test morphosyntax
-6. **Finalize participials** → confirm that stem-grade system covers all needs
-7. **Document derivational patterns** → how do nominalizers, causatives, etc. stack?
-
+1. Generate matched Split-S test clauses: 1SG/2SG/3SG, animate/inanimate, intentional/non-intentional
+2. Test pre- vs. post-nominal genitives in matched pairs
+3. Design negative morphology and test its position/scope
+4. Test reflexive and reciprocal object marking
+5. Test all 18 nominal forms in actual clauses
+6. Expand lexicon to 30–50 stems
+7. Build running text → 1–2 paragraphs to stress-test morphosyntax
+8. Finalize participials and derivational patterns
+9. Document validated syntax in canon files
