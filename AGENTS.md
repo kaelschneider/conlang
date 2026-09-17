@@ -98,7 +98,7 @@ Each example should be traceable to the grammar and lexical material it tests wh
 
 ### IPA conventions
 
-Use only established phonemic contrasts and documented surface realizations. Do not manufacture phonetic detail to appear more complete. Historical reconstructions belong in historical analysis, not in modern IPA fields. **Every non-`?` IPA field in `LEXICON.tsv` and `EXAMPLES.tsv` must include primary stress (`ˈ`) according to the current stress rule; validation must analyze each lexical and example IPA transcription against the phonology, including stress placement and context-dependent realizations such as orthographic `c` = `/ɕ/` from `-ki > -ci` or `/tɕ/` from `-ti > -ci`.**
+Use only established phonemic contrasts and documented surface realizations. Do not manufacture phonetic detail to appear more complete. Historical reconstructions belong in historical analysis, not in modern IPA fields. **Every non-`?` IPA field in `LEXICON.tsv` and `EXAMPLES.tsv` must include primary stress (`ˈ`) according to the current stress rule; validation must analyze each lexical and example IPA transcription against the phonology, including stress placement and context-dependent realizations such as orthographic `c` = `/ɕ/` from `-ki > -ci` or `/tɕ/` from `-ti > -ci`, and the morphophonological repair `n + C → enC` for LOCAL object marking.**
 
 Keep orthographic, phonemic, phonetic, and reconstructed forms distinctly labeled.
 
