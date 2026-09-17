@@ -14,14 +14,15 @@
 
 ### Phonology
 - Vowels: `/a e i u/`
-- Consonants: `/p t k c m n s h w j r/`
+- Consonants: `/p t k c m n s h w j r/` as orthographic inventory, with `c = /ts/` and `j = /j/`
 - Surface syllable: `(C)V(C)`
 - Word-initial `*p > h`
 - `t, k > c` before `/i/`
 - `tc > c`
 - `wu > u`
 - `yi > ye`
-- Stress is weight-sensitive: rightmost heavy syllable, otherwise penultimate
+- Stress is weight-sensitive: rightmost heavy syllable, otherwise penultimate; exact weight definition remains open
+- IPA is now recorded explicitly in lexical and example data rather than inferred from spelling
 
 ### Morphology
 - Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
@@ -35,20 +36,20 @@
 - Aspect: `Ø` imperfective, `-n` perfect
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
 - Dedicated verbal applicatives eliminated; instrumental/benefactive meanings use nominal case constructions
+- Leipzig Glossing Rules are the default interlinear glossing convention
 
-### Syntax
-- SOV is the current canonical order.
-- Attributive modifiers precede nouns.
-- Stative predicates follow subjects.
-- Mixed Split-S alignment is established in broad terms, with exact conditioning unresolved.
-- Participial relatives precede nouns; finite relatives follow nouns.
-- Converbs and nominalized clauses are the intended primary clause-combining strategy.
+### Hold-form analysis
+
+The previous `ka` vs. `ku` inconsistency is resolved as a morphological distinction rather than two competing lexical forms:
+
+- `L-0016 ka` is the canonical lexeme/citation form for HOLD.
+- `k-u` → `ku` is the REALIS stem form.
+- `k-u-i` → `kui` is REALIS + NONPAST.
+- `ku` and `kui` are predictable inflected forms and are not separate lexicon entries.
+
+This analysis should be revisited only if later evidence demonstrates lexicalization or an irregular paradigm.
 
 ## Known inconsistencies / cleanup needed
-
-### Q-001 — `ka` vs. `ku` 'hold'
-
-The historical root inventory identifies `*k` with modern `ka` 'hold', while existing test clauses use `ku` as the surface hold stem (`kui`, `kutye`, `kerurekin` contains a separate `keru` 'carry'). This must be resolved rather than inferred.
 
 ### Q-002 — `kerande`, `sare`, `keru`
 
@@ -75,11 +76,10 @@ These forms occur in the existing test corpus but their lexical/derivational ana
 
 ## Immediate testing priorities
 
-1. Resolve `ka`/`ku` hold-stem discrepancy.
-2. Generate matched Split-S clauses across person, animacy, and volitionality.
-3. Test pre- vs. post-nominal genitives.
-4. Design and test negative morphology.
-5. Test reflexive and reciprocal object marking.
-6. Test all 18 nominal case/polarity forms in natural clauses.
-7. Normalize `kerande`, `sare`, and `keru` lexical analyses.
-8. Expand the lexicon only after productive derivational patterns are sufficiently clear.
+1. Generate matched Split-S clauses across person, animacy, and volitionality.
+2. Test pre- vs. post-nominal genitives.
+3. Design and test negative morphology.
+4. Test reflexive and reciprocal object marking.
+5. Test all 18 nominal case/polarity forms in natural clauses.
+6. Normalize `kerande`, `sare`, and `keru` lexical analyses.
+7. Expand the lexicon only after productive derivational patterns are sufficiently clear.
