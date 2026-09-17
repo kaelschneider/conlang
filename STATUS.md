@@ -6,9 +6,7 @@
 
 ## Canonical files
 
-- `GRAMMAR.md` — canonical phonology, prosody, and historical sound change
-- `GRAMMAR.md` — canonical morphology
-- `GRAMMAR.md` — canonical syntax
+- `GRAMMAR.md` — canonical consolidated grammar: phonology, morphology, syntax, prosody, and historical sound change
 - `LEXICON.tsv` — canonical lexical/root inventory
 - `EXAMPLES.tsv` — example and test corpus
 - `SCHEMA.json` — structural validation schema
