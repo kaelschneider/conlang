@@ -60,7 +60,7 @@ The matrix below is the concrete current system. It applies to historical single
 | CLOSED | `t` | `t` | `t` | PAL | `d` |
 | CLOSED | `k` | `k` | `k` | PAL | `g` |
 
-`PAL` is the independently ordered `t, k > c > tɕ > ɕ / _i` pathway in G-PHON-05. The written `c` is retained in both outcomes, but its surface pronunciation depends on the historical source.
+`PAL` is the independently ordered pre-/i/ pathway in G-PHON-05. The written `c` is retained in both outcomes, but its surface pronunciation depends on the historical source.
 
 This matrix is a concrete design completion of cells that are not all directly instantiated by the small current corpus. Attested developments constrain the cells containing `reruka`, `reruta`, `rerupa`, `rupi`, `mente`, and `menta`; unsupported cells are completed by extending the same consonant-specific stage logic without introducing a new lenition series.
 
@@ -70,17 +70,17 @@ This matrix is a concrete design completion of cells that are not all directly i
 
 #### Stage I — Pre-/i/ palatalization
 
-**1. `t, k > t͡s / _i`**
+**1. `t, k > c / _i`**
 
-Historical `t` and `k` become orthographic `c` before `/i/`. The resulting surface pronunciations diverge by source: historical `-ki > -ci` yields `/ɕ/`, while historical `-ti > -ci` yields `/tɕ/`.
+Historical `t` and `k` become orthographic `c` before `/i/`. This `c` is a written merger, not a synchronic phoneme.
 
-**2. `t͡s > tɕ / _i`**
+**2. `-ti > -ci > /tɕi/`**
 
-The `/t͡s/` created before `/i/` acquires a palatalized affricate realization.
+The historical `t` outcome retains a palatalized affricate realization.
 
-**3. `tɕ > ɕ / _i`**
+**3. `-ki > -ci > /ɕi/`**
 
-The palatalized affricate subsequently deaffricates before `/i/`.
+The historical `k` outcome deaffricates to `/ɕ/` before `/i/`.
 
 Established developments include `ruki > ruci > /ruɕi/` and `ruti > ruci > /rutɕi/`. The written forms merge as `ruci`, but their surface pronunciations remain distinct by historical source; `/tɕ/` in the latter is not a separate synchronic phoneme.
 
