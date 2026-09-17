@@ -8,7 +8,7 @@ Status: canonical where stated; unresolved conditions remain in `STATUS.md`.
 
 ### G-PHON-01 — Syllable structure
 
-Surface syllable structure is `(C)V(C)`. Productive onset clusters are not established. Complex sequences may arise historically or morphologically and subsequently reduce or fuse.
+Surface syllable structure is `(C)V(C)`. Productive onset clusters are not established. Complex sequences may arise historically or morphologically and subsequently reduce or fuse. A productive morphophonological repair applies at the verbal object-stem boundary: `n + C → enC`, so the LOCAL object marker surfaces as `en-` before consonant-initial stems.
 
 For historical conditioning, **OPEN** means a target consonant belongs to a syllable of shape `CV`; **CLOSED** means it belongs to a syllable of shape `CVC`. The distinction is structural and is not specific to any one coda consonant. Historical syllabification determines which syllable is relevant at the stage where a sound law applies.
 
@@ -288,7 +288,6 @@ For BE.BIG, the citation/nonfinite form is `sara` and the linking form is `sare`
 
 Directional morphology is verbal. It is not a prefix attached to the noun. In case constructions the noun retains its nominal case suffix and the finite verb carries `i-` or `a-`.
 
-If a vowel is required for NONLOCAL without direction, `e-` may serve as support.
 
 ### G-MORPH-05 — Object slot
 
