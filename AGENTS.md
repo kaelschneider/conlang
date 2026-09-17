@@ -94,7 +94,7 @@ Each example should be traceable to the grammar and lexical material it tests wh
 
 ### IPA conventions
 
-Use only established phonemic contrasts. Do not manufacture phonetic detail to appear more complete. Historical reconstructions belong in historical analysis, not in modern IPA fields.
+Use only established phonemic contrasts and documented surface realizations. Do not manufacture phonetic detail to appear more complete. Historical reconstructions belong in historical analysis, not in modern IPA fields. **Every non-`?` IPA field in `LEXICON.tsv` and `EXAMPLES.tsv` must include primary stress (`ˈ`) according to the current stress rule; validation must analyze each lexical and example IPA transcription against the phonology, including stress placement and context-dependent realizations such as orthographic `c` = `/ɕ/` from `-ki > -ci` or `/tɕ/` from `-ti > -ci`.**
 
 Keep orthographic, phonemic, phonetic, and reconstructed forms distinctly labeled.
 
@@ -150,6 +150,10 @@ Look for broken segmentation, invalid forms, stale grammar references, changed l
 ### 6. Review the diff before committing
 
 Verify that the diff contains only the intended changes. Confirm that no experimental material was promoted accidentally, IDs were preserved, conflicts were documented, and no unauthorized structural changes were made.
+
+## IPA analysis requirement
+
+Before committing changes to `LEXICON.tsv` or `EXAMPLES.tsv`, analyze every non-`?` IPA field against `GRAMMAR.md`: verify segment legality, stress placement, word boundaries, and any conditioned realization. Do not merely regex-check the characters. Surface orthography and IPA must be compared separately, and orthographic `c` must never be treated as an IPA phoneme.
 
 ## Pre-commit validation checklist
 
