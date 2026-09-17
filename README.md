@@ -25,23 +25,30 @@ Exact rules, forms, and unresolved conditions belong in the source files below.
 
 | File | Role |
 |---|---|
-| `GRAMMAR.md` | Current synchronic grammar and established grammatical/historical evidence. |
+| `PHONOLOGY.md` | Current synchronic phonology, prosody, and consolidated historical sound change. |
+| `MORPHOLOGY.md` | Current morphology, including verbal/nominal inflection and derivation. |
+| `SYNTAX.md` | Current syntax and syntactic constructions. |
+| `GRAMMAR.md` | Navigation index for the three grammar domain files; not a duplicate grammar. |
 | `LEXICON.tsv` | Canonical lexical and root inventory, including lexical relationships and status. |
 | `EXAMPLES.tsv` | Provenance-bearing examples and test corpus. |
-| `STATUS.md` | Current development state, open questions, recovered decisions, and testing priorities. |
+| `STATUS.md` | Current development state, uncertainty, and testing priorities. |
 | `AGENTS.md` | Development and maintenance guide for contributors and automation. |
+| `SCHEMA.json` | JSON Schema for structural validation of LEXICON.tsv and EXAMPLES.tsv. |
 
-The repository is intentionally small and flat. Additional top-level source files should only be added when the existing structure becomes a genuine maintenance or retrieval bottleneck.
+The repository is intentionally small and flat. Repository structure must not be altered by agents unless the user explicitly instructs the agent to add, remove, rename, move, split, or merge files or directories.
 
 ## Source authority
 
-1. `GRAMMAR.md` is authoritative for established current grammar.
-2. `LEXICON.tsv` is authoritative for lexical entries and root data.
-3. `EXAMPLES.tsv` records evidence and testing; examples do not override established grammar.
-4. `STATUS.md` records development state and uncertainty; it is not itself grammar.
-5. Git history records change history and superseded analyses.
+1. `PHONOLOGY.md` is authoritative for phonology, prosody, and historical sound change.
+2. `MORPHOLOGY.md` is authoritative for morphology.
+3. `SYNTAX.md` is authoritative for syntax.
+4. `LEXICON.tsv` is authoritative for lexical entries and root data.
+5. `EXAMPLES.tsv` records evidence and testing; examples do not override established grammar.
+6. `STATUS.md` records development state and uncertainty; it is not itself grammar.
+7. `GRAMMAR.md` is a navigation index only.
+8. Git history records change history and superseded analyses.
 
-When sources conflict, do not silently choose one. Preserve the conflict and record the unresolved issue in `STATUS.md` until it is explicitly resolved.
+When sources conflict, do not silently choose one. Preserve the conflict and record it in `STATUS.md` until it is explicitly resolved.
 
 ## Evidence and status
 
@@ -67,6 +74,6 @@ Lexical derivation, lexicalization, historical independence, irregularity, or ot
 
 ## Working on the language
 
-Changes should be checked against the existing phonology, morphology, argument structure, case system, clause structure, lexical patterns, examples, and historical analysis. See `AGENTS.md` for the detailed development workflow and maintenance rules.
+Changes should be checked against the relevant grammar domain, phonology/morphology/syntax dependencies, lexical patterns, examples, and historical analysis. See `AGENTS.md` for the detailed development workflow and maintenance rules.
 
 The project favors explicit evidence, reversible analysis, and historically motivated naturalistic development over arbitrary regularization or isolated novelty.
