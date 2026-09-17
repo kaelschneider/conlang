@@ -2,7 +2,7 @@
 
 **Status:** DEVELOPMENTAL — generated for morphosyntactic testing; not canonical.
 
-**Purpose:** Initial ten-clause corpus for testing the currently established morphology and provisional SOV syntax. These examples deliberately exercise unresolved areas without silently canonizing them.
+**Purpose:** Initial test corpus for testing the currently established morphology and provisional SOV syntax. These examples deliberately exercise unresolved areas without silently canonizing them.
 
 ## 1. Simple transitive
 
@@ -51,21 +51,18 @@ container large-REALIS-NONPAST
 
 ## 6. Comitative
 
-`Neku Seme kui.`  
+`Neku seme kui.`  
 `ne-ku se-me ku-i`  
 1SG-ERG 2SG-COM hold.REAL-NONPAST  
 **Intended:** “I hold [it] with you.”
 
-**Tests:** SOV order; COM on the overt animate associate; verbal agreement and object omission. Exact object interpretation remains provisional.
+**Tests:** SOV order; COM on the overt animate associate; verbal agreement. Exact object interpretation remains provisional.
 
 ## 7. Instrumental
 
-`Neku samete sa ku-i.`  
-`ne-ku sa-me-te sa ku-i`  
-1SG-ERG cut/remove-COM-LOC cut.REAL-NONPAST  
-**Intended:** **Developmental placeholder only.** The intended test is “I cut/remove [it] with a tool,” but the current lexicon and case syntax do not yet provide a sufficiently secure noun for the tool or a validated instrumental clause pattern.
+**No secure clause yet.** The current case system identifies inanimate `-me` as instrumental, but the corpus does not yet contain a sufficiently secure instrumental noun + verb combination to serve as a clean test.
 
-**Tests:** identifies an instrumental test that should not be canonized until a secure noun and clause are generated.
+**Tests:** reserve instrumental canonization until a natural clause is generated with an established inanimate noun.
 
 ## 8. Perfect event
 
@@ -98,7 +95,7 @@ large.ATTR container
 
 | Area | Initial result |
 |---|---|
-| Basic word order | SOV is workable across the test set, but needs more independent clauses |
+| Basic word order | SOV is supported by the current examples, but needs more independent clauses |
 | ABS/ERG | Explicit ERG/ABS combinations are morphologically straightforward |
 | Person/number | Plural pronouns can be tested without verbal plural agreement |
 | Questions | `-y-` can be tested, but surface repair must be tracked |
@@ -117,7 +114,7 @@ large.ATTR container
 4. Pre-nominal vs. post-nominal genitives.
 5. Reflexive and reciprocal objects.
 6. Negative clauses once a negative marker is proposed.
-7. All 18 nominal inflectional forms in natural clauses.
+7. All 18 nominal case forms in natural clauses.
 8. Matched directional clauses using **S O-LOC i-VERB** vs. **S O-LOC a-VERB**.
 9. COM/INST/BEN clauses with securely established animate and inanimate nouns.
 
