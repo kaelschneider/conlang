@@ -76,7 +76,7 @@
       },
       "grammar_refs": {
         "tei": "<ref target=\"#grammar-section\">",
-        "description": "Convert each semicolon-separated grammar reference to a TEI ref whose target resolves to a grammar section identifier."
+        "description": "Convert each semicolon-separated grammar reference to a TEI ref whose target resolves to a section identifier in PHONOLOGY.md, MORPHOLOGY.md, or SYNTAX.md."
       },
       "entry_refs": {
         "tei": "<ref target=\"#lexical-id\">",
@@ -238,7 +238,7 @@
             { "const": "?" },
             { "pattern": "^[^;\\r\\n]+(?:;[ \\t]*[^;\\r\\n]+)*$" }
           ],
-          "description": "Optional semicolon-separated references to documented sections of GRAMMAR.md; validation code must verify resolution."
+          "description": "Optional semicolon-separated references to documented sections in PHONOLOGY.md, MORPHOLOGY.md, or SYNTAX.md; validation code must verify resolution."
         },
         "entry_refs": {
           "type": "string",
