@@ -36,7 +36,7 @@ The four classes are evaluated independently. No universal lenition hierarchy is
 
 ### G-PHON-03 — Consonants
 
-The synchronic consonant inventory is `/p t k m n s h w j r t͡s/`. In the established orthography, `c` represents `/t͡s/`, `v` represents `/w/`, and `y` represents `/j/`.
+The synchronic consonant inventory is `/p t k m n s h w j r/`. In the established orthography, `c` is a context-dependent spelling: it represents `/ɕ/` from historical `-ki > -ci`, and `/tɕ/` from historical `-ti > -ci`. The spellings `v` and `y` represent `/w/` and `/j/`, respectively.
 
 Conditioned phonetic realization is not exhaustively specified. Historical-source distinctions may survive as phonetic traces without creating additional synchronic phonemes.
 
@@ -60,7 +60,7 @@ The matrix below is the concrete current system. It applies to historical single
 | CLOSED | `t` | `t` | `t` | PAL | `d` |
 | CLOSED | `k` | `k` | `k` | PAL | `g` |
 
-`PAL` is the independently ordered `t, k > c > tɕ > ɕ / _i` pathway in G-PHON-05.
+`PAL` is the independently ordered `t, k > c > tɕ > ɕ / _i` pathway in G-PHON-05. The written `c` is retained in both outcomes, but its surface pronunciation depends on the historical source.
 
 This matrix is a concrete design completion of cells that are not all directly instantiated by the small current corpus. Attested developments constrain the cells containing `reruka`, `reruta`, `rerupa`, `rupi`, `mente`, and `menta`; unsupported cells are completed by extending the same consonant-specific stage logic without introducing a new lenition series.
 
@@ -72,7 +72,7 @@ This matrix is a concrete design completion of cells that are not all directly i
 
 **1. `t, k > t͡s / _i`**
 
-Historical `t` and `k` become `c` before `/i/`. This precedes the general weakening of those consonants, so a resulting `c` is not subsequently treated as historical `t` or `k` by the later lenition series.
+Historical `t` and `k` become orthographic `c` before `/i/`. The resulting surface pronunciations diverge by source: historical `-ki > -ci` yields `/ɕ/`, while historical `-ti > -ci` yields `/tɕ/`.
 
 **2. `t͡s > tɕ / _i`**
 
@@ -82,7 +82,7 @@ The `/t͡s/` created before `/i/` acquires a palatalized affricate realization.
 
 The palatalized affricate subsequently deaffricates before `/i/`.
 
-Established developments include `ruki > ruci > /ruɕi/` and `ruti > ruci > /ru(t)ɕi/`. The latter may retain a transitional stop component as a phonetic trace of historical `*t`; this is not a separate phoneme or a reversal of the historical merger.
+Established developments include `ruki > ruci > /ruɕi/` and `ruti > ruci > /rutɕi/`. The written forms merge as `ruci`, but their surface pronunciations remain distinct by historical source; `/tɕ/` in the latter is not a separate synchronic phoneme.
 
 #### Stage II — Early sequence restructuring
 
@@ -205,7 +205,7 @@ The current modern lexical and example forms are retained while their historical
 
 ### G-PHON-07 — Orthography and IPA
 
-The established orthography uses `v = /w/`, `y = /j/`, and `c = /ts/`. IPA records pronunciation rather than orthographic spelling. Thus orthographic `v` is transcribed `/w/`, orthographic `y` is transcribed `/j/`, and orthographic `c` is `/ts/` unless a documented phonetic realization is being represented.
+The established orthography uses `v = /w/`, `y = /j/`, and context-dependent `c`. IPA records pronunciation rather than orthographic spelling: orthographic `c` is transcribed `/ɕ/` when it derives from `-ki > -ci`, and `/tɕ/` when it derives from `-ti > -ci`.
 
 Long vowels are written doubled and transcribed with IPA length `ː` when established.
 
@@ -220,7 +220,7 @@ Stress is predictable rather than contrastive and is mora-weighted:
 - `CVC` = heavy (2 morae)
 - `CVVC` = superheavy but treated as heavy for stress assignment
 
-Stress falls on the rightmost heavy syllable. If a word contains no heavy syllable, stress falls on the penultimate syllable.
+Stress falls on the rightmost heavy syllable. If a word contains no heavy syllable, stress falls on the penultimate syllable. IPA fields must mark the assigned primary stress with `ˈ`, including monosyllables.
 
 ### Historical regression notes
 
