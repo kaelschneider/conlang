@@ -1,35 +1,35 @@
-id	form	type	pos	gloss	derived_from	status	notes
-L-0001	p	root	—	break / bite	—	stable	historical root; modern evidence apa
-L-0002	t	root	—	transfer	—	stable	historical root; modern evidence ita, da, teta
-L-0003	k	root	—	hold	—	stable	modern evidence ka; some existing examples use ku and this discrepancy is flagged in STATUS.md
-L-0004	w	root	—	grow	—	stable	modern wa 'grow'
-L-0005	r	root	—	go	—	stable	modern ra 'go'; rera 'turn'
-L-0006	j	root	—	see / know	—	stable	modern ya 'see/know'
-L-0007	h	root	—	say / blow	—	stable	modern ha 'say/blow'; source of exclamative -h-
-L-0008	s	root	—	cut / remove	—	stable	modern sa 'cut/remove'
-L-0009	m	root	—	live / dwell / stay	—	stable	modern ma 'live/dwell/stay'
-L-0010	n	root	—	get / find	—	stable	modern na 'get/find'; nena 'receive/acquire'
-L-0011	apa	lexeme	V	eat	L-0001	stable	historical development a-pa > apa
-L-0012	ita	lexeme	V	give	L-0002	stable	historical development from *t
-L-0013	ada	lexeme	V	take	L-0002	stable	historical development ata > ada > da
-L-0014	da	lexeme	V	take	L-0013	stable	modern outcome of ada
-L-0015	teta	lexeme	V	put / set	L-0002	stable	derived from *t
-L-0016	ka	lexeme	V	hold	L-0003	stable	modern basic hold stem
-L-0017	keka	lexeme	V	keep	L-0003	stable	derived from *k
-L-0018	wa	lexeme	V	grow	L-0004	stable	modern basic grow stem
-L-0019	ra	lexeme	V	go	L-0005	stable	modern basic go stem
-L-0020	rera	lexeme	V	turn	L-0005	stable	derived from *r
-L-0021	ya	lexeme	V	see / know	L-0006	stable	orthographic y corresponds to historical *j
-L-0022	ha	lexeme	V	say / blow	L-0007	stable	modern basic stem
-L-0023	sa	lexeme	V	cut / remove	L-0008	stable	modern basic stem
-L-0024	ma	lexeme	V	live / dwell / stay	L-0009	stable	modern basic stem
-L-0025	na	lexeme	V	get / find	L-0010	stable	modern basic stem
-L-0026	nena	lexeme	V	receive / acquire	L-0010	stable	derived from *n
-L-0027	ne	pronoun	PRON	1SG	—	stable	established through finite clauses
-L-0028	se	pronoun	PRON	2SG	—	stable	established through finite clauses
-L-0029	men	pronoun	PRON	1PL	—	stable	plural pronoun
-L-0030	sen	pronoun	PRON	2PL	—	stable	plural pronoun
-L-0031	en	pronoun	PRON	3PL	—	stable	plural pronoun
-L-0032	kerande	lexeme	N	container	?	experimental	established in test clauses; historical/derivational analysis not normalized
-L-0033	sare	lexeme	ADJ	large	?	experimental	established in attributive test; derivational analysis not normalized
-L-0034	keru	lexeme	V	carry	?	experimental	Appears in established complex form kerurekin; lexical history not normalized
+id	form	ipa	type	pos	gloss	derived_from	status	notes
+L-0001	p	/p/	root	—	break / bite	—	stable	historical root; modern evidence apa
+L-0002	t	/t/	root	—	transfer	—	stable	historical root; modern evidence ita, da, teta
+L-0003	k	/k/	root	—	hold	—	stable	root underlying modern ka and inflected ku/kui
+L-0004	w	/w/	root	—	grow	—	stable	modern wa 'grow'
+L-0005	r	/r/	root	—	go	—	stable	modern ra 'go'; rera 'turn'
+L-0006	j	/j/	root	—	see / know	—	stable	modern ya 'see/know'
+L-0007	h	/h/	root	—	say / blow	—	stable	modern ha 'say/blow'; source of exclamative -h-
+L-0008	s	/s/	root	—	cut / remove	—	stable	modern sa 'cut/remove'
+L-0009	m	/m/	root	—	live / dwell / stay	—	stable	modern ma 'live/dwell/stay'
+L-0010	n	/n/	root	—	get / find	—	stable	modern na 'get/find'; nena 'receive/acquire'
+L-0011	apa	/apa/	lexeme	V	eat	L-0001	stable	historical development a-pa > apa
+L-0012	ita	/ita/	lexeme	V	give	L-0002	stable	historical development from *t
+L-0013	ada	/ada/	lexeme	V	take	L-0002	stable	historical development ata > ada > da
+L-0014	da	/da/	lexeme	V	take	L-0013	stable	modern outcome of ada
+L-0015	teta	/teta/	lexeme	V	put / set	L-0002	stable	derived from *t
+L-0016	ka	/ka/	lexeme	V	hold	L-0003	stable	canonical citation/nonfinite form; realis/nonpast forms include ku and kui
+L-0017	keka	/keka/	lexeme	V	keep	L-0003	stable	derived from *k
+L-0018	wa	/wa/	lexeme	V	grow	L-0004	stable	modern basic grow stem
+L-0019	ra	/ra/	lexeme	V	go	L-0005	stable	modern basic go stem
+L-0020	rera	/rera/	lexeme	V	turn	L-0005	stable	derived from *r
+L-0021	ya	/ja/	lexeme	V	see / know	L-0006	stable	orthographic y corresponds to historical *j
+L-0022	ha	/ha/	lexeme	V	say / blow	L-0007	stable	modern basic stem
+L-0023	sa	/sa/	lexeme	V	cut / remove	L-0008	stable	modern basic stem
+L-0024	ma	/ma/	lexeme	V	live / dwell / stay	L-0009	stable	modern basic stem
+L-0025	na	/na/	lexeme	V	get / find	L-0010	stable	modern basic stem
+L-0026	nena	/nena/	lexeme	V	receive / acquire	L-0010	stable	derived from *n
+L-0027	ne	/ne/	pronoun	PRON	1SG	—	stable	established through finite clauses
+L-0028	se	/se/	pronoun	PRON	2SG	—	stable	established through finite clauses
+L-0029	men	/men/	pronoun	PRON	1PL	—	stable	plural pronoun
+L-0030	sen	/sen/	pronoun	PRON	2PL	—	stable	plural pronoun
+L-0031	en	/en/	pronoun	PRON	3PL	—	stable	plural pronoun
+L-0032	kerande	/kerande/	lexeme	N	container	?	experimental	established in test clauses; historical/derivational analysis not normalized
+L-0033	sare	/sare/	lexeme	ADJ	large	?	experimental	established in attributive test; derivational analysis not normalized
+L-0034	keru	/keru/	lexeme	V	carry	?	experimental	Appears in established complex form kerurekin; lexical history not normalized
