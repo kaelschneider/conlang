@@ -63,7 +63,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - `*ndt > nt:` is attested historically/lexically, not established as a productive synchronic rule
 - `ku-p-i > kupi > kuhi > kui` is established
 - `mente > mende`; `menta > menda`
-- Late homorganic sonorant reduction includes `nm > m:` and `nr > nn > n:`, with phonetic rather than phonemic length
+- Late sonorant-cluster reduction includes `nm > mm > m:` and `nr > nn > n:`, with phonetic rather than phonemic length
 - Stress is rightmost-heavy otherwise penultimate; IPA must mark primary stress with `ˈ`
 
 ### Morphology
@@ -104,13 +104,9 @@ The conditioned historical system is documented in `GRAMMAR.md`, including the r
 
 The earlier regression forms (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms) remain useful diagnostic evidence for historical strata and conditioning rather than being declared exceptions.
 
-The historical development `ada > da` remains to be placed in the chronology.
-
 The object-status reversal makes existing zero-marked object constructions formally NLOC by default. Their intended discourse status should be checked before introducing overt `n-` into examples. Local `n-` has the established surface repair `n + C → enC` before consonant-initial verb stems.
 
 ## Open questions
-
-### Phonology
 
 ### Morphology
 - Q-005: exact converb-to-case mappings and subject-continuity/switch-reference behavior
