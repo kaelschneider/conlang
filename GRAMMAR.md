@@ -98,7 +98,7 @@ Examples:
 - `r-u-t-h-a > rutha > rutta`
 - `r-u-p-h-a > rupha > ruppa`
 
-Because the stop has been restructured as a geminate, it is no longer an intervocalic singleton target for the later weakening series.
+Because the stop has been restructured as a historical geminate, it is no longer an intervocalic singleton target for the later weakening series. The geminate stage is historical rather than a productive synchronic consonant-length contrast; modern surface forms conform to the `(C)V(C)` phonotactics and may realize the outcome as a single stop.
 
 **5. `tc > c`**
 
@@ -106,13 +106,13 @@ Consonant-sequence simplification reduces `tc` to `c`. This belongs to the early
 
 **6. `wu > u`**
 
-The prohibited sequence `wu` is repaired to `u`.
+The prohibited sequence `wu` is repaired to `u` wherever the sequence occurs. This is a general phonological repair rather than a morphologically restricted alternation.
 
-**7. `yi > ye`**
+**7. `yi > ye` across a morpheme boundary**
 
-The prohibited sequence `yi` is repaired to `ye`. The grammatical identity of the final NONPAST marker is unchanged; `e` is the phonological repair rather than a replacement tense exponent.
+The prohibited sequence `yi` is repaired to `ye` when it arises across a morpheme boundary. The grammatical identity of the final NONPAST marker is unchanged; `e` is the phonological repair rather than a replacement tense exponent.
 
-Thus `ku-t-y-i > kutyi > kutye` retains `-i` as NONPAST historically.
+Thus `ku-t-y-i > kutyi > kutye` retains `-i` as NONPAST historically. The rule is a phonological boundary repair, not a lexicalized replacement of the tense marker.
 
 #### Stage III — Conditioned consonant weakening
 
@@ -160,20 +160,24 @@ Word-initial `*p > h` is historically continuous with the broader `p` weakening 
 
 #### Stage IV — Generalized sonorant-cluster reduction
 
-Complex sonorant clusters undergo late simplification with compensatory lengthening of the surviving consonant. The currently established cluster-specific outcomes are:
+Homorganic sonorant clusters undergo late simplification, especially across morphological boundaries, with phonetic lengthening of the surviving sonorant. The process is historically favored at morpheme boundaries but may spread into lexicalized material.
+
+The currently established outcomes are:
 
 **14. `nm > m:`**
 
-**15. `nr > n:`**
+**15. `nr > nn > n:`**
+
+The `nr > nn` step is analyzed as nasal-dominant assimilation within a highly similar sonorant cluster rather than as a general rule turning `r` into `n`.
 
 Thus:
 
 ```text
 menme > mem:e
-menra > men:a
+menra > menna > men:a
 ```
 
-These are members of a generalized historical cluster-reduction process, not lexical exceptions.
+The resulting `m:` and `n:` represent phonetic/metrical duration, not a new synchronic phonemic length contrast. In synchronic phonemic analysis, the surviving consonants remain /m/ and /n/. These are members of a generalized historical cluster-reduction process, not lexical exceptions.
 
 #### Stage V — Later initial-vowel reduction
 
@@ -220,7 +224,7 @@ Stress is predictable rather than contrastive and is mora-weighted:
 - `CVC` = heavy (2 morae)
 - `CVVC` = superheavy but treated as heavy for stress assignment
 
-Stress falls on the rightmost heavy syllable. If a word contains no heavy syllable, stress falls on the penultimate syllable. IPA fields must mark the assigned primary stress with `ˈ`, including monosyllables.
+Stress falls on the **rightmost heavy syllable**. If a word contains no heavy syllable, stress falls on the **penultimate syllable**. IPA fields must mark the assigned primary stress with `ˈ`, including monosyllables.
 
 ### Historical regression notes
 
