@@ -401,15 +401,28 @@ COM directional constructions are described under G-MORPH-13.
 
 ### G-MORPH-13 — COM polysemy and directional construction
 
-COM is a nominal case. Its directional uses are compositional constructions rather than additional cases.
+COM (`-me`) is a nominal case whose core meaning is **association / accompaniment**. The same case also supports an instrumental reading when the associated participant is a means, tool, or other inanimate entity. These are contextual readings of one case, not separate nominal cases.
 
-| Polarity | Animate argument | Inanimate argument | Semantic reading |
+| Construction | Core relation | Typical reading |
+|---|---|---|
+| `O-me` | association | with / alongside O |
+| `O-me` + instrument context | means | with / using O |
+
+The semantic distinction is not a grammatical animacy split: animate nouns strongly favor accompaniment, while tools and other inanimate nouns readily favor the means interpretation.
+
+With directional morphology, the direction is carried by the finite verb, while `-me` continues to mark the associated participant. The resulting construction can be interpreted as movement toward or away from an associated participant or means:
+
+| Direction | Construction | Spatial relation | Contextual extension |
 |---|---|---|---|
-| Ø | COM | INST | with / alongside (COM); with / using (INST) |
-| i- | BEN construction | INST construction | toward for / on behalf of (BEN); toward via / using (INST) |
-| a- | BEN construction | INST construction | away for / on behalf of (BEN); away via / using (INST) |
+| neutral | `O-me VERB` | with / alongside O | accompaniment or means |
+| toward | `O-me i-VERB` | toward O while associated with O | benefactive with animate O; instrumental/means with inanimate O |
+| away | `O-me a-VERB` | away from O while associated with O | benefactive with animate O; instrumental/means with inanimate O |
 
-The exact semantic boundaries remain subject to testing.
+The benefactive and instrumental readings are constructional extensions, not dedicated verbal applicatives. `i-` and `a-` do not change the COM suffix itself. The directional construction therefore remains transparently compositional:
+
+`O-me` + `i-/a-VERB`
+
+The exact discourse conditions that favor accompaniment, benefactive, or instrumental readings remain under testing.
 
 ### G-MORPH-14 — Applicatives
 
