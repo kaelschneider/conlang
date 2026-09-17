@@ -2,7 +2,7 @@
 
 ## Status
 
-**ESTABLISHED where stated; unresolved items are marked ?**
+**ESTABLISHED where stated; unresolved details remain explicitly marked ?.**
 
 ## Syllable structure
 
@@ -12,25 +12,31 @@ Surface onset clusters are not an ordinary productive feature. Complex sequences
 
 ## Vowels
 
-`a e i o u` — inventory status: ? for any elements not yet explicitly confirmed in the current canon.
+Synchronic vowel inventory: `/a e i u/`.
+
+Long vowels are written `aa ee ii uu`.
 
 ## Consonants
 
-The complete synchronic inventory is not yet formally recorded here. Confirmed historical/modern material includes `t k m n s h w j r`; historical `*p` has a modern word-initial reflex `h`.
+Synchronic consonant inventory: `/p t k c m n s h w j r/`.
+
+The inventory permits conditioned/allophonic realizations in appropriate phonological environments; individual allophones are not exhaustively specified here.
+
+Historical `*p` is distinct from historical `*h`, despite overlap in some reflexes.
 
 ## Confirmed sound changes / developments
 
 - Word-initial `*p > h`.
 - `*p` is distinct historically from `*h`; both can yield modern `h`.
-- `ti, ki` can converge to `c` through palatalization/fusion; exact formal conditioning is ?.
-- `tc > c`, paralleling reduction of geminate-like sequences.
-- `*ndt > nt:` is attested in the historical development of forms such as `kerande-te > kerant:e`; the precise conditioning of gemination vs. simplification remains ?.
+- `t, k > c` before `/i/`.
+- `tc > c`, paralleling reduction of complex coronal sequences.
+- `*ndt > nt:` is attested in the historical development of forms such as `kerande-te > kerant:e`; this is treated as a historical/lexicalized development rather than a productive synchronic rule.
 - `-yi` is prohibited; `ku-t-y-i > kutyi > kutye` is an established example of repair. The final `-i` is the NONPAST marker; `e` in the surface form is not a morphological tense substitution.
-- `-wu` is prohibited; repair is ?.
+- `-wu` is prohibited and is repaired as `-u`.
 - `ku-p-i > kupi > kuhi > kui` is an established historical development.
 - `mente > mende` and `menta > menda` are established developments.
-- `menme` may surface as `/menme/` or `/mem:e/` (status of the conditioning is ?).
-- `menra` may surface as `/menra/` or `/men:a/` (status of the conditioning is ?).
+- `menme` may surface as `/menme/` or `/mem:e/` pending more detailed conditioning.
+- `menra` may surface as `/menra/` or `/men:a/` pending more detailed conditioning.
 
 ## Orthography
 
@@ -42,4 +48,6 @@ Long vowels: `aa ee ii uu`.
 
 ## Prosody
 
-Lexical stress/tone system: ?.
+Lexical stress is predictable rather than contrastive. Stress is weight-sensitive: stress falls on the rightmost heavy syllable; when there is no heavy syllable, stress falls on the penultimate syllable.
+
+A heavy syllable is not yet fully defined in terms of the interaction of vowel length and coda weight; that finer phonetic specification remains ?.
