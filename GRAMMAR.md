@@ -296,12 +296,12 @@ There is exactly one object slot:
 
 | Marker | Function | Leipzig gloss |
 |---|---|---|
-| `Ø` | local object | — |
-| `n-` | nonlocal object | `NLOC` |
+| `n-` | local object | `LOC` |
+| `Ø` | nonlocal object | `NLOC` |
 | `s-` | reflexive | `REFL` |
 | `r-` | reciprocal | `RECP` |
 
-The overt object remains a separate noun phrase in SOV clauses. Nominal case suffixes likewise remain on the overt noun phrase.
+The overt object remains a separate noun phrase in SOV clauses. Nominal case suffixes likewise remain on the overt noun phrase. LOCAL/NLOC in this section refers to object status in the verbal object slot and is distinct from nominal LOC case (`-te`).
 
 ### G-MORPH-06 — AUX/DERIV
 
@@ -346,7 +346,9 @@ The 3rd-person marker `-p-` participates in the established historical developme
 
 `Ø` = imperfective (`IPFV`); `-n` = perfect (`PRF`).
 
-### G-MORPH-11 — Noun cases
+### G-MORPH-11 — Nominal case system
+
+The basic nominal case inventory comprises eight cases:
 
 | Case | Suffix | Core meaning | Semantic domain | Leipzig gloss |
 |---|---|---|---|---|
@@ -359,47 +361,75 @@ The 3rd-person marker `-p-` participates in the established historical developme
 | PATH | `-ra` | along / through / medium | spatial | `PATH` |
 | COM | `-me` | with / associate | participant | `COM` |
 
-### G-MORPH-12 — Directional constructions with case
+These are the basic nominal cases. Additional semantic functions are constructional extensions of these cases rather than additional nominal cases.
 
-Nominal cases remain distinct cases. Directional readings are compositional constructions: the noun keeps its ordinary case suffix and the finite verb carries `i-` toward or `a-` away. These constructions do not create additional nominal cases.
+### G-MORPH-12 — Case composition and directional constructions
 
-LOC, SUPER, INE, PATH, and COM can participate in directional constructions. ABS, ERG, and GEN do not currently directionalize.
+Nominal cases retain their ordinary suffixes when they participate in larger constructions. Direction is verbal: the finite verb carries `i-` toward/goalward or `a-` away/sourceward, while the noun retains its case suffix.
+
+The ordinary directional construction has no object-slot marking:
+
+`O-CASE i-VERB` → movement toward the case-marked spatial relation  
+`O-CASE a-VERB` → movement away from the case-marked spatial relation
+
+The currently established spatial cases participating in directional constructions are LOC, SUPER, INE, and PATH. COM has its own specialized semantic pattern in G-MORPH-13. ABS, ERG, and GEN do not currently directionalize.
 
 #### LOC series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-te` | LOC | at / in |
-| i- | `O-te i-VERB` | ALL construction | to / toward |
-| a- | `O-te a-VERB` | ABL construction | from / away |
+| i- | `O-te i-VERB` | ALL | to / toward |
+| a- | `O-te a-VERB` | ABL | from / away |
+
+The **allative (ALL)** construction expresses movement toward the location itself. It does not by itself introduce a recipient or beneficiary.
+
+A distinct **dative-like (DAT-like)** construction uses the LOC noun phrase together with the verb's object slot. The object slot is interpreted as the recipient/goal participant:
+
+| Object status | Construction | Function | Meaning |
+|---|---|---|---|
+| LOCAL | `O-te i-n-VERB` | DAT-like | to / for the local recipient |
+| NLOC | `O-te i-VERB` | DAT-like | to / for the nonlocal recipient |
+
+ALL and DAT-like are distinct constructions even where their surface segments coincide. ALL is `O-te i-VERB` with no object-slot value; DAT-like is `O-te i-(LOCAL/NLOC)-VERB` and introduces a recipient/goal participant through the object slot. Because NLOC is zero-marked, the NLOC DAT-like form is segmentally identical to ALL; the distinction is syntactic and semantic rather than an additional overt segment. This does not create a new nominal case.
 
 #### SUPER series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-ta` | SUPER | on / against |
-| i- | `O-ta i-VERB` | SUBLATIVE construction | onto / up to surface |
-| a- | `O-ta a-VERB` | DELATIVE construction | off / from surface |
+| i- | `O-ta i-VERB` | SUBLATIVE | onto / up to surface |
+| a- | `O-ta a-VERB` | DELATIVE | off / from surface |
 
 #### INE series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-ci` | INE | inside / within |
-| i- | `O-ci i-VERB` | ILLATIVE construction | into / in through |
-| a- | `O-ci a-VERB` | ELATIVE construction | out of |
+| i- | `O-ci i-VERB` | ILLATIVE | into / in through |
+| a- | `O-ci a-VERB` | ELATIVE | out of |
 
 #### PATH series
 
 | Polarity | Construction | Function | Meaning |
 |---|---|---|---|
 | Ø | `O-ra` | PATH | along / through |
-| i- | `O-ra i-VERB` | PATH+i- construction | toward along / across |
-| a- | `O-ra a-VERB` | PATH+a- construction | away along / back |
+| i- | `O-ra i-VERB` | PATH+i- | toward along / across |
+| a- | `O-ra a-VERB` | PATH+a- | away along / back |
 
-COM directional constructions are described under G-MORPH-13.
+#### Case stacking
 
-### G-MORPH-13 — COM polysemy and directional construction
+GEN may combine with a restricted set of spatial cases:
+
+| Stacking | Function | Status |
+|---|---|---|
+| `GEN + LOC` | at / in X's domain | established |
+| `GEN + SUPER` | on X's surface / domain | established |
+| `GEN + INE` | inside X's domain | established |
+
+These stacked constructions are not assumed to be freely productive over all nominal cases. Productivity limits remain under testing.
+
+### G-MORPH-13 — COM constructions and semantic extensions
 
 COM (`-me`) is a nominal case whose core meaning is **association / accompaniment**. It also supports an instrumental reading when the associated participant is a means, tool, or other inanimate entity. These are contextual readings of one case, not separate nominal cases.
 
@@ -410,7 +440,7 @@ COM (`-me`) is a nominal case whose core meaning is **association / accompanimen
 
 The distinction is contextual rather than a strict grammatical animacy split: animate nouns favor accompaniment, while tools and other inanimate nouns readily favor the instrumental/means reading.
 
-With directional morphology, the direction remains on the finite verb and `-me` continues to mark the associated participant. The directional constructions have a consistent semantic polarity:
+With directional morphology, the direction remains on the finite verb and `-me` continues to mark the associated participant:
 
 | Direction | Construction | Spatial relation | Constructional extension |
 |---|---|---|---|
@@ -418,40 +448,29 @@ With directional morphology, the direction remains on the finite verb and `-me` 
 | toward | `O-me i-VERB` | toward O | **benefactive**: for / toward the benefit of O |
 | away | `O-me a-VERB` | away from O | **malefactive**: to / from O's detriment |
 
-Thus `i-` and `a-` do not alter the COM suffix or introduce applicative morphology. They combine with the existing COM construction to produce directional semantic extensions:
+Thus:
 
-`O-me` + `i-VERB` → benefactive  
-`O-me` + `a-VERB` → malefactive
+`O-me` + `i-VERB` → **benefactive**  
+`O-me` + `a-VERB` → **malefactive**
 
-Benefactive and malefactive meanings are constructional extensions of COM plus verbal direction, not dedicated verbal applicatives. Instrumental/means remains a contextual reading of neutral COM and is not assigned to the directional opposition.
+`i-` and `a-` do not alter the COM suffix or introduce applicative morphology. Benefactive and malefactive meanings are constructional extensions of COM plus verbal direction. Instrumental/means remains a contextual reading of neutral COM and is not assigned to the directional opposition.
 
-The exact discourse conditions governing accompaniment, instrumental, benefactive, and malefactive readings remain under testing.
+### G-MORPH-14 — Constructional extensions
 
-### G-MORPH-14 — Constructional functions
+Some grammatical functions arise compositionally from existing cases and other established morphology. They are not additional nominal cases.
 
-| Function | Source | Realization |
+| Function | Source construction | Interpretation |
 |---|---|---|
-| PART | GEN, partitive use | `-se` in divisible/mass contexts |
-| COMP | COM, comitative + locative anchoring | `-me` + context |
-| DAT | LOC + `i-`, recipient / goal participant | `O-te i-VERB` in dative-like contexts |
-| ESSIVE | LOC + stative predicate | `-te` in copular/state constructions |
-| TRANSLATIVE | ESSIVE + `i-ra` | `-te` + `i-ra` meaning 'become' |
+| PART | GEN (`-se`) | partitive use in divisible/mass contexts |
+| ESSIVE | LOC (`-te`) + stative predicate | being at/in a state or location |
+| DAT | LOC (`-te`) + `i-` + object slot | recipient / goal participant |
+| TRANSLATIVE | ESSIVE + `i-ra` | become / come into a state |
 
-These are constructional readings, not additional nominal cases.
+The dative-like construction is distinct from the allative: allative describes movement to a location, while the dative-like construction introduces a recipient/goal participant through the verbal object slot. Its LOCAL/NLOC distinction is defined in G-MORPH-12.
 
-### G-MORPH-14 — GEN + spatial stacking
+`COMP` is not treated as a separate constructional function here because ordinary accompaniment is the core function of COM and is described under G-MORPH-13.
 
-GEN + spatial stacking is established as restricted constructional morphology.
-
-| Stacking | Function | Status |
-|---|---|---|
-| `GEN + LOC` | at / in X's domain | established |
-| `GEN + SUPER` | on X's surface / domain | established |
-| `GEN + INE` | inside X's domain | established |
-
-These stacked constructions are not assumed to be freely productive over all nominal cases. Productivity limits remain under testing.
-
-### G-MORPH-14 — Converbs, participles, and nominalization
+### G-MORPH-15 — Converbs, participles, and nominalization
 
 Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. The inventory of case-to-relation mappings and same-subject versus switch-reference behavior remains unresolved. Independent conjunctions are not currently established as the primary clause-combining strategy.
 
@@ -471,7 +490,7 @@ Participial morphology is analyzed as follows, but has not yet been promoted to 
 
 `kerande` remains the canonical CONTAINER lexeme. Its synchronic analysis is `kera + -nu + -te` with surface fusion/reduction; the exact independent exponent boundaries and phonological pathway remain unresolved.
 
-### G-MORPH-14 — Established complex verbal forms
+### G-MORPH-16 — Established complex verbal forms
 
 `kerurekin` = `keru-re-k-i-n` (CARRY.REAL-PROG-1-NONPAST-PERF). It demonstrates co-occurrence of AUX/DERIV, agreement, tense, and aspect.
 
