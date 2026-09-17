@@ -401,34 +401,33 @@ COM directional constructions are described under G-MORPH-13.
 
 ### G-MORPH-13 — COM polysemy and directional construction
 
-COM (`-me`) is a nominal case whose core meaning is **association / accompaniment**. The same case also supports an instrumental reading when the associated participant is a means, tool, or other inanimate entity. These are contextual readings of one case, not separate nominal cases.
+COM (`-me`) is a nominal case whose core meaning is **association / accompaniment**. It also supports an instrumental reading when the associated participant is a means, tool, or other inanimate entity. These are contextual readings of one case, not separate nominal cases.
 
 | Construction | Core relation | Typical reading |
 |---|---|---|
 | `O-me` | association | with / alongside O |
 | `O-me` + instrument context | means | with / using O |
 
-The semantic distinction is not a grammatical animacy split: animate nouns strongly favor accompaniment, while tools and other inanimate nouns readily favor the means interpretation.
+The distinction is contextual rather than a strict grammatical animacy split: animate nouns favor accompaniment, while tools and other inanimate nouns readily favor the instrumental/means reading.
 
-With directional morphology, the direction is carried by the finite verb, while `-me` continues to mark the associated participant. The resulting construction can be interpreted as movement toward or away from an associated participant or means:
+With directional morphology, the direction remains on the finite verb and `-me` continues to mark the associated participant. The directional constructions have a consistent semantic polarity:
 
-| Direction | Construction | Spatial relation | Contextual extension |
+| Direction | Construction | Spatial relation | Constructional extension |
 |---|---|---|---|
-| neutral | `O-me VERB` | with / alongside O | accompaniment or means |
-| toward | `O-me i-VERB` | toward O while associated with O | benefactive with animate O; instrumental/means with inanimate O |
-| away | `O-me a-VERB` | away from O while associated with O | benefactive with animate O; instrumental/means with inanimate O |
+| neutral | `O-me VERB` | with / alongside O | accompaniment; instrumental/means where context permits |
+| toward | `O-me i-VERB` | toward O | **benefactive**: for / toward the benefit of O |
+| away | `O-me a-VERB` | away from O | **malefactive**: to / from O's detriment |
 
-The benefactive and instrumental readings are constructional extensions, not dedicated verbal applicatives. `i-` and `a-` do not change the COM suffix itself. The directional construction therefore remains transparently compositional:
+Thus `i-` and `a-` do not alter the COM suffix or introduce applicative morphology. They combine with the existing COM construction to produce directional semantic extensions:
 
-`O-me` + `i-/a-VERB`
+`O-me` + `i-VERB` → benefactive  
+`O-me` + `a-VERB` → malefactive
 
-The exact discourse conditions that favor accompaniment, benefactive, or instrumental readings remain under testing.
+Benefactive and malefactive meanings are constructional extensions of COM plus verbal direction, not dedicated verbal applicatives. Instrumental/means remains a contextual reading of neutral COM and is not assigned to the directional opposition.
 
-### G-MORPH-14 — Applicatives
+The exact discourse conditions governing accompaniment, instrumental, benefactive, and malefactive readings remain under testing.
 
-Dedicated verbal applicatives have been eliminated. Instrumental and benefactive meanings are expressed through nominal case constructions; no dedicated verbal applicative morphology remains.
-
-### G-MORPH-15 — Constructional functions
+### G-MORPH-14 — Constructional functions
 
 | Function | Source | Realization |
 |---|---|---|
@@ -440,7 +439,7 @@ Dedicated verbal applicatives have been eliminated. Instrumental and benefactive
 
 These are constructional readings, not additional nominal cases.
 
-### G-MORPH-16 — GEN + spatial stacking
+### G-MORPH-14 — GEN + spatial stacking
 
 GEN + spatial stacking is established as restricted constructional morphology.
 
@@ -452,7 +451,7 @@ GEN + spatial stacking is established as restricted constructional morphology.
 
 These stacked constructions are not assumed to be freely productive over all nominal cases. Productivity limits remain under testing.
 
-### G-MORPH-17 — Converbs, participles, and nominalization
+### G-MORPH-14 — Converbs, participles, and nominalization
 
 Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. The inventory of case-to-relation mappings and same-subject versus switch-reference behavior remains unresolved. Independent conjunctions are not currently established as the primary clause-combining strategy.
 
@@ -472,7 +471,7 @@ Participial morphology is analyzed as follows, but has not yet been promoted to 
 
 `kerande` remains the canonical CONTAINER lexeme. Its synchronic analysis is `kera + -nu + -te` with surface fusion/reduction; the exact independent exponent boundaries and phonological pathway remain unresolved.
 
-### G-MORPH-18 — Established complex verbal forms
+### G-MORPH-14 — Established complex verbal forms
 
 `kerurekin` = `keru-re-k-i-n` (CARRY.REAL-PROG-1-NONPAST-PERF). It demonstrates co-occurrence of AUX/DERIV, agreement, tense, and aspect.
 
