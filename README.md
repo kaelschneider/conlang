@@ -28,7 +28,6 @@ Exact rules, forms, and unresolved conditions belong in the source files below.
 | `PHONOLOGY.md` | Current synchronic phonology, prosody, and consolidated historical sound change. |
 | `MORPHOLOGY.md` | Current morphology, including verbal/nominal inflection and derivation. |
 | `SYNTAX.md` | Current syntax and syntactic constructions. |
-| `GRAMMAR.md` | Navigation index for the three grammar domain files; not a duplicate grammar. |
 | `LEXICON.tsv` | Canonical lexical and root inventory, including lexical relationships and status. |
 | `EXAMPLES.tsv` | Provenance-bearing examples and test corpus. |
 | `STATUS.md` | Current development state, uncertainty, and testing priorities. |
@@ -45,8 +44,7 @@ The repository is intentionally small and flat. Repository structure must not be
 4. `LEXICON.tsv` is authoritative for lexical entries and root data.
 5. `EXAMPLES.tsv` records evidence and testing; examples do not override established grammar.
 6. `STATUS.md` records development state and uncertainty; it is not itself grammar.
-7. `GRAMMAR.md` is a navigation index only.
-8. Git history records change history and superseded analyses.
+7. Git history records change history and superseded analyses.
 
 When sources conflict, do not silently choose one. Preserve the conflict and record it in `STATUS.md` until it is explicitly resolved.
 
