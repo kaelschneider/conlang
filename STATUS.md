@@ -44,18 +44,18 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 
 ### Phonology
 - Vowels: `/a e i u/`; long vowels are `aa ee ii uu` when established
-- Consonants: `/p t k c m n s h w j r/`; established orthography uses `c = /ts/`, `v = /w/`, and `y = /j/`
+- Consonants: `/p t k m n s h w j r/`; `c` is orthographic and has `/ɕ/` or `/tɕ/` surface realization depending on historical source (`-ki > -ci` vs. `-ti > -ci`); `v = /w/`, `y = /j/`
 - Surface syllable: `(C)V(C)`
 - Historical conditioning uses OPEN/CLOSED syllable structure plus F_F/F_B/B_F/B_B vowel-transition class
 - Historical `*p > h`; historical `*p` remains distinct from historical `*h`
-- Pre-/i/ `t, k > c > tɕ > ɕ`
+- Pre-/i/ `t, k > c`; orthographic `c` is `/ɕ/` from `-ki > -ci` and `/tɕ/` from `-ti > -ci`
 - `ph > pp`, `th > tt`, `kh > kk`
 - `wu > u`; `yi > ye`
 - `*ndt > nt:` is attested historically/lexically, not established as a productive synchronic rule
 - `ku-p-i > kupi > kuhi > kui` is established
 - `mente > mende`; `menta > menda`
 - `menme` and `menra` have unresolved conditioning
-- Stress is weight-sensitive; exact weight definition remains open
+- Stress is weight-sensitive; IPA must mark primary stress with `ˈ`
 
 ### Morphology
 - Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
