@@ -61,9 +61,17 @@ The previous `ka` vs. `ku` inconsistency is resolved as a morphological distinct
 
 This analysis should be revisited only if later evidence demonstrates lexicalization or an irregular paradigm.
 
+### Carry-form analysis
+
+The previous `keru` entry was incorrect. The canonical lexical item is `L-0034 kera`, derived from `ka + ra` and functioning as the nonfinite stem for CARRY.
+
+- `kera` is the lexical/nonfinite stem.
+- `keru` is the predictable REALIS form of `kera` and is not a separate lexicon entry.
+- `kerurekin` is analyzed from `keru-re-k-i-n`.
+
 ## Known inconsistencies / cleanup needed
 
-### Q-002 — `kerande`, `sare`, `keru`
+### Q-002 — `kerande`, `sare`
 
 These forms occur in the existing test corpus but their lexical/derivational analyses are not yet normalized. They are retained as experimental lexical entries.
 
@@ -93,5 +101,5 @@ These forms occur in the existing test corpus but their lexical/derivational ana
 3. Design and test negative morphology.
 4. Test reflexive and reciprocal object marking.
 5. Test all 18 nominal case/polarity forms in natural clauses.
-6. Normalize `kerande`, `sare`, and `keru` lexical analyses.
+6. Normalize `kerande` and `sare` lexical analyses.
 7. Expand the lexicon only after productive derivational patterns are sufficiently clear.
