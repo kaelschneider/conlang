@@ -10,11 +10,11 @@ Surface syllable structure is `(C)V(C)`. Productive onset clusters are not estab
 
 ### G-PHON-02 — Vowels
 
-The synchronic vowel inventory is `/a e i u/`. Long vowels are written `aa ee ii uu`.
+The synchronic vowel inventory is `/a e i u/`. Long vowels are written `aa ee ii uu` and represented phonemically as `/aː eː iː uː/` when their quantity is established.
 
 ### G-PHON-03 — Consonants
 
-The synchronic consonant inventory is `/p t k c m n s h w j r/`. Conditioned allophony is not exhaustively specified.
+The synchronic consonant inventory is `/p t k c m n s h w j r/`. In IPA, orthographic `c` represents `/ts/` under the established `ts = c` convention, and orthographic `j` represents `/j/`. Conditioned allophony is not exhaustively specified.
 
 ### G-PHON-04 — Established historical developments
 
@@ -28,13 +28,13 @@ The synchronic consonant inventory is `/p t k c m n s h w j r/`. Conditioned all
 
 Historical developments are not automatically productive synchronic rules.
 
-### G-PHON-05 — Orthography
+### G-PHON-05 — Orthography and IPA
 
-`w = v`, `j = y`, and `ts = c` in the established orthography. Long vowels are written doubled.
+The established orthography uses `w = v`, `j = y`, and `ts = c`. IPA records pronunciation rather than orthographic spelling. Thus orthographic `y` is transcribed `/j/`, and orthographic `c` is `/ts/`. Long vowels are written doubled and transcribed with IPA length `ː` when established.
 
 ### G-PHON-06 — Prosody
 
-Stress is predictable and weight-sensitive: stress falls on the rightmost heavy syllable; if there is no heavy syllable, stress falls on the penultimate syllable. The exact definition of heavy remains unresolved.
+Stress is predictable and weight-sensitive: stress falls on the rightmost heavy syllable; if there is no heavy syllable, stress falls on the penultimate syllable. The exact definition of heavy remains unresolved. IPA stress marks should not be added to lexical entries until the relevant stress assignment is established.
 
 ## G-MORPH — Morphology
 
@@ -52,18 +52,26 @@ There is no dedicated verbal applicative slot.
 
 ### G-MORPH-03 — Stem grades
 
-| Grade | Form | Function |
-|---|---|---|
-| NONFINITE | `-a-` | nonfinite |
-| LINKING | `-e-` | linking / attributive |
-| REALIS | `-u-` | realis |
-| IRREALIS | `-i-` | irrealis |
+| Grade | Form | Function | Leipzig gloss |
+|---|---|---|---|
+| NONFINITE | `-a-` | nonfinite / citation form | `NFIN` |
+| LINKING | `-e-` | linking / attributive | `LINK` |
+| REALIS | `-u-` | realis | `REAL` |
+| IRREALIS | `-i-` | irrealis | `IRR` |
 
 These grades are independent of directional `i-` and `a-`.
+
+For the HOLD lexeme, the citation/nonfinite form is `ka`. The realis stem is `ku`; adding nonpast `-i` gives `kui`:
+
+`ka` → `k-u` → `k-u-i`
+
+The predictable inflected forms `ku` and `kui` are not separate lexemes.
 
 ### G-MORPH-04 — Direction
 
 `i-` = toward / goalward; `a-` = away / sourceward; `Ø` = neutral.
+
+Leipzig gloss: `DIR` for the directional prefix when its specific polarity is recoverable from context; use a more specific project gloss only if one is established.
 
 Directional morphology is verbal. In spatial case constructions the noun retains its spatial suffix:
 
@@ -73,61 +81,61 @@ For example, `O-te i-VERB` is allative and `O-te a-VERB` is ablative.
 
 ### G-MORPH-05 — Object slot
 
-| Marker | Function |
-|---|---|
-| `Ø` | local object |
-| `n-` | nonlocal object |
-| `s-` | reflexive |
-| `r-` | reciprocal |
+| Marker | Function | Leipzig gloss |
+|---|---|---|
+| `Ø` | local object | — |
+| `n-` | nonlocal object | `NLOC` |
+| `s-` | reflexive | `REFL` |
+| `r-` | reciprocal | `RECP` |
 
 The overt object remains a separate noun phrase.
 
 ### G-MORPH-06 — AUX/DERIV
 
-| Form | Value |
-|---|---|
-| `-re-` | progressive |
-| `-ke-` | continuative |
-| `-me-` | habitual |
-| `-se-` | inchoative |
-| `-te-` | opposite of inchoative |
+| Form | Value | Leipzig gloss |
+|---|---|---|
+| `-re-` | progressive | `PROG` |
+| `-ke-` | continuative | `CONT` |
+| `-me-` | habitual | `HAB` |
+| `-se-` | inchoative | `INCH` |
+| `-te-` | opposite of inchoative | `TE` |
 
 `-we-` is unresolved and therefore not canonical.
 
 ### G-MORPH-07 — Agreement
 
-| Marker | Value |
-|---|---|
-| `-k-` | 1SG |
-| `-t-` | 2SG |
-| `-p-` | 3SG |
+| Marker | Value | Leipzig gloss |
+|---|---|---|
+| `-k-` | 1SG | `1SG` |
+| `-t-` | 2SG | `2SG` |
+| `-p-` | 3SG | `3SG` |
 
 There is no verbal plural agreement. Plural number is expressed by pronouns.
 
 ### G-MORPH-08 — Discourse / mood
 
-`-h-` = exclamative; `-y-` = interrogative. `-h-` is historically associated with `*h` 'say/blow'.
+`-h-` = exclamative; `-y-` = interrogative. Leipzig gloss: `EXCL` for exclamative and `INT` for interrogative. `-h-` is historically associated with `*h` 'say/blow'.
 
 ### G-MORPH-09 — Tense
 
-`-i-` = nonpast; `-a-` = past.
+`-i-` = nonpast; `-a-` = past. Leipzig gloss: `NPST` and `PST` respectively.
 
 ### G-MORPH-10 — Aspect
 
-`Ø` = imperfective; `-n` = perfect.
+`Ø` = imperfective; `-n` = perfect. Leipzig gloss: `IPFV` and `PRF` respectively.
 
 ### G-MORPH-11 — Noun cases
 
-| Case | Suffix | Core meaning |
-|---|---|---|
-| ABS | `Ø` | patient / S |
-| ERG | `-ku` | agent / A |
-| GEN | `-se` | possessor / dependent |
-| LOC | `-te` | at / in / static |
-| SUPER | `-ta` | on / against / surface |
-| INE | `-ci` | inside / containment |
-| PATH | `-ra` | along / through / medium |
-| COM | `-me` | with / associate |
+| Case | Suffix | Core meaning | Leipzig gloss |
+|---|---|---|---|
+| ABS | `Ø` | patient / S | `ABS` |
+| ERG | `-ku` | agent / A | `ERG` |
+| GEN | `-se` | possessor / dependent | `GEN` |
+| LOC | `-te` | at / in / static | `LOC` |
+| SUPER | `-ta` | on / against / surface | `SUPER` |
+| INE | `-ci` | inside / containment | `INE` |
+| PATH | `-ra` | along / through / medium | `PATH` |
+| COM | `-me` | with / associate | `COM` |
 
 ### G-MORPH-12 — Spatial polarity
 
@@ -144,6 +152,16 @@ Dedicated verbal applicatives have been eliminated. Instrumental and benefactive
 ### G-MORPH-15 — Converbs and participles
 
 Converbs are intended to derive through nominalizers and case endings. Dedicated participial morphology supplements the existing stem grades. Exact inventories remain unresolved.
+
+## G-GLOSS — Glossing conventions
+
+### G-GLOSS-01 — Leipzig baseline
+
+Interlinear glosses use the Leipzig Glossing Rules as the default. Morpheme boundaries are represented with `-`; clitic boundaries with `=`. A period `.` in a gloss marks multiple grammatical values expressed by a single morph. A colon `:` is reserved for appropriate phonological/grammatical fusion. Do not use punctuation merely to shorten a gloss.
+
+### G-GLOSS-02 — Project abbreviations
+
+The project uses standard Leipzig abbreviations where applicable, including `1SG`, `2SG`, `3SG`, `ERG`, `ABS`, `GEN`, `LOC`, `COM`, `REAL`, `IRR`, `NPST`, `PST`, `PRF`, `IPFV`, `PROG`, `CONT`, `HAB`, `INCH`, `REFL`, and `RECP`. Project-specific categories are used only where necessary.
 
 ## G-SYN — Syntax
 
