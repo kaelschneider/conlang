@@ -9,7 +9,6 @@
 - `PHONOLOGY.md` — canonical phonology, prosody, and historical sound change
 - `MORPHOLOGY.md` — canonical morphology
 - `SYNTAX.md` — canonical syntax
-- `GRAMMAR.md` — navigation index only
 - `LEXICON.tsv` — canonical lexical/root inventory
 - `EXAMPLES.tsv` — example and test corpus
 - `SCHEMA.json` — structural validation schema
@@ -37,7 +36,6 @@ The former consolidated `GRAMMAR.md` has been split into:
 - `PHONOLOGY.md` — synchronic phonology plus consolidated historical sound change
 - `MORPHOLOGY.md` — morphology
 - `SYNTAX.md` — syntax
-- `GRAMMAR.md` — navigation index
 
 Existing `G-PHON`, `G-MORPH`, and `G-SYN` section IDs are retained so existing `EXAMPLES.tsv` references remain stable.
 
