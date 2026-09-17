@@ -1,25 +1,38 @@
 # Conlang
 
-A naturalistic a priori constructed language project. This repository contains the current grammatical description, lexical inventory, and example corpus for the language.
+A naturalistic a priori constructed language project. The language is developed as a coherent system in which phonology, morphology, syntax, lexicon, usage, and historical development constrain one another.
 
-## Language overview
+## Typological profile
 
-The language is being developed as a coherent linguistic system: phonology, morphology, syntax, lexicon, usage, and historical development are intended to constrain one another.
+The current language can be described as a **head-final, predominantly agglutinative language with substantial historical fusion and reduction**. Its grammatical profile includes:
 
-Current work includes:
+- **Basic clause order:** SOV.
+- **Alignment:** active-stative / Split-S analysis, with the exact conditioning of person, animacy, and volitionality still under testing.
+- **Nominal morphology:** eight basic cases—ABS, ERG, GEN, LOC, SUPER, INE, PATH, and COM—used for core argument marking and spatial/relational functions.
+- **Verbal morphology:** finite verbs require person agreement. Person contrasts are 1/2/3, without a singular/plural distinction in the agreement markers.
+- **Direction:** verbal `i-` marks movement toward/goalward and `a-` movement away/sourceward. Directional constructions retain the noun's case morphology.
+- **Object status:** the verbal object slot distinguishes LOCAL (`n-`) from NLOC (`Ø`), with additional reflexive and reciprocal values. Before consonant-initial stems, LOCAL `n-` surfaces as `en-` by `n + C → enC`.
+- **TAM and verbal categories:** stem grades distinguish NONFINITE, LINKING, REALIS, and IRREALIS; tense distinguishes NONPAST and PAST; aspect distinguishes IMPERFECTIVE and PERFECT.
+- **Case constructions:** spatial cases participate in directional constructions; LOC plus verbal direction also supports a distinct dative-like construction through the object slot.
+- **COM semantics:** `-me` has association/accompaniment as its core value, with contextual instrumental use; `O-me + i-VERB` has a benefactive reading and `O-me + a-VERB` a malefactive reading.
+- **Clause combining:** nominalization plus case is the intended basis for converbial constructions.
+- **Prosody:** stress is predictable and weight-sensitive.
+- **Phonology and historical development:** a four-vowel system, a ten-consonant synchronic inventory, context-dependent orthographic `c`, and a layered history of palatalization, consonant weakening, sequence repair, and cluster reduction.
 
-- a four-vowel system with established long vowels;
-- a consonant system with `c = /ts/`, `v = /w/`, and `y = /j/` in the established orthography;
-- weight-sensitive stress and established morphophonological processes;
-- consonant-final verbal roots with distinct stem grades for nonfinite, linking/attributive, realis, and irrealis functions;
-- verbal direction marking, object marking, person agreement, discourse marking, tense, and aspect;
-- an active–stative / Split-S alignment system under continued testing;
-- nominal case marking with constructional extensions;
-- nominalization and case-based converb constructions;
-- lexical derivation, compounds, and lexicalized complexes;
-- a developing historical account based on conditioned sound change, reduction, reanalysis, analogy, and lexicalization.
+The language is intended to exhibit ordinary historical consequences—fusion, reduction, lexicalization, analogy, and semantic specialization—rather than a perfectly regular synchronically transparent system.
 
-Exact rules, forms, and unresolved conditions belong in `GRAMMAR.md`, with lexical/data structures in the TSV files and project-state notes in `STATUS.md`.
+### Orthography
+
+The established orthography uses:
+
+| Letter | Pronunciation / function |
+|---|---|
+| `c` | context-dependent spelling: `/ɕ/` from historical `-ki > -ci`; `/tɕ/` from historical `-ti > -ci` |
+| `v` | `/w/` |
+| `y` | `/j/` |
+| `aa ee ii uu` | long vowels |
+
+Orthographic `c` is **not a synchronic phoneme**. IPA records the actual pronunciation rather than the written letter.
 
 ## Repository structure
 
@@ -37,10 +50,10 @@ The repository is intentionally small and flat. Repository structure must not be
 ## Source authority
 
 1. `GRAMMAR.md` is authoritative for phonology, morphology, syntax, prosody, and historical sound change.
-4. `LEXICON.tsv` is authoritative for lexical entries and root data.
-5. `EXAMPLES.tsv` records evidence and testing; examples do not override established grammar.
-6. `STATUS.md` records development state and uncertainty; it is not itself grammar.
-7. Git history records change history and superseded analyses.
+2. `LEXICON.tsv` is authoritative for lexical entries and root data.
+3. `EXAMPLES.tsv` records evidence and testing; examples do not override established grammar.
+4. `STATUS.md` records development state and uncertainty; it is not itself grammar.
+5. Git history records change history and superseded analyses.
 
 When sources conflict, do not silently choose one. Preserve the conflict and record it in `STATUS.md` until it is explicitly resolved.
 
