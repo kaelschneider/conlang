@@ -6,18 +6,18 @@
 
 ## 1. Simple transitive
 
-`Neku kerande kuci.`  
-`ne-ku kerande ku-ci`  
-1SG-ERG container ABS hold.REAL-LOC  
-**Intended:** “I hold the container in/at [a place].”
+`Neku kerande kui.`  
+`ne-ku kerande ku-i`  
+1SG-ERG container ABS hold.REAL-NONPAST  
+**Intended:** “I hold the container.”
 
-**Tests:** SOV order; explicit ERG subject; ABS object; spatial case.
+**Tests:** SOV order; explicit ERG subject; ABS object; established 3SG verbal form as a paradigmatic test.
 
 ## 2. Third-person transitive
 
 `Seku kerande kutye?`  
 `se-ku kerande ku-t-y-e`  
-2SG-ERG container ABS hold-2SG-INTERROG-LINK?  
+2SG-ERG container ABS hold-2SG-INTERROG-LINK  
 **Intended:** “Do you hold the container?”
 
 **Tests:** interrogative discourse slot; object marking; existing question pattern. The final surface form remains subject to phonological testing.
@@ -31,23 +31,23 @@ container large-REALIS-NONPAST
 
 **Tests:** subject + predicate order; realis/nonpast stacking.
 
-## 4. Directional movement
+## 4. Directional movement: toward
 
-`Neku i-kerande-te rui.`  
-`ne-ku i-kerande-te ru-i`  
-1SG-ERG toward-container-LOC go.REAL-NONPAST  
+`Neku kerande irui.`  
+`ne-ku kerande i-ru-i`  
+1SG-ERG container ABS toward-go.REAL-NONPAST  
 **Intended:** “I go toward the container.”
 
-**Tests:** directional morphology on spatial case; SOV order; interaction of nominal direction with verbal morphology.
+**Tests:** directional morphology on the **verb**, not the noun; SOV order; interaction of verbal direction with an overt goal. The exact case marking of the goal still needs testing.
 
-## 5. Source-oriented movement
+## 5. Directional movement: away
 
-`Neku a-kerande-te rau.`  
-`ne-ku away-container-LOC go.REAL`  
-1SG-ERG away-container-LOC go.REAL  
+`Neku kerande arui.`  
+`ne-ku kerande a-ru-i`  
+1SG-ERG container ABS away-go.REAL-NONPAST  
 **Intended:** “I go away from the container.”
 
-**Tests:** `a-` directional polarity; contrast with clause 4.
+**Tests:** `a-` directional polarity on the **verb**; contrast with clause 4. The exact case marking of the source still needs testing.
 
 ## 6. Comitative
 
@@ -62,7 +62,7 @@ container large-REALIS-NONPAST
 
 `Neku kerande same.`  
 `ne-ku kerande sa-me`  
-1SG-ERG container ABS cut.REAL-INST  
+1SG-ERG container ABS cut.REAL-COM/INST  
 **Intended:** “I cut/remove the container with [a tool].”
 
 **Tests:** inanimate instrumental COM semantics; lexical/morphological segmentation needs testing.
@@ -78,12 +78,12 @@ container large-REALIS-NONPAST
 
 ## 9. Attributive modifier
 
-`Sare kerande ku.`  
-`sare kerande ku`  
-large.ATTR container ABS  
-**Intended:** “the large container [is/exists].”
+`Sare kerande.`  
+`sare kerande`  
+large.ATTR container  
+**Intended:** “the large container.”
 
-**Tests:** attributive modifier preceding noun; zero-marked ABS noun.
+**Tests:** attributive modifier preceding noun.
 
 ## 10. Plural pronoun
 
@@ -100,9 +100,9 @@ large.ATTR container ABS
 |---|---|
 | Basic word order | SOV is workable across the test set, but needs more independent clauses |
 | ABS/ERG | Explicit ERG/ABS combinations are morphologically straightforward |
-| Person/number | Plural pronouns can be tested without plural verbal agreement |
+| Person/number | Plural pronouns can be tested without verbal plural agreement |
 | Questions | `-y-` can be tested, but surface repair must be tracked |
-| Directional case | `i-` / `a-` provide a useful contrast |
+| Verbal direction | `i-` / `a-` are placed on the verb, contrasting toward vs. away |
 | COM polysemy | Animate COM vs. inanimate INST needs explicit noun referents in future tests |
 | Verb stacking | `kerurekin` provides an established complex-form test |
 | Genitive | **Not resolved by these examples**; requires a matched noun-phrase test |
@@ -118,5 +118,6 @@ large.ATTR container ABS
 5. Reflexive and reciprocal objects.
 6. Negative clauses once a negative marker is proposed.
 7. All 18 nominal inflectional forms in natural clauses.
+8. Directional verbs with clearly established goal/source case-marking, testing whether verbal direction and nominal direction can co-occur or must be distinguished.
 
 **Method:** unresolved features should remain hypotheses until repeated sentence-generation tests support a canonical analysis.
