@@ -74,9 +74,9 @@ This matrix is a concrete design completion of cells that are not all directly i
 
 Historical `t` and `k` become orthographic `c` before `/i/`. This `c` is a written merger, not a synchronic phoneme.
 
-**2. `-ti > -ci > /tɕi/`**
+**2. `-ti > -ci` in 2P verb morphology**
 
-The historical `t` outcome retains a palatalized affricate realization.
+The 2P agreement sequence `-ti` becomes orthographic `-ci`. In an open syllable, `-ci` is realized `/tɕi/`; when the syllable is closed, the affricate reduces to `/ɕ/`. Thus `-ci` is `/tɕi/`, while `-cin` is `/ɕin/`.
 
 **3. `-ki > -ci > /ɕi/`**
 
