@@ -2,7 +2,7 @@ id	form	ipa	type	pos	gloss	derived_from	status	notes
 L-0001	p	/p/	root	—	break / bite	—	stable	historical root; modern evidence apa
 L-0002	t	/t/	root	—	transfer	—	stable	historical root; modern evidence ita, da, teta
 L-0003	k	/k/	root	—	hold	—	stable	root underlying modern ka and inflected ku/kui
-L-0004	w	/w/	root	—	grow	—	stable	modern wa 'grow'
+L-0004	v	/w/	root	—	grow	—	stable	orthographic v represents /w/; modern va 'grow'
 L-0005	r	/r/	root	—	go	—	stable	modern ra 'go'; rera 'turn'
 L-0006	j	/j/	root	—	see / know	—	stable	modern ya 'see/know'
 L-0007	h	/h/	root	—	say / blow	—	stable	modern ha 'say/blow'; source of exclamative -h-
@@ -16,7 +16,7 @@ L-0014	da	/da/	lexeme	V	take	L-0013	stable	modern outcome of ada
 L-0015	teta	/teta/	lexeme	V	put / set	L-0002	stable	derived from *t
 L-0016	ka	/ka/	lexeme	V	hold	L-0003	stable	canonical citation/nonfinite form; realis/nonpast forms include ku and kui
 L-0017	keka	/keka/	lexeme	V	keep	L-0003	stable	derived from *k
-L-0018	wa	/wa/	lexeme	V	grow	L-0004	stable	modern basic grow stem
+L-0018	va	/wa/	lexeme	V	grow	L-0004	stable	modern basic grow stem
 L-0019	ra	/ra/	lexeme	V	go	L-0005	stable	modern basic go stem
 L-0020	rera	/rera/	lexeme	V	turn	L-0005	stable	derived from *r
 L-0021	ya	/ja/	lexeme	V	see / know	L-0006	stable	orthographic y corresponds to historical *j
@@ -30,6 +30,7 @@ L-0028	se	/se/	pronoun	PRON	2SG	—	stable	established through finite clauses
 L-0029	men	/men/	pronoun	PRON	1PL	—	stable	plural pronoun
 L-0030	sen	/sen/	pronoun	PRON	2PL	—	stable	plural pronoun
 L-0031	en	/en/	pronoun	PRON	3PL	—	stable	plural pronoun
-L-0032	karande	/karande/	lexeme	N	container	L-0034	stable	derived from kera; exact derivational morphology is not separately established
+L-0032	kerande	/kerande/	lexeme	N	container	L-0034	stable	derived from kera + NOM + CASE; exact derivational exponents not separately established
 L-0033	sara	/sara/	lexeme	V	be.big	?	stable	canonical citation/nonfinite form; attributive/linking form is sare
 L-0034	kera	/kera/	lexeme	V	carry	L-0016;L-0019	stable	derived nonfinite stem from ka + ra; REALIS form is keru; established in complex form kerurekin
+L-0035	er	/er/	pronoun	PRON	3SG	—	stable	established 3SG pronoun
