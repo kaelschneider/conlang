@@ -130,6 +130,7 @@
         "form": {
           "type": "string",
           "minLength": 1,
+          "pattern": "^[^-\\r\\n]+$",
           "description": "Orthographic form in established project orthography. This should represent a lexical form, not a merely predictable inflected form."
         },
         "ipa": {
@@ -317,6 +318,7 @@
         "text": {
           "type": "string",
           "minLength": 1,
+          "pattern": "^[^-\\r\\n]+$",
           "description": "Example sentence or utterance in established orthography. '?' is permitted as an explicit unresolved placeholder."
         },
         "ipa": {
