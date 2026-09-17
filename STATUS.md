@@ -97,7 +97,7 @@ The previous regression also identified forms whose outcomes under an unconditio
 
 The historical development `ada > da` remains to be placed in the chronology.
 
-The object-status reversal makes existing zero-marked object constructions formally NLOC by default. Their intended discourse status should be checked before introducing overt `n-` into examples. The surface phonology does not yet specify how `n-` combines with consonant-initial verb forms without creating an onset cluster.
+The object-status reversal makes existing zero-marked object constructions formally NLOC by default. Their intended discourse status should be checked before introducing overt `n-` into examples. Local `n-` has the established surface repair `n + C → enC` before consonant-initial verb stems.
 
 ## Open questions
 
@@ -122,7 +122,6 @@ The object-status reversal makes existing zero-marked object constructions forma
 - Q-011: independent adposition system, if any
 - Q-013: information-structure mechanisms
 - Q-017: productivity limits of GEN + spatial case stacking
-- Q-020: surface realization of the local object marker `n-` before consonant-initial verbs, given the current `(C)V(C)` surface syllable structure
 
 ## Immediate testing priorities
 
