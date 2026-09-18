@@ -277,7 +277,7 @@ The language has compact, consonant-heavy morphology with historically fused/red
 
 Finite verbs follow:
 
-`(DIRECTION) (OBJECT) STEM (AUX/DERIV) APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
+`(DIRECTION) (IMPERATIVE) (OBJECT) STEM (AUX/DERIV) APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
 
 NEG is the invariant suffix `-su-` in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. It is a dedicated polarity exponent (`NEG`). Negation does not alter stem grade, direction, object status, or the positions of discourse, tense, or aspect.
 
@@ -393,8 +393,32 @@ The 3rd-person marker `-p-` participates in the established historical developme
 |---|---|---|
 | `-h-` | exclamative | `EXCL` |
 | `-y-` | interrogative | `INT` |
+| `ka-` | imperative | `IMP` |
 
-`-h-` is historically associated with `*h` 'say/blow'; it is not a realis marker.
+The imperative is a dedicated verbal prefix. Its structural position is after any directional prefix and before the ordinary object slot:
+
+`(DIRECTION) ka- (OBJECT) STEM ...`
+
+Imperative clauses suppress ordinary person agreement. The addressee is pragmatically understood unless an overt subject is independently required for contrast, deixis, or discourse reasons. Number is therefore not encoded on the imperative verb.
+
+The default imperative uses the existing citation/nonfinite stem rather than the realis or irrealis stem. A distinct special imperative grade is not synchronically productive; lexicalized exceptional forms may develop historically.
+
+Thus the default relationship is:
+
+`ka- + STEM-NFIN`
+
+and with direction:
+
+`i- + ka- + STEM-NFIN`
+`a- + ka- + STEM-NFIN`
+
+The imperative prefix `ka-` is distinct from APPL `-ka-` in both position and function. Adjacent identical material is permitted; an imperative of HOLD, whose citation form is `ka`, therefore yields `kaka`.
+
+Hortatives reuse the imperative construction with an overt 1PL subject where needed for disambiguation or emphasis. No dedicated hortative exponent is established.
+
+Prohibitives are compositional NEG + IMP. NEG retains its ordinary right-edge position; the imperative continues to suppress ordinary person agreement. The exact surface pattern of NEG in commands is therefore morphological composition rather than a separate prohibitive construction.
+
+The exclamative `-h-` and interrogative `-y-` remain in the discourse slot. Imperative is a separate outer mood prefix and is not equivalent to either discourse marker.
 
 ### G-MORPH-09 — Tense
 
@@ -764,5 +788,21 @@ GEN-marked possessors precede the head noun and participate in the general preno
 Independent clauses are normally coordinated by juxtaposition. A small closed set of conjunctions is available where overt coordination is useful, especially for contrast, additive linkage, or discourse clarity. Conjunctions are secondary to juxtaposition and are not the primary mechanism for subordination.
 
 ### G-SYN-13 — Information structure
+### G-SYN-14 — Imperatives and modality
+
+Imperative mood is expressed by verbal `ka-` after any directional prefix and before the object slot. Imperatives suppress ordinary person agreement; the addressee is normally implicit.
+
+Hortatives reuse the imperative construction with an overt 1PL subject when pragmatically necessary. Prohibitives are formed compositionally from NEG + imperative.
+
+Clause-level modality is structurally distinct from imperative mood. Two modal realization types are permitted:
+
+1. **clause-level modal particles** with broad scope over the clause;
+2. **modal auxiliaries** in the immediate preverbal position for tighter association with the event/predicate.
+
+The initial modal semantic inventory is restricted to necessity, possibility, intention/volition, and evidential/epistemic uncertainty. Exact modal exponents remain pending.
+
+By default, modal meaning scopes over negation. Inverse scope may be expressed when independently licensed by constructional or discourse means; no special scope affix is currently established.
+
+
 
 Neutral declaratives retain SOV order. A discourse topic may be placed at the left edge of the clause without changing its grammatical role. Narrow or contrastive focus favors the immediately preverbal position and receives prosodic prominence. No dedicated topic or focus particle is required; information-structural effects are expressed through constituent order plus prosody.
