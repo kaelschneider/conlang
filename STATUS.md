@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-17  
-**Phase:** Core grammar established; residual lexical/phonetic edge cases remain under testing  
+**Phase:** Core grammar established; remaining work is validation, corpus growth, and lexical expansion  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -86,7 +86,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - LOC + verbal direction has two distinct constructions: ALL (`O-te i-VERB`) and DAT-like (`O-te i-(LOCAL/NLOC)-VERB`); NLOC DAT-like is zero-marked and therefore segmentally identical to ALL
 - Converbs are nominalization + case; same-subject continuity is unmarked and overt GEN-marking marks switch-reference
 - Participles `-ri`, `-na`, `-mu` are productive agentive, patientive, and resultative forms
-- `-nu` nominalizer; `keranu`, `keranka`, `kerande` working family
+- `-nu` nominalizer; `keranu` is productive, `keranka` is lexicalized, and `kerande` is a partially fossilized lexicalized nominal
 
 ### Syntax
 - Declarative SOV
@@ -111,7 +111,7 @@ The 20-question morphology/syntax pass resolved the following structural points:
 - Common-noun number is restricted rather than obligatory; animate nouns have productive `-i` plural and inanimate nouns have productive `-n` plural; an archaic dual survives in conventionalized natural-pair nouns.
 - GEN possessors are prenominal. GEN + LOC/SUPER/INE stacking is productive within its established semantic domain but is not freely extended to arbitrary case combinations.
 - A small, historically derived postposition class may coexist with case morphology.
-- Negation is a verbal suffix in the right-edge inflectional zone: after AGENT and before optional DISCOURSE/TENSE/ASPECT. The exponent is a dedicated short CV/VC form; its exact phonological shape remains a separate lexicalization detail. No negative stem grade is used.
+- Negation is the invariant suffix `-su-` in the right-edge inflectional zone after AGENT and before optional DISCOURSE/TENSE/ASPECT; no negative stem grade or special allomorphy is used.
 - `-ri`, `-na`, and `-mu` are productive agentive, patientive, and resultative participles
 - AUX/DERIV `-te-` is synchronically productive but semantically restricted as a change-of-state / transformative marker.
 - The productive derivational core remains compact, while older derivational strata may be partially productive, lexicalized, or opaque; deeper historical layering is permitted through reanalysis rather than unrestricted synchronic stacking.
