@@ -598,7 +598,8 @@ Include neutral, convergent `i-`, and divergent `a-` readings, stative and dynam
 `GEN → LOC`
 
 Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as explicit boundary tests rather than promoting them.
-**4 — Lexicon semantic reanalysis and audit — NEXT.**
+
+**4 — Lexicon semantic reanalysis and audit.**
 
 Before further construction-first corpus growth, reanalyze the lexicon as a **semantic system**, not merely as a list of English glosses. The purpose is to ensure that the corpus has enough generic/core predicates to expose constructional meaning without flattening genuinely specialized vocabulary.
 
