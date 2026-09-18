@@ -88,7 +88,11 @@ def validate_grammar(config: dict[str, Any], grammar_text: str) -> None:
 
 
 def validate_config(config: dict[str, Any]) -> None:
-    require_keys(config, ["generator", "inventory", "phonology", "semantic_pressure", "semantic_graph"], "config")
+    require_keys(
+        config,
+        ["generator", "inventory", "phonology", "semantic_pressure", "cultural_profile", "semantic_graph"],
+        "config",
+    )
     inv = config["inventory"]
     if not inv["minimum"] <= inv["default_target"] <= inv["maximum"]:
         raise ValueError("inventory target must lie within configured bounds")
@@ -101,6 +105,20 @@ def validate_config(config: dict[str, Any]) -> None:
             raise ValueError(f"unknown final-exclusion phoneme in {shape}")
     if config["sound_symbolism"]["deterministic_mapping_forbidden"] is not True:
         raise ValueError("deterministic sound symbolism must remain forbidden")
+    profile = config["cultural_profile"]
+    require_keys(
+        profile,
+        ["name", "status", "pressure_scale", "weighting", "domain_multipliers",
+         "feature_multipliers", "node_multipliers", "relation_multipliers"],
+        "cultural_profile",
+    )
+    if profile["status"] != "adopted":
+        raise ValueError("cultural_profile must be explicitly adopted before affecting generation")
+    if not 0.0 <= float(profile["pressure_scale"]) <= 1.0:
+        raise ValueError("cultural_profile.pressure_scale must lie between 0 and 1")
+    weighting = profile["weighting"]
+    if abs(sum(float(v) for v in weighting.values()) - 1.0) > 1e-9:
+        raise ValueError("cultural_profile.weighting values must sum to 1.0")
 
 
 def parse_graph(config: dict[str, Any]) -> tuple[dict[str, Node], list[Edge], dict[str, list[Edge]]]:
@@ -173,11 +191,38 @@ def weighted_pagerank(nodes: dict[str, Node], edges: list[Edge], damping: float 
     return rank
 
 
+def _average_multiplier(keys: list[str], mapping: dict[str, float]) -> float:
+    values = [float(mapping.get(key, 1.0)) for key in keys]
+    return sum(values) / len(values) if values else 1.0
+
+
+def cultural_node_multiplier(
+    node: Node,
+    incident_relations: list[str],
+    config: dict[str, Any],
+) -> float:
+    profile = config["cultural_profile"]
+    weighting = profile["weighting"]
+    raw = (
+        float(weighting["domain"]) * _average_multiplier(list(node.domains), profile["domain_multipliers"])
+        + float(weighting["feature"]) * _average_multiplier(list(node.features), profile["feature_multipliers"])
+        + float(weighting["node"]) * float(profile["node_multipliers"].get(node.id, 1.0))
+        + float(weighting["relation"]) * _average_multiplier(incident_relations, profile["relation_multipliers"])
+    )
+    scale = float(profile["pressure_scale"])
+    # Keep the adopted worldview visibly soft even when a node has several
+    # reinforcing ecological/social/relational signals.
+    return min(1.30, max(0.85, 1.0 + scale * (raw - 1.0)))
+
+
 def build_centrality(nodes: dict[str, Node], edges: list[Edge], config: dict[str, Any]) -> dict[str, float]:
     degree = defaultdict(int)
+    incident_relations: dict[str, list[str]] = defaultdict(list)
     for edge in edges:
         degree[edge.source] += 1
         degree[edge.target] += 1
+        incident_relations[edge.source].append(edge.relation)
+        incident_relations[edge.target].append(edge.relation)
     degree_n = normalize({k: float(degree[k]) for k in nodes})
     pr = normalize(weighted_pagerank(nodes, edges))
     pressure = {}
@@ -186,7 +231,9 @@ def build_centrality(nodes: dict[str, Node], edges: list[Edge], config: dict[str
         centrality = weights["semantic_centrality"] * pr[node_id]
         connectivity = weights["network_connectivity"] * degree_n[node_id]
         frequency = weights["communicative_frequency"] * node.frequency
-        cultural = weights["cultural_salience"] * node.cultural
+        cultural = weights["cultural_salience"] * node.cultural * cultural_node_multiplier(
+            node, incident_relations[node_id], config
+        )
         grammatical = weights["grammatical_utility"] * node.grammatical
         pressure[node_id] = centrality + connectivity + frequency + cultural + grammatical
     return normalize(pressure)
@@ -291,8 +338,27 @@ def distance_band(distance: str) -> str:
     return distance
 
 
-def lexicalization_bias(distance: str, priors: dict[str, dict[str, float]]) -> dict[str, float]:
-    return dict(priors[distance])
+def cultural_lexicalization_bias(
+    distance: str,
+    node: Node,
+    features: set[str],
+    config: dict[str, Any],
+) -> dict[str, float]:
+    bias = dict(config["lexicalization_priors"][distance])
+    profile = config["cultural_profile"]["lexicalization_bias"]
+    factors: dict[str, float] = {key: 1.0 for key in bias}
+    if set(node.domains).intersection({"events", "motion_change", "making", "acquisition"}):
+        factors["polysemy"] *= float(profile["event_process_center_bonus"])
+        factors["derivation_conversion"] *= float(profile["event_process_center_bonus"])
+    if set(node.domains).intersection({"relations", "social"}) or "social" in features:
+        factors["polysemy"] *= float(profile["relational_polysemy_bonus"])
+    if set(node.domains).intersection({"acquisition", "relations"}) and "state" in features:
+        factors["polysemy"] *= float(profile["possession_contextualization"])
+    if set(node.domains).intersection({"perception", "cognition"}) or "animate" in features:
+        factors["polysemy"] *= float(profile["experiential_knowledge_bonus"])
+    adjusted = {key: bias[key] * factors[key] for key in bias}
+    total = sum(adjusted.values())
+    return {key: value / total for key, value in adjusted.items()} if total else bias
 
 
 def family_stage(rng: random.Random, config: dict[str, Any], family_bias: str) -> str:
@@ -588,7 +654,7 @@ def generate_candidates(
         ortho = orthographic(form, config)
 
         band = semantic_distance_from_path(family)
-        lex_bias = lexicalization_bias(band, config["lexicalization_priors"])
+        lex_bias = cultural_lexicalization_bias(band, node, features, config)
         stage = family_stage(rng, config, family["family_stage_bias"])
         category = category_behavior_for(features, rng, config)
         probe = probe_role_for(features, rng, config)
@@ -642,6 +708,12 @@ def generate_candidates(
         "generated_on": str(date.today()),
         "seed": seed,
         "target": target,
+        "cultural_profile": {
+            "name": config["cultural_profile"]["name"],
+            "status": config["cultural_profile"]["status"],
+            "pressure_scale": config["cultural_profile"]["pressure_scale"],
+            "worldview": config["cultural_profile"]["worldview"],
+        },
         "architecture": {
             "root_shapes": config["phonology"]["root_shapes"],
             "root_final_exclude": config["phonology"]["root_final_exclude"],
