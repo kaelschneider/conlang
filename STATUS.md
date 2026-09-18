@@ -805,3 +805,66 @@ Key decisions:
 - The LLM is used as semantic curator/critic, not as the primary phonological word-form generator.
 
 These generation decisions do not by themselves determine the status of individual grammatical exponents. The productive participles `-ri`, `-na`, and `-mu`, and semantically restricted productive `-te-` change-of-state morphology, are established independently by the morphology/syntax pass. Existing lexical entries are not retroactively reclassified from this generation model alone.
+## Lexicon semantic audit — 2026-09-18
+
+The first semantic audit pass is complete for the inherited core. The audit treats the lexicon as a semantic system rather than as a list of English glosses and separates neutral constructional probes from inherently diagnostic/specialized vocabulary.
+
+### Adopted inherited semantic centers
+
+- `r` / `ra`: broader **MOVE / GO** semantic center; the historical `GO` gloss remains a normal lexical interpretation.
+- `m` / `ma`: broader **REMAIN / STAY** semantic center; `LIVE / DWELL` remains lexicalized.
+- `n` / `na`: broader **OBTAIN / ACQUIRE** semantic center; `GET / FIND` and `RECEIVE` remain available through lexical semantics.
+- `j` / `ya`: broader **PERCEIVE** semantic center; `SEE / KNOW` polysemy is retained.
+- `h` / `ha`: **SAY** is the neutral probe sense; `BLOW` remains a lexicalized sense.
+- `v` / `va`: broader **GROW / INCREASE** semantic center.
+- `t` / `transfer`: remains a deliberately neutral **TRANSFER** predicate rather than being specialized toward GIVE or TAKE.
+- Existing specialized lexical items remain specialized; semantic broadening does not flatten the lexicon.
+
+### Neutral probe principle
+
+A neutral probe is not simply a frequent word. It is a lexeme whose inherent semantics leave the target construction free to contribute its own relational, aspectual, argument-structural, or discourse meaning.
+
+The current verbal probe core is centered on:
+`TRANSFER, MOVE, HOLD/RETAIN, REMAIN/STAY, PERCEIVE, SAY, HEAR, THINK, WORK/ACT, SLEEP, MAKE/CREATE, OPEN, CLOSE, WRITE, READ, WASH, COOK`.
+
+Predicates with strongly directional or endpoint-fixed semantics such as `ENTER`, `FALL`, `RISE`, `PUT`, `GIVE`, and `TAKE` are retained as **diagnostic predicates**, not excluded from the language.
+
+## Lexical-class generation strategy — pending consultation
+
+The same audit logic will be extended to nominals and other lexical classes. The intended procedure is:
+
+1. establish semantic domains and conceptual families before assigning individual forms;
+2. generate category-neutral roots independently of English part-of-speech labels;
+3. assign lexical-category biases from semantic behavior, derivational history, and expected frequency rather than from root shape alone;
+4. construct balanced **probe inventories** for nominals, statives/adjectives, and other open classes;
+5. retain specialized vocabulary outside the probe inventories so the language does not become an artificial set of generic words;
+6. use construction-first corpus needs to identify genuine semantic gaps rather than adding words merely to translate an English sentence list;
+7. permit light sound symbolism as a **probabilistic semantic prior** in candidate generation/selection, never as a deterministic mapping from sound to meaning;
+8. distinguish productive lexical semantics from later lexicalization, metaphor, and sound-symbolic specialization.
+
+### Nominal probe coverage target
+
+`CONTAINER` should no longer function as the default nominal test object. The nominal probe set should cover contrasting referential types relevant to the grammar, including at minimum:
+
+- animate/person;
+- animal or other sentient being;
+- plant;
+- natural landmark;
+- artifact/tool;
+- bounded enclosure/container;
+- substance/mass entity;
+- food/material;
+- body/object of manipulation;
+- place/region/domain;
+- abstract/eventive nominal;
+- relationally dependent entity.
+
+The exact inventory and category balance remain pending consultation.
+
+### Sound-symbolism policy — provisional
+
+Sound shape may bias candidate meanings where a plausible association is culturally and phonetically coherent. The generator should prefer **soft tendencies** over fixed correspondences and should allow multiple lexical outcomes within the same semantic domain.
+
+A sound-symbolic association may influence candidate ranking, but semantic-family coherence, phonological legality, derivational behavior, frequency, and lexical collision checks remain stronger constraints.
+
+This audit does not establish any new synchronic sound-meaning rule.
