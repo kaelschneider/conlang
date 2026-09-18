@@ -1,6 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
+
 **Phase:** Relational grammar and the current construction-first corpus layer are validated; active work is generator runtime validation, lexical valency/construction coverage, and remaining independent syntax.  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
@@ -40,8 +41,8 @@ Both persistent branches were checked after the recent relational, corpus, synta
 **`developmental`**
 
 - 98 lexical rows
-- 240 example rows
-- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 110 experimental, 115 deprecated
+- 253 example rows
+- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 123 experimental, 115 deprecated
 - no duplicate IDs
 - no broken lexical references
 - no broken grammar references
@@ -79,6 +80,9 @@ The current `developmental` grammar is organized around:
 - SOV order, active-stative / Split-S alignment, person-only finite agreement, case-based converbs, constituent-order/prosody information structure, and a compact derivational system
 - impersonal finite predicates with working `-v-` agreement for the initial weather/ambient class
 - secondary predication using existing `-ri`, `-na`, and `-mu` participles, independent of APPL
+- finite speech complements as zero-complementizer finite ABS content clauses, with optional LOC addressees
+- comparison as COM-marked standard + verbal direction on gradable predicates, including equative, superior, inferior, and set-based superlative readings
+- passive as finite `-na-` voice, promoting the patient to ABS S and optionally demoting the agent to COM
 
 The relational system is fully integrated into the current `developmental` description, but remains developmental until independently promoted to `main`.
 
@@ -134,19 +138,46 @@ Current generation profile:
 
 Static configuration and grammar-anchor checks are consistent with the current files. A runtime seeded generator smoke test has **not** been executed in this environment because the repository sandbox cannot resolve external GitHub access; candidate production therefore remains a separate runtime-validation step.
 
+## Independent syntax pass — 2026-09-18
+
+The three remaining independent-syntax gaps were completed as working developmental constructions and added to the regression corpus.
+
+### Finite speech complements
+
+- SAY `ha` now directly selects a finite ABS speech-content clause in ordinary preverbal complement position.
+- No complementizer is required. The embedded clause remains fully finite, retaining its own subject/case marking, agreement, TAM, negation, and interrogation.
+- An overt addressee is an ordinary LOC-marked relational NP; it is not automatically promoted by APPL.
+- Direct speech has no obligatory dedicated quotative exponent. Quotation is treated as a discourse/prosodic interpretation of the finite speech-content clause rather than a new grammatical morpheme.
+
+### Comparison
+
+- Comparison uses the existing COM/ASSOCIATIVE case to mark the standard.
+- With gradable predicates, neutral direction gives an equative reading; `i-` gives a superior comparison; `a-` gives an inferior comparison.
+- Superlative meaning is a conventionalized set-comparison construction: a singular comparee is evaluated upward against a plural/set-valued COM standard.
+- The construction does not automatically trigger APPL or object indexing.
+
+### Passive
+
+- Passive is marked by finite `-na-` in a new VOICE slot after AUX/DERIV and before APPL.
+- The lexical patient/theme becomes ABS S and controls ordinary person agreement.
+- The agent is optional; when overt, it is COM-marked and therefore demoted from core argument structure.
+- The promoted passive patient is not represented in the ordinary object-index slot.
+- Formal identity between passive `-na-` and patientive participle `-na` is retained as a naturalistic morphological relationship, but the two functions remain distinct synchronically.
+- PASS + APPL remains a targeted interaction test rather than an established productive combination.
+
+These are working developmental analyses, not yet promoted to `main`.
+
 ## Open questions
 
-The settled relational architecture should not be reopened without contradictory evidence.
+The settled relational architecture and the three completed syntax analyses should not be reopened without contradictory evidence.
 
 Current open work is concentrated in:
 
-1. exact finite speech-complement / direct-speech syntax
-2. comparison constructions
-3. passive or related voice behavior
-4. whether a small independent adposition class should be developed
-5. lexical coverage for NAME and FILL/LOAD
-6. runtime evaluation of generated-root output and parameter tuning based on observed distributions
-7. eventual promotion of sufficiently tested developmental constructions into `main`
+1. PASS + APPL interaction and other cross-domain voice stress tests
+2. whether a small independent adposition class should be developed
+3. lexical coverage for NAME and FILL/LOAD
+4. runtime evaluation of generated-root output and parameter tuning based on observed distributions
+5. eventual promotion of sufficiently tested developmental constructions into `main`
 
 Unresolved lexical questions should not be converted into new universal case frames merely to make an English sentence expressible.
 
@@ -156,7 +187,7 @@ Unresolved lexical questions should not be converted into new universal case fra
 
 **2 — Lexical valency / construction coverage.** Continue matched probes for under-specified lexical predicates and fill genuine semantic gaps before adding new roots.
 
-**3 — Independent syntax.** Test finite speech complements, comparison, and passive constructions as separate construction families.
+**3 — Independent syntax.** Working analyses for finite speech complements, comparison, and passive are now in place. Stress-test their interactions, especially PASS + APPL, before promotion.
 
 **4 — Promotion review.** Re-run cross-domain contradiction checks, preserve historical/deprecated analyses, and promote only constructions with sufficient independent corpus support.
 
