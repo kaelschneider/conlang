@@ -227,7 +227,7 @@ Future root batches must test semantically central candidates against neutral, `
 
 ## Root-final generation filter — 2026-09-17
 
-The lexical generator now blocks `h` and `j` from root-final position in newly generated VC/CVC roots. The six affected experimental roots were replaced without changing their IDs or semantic glosses: `ah → pas`, `muh → muk`, `jeh → jek`, `kah → kat`, `haj → han`, `pej → pet`. The established one-segment roots `h` and `j` remain valid historical roots; the new filter applies only to newly generated multi-segment roots.
+The lexical generator now blocks `h` and `j` from root-final position in newly generated VC/CVC roots. The six affected experimental roots were replaced without changing their IDs or semantic glosses: `ah → an`, `muh → muk`, `jeh → jek`, `kah → kat`, `haj → han`, `pej → pet`. The established one-segment roots `h` and `j` remain valid historical roots; the new filter applies only to newly generated multi-segment roots.
 
 ## Lexical root generation pass — 2026-09-17
 
