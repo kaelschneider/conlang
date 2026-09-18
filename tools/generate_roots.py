@@ -24,7 +24,7 @@ from typing import Any
 
 import yaml
 
-GENERATOR_VERSION = "0.1.2"
+GENERATOR_VERSION = "0.2.0"
 
 
 @dataclass(frozen=True)
@@ -119,9 +119,21 @@ def validate_config(config: dict[str, Any]) -> None:
         raise ValueError("root_shape_fallbacks must not contain duplicates")
     if primary_shapes.intersection(fallback_shapes):
         raise ValueError("root_shape_fallbacks must be distinct from configured root_shapes")
-    for shape in [*primary_shapes, *fallback_shapes]:
+    all_shapes = [*primary_shapes, *fallback_shapes]
+    for shape in all_shapes:
         if not shape or any(symbol not in {"C", "V"} for symbol in shape):
             raise ValueError(f"unsupported root-shape skeleton: {shape!r}")
+    coda_positions = config["phonology"].get("root_shape_coda_indices", {})
+    for shape in all_shapes:
+        indices = coda_positions.get(shape, [])
+        if any(index < 0 or index >= len(shape) for index in indices):
+            raise ValueError(f"invalid coda index for root shape {shape!r}")
+        if any(shape[index] != "C" for index in indices):
+            raise ValueError(f"coda index must point to C in root shape {shape!r}")
+    domain_bias = config["phonology"].get("domain_shape_bias", {})
+    for domain, bias_map in domain_bias.items():
+        if set(bias_map) - set(all_shapes):
+            raise ValueError(f"domain {domain!r} has bias for unknown root shape")
     if config["sound_symbolism"]["deterministic_mapping_forbidden"] is not True:
         raise ValueError("deterministic sound symbolism must remain forbidden")
     profile = config["cultural_profile"]
@@ -453,7 +465,7 @@ def sound_symbolic_score(form: str, semantic_features: set[str], config: dict[st
 
 
 def legal_form_pool(shape: str, config: dict[str, Any]) -> set[str]:
-    """Enumerate all legal phonological forms for a configured C/V skeleton."""
+    """Enumerate all legal forms, excluding h/j at every configured syllable-coda position."""
     import itertools
 
     vowels = list(config["phonology"]["vowels"])
@@ -463,9 +475,13 @@ def legal_form_pool(shape: str, config: dict[str, Any]) -> set[str]:
         raise ValueError(f"no phonemes available for root shape {shape!r}")
 
     excluded = set(config["phonology"]["root_final_exclude"].get(shape, []))
+    coda_indices = list(config["phonology"].get("root_shape_coda_indices", {}).get(shape, []))
     forms: set[str] = set()
     for parts in itertools.product(*choices):
-        if shape.endswith("C") and parts[-1] in excluded:
+        if any(
+            index < 0 or index >= len(parts) or parts[index] in excluded
+            for index in coda_indices
+        ):
             continue
         forms.add("".join(parts))
     return forms
@@ -673,12 +689,17 @@ def generate_candidates(
         attempts += 1
         remaining_shapes = []
         remaining_shape_weights = []
+        current_by_shape = defaultdict(int)
+        for candidate in candidates:
+            current_by_shape[candidate["root_shape"]] += 1
+        domain_bias = config["phonology"].get("domain_shape_bias", {}).get(node.domains[0], {})
         for shape, target_count in shape_targets.items():
-            current = sum(1 for c in candidates if c["root_shape"] == shape)
-            remaining = target_count - current
+            remaining = target_count - current_by_shape[shape]
             if remaining > 0:
                 remaining_shapes.append(shape)
-                remaining_shape_weights.append(remaining)
+                remaining_shape_weights.append(
+                    remaining * float(domain_bias.get(shape, 1.0))
+                )
         shape = random_weighted(rng, remaining_shapes, remaining_shape_weights)
 
         weights = []
@@ -786,6 +807,14 @@ def generate_candidates(
         "shape_counts": {
             shape: sum(1 for c in candidates if c["root_shape"] == shape)
             for shape in shape_targets
+        },
+        "configured_shape_targets": configured_shape_targets,
+        "legal_shape_capacities": {
+            shape: len(legal_form_pool(shape, config) - existing_forms)
+            for shape in [
+                *config["phonology"]["root_shapes"].keys(),
+                *config["phonology"].get("root_shape_fallbacks", []),
+            ]
         },
         "domain_counts": dict(sorted(domain_counts.items())),
     }
