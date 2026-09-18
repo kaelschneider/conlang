@@ -556,10 +556,15 @@ def allocate_shape_targets(
             max(0.001, float(primary[shape]) * (capacities[shape] - targets[shape]))
             for shape in eligible
         ]
+        weight_total = sum(weights)
+        normalized = {
+            shape: weight / weight_total
+            for shape, weight in zip(eligible, weights)
+        }
         # Deterministic proportional allocation; largest-remainder preserves
         # the configured short-root bias as far as finite capacities allow.
         extra_total = min(overflow, sum(capacities[s] - targets[s] for s in eligible))
-        extra = largest_remainder_counts(extra_total, dict(zip(eligible, weights)))
+        extra = largest_remainder_counts(extra_total, normalized)
         for shape, amount in extra.items():
             targets[shape] += amount
             overflow -= amount
