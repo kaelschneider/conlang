@@ -173,7 +173,7 @@ def weighted_pagerank(nodes: dict[str, Node], edges: list[Edge], damping: float 
     return rank
 
 
-def build_centrality(nodes: dict[str, Node], edges: list[Edge]) -> dict[str, float]:
+def build_centrality(nodes: dict[str, Node], edges: list[Edge], config: dict[str, Any]) -> dict[str, float]:
     degree = defaultdict(int)
     for edge in edges:
         degree[edge.source] += 1
@@ -181,7 +181,7 @@ def build_centrality(nodes: dict[str, Node], edges: list[Edge]) -> dict[str, flo
     degree_n = normalize({k: float(degree[k]) for k in nodes})
     pr = normalize(weighted_pagerank(nodes, edges))
     pressure = {}
-    weights = current_config["semantic_pressure"]
+    weights = config["semantic_pressure"]
     for node_id, node in nodes.items():
         centrality = weights["semantic_centrality"] * pr[node_id]
         connectivity = weights["network_connectivity"] * degree_n[node_id]
@@ -467,11 +467,9 @@ def generate_candidates(
     target: int,
     existing_forms: set[str],
 ) -> dict[str, Any]:
-    global current_config
-    current_config = config
     rng = random.Random(seed)
 
-    centrality = build_centrality(nodes, edges)
+    centrality = build_centrality(nodes, edges, config)
     families = make_family_seeds(nodes, edges, centrality)
     if not families:
         raise ValueError("semantic graph produced no family seeds")
