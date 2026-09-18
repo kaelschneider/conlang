@@ -121,20 +121,20 @@ The inherited-root generator is implemented on `developmental`:
 - `tools/generate_roots.py`
 - `tools/root_generation.yaml`
 
-Current generator/config version: **0.2.0**.
+Current generator/config version: **0.3.0** (candidate-pool architecture).
 
 Current generation profile:
 
-- default target: 1,600 candidates
-- permitted range: 1,200–2,000
+- default candidate pool: 4,000 candidates; intended human-curation target: 1,600 roots
+- permitted generation range: 1,200–5,000
 - root-shape weights sum to 1.0
-- mixed mono-/disyllabic root shapes with CVCV as the principal high-capacity shape and CVCVC as fallback
+- mixed mono-/disyllabic root shapes with a 20% short-root allocation; CVCV remains the principal shape and CVCVC is an emergency fallback only after primary legal forms are exhausted
 - final `h/j` exclusion applies to configured syllable-final consonant positions
 - orthographic `v/y` are normalized to phonological /w j/ for collision checks
 - existing lexicon collisions and within-run collisions are rejected
 - semantic graph: 133 nodes and 160 relations
 - sound symbolism is a weak ranking prior; deterministic sound-to-meaning mapping is forbidden
-- generated candidates remain experimental and are never written automatically to `LEXICON.tsv`
+- generated candidates remain experimental and are never written automatically to `LEXICON.tsv`\n- the candidate pool deliberately overgenerates; human semantic curation is expected to reduce the pool toward the 1,600-root working target\n- the family model targets 55% of candidate roots as singleton families; the remaining roots are allocated to centrality-weighted non-singleton families with a long-tail size distribution\n- distant/very-distant semantic relationships are reserved for a separate historical-drift stage rather than being generated as direct semantic families
 
 Static configuration and grammar-anchor checks are consistent with the current files. A runtime seeded generator smoke test has **not** been executed in this environment because the repository sandbox cannot resolve external GitHub access; candidate production therefore remains a separate runtime-validation step.
 
