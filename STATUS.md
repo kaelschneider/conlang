@@ -623,9 +623,66 @@ Include neutral, convergent `i-`, and divergent `a-` readings, plus stative and 
 
 Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as explicit boundary tests rather than silently promoting them.
 
-**4 — Construction-first corpus redevelopment.**
+**4 — Lexicon semantic reanalysis and audit — NEXT.**
 
-After migration and argument-structure validation, rebuild the corpus in **layers**, moving from constructional meaning to lexical restriction, multi-participant interaction, discourse behavior, and finally lexicalization evidence. Generate examples from language-internal schemas; English remains a translation/paraphrase layer and is never the primary generator.
+Before further construction-first corpus growth, reanalyze the lexicon as a **semantic system**, not merely as a list of English glosses. The purpose is to ensure that the corpus has enough generic/core predicates to expose constructional meaning without flattening genuinely specialized vocabulary.
+
+Audit each root/lexeme in layers:
+
+### Lexicon audit layer 1 — Semantic-frame reanalysis
+
+For each lexical item, identify the broadest defensible semantic frame, inherent participants, event structure, and likely relational affordances. Distinguish the lexical meaning from an English gloss that may be narrower than the intended root.
+
+Record separately:
+
+- core semantic frame;
+- inherent arguments/participants;
+- optional or construction-supplied participants;
+- event-boundary profile;
+- compatibility with `Ø / i- / a-`;
+- likely constructional extensions.
+
+### Lexicon audit layer 2 — Neutrality classification
+
+Classify each item as **neutral/core**, **moderately specific**, or **lexically specific** for corpus purposes.
+
+Neutral/core items are preferred as diagnostic probes. Moderately specific items test lexical–constructional interaction. Lexically specific items remain necessary for testing lexical restriction and specialization.
+
+Do not broaden a lexical item merely to make it useful as a probe.
+
+### Lexicon audit layer 3 — Inherited `*C` root repurposing
+
+Reconsider the inherited one-consonant roots as high-value candidates for semantic redesign. Their historical identity should be preserved, but their modern lexical meanings may be broadened or redirected where the evidence and intended semantic system support it.
+
+Particular attention should go to roots that could supply generic semantic primitives for transfer, holding, movement, perception/cognition, change, association, acquisition, or other high-frequency constructional domains.
+
+A repurposed `*C` root should retain its provenance and should not be reassigned solely because an English gloss would be more convenient. Record the old and proposed semantic readings during the audit before changing the canonical lexicon.
+
+### Lexicon audit layer 4 — Probe-set construction
+
+Select a deliberately small set of neutral/core probes covering the major constructional dimensions. Each probe should have enough semantic flexibility to be crossed with the constructions without already encoding their target interpretation.
+
+Prioritize generic domains such as TRANSFER, MOVE/CHANGE, HOLD/RETAIN, MAKE/BRING-ABOUT, PERCEIVE/COGNIZE, and REMAIN/BE, while retaining specialized verbs alongside them.
+
+### Lexicon audit layer 5 — Semantic coverage gaps
+
+Identify missing generic predicates that prevent clean testing of a construction family. Add or repurpose roots only where a genuine semantic gap exists.
+
+Prefer repurposing an existing inherited root over adding a new root when this yields a plausible, internally motivated semantic development. New roots remain available when the semantic gap cannot be filled naturally.
+
+### Lexicon audit layer 6 — Lexical/constructional separation
+
+For each audited item, explicitly distinguish:
+
+**lexical meaning → lexical valency → constructional contribution → discourse contribution**
+
+This prevents constructional meanings such as recipient, benefactive, malefactive, route, or state-transition from being silently built into lexical glosses.
+
+All changes remain **ANALYZED** or **EXPERIMENTAL** until tested in the corpus and independently promoted. Specialized lexical items are preserved rather than normalized into generic roots.
+
+**5 — Construction-first corpus redevelopment.**
+
+After the lexicon audit, rebuild the corpus in **layers**, moving from constructional meaning to lexical restriction, multi-participant interaction, discourse behavior, and finally lexicalization evidence. Generate examples from language-internal schemas; English remains a translation/paraphrase layer and is never the primary generator.
 
 ### Layer 1 — Construction inventory
 
@@ -646,9 +703,9 @@ Initial families:
 
 ### Layer 2 — Neutral lexical probes
 
-For each construction, select a small set of **semantically flexible verbs** whose lexical semantics do not already force the target interpretation. These are probes for what the construction itself contributes.
+For each construction, select a small set of **semantically flexible verbs** from the audited neutral/core probe set. These are probes for what the construction itself contributes.
 
-Prioritize TRANSFER-type, general motion/change, placement/positioning, neutral interaction, and semantically light stative predicates. Cross each probe with the construction's meaningful alternatives, especially `Ø / i- / a-` and APPL vs. non-APPL, using matched sets that change one structural variable at a time.
+Cross each probe with the construction's meaningful alternatives, especially `Ø / i- / a-` and APPL vs. non-APPL, using matched sets that change one structural variable at a time.
 
 Record the resulting interpretation without assuming that the English gloss is the lexical meaning. The diagnostic question is: **what meaning comes from the construction that the neutral verb does not supply by itself?**
 
@@ -673,8 +730,6 @@ Record where lexical valency restricts, redirects, or blocks a construction. Do 
 Apply the construction families to stative and non-motion predicates where the relational frame is semantically licensed.
 
 Test `Ø` state/relation, `i-` orientation toward establishment or attainment, `a-` orientation toward withdrawal or termination, and imperfective vs. perfect. APPL is used only where the predicate independently licenses an affected participant.
-
-This layer tests whether relational direction has genuinely generalized beyond physical motion rather than merely receiving metaphorical translations.
 
 ### Layer 5 — Multi-construction and argument competition
 
@@ -717,7 +772,7 @@ The corpus therefore serves four purposes simultaneously:
 3. accumulation of evidence for lexical valency;
 4. evidence for discourse behavior and lexicalization.
 
-**5 — Remaining independent syntax gaps.**
+**6 — Remaining independent syntax gaps.**
 
 Only after the relational architecture is stable, address the largest non-relational coverage gaps from the prior Fiziwig/Leipzig audits:
 
