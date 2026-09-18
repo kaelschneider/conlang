@@ -181,6 +181,16 @@ None among the current core grammar decisions. Residual lexical creation/testing
 4. **Completed 2026-09-17:** Stress-test the OPEN/CLOSED × F_F/F_B/B_F/B_B historical matrix across all 24 cells and reconcile the attested diagnostic forms.
 5. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
 
+## Lexical root generation pass — 2026-09-17
+
+Added 50 experimental lexical roots (`L-0037`–`L-0086`) to `LEXICON.tsv`.
+
+- The 50 new roots comprise 15 VC and 35 CVC forms. All ten available one-consonant root forms (`p t k v r j h s m n`) were already occupied, so no additional C roots could be added without exact-form collision.
+- Including the existing 10 C roots, the 60-root inventory now has 16.7% C, 25.0% VC, and 58.3% CVC roots, close to the generation targets of 15%, 25%, and 60%.
+- All new roots are `experimental`, category-neutral (`pos = —`), have `derived_from = —`, and carry no invented historical derivation.
+- The complete modified lexicon passes the applicable structural schema constraints, ID/form uniqueness, root-shape checks, and lexical-status checks.
+- All 200 basic grade expansions (four stem grades for each root) were tested for legal modern surface shape; no cross-root stem collisions were found. Boundary repairs were considered where relevant.
+
 ## Corpus growth pass — 2026-09-17
 
 Added sixteen experimental regression examples (`E-0021`–`E-0036`) to extend matched coverage without adding lexical entries or changing canonical grammar:
