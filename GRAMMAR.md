@@ -281,7 +281,7 @@ Finite verbs follow:
 
 NEG is the invariant suffix `-su-` in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. It is a dedicated polarity exponent (`NEG`). Negation does not alter stem grade, direction, object status, or the positions of discourse, tense, or aspect.
 
-APPL is a dedicated verbal suffixal slot immediately after AUX/DERIV. Its productive exponent is `-ka-`. APPL adds one selected relational participant to the verb's core argument structure. It is available to overt relational NPs and to inherently relational arguments that are lexically licensed by the predicate. Finite verbs require a person-agreement marker. The agreement controller is the semantic agent where an agentive argument exists; in agentless/stative predicates, the single S argument controls agreement.
+APPL is a dedicated verbal suffixal slot immediately after AUX/DERIV. Its productive exponent is `-ka-`. APPL adds one selected relational participant to the verb's core argument structure. It is available to overt relational NPs and to inherently relational arguments that are lexically licensed by the predicate. Finite clauses with an overt agreement controller use ordinary person agreement; genuinely subjectless impersonal clauses use the dedicated impersonal agreement marker `-v-`. The agreement controller is the semantic agent where an agentive argument exists; in agentless/stative predicates, the single S argument controls agreement.
 
 ### G-MORPH-03 — Stem grades
 
@@ -382,8 +382,9 @@ No APPL-specific allomorphy is currently established.
 | 1 | `-k-` | `1` |
 | 2 | `-t-` | `2` |
 | 3 | `-p-` | `3` |
+| impersonal | `-v-` | `IMPERS` |
 
-Agreement is person-only: the markers do not distinguish singular from plural. Finite verbs require one person marker. Agreement follows the semantic agent when an agentive argument exists; a stative or otherwise agentless single S argument controls agreement. Number is expressed independently, including by pronouns.
+Ordinary agreement is person-only: the person markers do not distinguish singular from plural. Finite clauses with an overt S/A controller require one person marker. Genuinely subjectless impersonal finite clauses instead use dedicated `-v-` agreement and have no dummy S argument. Number is expressed independently, including by pronouns. The impersonal marker is a synchronically dedicated working exponent; no historical source is currently claimed.
 
 The 3rd-person marker `-p-` participates in the established historical development to `kui` and related forms; the full conditioned historical system is documented in `GRAMMAR.md`.
 
@@ -845,6 +846,22 @@ The initial modal inventory is `kera` NECESSITY, `ure` POSSIBILITY, `nete` INTEN
 By default, modal meaning scopes over negation. Exact negative-complement morphology under a modal auxiliary remains an explicit stress-test question.
 
 
+
+### G-SYN-16 — Impersonal predicates
+
+A restricted class of finite predicates may occur in genuinely subjectless clauses. These clauses have no syntactic S argument and do not use a dummy pronoun. Instead, the finite predicate carries the dedicated impersonal agreement marker `-v-`.
+
+The initial semantic class is weather and ambient predicates such as RAIN and ambient COLD. The construction is constructionally productive, but lexical extension is licensed by semantic class rather than automatically available to every predicate.
+
+Ordinary case-marked NPs may occur as non-controller participants with an impersonal predicate. They retain their ordinary nominal case and do not become S merely because the clause lacks a subject.
+
+Direction, negation, tense, aspect, interrogation, and other verbal morphology remain available to impersonal predicates. The impersonal agreement marker occupies the ordinary agreement position in the right-edge verbal template.
+
+The working form is:
+
+`STEM (AUX/DERIV) APPL -v- (NEG) (DISCOURSE) TENSE (ASPECT)`
+
+Examples include `iruvi` ‘it is raining’, `iruva` ‘it rained’, `surte iruvi` ‘it is raining at the place’, and `surci petuvi` ‘it is cold inside the domain’.
 
 ### G-SYN-15 — Content questions
 
