@@ -85,3 +85,8 @@ L-0083	vep	/ˈwep/	root	—	warm	—	experimental	Generated root candidate; CVC 
 L-0084	pet	/ˈpet/	root	—	cold	—	experimental	Generated root candidate; CVC root under the current lexical-generation model; no historical derivation claimed.
 L-0085	hik	/ˈhik/	root	—	meet	—	experimental	Generated root candidate; CVC root under the current lexical-generation model; no historical derivation claimed.
 L-0086	nit	/ˈnit/	root	—	hide	—	experimental	Generated root candidate; CVC root under the current lexical-generation model; no historical derivation claimed.
+L-0087	ren	/ˈren/	root	—	person / human	—	experimental	Generated neutral nominal probe root; generic human/person referent; category-neutral; no historical derivation claimed; sound shape used only as a weak semantic prior.
+L-0088	mur	/ˈmur/	root	—	animal	—	experimental	Generated neutral nominal probe root; generic animal referent; category-neutral; no historical derivation claimed; sound shape used only as a weak semantic prior.
+L-0089	tak	/ˈtak/	root	—	tool / artifact	—	experimental	Generated neutral nominal probe root; generic artifact/tool referent; category-neutral; no historical derivation claimed; sound shape used only as a weak semantic prior.
+L-0090	nim	/ˈnim/	root	—	body part	—	experimental	Generated neutral nominal probe root; generic body-part referent; category-neutral; no historical derivation claimed; sound shape used only as a weak semantic prior.
+L-0091	sur	/ˈsur/	root	—	place / domain	—	experimental	Generated neutral nominal probe root; generic place/domain referent; category-neutral; no historical derivation claimed; sound shape used only as a weak semantic prior.
