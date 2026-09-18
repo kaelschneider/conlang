@@ -570,6 +570,32 @@ The dative-like construction is distinct from the allative: allative describes o
 
 `COMP` is not treated as a separate constructional function here because ordinary accompaniment is the core function of COM and is described under G-MORPH-13.
 
+### G-MORPH-14A — Mood and modality
+
+The imperative is marked by the dedicated prefix `ka-`, after any directional prefix and before the ordinary object slot. Imperatives suppress ordinary person agreement and default to the citation/nonfinite stem. The imperative prefix is distinct from APPL `-ka-`.
+
+Hortatives reuse the imperative construction with an overt 1PL subject when pragmatically useful. Prohibitives are NEG + IMP compositionally; there is no separate prohibitive exponent.
+
+Modal auxiliaries are finite preverbal operators. They carry the ordinary finite morphology (stem grade, agreement, tense, and aspect), while the lexical predicate appears in the nonfinite/citation form. The auxiliary is positioned immediately before the lexical predicate, after the ordinary object and other overt clause arguments.
+
+Clause-level modal particles precede the clause and carry broad scope. The current epistemic/evidential particle is `hi`.
+
+The experimental modal inventory is:
+
+| Form | Type | Meaning | Source |
+|---|---|---|---|
+| `kera` | modal AUX | necessity / must | CARRY lexical domain; grammaticalized |
+| `ure` | modal AUX | possibility / may | DREAM lexical domain; grammaticalized |
+| `nete` | modal AUX | intention / intend | THINK lexical domain; grammaticalized |
+| `hi` | modal PART | epistemic/evidential uncertainty | SAY/BLOW lexical domain; grammaticalized |
+
+`kera` as a necessity auxiliary is synchronically homonymous with lexical `kera` CARRY. The distinction is established by syntactic category and the auxiliary construction rather than by a new phonological form.
+
+Modal auxiliary clauses retain ordinary verbal direction and relational structure on the nonfinite lexical predicate. Object indexing and APPL remain associated with the clause's lexical argument structure; their interaction with modal auxiliaries is a dedicated stress-test area rather than an automatic reassignment.
+
+Modal meaning scopes over negation by default. The formal realization of a negated lexical complement under a modal auxiliary is not yet canonical and remains a scope/negation stress-test question.
+
+Modal auxiliaries and particles form no single transparent synchronic paradigm. Their partially related forms reflect independent grammaticalization histories; sound symbolism may bias future lexicalized modal developments only weakly.
 ### G-MORPH-15 — Converbs, participles, and nominalization
 
 Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. Same-subject continuity is the unmarked interpretation. An overt GEN-marked subject inside the nominalized clause marks a switch to a different subject. This gives an explicit switch-reference contrast without a dedicated switch-reference affix.
@@ -790,7 +816,7 @@ Independent clauses are normally coordinated by juxtaposition. A small closed se
 ### G-SYN-13 — Information structure
 ### G-SYN-14 — Imperatives and modality
 
-Imperative mood is expressed by verbal `ka-` after any directional prefix and before the object slot. Imperatives suppress ordinary person agreement; the addressee is normally implicit.
+Imperative mood is expressed by verbal `ka-` after any directional prefix and before the object slot. Imperatives suppress ordinary person agreement; the addressee is normally implicit. The default imperative uses the citation/nonfinite stem.
 
 Hortatives reuse the imperative construction with an overt 1PL subject when pragmatically necessary. Prohibitives are formed compositionally from NEG + imperative.
 
@@ -799,9 +825,11 @@ Clause-level modality is structurally distinct from imperative mood. Two modal r
 1. **clause-level modal particles** with broad scope over the clause;
 2. **modal auxiliaries** in the immediate preverbal position for tighter association with the event/predicate.
 
-The initial modal semantic inventory is restricted to necessity, possibility, intention/volition, and evidential/epistemic uncertainty. Exact modal exponents remain pending.
+Modal auxiliaries carry ordinary finite morphology; the lexical complement appears in the citation/nonfinite form. Clause-level particles precede the clause.
 
-By default, modal meaning scopes over negation. Inverse scope may be expressed when independently licensed by constructional or discourse means; no special scope affix is currently established.
+The initial modal inventory is `kera` NECESSITY, `ure` POSSIBILITY, `nete` INTENTION/VOLITION, and `hi` EPISTEMIC/EVIDENTIAL UNCERTAINTY.
+
+By default, modal meaning scopes over negation. Exact negative-complement morphology under a modal auxiliary remains an explicit stress-test question.
 
 
 
