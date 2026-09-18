@@ -193,9 +193,25 @@ Thus the established lexical chain is:
 
 The later vowel-loss rule is independent of the main stop-weakening matrix and follows `t > d`.
 
-#### Stage VI — Later lexicalized cluster reduction
+#### Stage VI — Later lexicalized and morphological reduction
 
-**17. `*ndt > nt:`**
+**17. `-anute > -ante` in nominalizer + LOC sequences**
+
+In the historical `kera + -nu + -te` sequence, the unstressed vowel of the `-nu-te` sequence is lost:
+
+`keranute > kerante`
+
+The contraction was historically productive in this morphological environment.
+
+**18. `nt > nd` in the same lexicalized sequence**
+
+Post-nasal voicing yields:
+
+`kerante > kerande`
+
+This is a localized historical development of the nominalizer-plus-LOC sequence, not a general modern alternation.
+
+**19. `*ndt > nt:`**
 
 This is an independent later development attested in lexicalized material. It is not part of either the general weakening series or the generalized sonorant-cluster reduction, and is not established as a productive synchronic rule.
 
@@ -249,7 +265,7 @@ The stable forms `apa`, `ita`, and `teta` are assigned to a later lexical/struct
 
 ## Morphology
 
-Status: canonical where stated; unresolved items remain in `STATUS.md`.
+Status: canonical where stated; residual lexical/phonetic edge cases remain in `STATUS.md`.
 
 ## G-MORPH — Morphology
 
@@ -353,7 +369,7 @@ The 3rd-person marker `-p-` participates in the established historical developme
 
 ### G-MORPH-11 — Nominal number and case
 
-Common nouns do not obligatorily inflect for number. A restricted productive plural category is available where overt number is useful. An archaic dual survives in a lexicalized set of conventionalized natural-pair nouns. The exact productive plural exponent and surviving dual forms remain to be established.
+Common nouns do not obligatorily inflect for number. A restricted productive plural category is available where overt number is useful. An archaic dual survives in a lexicalized set of conventionalized natural-pair nouns. The exact productive plural exponent and surviving conventionalized dual inventory remain under testing.
 
 The basic nominal case inventory comprises eight cases:
 
@@ -556,7 +572,7 @@ The following principles are established for generation:
 5. Zero derivation/conversion remains available, especially for closely related noun/verb pairs.
 6. Synchronically productive derivations normally compose to at most two layers; unrestricted stacking is not the default. Older lexicalized forms may preserve deeper historical layering through reanalysis or fusion.
 
-This generation model does not by itself promote unresolved morphology such as `-te-` to productive status. The participles `-ri`, `-na`, and `-mu` are productive by the current morphological canon, independently of the generation model.
+This generation model does not by itself determine the status of individual grammatical exponents. The productive participles `-ri`, `-na`, and `-mu`, and the semantically restricted `-te-` change-of-state auxiliary, are established independently by the current morphology.
 
 ### Added-consonant derivation
 
@@ -609,7 +625,7 @@ This model is a generation methodology and analytical parameterization. It must 
 
 ## Syntax
 
-Status: canonical where stated; unresolved items remain in `STATUS.md`.
+Status: canonical where stated; residual lexical/phonetic edge cases remain in `STATUS.md`.
 
 ## G-SYN — Syntax
 
@@ -635,7 +651,7 @@ Agentive S and A take ERG; patientive S and O take ABS. The split therefore has 
 
 Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
 
-Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; an archaic dual survives in conventionalized natural-pair nouns. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/`; their conditioning remains unresolved. Formal `sese` and reduced `sa/si` variants remain unresolved in distribution.
+Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; an archaic dual survives in conventionalized natural-pair nouns. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/`; their exact conditioning remains under testing. Formal `sese` and reduced `sa/si` variants remain under testing in distribution.
 
 ### G-SYN-06 — Questions
 
