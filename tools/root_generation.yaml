@@ -282,6 +282,7 @@ semantic_graph:
 
     - {id: food, label: food, domains: [food, physical], features: [material, social], salience: 0.92, frequency: 0.86, cultural: 0.96, grammatical: 0.86}
     - {id: drink, label: drink, domains: [food, living], features: [liquid_substance], salience: 0.88, frequency: 0.82, cultural: 0.88, grammatical: 0.88}
+    - {id: eat, label: eat/consume, domains: [food, living], features: [material, animate], salience: 0.90, frequency: 0.86, cultural: 0.94, grammatical: 0.92}
     - {id: cook, label: cook/prepare food, domains: [food, making], features: [impact_manipulation, material], salience: 0.80, frequency: 0.64, cultural: 0.82, grammatical: 0.90}
     - {id: grain, label: grain/seed, domains: [food, plant], features: [material, living], salience: 0.66, frequency: 0.50, cultural: 0.82, grammatical: 0.72}
     - {id: fruit, label: fruit, domains: [food, plant], features: [living, material], salience: 0.72, frequency: 0.54, cultural: 0.78, grammatical: 0.70}
