@@ -53,7 +53,6 @@ phonology:
   root_final_exclude:
     VC: [h, j]
     CVC: [h, j]
-    CVCV: [h, j]
     CVCVC: [h, j]
   phoneme_weights:
     a: 1.0
@@ -164,8 +163,8 @@ validation:
   grammar_anchors:
     vowels: "a e i u"
     consonants: "p t k m n s h w j r"
-    root_shapes: "| C | 15% |"
-    final_exclusion_phrase: "The lexical generator excludes `h` and `j` from root-final position"
+    root_shapes: "Inherited lexical roots use a mixed mono-/disyllabic shape system."
+    final_exclusion_phrase: "Newly generated roots exclude `h` and `j` from every syllable-final consonant position"
 
 output:
   json_description: "Full machine-readable candidate records with generation provenance."
