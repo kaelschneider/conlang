@@ -908,3 +908,25 @@ The active corpus now contains direct evidence for the previously underrepresent
 The current active corpus still has no dedicated **G-SYN-10 adposition** example because the grammar only permits a small independent postposition class historically derived from relational expressions; no such adposition is presently established in the lexicon. This remains an intentional lexical/grammatical open area rather than a corpus omission.
 
 New active examples: **E-0195–E-0202**.
+
+## Lexical valency / construction audit — 2026-09-18
+
+A construction-first valency pass was run against the current lexical inventory and relational grammar. The goal was to identify where existing predicates already support useful argument structures and where apparent gaps are genuinely lexical rather than grammatical.
+
+### Tested successfully with existing lexical material
+
+- **Experiencer predicates:** `an` FEAR and `yat` SMELL were tested with an ERG experiencer and ABS stimulus. `j` PERCEIVE already has the same basic transitive pattern in the active corpus. This supports lexical variation in experiencer alignment without establishing a universal experiencer case.
+- **Speech:** `h` SAY supports an ABS nominalized content plus a LOC recipient/goal in `E-0205`. This is evidence for a viable finite speech frame, but the exact syntax of finite vs. nominalized/direct-speech complements remains open.
+- **Search/hunt:** `em` HUNT takes an ABS target in `E-0206`. A separate SEARCH lexeme is not currently required by the grammar, but the lexical distinction remains open.
+- **Acquisition/finding:** broadened `n` OBTAIN/ACQUIRE takes an ordinary ABS object in `E-0207`; FIND remains a lexical interpretation rather than a separate grammatical construction.
+- **Material/medium:** `at-me` with `kan` BUILD in `E-0208` provides an event-oriented stone material/medium relation under COM. This does not establish a separate MATERIAL or SOURCE case and does not generalize GEN to event arguments.
+
+### Genuine lexical gaps
+
+No current root directly supplies **NAME** or **FILL/LOAD**, so those frames should not yet drive grammatical invention. They remain candidates for future lexical-family generation if construction-first corpus needs demonstrate that the semantic domains are warranted.
+
+### Current conclusion
+
+The existing relational system is sufficient to express the tested valencies without adding a new core case or a new general applicative. The unresolved work is now primarily **lexical semantics and construction-specific syntax**, especially exact finite speech-complement behavior and future NAME/FILL/LOAD predicates.
+
+New active valency probes: **E-0203–E-0208**.
