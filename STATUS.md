@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Relational grammar integrated; corpus migration reconciled; remaining work is constructional validation, syntax coverage, and lexical expansion  
+**Phase:** Relational grammar integrated; corpus migration reconciled; argument/multi-complement validation completed; next work is the full relational construction matrix and lexicon semantic audit  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -22,14 +22,14 @@ The corpus has now been reconciled with the integrated relational grammar.
 - E-0118 is corrected to a genuine **GEN → LOC** stack (-se-te); the previous unstacked GEN form did not instantiate the documented stack.
 - Benefactive, malefactive, and recipient examples using a promoted relational participant now use productive **APPL -ka-**. For the existing 2P examples, the promoted participant receives the **LOCAL n-/en-** object index, matching the current verb-template and APPL analysis.
 - The obsolete NLOC description in E-0027 is replaced by the current ordinary 3P-inanimate zero-index analysis; E-0029 and recipient examples use LOCAL explicitly to distinguish object indexing from nominal LOC case.
-- All 120 example IDs are preserved. No lexicon entries were added or changed.
+- All 120 pre-existing example IDs are preserved. Seven experimental argument-structure regression examples were then added (`E-0122`–`E-0128`); no lexicon entries were added or changed.
 
-Validation checks on the migrated corpus: 120 rows retained; no stale PATH, INE, SUPER, or NLOC labels remain in segmentation/gloss/notes; segmentation/gloss word counts remain aligned; grammar references and lexical-entry references resolve against the branch; no duplicate IDs were introduced.
+Validation checks on the migrated corpus: 120 pre-existing rows retained before the regression additions; no stale PATH, INE, SUPER, or NLOC labels remain in segmentation/gloss/notes; segmentation/gloss word counts remain aligned; grammar references and lexical-entry references resolve against the branch; no duplicate IDs were introduced.
 
 This reconciliation treats GRAMMAR.md as authoritative for the resulting system while preserving the superseded PATH analysis in historical/status provenance where relevant.
 ## Experimental relational case / directional / applicative system — 2026-09-18
 
-**Status: EXPERIMENTAL.** This section records the current working system developed for continued testing. It is intentionally **not canonical** and does not replace the morphology, syntax, lexicon, or examples currently established in `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv`. The experiment is isolated on branch `experimental-relational-case-system`; `main` remains unchanged.
+**Status: EXPERIMENTAL.** This section records the current working system developed for continued testing. It is intentionally **not canonical** and does not replace the morphology, syntax, lexicon, or examples currently established in `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv`. The relational model is documented in the repository for continued testing, but its constructional analyses remain experimental and are not fully promoted as established grammar.
 
 ### Experimental architecture
 
@@ -107,7 +107,7 @@ It does not intrinsically mean dative, benefactive, malefactive, locative, instr
 
 The productive applicative exponent is **`-ka-`**, selected as a verbal suffix immediately after AUX/DERIV and before AGENT.
 
-One APPL adds one relational participant. **Unrestricted APPL stacking is rejected.** Multiple APPLs are not established as a productive mechanism. When more than one relational NP could supply the applied participant, the remaining open issue is how the language selects among those candidates.
+One APPL adds one relational participant. **Unrestricted APPL stacking is rejected.** Multiple APPLs are not established as a productive mechanism. When more than one relational NP is eligible, selection follows the resolved hierarchy below, with discourse prominence and then linear order handling genuine same-rank ties.
 
 ### Experimental object indexing
 
@@ -198,7 +198,7 @@ Promoted productive core after the stacking stress test:
 | **GEN → CONTAINMENT** | construct a bounded domain belonging to/defined by X | promoted |
 | **GEN → LOC** | locate something in/at X's domain | promoted |
 
-The promotion is structural. The experimental `STATUS.md` inventory still conflicts with the case inventory in `GRAMMAR.md` (`GEN = -ra` here versus `GEN = -se` and `PATH = -ra` there); that conflict remains unresolved. Corpus forms therefore follow `GRAMMAR.md`'s currently authoritative surface inventory rather than silently resolving the discrepancy.
+The seven-value case inventory now agrees with `GRAMMAR.md`: GEN is `-se`, and the former PATH domain is absorbed into COM/ASSOCIATIVE `-me`.
 
 Retained experimental tests:
 
@@ -340,52 +340,47 @@ If the caused participant is non-agentive, it does not retain ERG; ABS is the cu
 
 No dedicated causee case is proposed.
 
-### Experimental status and remaining tests
+### Experimental status and scope
 
-The following have been promoted within this experimental model:
+The experimental relational architecture is now structurally settled for the current validation pass. Remaining work is regression coverage, construction-level interaction, and promotion decisions; no unresolved core parameter remains in the argument/multi-complement model.
 
-- general relational-vector direction
-- single general applicative (`-ka-`)
-- LOCAL vs. NONLOCAL object-index organization
-- OBV `-v-`
-- patient > recipient/goal > beneficiary/maleficiary > other applied participant hierarchy
-- four spatial/relational base frames
-- COM absorbing PATH/medium
-- no BOUNDARY case
-- stative × directional × aspect interaction
-- agentive-causee causative hierarchy
-- restricted productive case stacking
-- multiple relational NPs with one clause-level directional
+Resolved within this model:
 
-The following remain to be tested before any possible canonical promotion:
+- general relational-vector direction;
+- single productive APPL (`-ka-`);
+- APPL selection by semantic hierarchy, then discourse prominence, then linear order;
+- one object-index slot;
+- APPL promotion before object indexing;
+- LOCAL, 3P.ANIMATE, 3P.INANIMATE, and OBV object-status behavior as tested;
+- restricted productive case stacking;
+- multiple relational NPs with one clause-level directional.
 
-No changes to `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv` are made by this experimental record.
+APPL candidate selection and object indexing are distinct operations. A lexical patient/theme is not displaced because an APPL candidate exists; the selected relational NP is promoted into the single indexed object position while an overt lexical patient may remain as an ABS core complement.
 
-## Stacked case + APPL decision — 2026-09-18
+## Argument-structure / multi-complement validation — 2026-09-18
 
-The stacked-case + APPL stress test is resolved within the experimental relational system:
+The matched construction-first validation is complete for the current experimental relational system.
 
-- **Single APPL is productive.** One APPL may promote one relational participant into the verb's core argument structure.
-- **Unrestricted APPL stacking is rejected.** The system does not permit arbitrary multiple APPL operations.
-- **Multiple-candidate APPL selection remains open.** When multiple relational NPs are simultaneously eligible, the criteria for choosing which one is applied remain to be specified/tested.
+### Selection and complement structure
 
-The result does not select an APPL exponent and does not promote the experimental relational system into canonical grammar.
+1. **APPL vs. non-APPL:** `E-0122` confirms that a LOC goal can remain a relational complement without APPL; it is not object-indexed.
+2. **Lexical theme + applied participant:** existing `E-0106` and `E-0108`, plus `E-0123`, confirm that an APPL-selected relational participant coexists with an overt ABS lexical theme and receives the single object index.
+3. **Recipient > beneficiary:** `E-0123` places the beneficiary before the recipient but still selects the recipient, confirming that semantic rank outranks linear order.
+4. **Three relational NPs:** `E-0124` combines route/medium, beneficiary, and recipient; the recipient is selected despite appearing last.
+5. **3P animate indexing:** `E-0125` confirms `m-` for an APPL-promoted 3P animate recipient.
+6. **OBV indexing:** `E-0126` confirms `v-` replacing the ordinary 3P animate index for an obviative recipient.
+7. **Same-rank discourse tie:** `E-0127` models discourse prominence overriding linear order between two beneficiary-type COM participants. Both are LOCAL, so the shared `n-/en-` index is intentionally syncretic; selection is therefore recoverable from discourse context rather than the verb form.
+8. **Same-rank linear fallback:** `E-0128` tests the final word-order fallback when two beneficiary-type candidates are otherwise indistinguishable.
 
-## Multiple-candidate APPL selection decision — 2026-09-18
+The resulting operational rule is:
 
-The selection test is resolved within the experimental relational system:
+> **APPL candidate selection:** semantic hierarchy → discourse prominence → linear word order for genuine same-rank ties.
 
-- **Semantic hierarchy is the primary selector.** Among simultaneously eligible relational NPs, the higher-ranked semantic argument is selected.
-- **Discourse prominence resolves genuine same-rank ties.**
-- **Linear word order resolves only remaining genuine ties.**
-- **APPL selection precedes OBJ indexing.** The selected relational participant is promoted first; the resulting core arguments then compete for the single OBJ slot under the established hierarchy.
+> **After selection:** the APPL-selected participant occupies the single object-index position; other relational NPs remain oblique, and an overt lexical patient may remain an ABS core complement.
 
-The working selection hierarchy remains:
+The earlier wording that all post-APPL core arguments “compete” for the object index is retired as misleading.
 
-> **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**
-
-A relational NP that functions only as an event setting/domain is not automatically APPL-eligible.
-
+All seven new examples (`E-0122`–`E-0128`) pass row-shape, ID, grammar-reference, lexical-reference, segmentation/gloss alignment, and primary-stress checks against the current files. The corpus now contains **127 example rows**.
 ## OBV/discourse behavior decision — 2026-09-18
 
 The OBV/discourse stress test is resolved within the experimental relational/object system:
@@ -566,46 +561,27 @@ The object slot distinguishes `n-` (1P/2P), `m-` (ordinary 3P animate), `Ø` (or
 
 There are no unresolved core parameters among the relational-system decisions already tested. The remaining uncertainties are **integration or construction-level tests**, not reasons to reopen the settled architecture.
 
-The main integration issue is that `GRAMMAR.md` now contains the reorganized seven-value case system and productive APPL `-ka-`, while `EXAMPLES.tsv` still contains examples written against earlier case semantics and therefore requires systematic migration rather than selective patching.
+The core relational morphology and argument-structure behavior are now reconciled between `GRAMMAR.md` and the tested corpus. Remaining work is construction-matrix expansion, semantic audit, and promotion of experimental constructions where independently justified.
 
 ## Relational-system roadmap — 2026-09-18
 
-The relational system has moved from architectural design into **integration and validation**. The roadmap is now:
+The relational system has moved from architectural design into **integration and validation**. Argument/multi-complement validation is now complete.
 
-**1 — Corpus migration and grammar reconciliation — NEXT.**
+**1 — Corpus migration and grammar reconciliation — COMPLETED.**
 
-Bring `EXAMPLES.tsv` into alignment with the current `GRAMMAR.md` without changing established IDs or inventing new evidence.
+`EXAMPLES.tsv` now agrees with the current seven-value case system and productive APPL `-ka-`; the pre-existing 120 rows were retained and seven targeted argument-structure regression examples were added.
 
-Required audit targets:
+**2 — Argument-structure / multi-complement validation — COMPLETED.**
 
-- replace obsolete GEN/PATH/SUPER/INE analyses with the current seven-value system;
-- identify examples whose **surface segmentation, gloss, translation, or IPA** changes under the new case inventory;
-- add APPL `-ka-` only where the construction actually licenses an applied participant;
-- distinguish ordinary relational NPs from APPL-selected core participants;
-- preserve examples whose historical form is opaque when the modern analysis is still adequately documented;
-- mark genuinely new constructions `experimental` rather than silently promoting them.
+The hierarchy and selection procedure have been tested in matched clauses: lexical theme + recipient, lexical theme + beneficiary, recipient + beneficiary, three relational NPs, APPL vs. non-APPL, 3P animate/OBV indexing, discourse-priority ties, and linear-order fallback.
 
-This is the highest-priority task because the grammar is now ahead of the corpus.
-
-**2 — Argument-structure / multi-complement validation.**
-
-Use matched construction-first tests to validate the already-settled hierarchy in actual clauses:
+The working hierarchy remains:
 
 `patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant`
 
-Test especially:
+For APPL candidate selection, only eligible relational NPs compete; the lexical patient/theme remains an independent core argument when present. Once selected, the APPL participant receives the single object index.
 
-- lexical patient + recipient/goal;
-- lexical patient + beneficiary/maleficiary;
-- recipient + beneficiary;
-- three relational NPs;
-- APPL vs. non-APPL contrasts;
-- ordinary 3P animate, 3P inanimate, LOCAL, and OBV object indexing;
-- discourse-priority and same-rank tie cases.
-
-The purpose is no longer to choose the hierarchy; that decision is already settled. The purpose is to establish its concrete morphosyntactic behavior and discover interactions the current abstract description does not yet capture.
-
-**3 — Full relational construction matrix.**
+**3 — Full relational construction matrix — NEXT.**
 
 Build a compact regression matrix crossing:
 
@@ -615,14 +591,13 @@ for the four productive relational frames:
 
 `LOC × CONTAINMENT × POSITION × COM`
 
-Include neutral, convergent `i-`, and divergent `a-` readings, plus stative and dynamic predicates. Add targeted case-stacking tests for the three promoted stacks:
+Include neutral, convergent `i-`, and divergent `a-` readings, stative and dynamic predicates, and the promoted case-stacking core:
 
 `CONTAINMENT → LOC`  
 `GEN → CONTAINMENT`  
 `GEN → LOC`
 
-Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as explicit boundary tests rather than silently promoting them.
-
+Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as explicit boundary tests rather than promoting them.
 **4 — Lexicon semantic reanalysis and audit — NEXT.**
 
 Before further construction-first corpus growth, reanalyze the lexicon as a **semantic system**, not merely as a list of English glosses. The purpose is to ensure that the corpus has enough generic/core predicates to expose constructional meaning without flattening genuinely specialized vocabulary.
