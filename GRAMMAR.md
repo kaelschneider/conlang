@@ -361,9 +361,11 @@ When several relational NPs are eligible, selection proceeds by:
 2. discourse prominence for genuine same-rank ties;
 3. linear word order for any remaining genuine tie.
 
-The working hierarchy is **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**.
+The working argument-role hierarchy is **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**.
 
-APPL selection occurs before object indexing. The selected participant is promoted into core argument structure, after which the single object slot is assigned to that participant. APPL therefore does not create a second object-indexing position.
+For APPL selection, the lexical patient/theme is not itself an APPL candidate unless it is independently expressed as a relational argument. Among eligible relational NPs, the effective selection hierarchy is **recipient/goal > beneficiary/maleficiary > other applied participant**. Discourse prominence resolves genuine same-rank ties, and linear order is the final fallback.
+
+APPL selection occurs before object indexing. The selected relational participant is promoted into the verb's core argument structure and occupies the single indexed object position. A lexical patient/theme may remain an overt ABS core complement, but it does not displace the APPL-selected participant from the object-index slot and does not create a second object-indexing position.
 
 With stative predicates, APPL is available only where the predicate independently licenses an affected participant. Direction and aspect remain independent of APPL.
 
