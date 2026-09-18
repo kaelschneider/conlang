@@ -611,11 +611,11 @@ The active corpus now includes relational, argument-structure, information-struc
 
 The currently resolved sequence is:
 
-`imperative/hortative → modality → content questions → impersonal predicates`
+`imperative/hortative → modality → content questions → impersonal predicates → secondary predication`
 
 The next independent syntax targets are:
 
-`secondary predication → finite speech complements → comparison → passive`
+`finite speech complements → comparison → passive`
 
 These should be designed and tested only after lexical valency distinctions are sufficiently understood.
 
@@ -1185,3 +1185,16 @@ The impersonal architecture is now implemented and exercised in the active corpu
 - tense, aspect, negation, direction, and other verbal morphology remain structurally independent of impersonal agreement.
 
 Active probes: **E-0231–E-0235**. The working impersonal exponent is explicitly experimental; no historical source is claimed yet.
+## Secondary predication — 2026-09-18
+
+The secondary-predication architecture is now implemented:
+
+- both depictive and resultative secondary predication are productive;
+- existing participles are reused: `-ri` for agent-oriented depictives, `-na` for patient-oriented depictives, and `-mu` for resultatives;
+- the predicand remains an ordinary case-marked NP;
+- secondary predicates normally follow their target directly and precede the main predicate;
+- both subject-oriented and object-oriented secondary predication are allowed;
+- secondary predication is independent of APPL and does not compete for object indexing.
+
+Active probes: **E-0236–E-0241**. E-0110 remains retained as deprecated provenance and is superseded by the fully finite resultative construction in E-0238.
+
