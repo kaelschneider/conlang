@@ -277,7 +277,7 @@ The language has compact, consonant-heavy morphology with historically fused/red
 
 Finite verbs follow:
 
-`(DIRECTION) (IMPERATIVE) (OBJECT) STEM (AUX/DERIV) APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
+`(DIRECTION) (IMPERATIVE) (OBJECT) STEM (AUX/DERIV) VOICE APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
 
 NEG is the invariant suffix `-su-` in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. It is a dedicated polarity exponent (`NEG`). Negation does not alter stem grade, direction, object status, or the positions of discourse, tense, or aspect.
 
@@ -374,6 +374,18 @@ APPL follows the complete AUX/DERIV material and precedes AGENT:
 `STEM (AUX/DERIV) APPL AGENT`
 
 No APPL-specific allomorphy is currently established.
+
+### G-MORPH-06B — Voice
+
+The productive passive voice is marked by `-na-` in a dedicated VOICE slot after AUX/DERIV and before APPL. This finite `-na-` has the same form as the productive patientive participle but a distinct synchronically grammatical function; passive finite forms are identified by their finite morphology and argument-structure effects rather than treated as participles.
+
+PASS promotes the lexical patient/theme to the clause's ABS S argument. The promoted patient controls ordinary person agreement under the normal active-stative / Split-S alignment. The former agent is demoted out of the core argument structure and may be omitted or expressed as a COM-marked NP. The passive patient is therefore not represented by the ordinary object-index slot.
+
+The initial productive template is:
+
+`STEM (AUX/DERIV) VOICE APPL AGENT`
+
+A passive clause normally has no indexed object. PASS + APPL interaction is not yet established as an independent productive combination; it remains a targeted stress-test case rather than an automatic extension of either rule.
 
 ### G-MORPH-07 — Agreement
 
@@ -894,3 +906,62 @@ By default, the secondary predicate follows its target directly and precedes the
 The construction may describe a participant's state during the main event (depictive) or a state resulting from the main event (resultative). A resultative secondary predicate may target either a subject or another core participant where the lexical semantics support that reading.
 
 Secondary predication is independent of APPL. An APPL-selected relational participant continues to occupy the single object-index position, while a secondary predicate may independently target another core participant. Secondary predicates do not compete for object indexing and do not trigger APPL selection.
+### G-SYN-18 — Finite speech complements
+
+Utterance predicates such as SAY may take a **finite clause directly as an ABS speech-content complement**. The complement is a full finite clause: it retains its own subject/case marking, verbal agreement, tense, aspect, negation, interrogation, and other clause-level morphology. No dedicated complementizer is required.
+
+Because the language is SOV, the finite content clause occupies the ordinary preverbal complement position of the speech predicate:
+
+`S [finite clause] SPEECH-VERB`
+
+A speech-content clause is therefore distinguished from the productive nominalized content strategy by retaining finite morphology rather than by a special complementizer. The same finite-complement construction can host a reported declarative or interrogative proposition. An overt addressee may be expressed by an ordinary relational NP, commonly LOC; it remains oblique unless APPL independently promotes it.
+
+Direct speech does not receive a separate obligatory quotative morpheme in the current system. A finite speech-content clause may be interpreted as direct speech by quotation prosody/discourse context; the morphosyntactic relation to SAY remains the same. Punctuation or orthographic quotation is not treated as a grammatical exponent.
+
+Finite speech complements are distinct from coordination: the speech predicate semantically selects the finite clause as its content, and the content clause precedes the matrix speech predicate in the same way as other core complements.
+
+The construction is compatible with ordinary direction, negation, interrogation, agreement, tense, and aspect on both the matrix and embedded clauses. Matrix and embedded tense are independent.
+
+
+### G-SYN-19 — Comparison
+
+Comparison is a constructional use of the existing COM/ASSOCIATIVE relation plus the verbal directional system; no dedicated comparative adjective class or degree suffix is introduced.
+
+For a gradable predicate, the standard of comparison is marked COM (`-me`) and precedes the predicate. Direction on the gradable predicate supplies the comparison relation:
+
+| Direction | Reading |
+|---|---|
+| `Ø` | equative: comparee and standard have the property to the same degree |
+| `i-` | superior comparative: comparee exceeds the standard on the relevant scale |
+| `a-` | inferior comparative: comparee falls below the standard on the relevant scale |
+
+Thus the core pattern is:
+
+`COMPAREE STANDARD-COM (DIR) GRADABLE-PREDICATE`
+
+The construction is restricted to contexts in which the predicate supplies a gradable scale. The comparative interpretation is therefore constructional and does not generalize the lexical meaning of `i-` or `a-` to all COM-marked clauses.
+
+A superlative uses the same system with a plural or otherwise set-valued standard: a singular comparee is contrasted with a COM-marked comparison set using `i-` and a gradable predicate. The resulting reading is conventionalized as 'the most X within that comparison set.' This is a set-comparison construction rather than a new superlative affix.
+
+The standard does not become an indexed object merely because it is the comparison standard. APPL, if ever combined with comparison, must be separately licensed; comparison itself does not trigger APPL promotion.
+
+Comparison remains compatible with the ordinary finite morphology of the gradable predicate. Since property concepts are verbal in the current system, the same comparison architecture applies across the gradable predicate inventory without introducing an adjective-specific inflectional paradigm.
+
+
+### G-SYN-20 — Passive voice
+
+The productive passive promotes the lexical patient/theme to ABS S and demotes the lexical agent out of the core argument structure. The patient controls finite agreement under the ordinary alignment system.
+
+The basic passive pattern is:
+
+`PATIENT-ABS (AGENT-COM) STEM-PASS-AGREEMENT-TENSE (ASPECT)`
+
+The agent is optional. When overt, it is expressed with COM/ASSOCIATIVE `-me`, yielding an agent-like instrumental/associative interpretation. No separate agentive case is introduced.
+
+Passive suppresses the ordinary object-indexing relation for the promoted patient: the patient is now S rather than O. The passive marker remains present even when the agent is omitted, preventing ordinary intransitive clauses from being reanalyzed as passive solely through argument omission.
+
+Direction, negation, interrogation, tense, and aspect remain available because PASS is a voice operation rather than a replacement for the ordinary verbal inflectional zones. The initial passive implementation does not establish productive PASS + APPL stacking; that interaction remains a later stress test.
+
+The formal identity of passive `-na-` with patientive participle `-na` is retained as a naturalistic morphological relationship, but the two functions remain distinct in synchrony: `-na` PAT.PTCP is nonfinite/attributive or secondary-predicate morphology, whereas `-na` PASS is finite voice morphology.
+
+
