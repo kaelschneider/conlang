@@ -119,6 +119,16 @@ The 20-question morphology/syntax pass resolved the following structural points:
 - Finite relative clauses use a gap. Coordination is primarily juxtaposition, with a small secondary conjunction class.
 - Information structure is established as constituent-order plus prosodic prominence: topics may occur clause-initially; narrow/contrastive focus favors the immediately preverbal position.
 
+## Nominalizer family testing — 2026-09-17
+
+Added three experimental regression examples to `EXAMPLES.tsv`:
+
+- `E-0011` tests productive `keranu` + LOC (`keranu-te`) as a same-subject converb, contrasted with fossilized `kerande`.
+- `E-0012` tests `keranu-te` with an overt GEN-marked nominalized subject (`sese`) for switch-reference.
+- `E-0013` tests lexicalized `keranka` as a normal noun with ERG case and regular 3rd-person agreement, while `kerande` remains the object noun.
+
+All three examples pass structural/schema-field checks, ID and cross-file reference checks, IPA/stress checks, and segmentation/gloss alignment. The family remains experimentally tested; no new productive morphology is promoted beyond the existing grammar.
+
 ## Known inconsistencies / cleanup needed
 
 The conditioned historical system is documented in `GRAMMAR.md`, including the resolved OPEN/CLOSED × F_F/F_B/B_F/B_B matrix. The principal lexical and example forms have been reconciled against the current grammar.
