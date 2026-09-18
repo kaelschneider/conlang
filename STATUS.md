@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Relational grammar integrated and matrix-tested; lexicon semantic audit and first construction-first corpus rebuild completed; active work is lexical valency/construction coverage and independent syntax validation
+**Phase:** Relational grammar integrated and matrix-tested; lexicon semantic audit and first construction-first corpus rebuild completed; cultural semantic profile adopted for the inherited-root generator; active work is seeded generator validation, lexical valency/construction coverage, and independent syntax validation
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -1004,7 +1004,8 @@ The implementation follows the design-resolved specification without generating 
 - explicit seed-controlled reproducibility;
 - grammar reconciliation against the current hard architectural anchors;
 - semantic graph centrality and weighted lexical pressure;
-- sparse event/process-centered seed graph;
+- adopted cultural/environmental semantic pressure profile;
+- sparse event/process-centered seed graph with a small ecology/social worldview cluster;
 - soft domain-balance pressure rather than rigid domain quotas;
 - long-tailed family-size planning with centrality-sensitive growth;
 - uneven lexicalization profiles by semantic distance;
@@ -1019,11 +1020,11 @@ The implementation follows the design-resolved specification without generating 
 
 ### Repository validation state
 
-Connector-level structural checks pass for the new configuration and generator interfaces: the semantic graph contains **124 declared nodes and 129 declared relations**, with no unresolved graph references or duplicate graph-node IDs; required generator functions and CLI parameters are present.
+Connector-level structural checks pass for the new configuration and generator interfaces: the adopted cultural profile is marked **adopted**, the semantic graph contains **133 declared nodes and 160 declared relations**, and the generator exposes the cultural-pressure and provenance fields required by the implementation. No unresolved graph references or duplicate graph-node IDs were found in the current configured graph.
 
 A local Python smoke test could not be executed in the repository sandbox because external GitHub network resolution is unavailable there. Runtime execution should therefore be performed in a Python environment with **PyYAML** installed before using the generator for candidate production.
 
-The next implementation task is to execute the generator at small seeded counts, inspect semantic/family distributions and phonological output, then tune parameters only where the empirical output contradicts the design specification.
+The next implementation task is to execute the generator at small seeded counts, inspect semantic/family distributions and phonological output under the adopted worldview, then tune parameters only where empirical output contradicts the design specification.
 
 ## Adopted cultural / environmental worldview profile — 2026-09-18
 
