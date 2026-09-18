@@ -29,7 +29,7 @@ Validation checks on the migrated corpus: 120 rows retained; no stale PATH, INE,
 This reconciliation treats GRAMMAR.md as authoritative for the resulting system while preserving the superseded PATH analysis in historical/status provenance where relevant.
 ## Experimental relational case / directional / applicative system — 2026-09-18
 
-**Status: EXPERIMENTAL.** This section records the current working system developed for continued testing. It is intentionally **not canonical** and does not replace the morphology, syntax, lexicon, or examples currently established in `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv`. The experiment is isolated on branch `experimental-relational-case-system`; `main` remains unchanged.
+**Historical development record.** This section records the experimental system from which the integrated `developmental` grammar was derived. The former `experimental-relational-case-system` branch is no longer the active development branch. Current repository state is governed by `developmental/GRAMMAR.md`, `developmental/LEXICON.tsv`, `developmental/EXAMPLES.tsv`, and the current sections of this file.
 
 ### Experimental architecture
 
