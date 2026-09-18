@@ -1,0 +1,431 @@
+generator:
+  name: inherited-root-generator
+  version: "0.1.0"
+  architecture_version: "2026-09-18.semantic-architecture.v1"
+  parameter_profile: "default-1600"
+  status_policy: "experimental-candidate"
+
+inventory:
+  default_target: 1600
+  minimum: 1200
+  maximum: 2000
+
+phonology:
+  vowels: [a, e, i, u]
+  consonants: [p, t, k, m, n, s, h, w, j, r]
+  orthography:
+    w: v
+    j: y
+  root_shapes:
+    C: 0.15
+    VC: 0.25
+    CVC: 0.60
+  root_final_exclude:
+    VC: [h, j]
+    CVC: [h, j]
+  phoneme_weights:
+    a: 1.0
+    e: 1.0
+    i: 1.0
+    u: 1.0
+    p: 1.0
+    t: 1.0
+    k: 1.0
+    m: 1.0
+    n: 1.0
+    s: 1.0
+    h: 0.8
+    w: 0.9
+    j: 0.9
+    r: 1.0
+
+semantic_pressure:
+  semantic_centrality: 0.35
+  network_connectivity: 0.25
+  communicative_frequency: 0.20
+  cultural_salience: 0.10
+  grammatical_utility: 0.10
+  domain_share:
+    minimum_soft: 0.03
+    maximum_soft: 0.18
+    underweight_factor: 2.0
+    overweight_factor: 0.15
+
+family_model:
+  event_process_centered: true
+  simple_root_baseline: 0.55
+  family_size_buckets:
+    - {centrality_max: 0.50, share: 0.50, simple_probability: 0.70, size_min: 1, size_max: 3}
+    - {centrality_max: 0.90, share: 0.40, simple_probability: 0.45, size_min: 2, size_max: 4}
+    - {centrality_max: 0.98, share: 0.08, simple_probability: 0.20, size_min: 3, size_max: 6}
+    - {centrality_max: 1.00, share: 0.02, simple_probability: 0.05, size_min: 5, size_max: 12}
+  semantic_role_angles:
+    - event
+    - participant
+    - product
+    - instrument
+    - location
+    - result
+    - state
+    - social_role
+    - quality
+    - material
+    - abstract
+  family_stage_weights:
+    initial: 0.55
+    specialized: 0.25
+    reinterpreted: 0.12
+    opaque: 0.08
+
+lexicalization_priors:
+  "very_close": {polysemy: 0.45, derivation_conversion: 0.40, independent_root: 0.10, compound_other: 0.05}
+  "close": {polysemy: 0.30, derivation_conversion: 0.35, independent_root: 0.25, compound_other: 0.10}
+  "moderate": {polysemy: 0.20, derivation_conversion: 0.25, independent_root: 0.40, compound_other: 0.15}
+  "distant": {polysemy: 0.10, derivation_conversion: 0.10, independent_root: 0.65, compound_other: 0.15}
+  "very_distant": {polysemy: 0.03, derivation_conversion: 0.02, independent_root: 0.80, compound_other: 0.15}
+
+historical_layering:
+  broadly_transparent: 0.70
+  specialized_reinterpreted: 0.20
+  substantially_opaque: 0.10
+
+category_behavior:
+  neutral: 0.88
+  noun_leaning: 0.05
+  verb_leaning: 0.05
+  stative_leaning: 0.02
+
+probe_policy:
+  neutral: 0.72
+  diagnostic: 0.20
+  specialized: 0.08
+  diagnostic_features: [endpoint_fixed, strongly_directional, highly_resultative]
+  specialized_features: [culturally_specific, narrow_artifact, ritual_or_social]
+  never_force_generic: true
+
+sound_symbolism:
+  maximum_effect_on_rank: 0.08
+  tendencies:
+    animate:
+      preferred_consonant_manners: [nasal, approximant, liquid]
+      preferred_vowels: [a, e]
+    liquid_substance:
+      preferred_consonant_manners: [nasal, approximant, fricative]
+      preferred_vowels: [u, a]
+    impact_manipulation:
+      preferred_consonant_manners: [stop]
+      preferred_vowels: [a, u]
+    continuity_change:
+      preferred_consonant_manners: [fricative, liquid, nasal]
+      preferred_vowels: [e, i]
+    size_strength:
+      preferred_consonant_manners: [stop, fricative]
+      preferred_vowels: [a, u]
+  deterministic_mapping_forbidden: true
+
+validation:
+  require_grammar_reconciliation: true
+  reject_existing_lexicon_collisions: true
+  reject_within_run_collisions: true
+  require_seed: true
+  allowed_candidate_status: experimental
+  grammar_anchors:
+    vowels: "a e i u"
+    consonants: "p t k m n s h w j r"
+    root_shapes: "C 15% / VC 25% / CVC 60%"
+    final_exclusion_phrase: "exclude `h` and `j` from root-final position"
+
+output:
+  json_description: "Full machine-readable candidate records with generation provenance."
+  tsv_description: "Human-auditable candidate table."
+  json_fields:
+    - root_id
+    - root_form
+    - root_shape
+    - phonological_features
+    - semantic_center
+    - semantic_domain
+    - semantic_subdomain
+    - semantic_neighbors
+    - semantic_relations
+    - semantic_distance
+    - conceptual_salience
+    - expected_frequency
+    - lexicalization_bias
+    - family_affinity
+    - derivational_affinity
+    - sound_symbolic_profile
+    - probe_role
+    - family_id
+    - family_stage
+    - lexicalization_status
+    - category_behavior
+    - generation_seed
+    - generation_version
+
+semantic_graph:
+  nodes:
+    - {id: person, label: person/human, domains: [living, social], features: [animate, social], salience: 1.00, frequency: 0.95, cultural: 0.95, grammatical: 0.95}
+    - {id: animal, label: animal, domains: [living], features: [animate], salience: 0.92, frequency: 0.88, cultural: 0.75, grammatical: 0.85}
+    - {id: plant, label: plant, domains: [living, physical], features: [living, material], salience: 0.88, frequency: 0.80, cultural: 0.80, grammatical: 0.75}
+    - {id: growth, label: growth/increase, domains: [living, motion_change], features: [continuity_change], salience: 0.90, frequency: 0.88, cultural: 0.78, grammatical: 0.95}
+    - {id: birth, label: birth/origin, domains: [living, events], features: [change], salience: 0.72, frequency: 0.60, cultural: 0.72, grammatical: 0.80}
+    - {id: death, label: death/ending, domains: [living, events], features: [change, endpoint_fixed], salience: 0.78, frequency: 0.62, cultural: 0.82, grammatical: 0.82}
+    - {id: body, label: body, domains: [living], features: [animate, material], salience: 0.92, frequency: 0.88, cultural: 0.82, grammatical: 0.88}
+    - {id: hunger, label: hunger/need, domains: [living, states], features: [state], salience: 0.82, frequency: 0.70, cultural: 0.72, grammatical: 0.84}
+    - {id: sleep, label: sleep/rest, domains: [living, states], features: [state], salience: 0.88, frequency: 0.80, cultural: 0.72, grammatical: 0.82}
+
+    - {id: stone, label: stone/rock, domains: [physical], features: [material, size_strength], salience: 0.86, frequency: 0.78, cultural: 0.74, grammatical: 0.78}
+    - {id: wood, label: wood, domains: [physical, material], features: [material], salience: 0.76, frequency: 0.68, cultural: 0.70, grammatical: 0.70}
+    - {id: water, label: water, domains: [physical, material], features: [liquid_substance], salience: 0.98, frequency: 0.96, cultural: 0.98, grammatical: 0.95}
+    - {id: fire, label: fire, domains: [physical, change], features: [impact_manipulation, change], salience: 0.95, frequency: 0.88, cultural: 0.92, grammatical: 0.90}
+    - {id: earth, label: earth/ground, domains: [physical, space], features: [material], salience: 0.88, frequency: 0.78, cultural: 0.84, grammatical: 0.82}
+    - {id: sky, label: sky, domains: [physical, space], features: [space], salience: 0.82, frequency: 0.70, cultural: 0.82, grammatical: 0.74}
+    - {id: light, label: light, domains: [physical, perception], features: [continuity_change], salience: 0.90, frequency: 0.82, cultural: 0.82, grammatical: 0.86}
+    - {id: darkness, label: darkness, domains: [physical, perception], features: [state], salience: 0.74, frequency: 0.62, cultural: 0.70, grammatical: 0.72}
+    - {id: heat, label: heat/warmth, domains: [physical, qualities], features: [size_strength, state], salience: 0.84, frequency: 0.78, cultural: 0.76, grammatical: 0.82}
+    - {id: cold, label: coldness, domains: [physical, qualities], features: [state], salience: 0.84, frequency: 0.76, cultural: 0.74, grammatical: 0.82}
+
+    - {id: place, label: place/domain, domains: [space], features: [space], salience: 0.98, frequency: 0.90, cultural: 0.92, grammatical: 1.00}
+    - {id: boundary, label: boundary/limit, domains: [space, events], features: [endpoint_fixed, space], salience: 0.86, frequency: 0.74, cultural: 0.82, grammatical: 0.96}
+    - {id: interior, label: interior/inside, domains: [space], features: [space], salience: 0.90, frequency: 0.82, cultural: 0.86, grammatical: 0.98}
+    - {id: exterior, label: exterior/outside, domains: [space], features: [space], salience: 0.82, frequency: 0.72, cultural: 0.80, grammatical: 0.92}
+    - {id: surface, label: surface/support, domains: [space, physical], features: [space, size_strength], salience: 0.84, frequency: 0.76, cultural: 0.80, grammatical: 0.98}
+    - {id: center, label: center/core, domains: [space, abstract], features: [space], salience: 0.66, frequency: 0.54, cultural: 0.65, grammatical: 0.72}
+    - {id: edge, label: edge/border, domains: [space], features: [endpoint_fixed, space], salience: 0.72, frequency: 0.60, cultural: 0.68, grammatical: 0.74}
+    - {id: path, label: route/path, domains: [space, motion_change], features: [space, continuity_change], salience: 0.88, frequency: 0.78, cultural: 0.84, grammatical: 0.98}
+    - {id: distance, label: distance/separation, domains: [space, abstract], features: [space], salience: 0.76, frequency: 0.60, cultural: 0.72, grammatical: 0.76}
+
+    - {id: move, label: move/go, domains: [motion_change], features: [continuity_change], salience: 1.00, frequency: 0.95, cultural: 0.90, grammatical: 1.00}
+    - {id: approach, label: approach/converge, domains: [motion_change, relations], features: [continuity_change], salience: 0.90, frequency: 0.78, cultural: 0.80, grammatical: 1.00}
+    - {id: depart, label: depart/diverge, domains: [motion_change, relations], features: [continuity_change, endpoint_fixed], salience: 0.86, frequency: 0.74, cultural: 0.80, grammatical: 1.00}
+    - {id: arrive, label: arrive/reach, domains: [motion_change, events], features: [endpoint_fixed], salience: 0.84, frequency: 0.70, cultural: 0.76, grammatical: 0.90}
+    - {id: turn, label: turn/change orientation, domains: [motion_change, relations], features: [continuity_change], salience: 0.74, frequency: 0.62, cultural: 0.68, grammatical: 0.88}
+    - {id: rise, label: rise, domains: [motion_change], features: [continuity_change], salience: 0.70, frequency: 0.62, cultural: 0.64, grammatical: 0.78}
+    - {id: fall, label: fall, domains: [motion_change], features: [continuity_change, endpoint_fixed], salience: 0.76, frequency: 0.68, cultural: 0.72, grammatical: 0.78}
+    - {id: remain, label: remain/stay, domains: [motion_change, states], features: [continuity_change, state], salience: 0.92, frequency: 0.80, cultural: 0.86, grammatical: 1.00}
+    - {id: cross, label: cross/pass, domains: [motion_change, space], features: [endpoint_fixed, continuity_change], salience: 0.70, frequency: 0.56, cultural: 0.68, grammatical: 0.84}
+
+    - {id: perceive, label: perceive, domains: [perception, cognition], features: [animate, state], salience: 1.00, frequency: 0.90, cultural: 0.82, grammatical: 0.98}
+    - {id: see, label: see, domains: [perception], features: [animate], salience: 0.96, frequency: 0.94, cultural: 0.88, grammatical: 0.90}
+    - {id: hear, label: hear, domains: [perception], features: [animate], salience: 0.92, frequency: 0.88, cultural: 0.86, grammatical: 0.90}
+    - {id: smell, label: smell, domains: [perception], features: [animate], salience: 0.76, frequency: 0.68, cultural: 0.70, grammatical: 0.80}
+    - {id: taste, label: taste, domains: [perception, food], features: [animate, material], salience: 0.74, frequency: 0.64, cultural: 0.72, grammatical: 0.80}
+    - {id: touch, label: touch/feel, domains: [perception, social], features: [animate], salience: 0.78, frequency: 0.68, cultural: 0.76, grammatical: 0.82}
+    - {id: know, label: know, domains: [cognition], features: [animate, state], salience: 0.94, frequency: 0.88, cultural: 0.86, grammatical: 0.92}
+    - {id: remember, label: remember, domains: [cognition], features: [animate, continuity_change], salience: 0.78, frequency: 0.66, cultural: 0.72, grammatical: 0.82}
+    - {id: forget, label: forget/lose memory, domains: [cognition], features: [animate, continuity_change], salience: 0.72, frequency: 0.60, cultural: 0.68, grammatical: 0.76}
+
+    - {id: say, label: say, domains: [communication, social], features: [animate, social], salience: 0.98, frequency: 0.92, cultural: 0.90, grammatical: 1.00}
+    - {id: speak, label: speak/converse, domains: [communication, social], features: [animate, social], salience: 0.88, frequency: 0.82, cultural: 0.86, grammatical: 0.96}
+    - {id: call, label: call/address, domains: [communication, social], features: [animate, social], salience: 0.76, frequency: 0.66, cultural: 0.72, grammatical: 0.88}
+    - {id: ask, label: ask/question, domains: [communication, cognition], features: [animate, social], salience: 0.82, frequency: 0.76, cultural: 0.80, grammatical: 0.94}
+    - {id: answer, label: answer/reply, domains: [communication, social], features: [animate, social], salience: 0.78, frequency: 0.68, cultural: 0.78, grammatical: 0.90}
+    - {id: tell, label: tell/inform, domains: [communication, social], features: [animate, social], salience: 0.86, frequency: 0.78, cultural: 0.80, grammatical: 0.96}
+    - {id: name, label: name/designate, domains: [communication, social, cognition], features: [animate, social], salience: 0.70, frequency: 0.56, cultural: 0.76, grammatical: 0.88}
+    - {id: warn, label: warn, domains: [communication, social], features: [animate, social], salience: 0.64, frequency: 0.50, cultural: 0.72, grammatical: 0.78}
+    - {id: promise, label: promise/commit, domains: [communication, social], features: [animate, social], salience: 0.62, frequency: 0.46, cultural: 0.74, grammatical: 0.76}
+
+    - {id: meet, label: meet, domains: [social, motion_change], features: [animate, social], salience: 0.90, frequency: 0.82, cultural: 0.84, grammatical: 0.94}
+    - {id: join, label: join/associate, domains: [social, relations], features: [animate, social, continuity_change], salience: 0.84, frequency: 0.72, cultural: 0.82, grammatical: 0.98}
+    - {id: separate, label: separate/diverge, domains: [social, relations], features: [social, continuity_change, endpoint_fixed], salience: 0.78, frequency: 0.68, cultural: 0.80, grammatical: 0.96}
+    - {id: help, label: help/support, domains: [social, relations], features: [social, continuity_change], salience: 0.80, frequency: 0.72, cultural: 0.84, grammatical: 0.96}
+    - {id: oppose, label: oppose/resist, domains: [social, relations], features: [social, continuity_change], salience: 0.64, frequency: 0.54, cultural: 0.72, grammatical: 0.90}
+    - {id: trust, label: trust, domains: [social, cognition], features: [animate, social, state], salience: 0.70, frequency: 0.58, cultural: 0.78, grammatical: 0.78}
+    - {id: fear, label: fear, domains: [social, cognition, states], features: [animate, state], salience: 0.78, frequency: 0.68, cultural: 0.80, grammatical: 0.86}
+    - {id: rule, label: rule/govern, domains: [social, relations], features: [animate, social, continuity_change], salience: 0.54, frequency: 0.42, cultural: 0.70, grammatical: 0.82}
+    - {id: exchange, label: exchange, domains: [social, acquisition], features: [social, continuity_change], salience: 0.76, frequency: 0.58, cultural: 0.74, grammatical: 0.98}
+
+    - {id: make, label: make/create, domains: [making], features: [impact_manipulation, change], salience: 0.98, frequency: 0.90, cultural: 0.90, grammatical: 1.00}
+    - {id: build, label: build/construct, domains: [making, physical], features: [impact_manipulation], salience: 0.82, frequency: 0.72, cultural: 0.78, grammatical: 0.92}
+    - {id: cut, label: cut/remove, domains: [making, manipulation], features: [impact_manipulation], salience: 0.80, frequency: 0.70, cultural: 0.76, grammatical: 0.96}
+    - {id: break, label: break/bite, domains: [making, change], features: [impact_manipulation, change], salience: 0.84, frequency: 0.72, cultural: 0.78, grammatical: 0.90}
+    - {id: hold, label: hold/retain, domains: [making, acquisition, relations], features: [impact_manipulation, state], salience: 0.96, frequency: 0.88, cultural: 0.88, grammatical: 1.00}
+    - {id: tie, label: tie/bind, domains: [making, relations], features: [impact_manipulation, continuity_change], salience: 0.66, frequency: 0.54, cultural: 0.66, grammatical: 0.88}
+    - {id: push, label: push, domains: [making, motion_change], features: [impact_manipulation], salience: 0.70, frequency: 0.62, cultural: 0.70, grammatical: 0.90}
+    - {id: pull, label: pull, domains: [making, motion_change], features: [impact_manipulation], salience: 0.70, frequency: 0.60, cultural: 0.70, grammatical: 0.90}
+    - {id: open, label: open, domains: [making, space, change], features: [endpoint_fixed, continuity_change], salience: 0.82, frequency: 0.74, cultural: 0.78, grammatical: 0.94}
+    - {id: close, label: close, domains: [making, space, change], features: [endpoint_fixed, continuity_change], salience: 0.82, frequency: 0.72, cultural: 0.78, grammatical: 0.94}
+
+    - {id: obtain, label: obtain/acquire, domains: [acquisition, relations], features: [continuity_change], salience: 0.96, frequency: 0.86, cultural: 0.88, grammatical: 1.00}
+    - {id: give, label: give/transfer-out, domains: [acquisition, relations], features: [continuity_change, endpoint_fixed], salience: 0.86, frequency: 0.80, cultural: 0.84, grammatical: 1.00}
+    - {id: take, label: take/transfer-in, domains: [acquisition, relations], features: [continuity_change, endpoint_fixed], salience: 0.84, frequency: 0.78, cultural: 0.82, grammatical: 1.00}
+    - {id: receive, label: receive, domains: [acquisition, relations], features: [continuity_change], salience: 0.82, frequency: 0.72, cultural: 0.82, grammatical: 0.98}
+    - {id: keep, label: keep/retain, domains: [acquisition, relations, states], features: [state], salience: 0.80, frequency: 0.72, cultural: 0.78, grammatical: 0.96}
+    - {id: release, label: release/let-go, domains: [acquisition, relations], features: [continuity_change, endpoint_fixed], salience: 0.70, frequency: 0.56, cultural: 0.70, grammatical: 0.92}
+    - {id: own, label: own/possess, domains: [acquisition, relations], features: [state], salience: 0.68, frequency: 0.54, cultural: 0.76, grammatical: 0.94}
+    - {id: share, label: share/distribute, domains: [acquisition, social], features: [social, continuity_change], salience: 0.74, frequency: 0.58, cultural: 0.76, grammatical: 0.96}
+
+    - {id: big, label: large, domains: [qualities], features: [size_strength], salience: 0.82, frequency: 0.78, cultural: 0.72, grammatical: 0.84}
+    - {id: small, label: small, domains: [qualities], features: [size_strength], salience: 0.76, frequency: 0.72, cultural: 0.68, grammatical: 0.82}
+    - {id: hot, label: hot, domains: [qualities], features: [size_strength, state], salience: 0.82, frequency: 0.78, cultural: 0.74, grammatical: 0.84}
+    - {id: cold_quality, label: cold, domains: [qualities], features: [state], salience: 0.82, frequency: 0.76, cultural: 0.72, grammatical: 0.84}
+    - {id: wet, label: wet, domains: [qualities, physical], features: [liquid_substance, state], salience: 0.68, frequency: 0.56, cultural: 0.66, grammatical: 0.74}
+    - {id: dry, label: dry, domains: [qualities, physical], features: [state], salience: 0.64, frequency: 0.52, cultural: 0.64, grammatical: 0.72}
+    - {id: hard, label: hard, domains: [qualities, physical], features: [size_strength], salience: 0.66, frequency: 0.56, cultural: 0.62, grammatical: 0.74}
+    - {id: soft, label: soft, domains: [qualities, physical], features: [state], salience: 0.62, frequency: 0.48, cultural: 0.62, grammatical: 0.72}
+    - {id: old, label: old, domains: [qualities, events], features: [state], salience: 0.72, frequency: 0.64, cultural: 0.72, grammatical: 0.82}
+    - {id: new, label: new, domains: [qualities, events], features: [continuity_change, state], salience: 0.74, frequency: 0.66, cultural: 0.74, grammatical: 0.84}
+    - {id: good, label: good, domains: [qualities, evaluation, social], features: [state], salience: 0.84, frequency: 0.82, cultural: 0.92, grammatical: 0.90}
+    - {id: bad, label: bad, domains: [qualities, evaluation, social], features: [state], salience: 0.82, frequency: 0.78, cultural: 0.90, grammatical: 0.90}
+
+    - {id: cause, label: cause, domains: [events, relations], features: [change], salience: 0.88, frequency: 0.76, cultural: 0.80, grammatical: 1.00}
+    - {id: result, label: result/outcome, domains: [events, change], features: [endpoint_fixed, change], salience: 0.84, frequency: 0.68, cultural: 0.76, grammatical: 0.92}
+    - {id: beginning, label: beginning/onset, domains: [events, change], features: [continuity_change], salience: 0.78, frequency: 0.62, cultural: 0.72, grammatical: 0.92}
+    - {id: ending, label: ending/cessation, domains: [events, change], features: [endpoint_fixed], salience: 0.78, frequency: 0.62, cultural: 0.74, grammatical: 0.92}
+    - {id: change, label: change/transform, domains: [events, motion_change], features: [continuity_change], salience: 0.96, frequency: 0.84, cultural: 0.82, grammatical: 0.98}
+    - {id: state, label: state/condition, domains: [events, states], features: [state], salience: 0.90, frequency: 0.78, cultural: 0.82, grammatical: 0.94}
+    - {id: matter, label: matter/substance, domains: [events, physical, material], features: [material], salience: 0.72, frequency: 0.54, cultural: 0.66, grammatical: 0.72}
+    - {id: idea, label: idea/thought, domains: [events, cognition, abstract], features: [animate, state], salience: 0.74, frequency: 0.58, cultural: 0.76, grammatical: 0.88}
+    - {id: time, label: time, domains: [events, abstract], features: [continuity_change], salience: 0.98, frequency: 0.92, cultural: 0.96, grammatical: 0.94}
+    - {id: season, label: season/cycle, domains: [events, physical], features: [continuity_change], salience: 0.72, frequency: 0.56, cultural: 0.76, grammatical: 0.80}
+
+    - {id: food, label: food, domains: [food, physical], features: [material, social], salience: 0.92, frequency: 0.86, cultural: 0.96, grammatical: 0.86}
+    - {id: drink, label: drink, domains: [food, living], features: [liquid_substance], salience: 0.88, frequency: 0.82, cultural: 0.88, grammatical: 0.88}
+    - {id: cook, label: cook/prepare food, domains: [food, making], features: [impact_manipulation, material], salience: 0.80, frequency: 0.64, cultural: 0.82, grammatical: 0.90}
+    - {id: grain, label: grain/seed, domains: [food, plant], features: [material, living], salience: 0.66, frequency: 0.50, cultural: 0.82, grammatical: 0.72}
+    - {id: fruit, label: fruit, domains: [food, plant], features: [living, material], salience: 0.72, frequency: 0.54, cultural: 0.78, grammatical: 0.70}
+    - {id: tool, label: tool/artifact, domains: [physical, making], features: [impact_manipulation], salience: 0.88, frequency: 0.74, cultural: 0.88, grammatical: 0.94}
+    - {id: container, label: container/enclosure, domains: [physical, space, making], features: [space, impact_manipulation], salience: 0.68, frequency: 0.54, cultural: 0.78, grammatical: 0.86}
+
+  relations:
+    - [person, social, meet]
+    - [person, social, trust]
+    - [person, social, help]
+    - [animal, living, person]
+    - [plant, living, growth]
+    - [growth, change, new]
+    - [birth, origin, person]
+    - [death, endpoint, ending]
+    - [body, living, person]
+    - [hunger, state, food]
+    - [sleep, state, time]
+
+    - [stone, material, tool]
+    - [wood, material, tool]
+    - [water, material, drink]
+    - [fire, change, heat]
+    - [earth, space, place]
+    - [sky, space, light]
+    - [light, perception, see]
+    - [darkness, perception, see]
+    - [heat, quality, hot]
+    - [cold, quality, cold_quality]
+
+    - [place, relation, boundary]
+    - [place, relation, interior]
+    - [place, relation, exterior]
+    - [place, relation, surface]
+    - [place, relation, path]
+    - [path, relation, distance]
+    - [boundary, relation, edge]
+    - [interior, relation, container]
+    - [surface, relation, tool]
+    - [center, relation, edge]
+    - [distance, relation, separate]
+
+    - [move, change, place]
+    - [move, change, approach]
+    - [move, change, depart]
+    - [move, change, turn]
+    - [move, change, remain]
+    - [approach, relation, arrive]
+    - [depart, relation, path]
+    - [arrive, endpoint, place]
+    - [turn, change, orientation]
+    - [rise, change, sky]
+    - [fall, endpoint, earth]
+    - [remain, state, place]
+    - [cross, endpoint, boundary]
+
+    - [perceive, relation, person]
+    - [perceive, relation, place]
+    - [see, perception, light]
+    - [see, perception, person]
+    - [hear, communication, say]
+    - [smell, perception, food]
+    - [taste, perception, food]
+    - [touch, relation, body]
+    - [know, cognition, perceive]
+    - [remember, cognition, know]
+    - [forget, cognition, remember]
+
+    - [say, communication, person]
+    - [say, communication, speak]
+    - [speak, communication, tell]
+    - [ask, communication, answer]
+    - [ask, cognition, know]
+    - [answer, communication, tell]
+    - [tell, communication, person]
+    - [name, communication, person]
+    - [warn, communication, fear]
+    - [promise, communication, trust]
+
+    - [meet, social, person]
+    - [join, relation, person]
+    - [join, relation, group]
+    - [separate, relation, distance]
+    - [help, relation, support]
+    - [oppose, relation, help]
+    - [trust, cognition, person]
+    - [fear, cognition, harm]
+    - [rule, social, person]
+    - [exchange, social, obtain]
+
+    - [make, change, product]
+    - [build, making, structure]
+    - [cut, manipulation, remove]
+    - [break, change, result]
+    - [hold, state, keep]
+    - [tie, relation, bind]
+    - [push, change, move]
+    - [pull, change, move]
+    - [open, change, interior]
+    - [close, change, interior]
+    - [tool, relation, make]
+    - [container, relation, interior]
+
+    - [obtain, acquisition, receive]
+    - [obtain, acquisition, keep]
+    - [give, acquisition, receive]
+    - [give, relation, person]
+    - [take, acquisition, obtain]
+    - [take, relation, person]
+    - [receive, acquisition, obtain]
+    - [keep, state, hold]
+    - [release, change, possession]
+    - [own, relation, person]
+    - [share, social, person]
+    - [exchange, acquisition, receive]
+
+    - [big, quality, size]
+    - [small, quality, size]
+    - [hot, quality, heat]
+    - [cold_quality, quality, cold]
+    - [wet, quality, water]
+    - [dry, quality, water]
+    - [hard, quality, stone]
+    - [soft, quality, body]
+    - [old, time, person]
+    - [new, change, growth]
+    - [good, evaluation, help]
+    - [bad, evaluation, harm]
+
+    - [cause, relation, change]
+    - [result, relation, cause]
+    - [beginning, change, event]
+    - [ending, endpoint, event]
+    - [change, relation, state]
+    - [state, relation, remain]
+    - [matter, material, object]
+    - [idea, cognition, say]
+    - [time, change, event]
+    - [season, time, change]
+
+    - [food, material, eat]
+    - [drink, food, water]
+    - [cook, making, food]
+    - [grain, plant, food]
+    - [fruit, plant, food]
+    - [tool, making, build]
+    - [container, space, interior]
