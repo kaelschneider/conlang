@@ -30,7 +30,9 @@ L-0028	se	/ˈse/	pronoun	PRON	2SG	—	stable	established through finite clauses
 L-0029	men	/ˈmen/	pronoun	PRON	1PL	—	stable	plural pronoun
 L-0030	sen	/ˈsen/	pronoun	PRON	2PL	—	stable	plural pronoun
 L-0031	en	/ˈen/	pronoun	PRON	3PL	—	stable	plural pronoun
-L-0032	kerande	/keˈrande/	lexeme	N	container	L-0034	stable	derived from kera + NOM + CASE; exact derivational exponents not separately established
-L-0033	sara	/ˈsara/	lexeme	V	be.big	?	stable	canonical citation/nonfinite form; attributive/linking form is sare
+L-0032	kerande	/keˈrande/	lexeme	N	container	L-0034	stable	historically kera + NOM + LOC > keranute > kerante > kerande; final -de preserves weak locative association but is not productive
+L-0033	sara	/ˈsara/	lexeme	V	be.big	—	stable	independent lexical lexeme; canonical citation/nonfinite form; attributive/linking form is sare
 L-0034	kera	/ˈkera/	lexeme	V	carry	L-0016;L-0019	stable	derived nonfinite stem from ka + ra; REALIS form is keru; established in complex form kerurekin
 L-0035	er	/ˈer/	pronoun	PRON	3SG	—	stable	established 3SG pronoun
+
+L-0036	keranka	/keˈranka/	lexeme	N	carrier	L-0034	stable	lexicalized carrier noun derived from kera with the nominalizing/derivational pathway; not merely a productive inflectional form
