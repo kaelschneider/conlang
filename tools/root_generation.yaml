@@ -1,14 +1,15 @@
 generator:
   name: inherited-root-generator
-  version: "0.2.0"
-  architecture_version: "2026-09-18.semantic-architecture.v3.root-shape-architecture"
-  parameter_profile: "default-1600-forest-reciprocal-event-relational-roots-v3"
+  version: "0.3.0"
+  architecture_version: "2026-09-18.semantic-architecture.v4.candidate-pool"
+  parameter_profile: "candidate-pool-4000-forest-reciprocal-event-relational-roots-v4"
   status_policy: "experimental-candidate"
 
 inventory:
-  default_target: 1600
+  default_target: 4000
   minimum: 1200
-  maximum: 2000
+  maximum: 5000
+  curation_target: 1600
 
 phonology:
   vowels: [a, e, i, u]
@@ -188,6 +189,8 @@ output:
     - sound_symbolic_profile
     - probe_role
     - family_id
+    - family_size
+    - family_member_index
     - family_stage
     - lexicalization_status
     - category_behavior
