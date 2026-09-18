@@ -930,3 +930,61 @@ No current root directly supplies **NAME** or **FILL/LOAD**, so those frames sho
 The existing relational system is sufficient to express the tested valencies without adding a new core case or a new general applicative. The unresolved work is now primarily **lexical semantics and construction-specific syntax**, especially exact finite speech-complement behavior and future NAME/FILL/LOAD predicates.
 
 New active valency probes: **E-0203–E-0208**.
+
+## Inherited-root lexical generator specification — 2026-09-18
+
+The inherited-root lexical generator is now **design-resolved at the semantic-architecture level**. The supplied specification defines the working implementation contract for a reproducible generator targeting approximately **1,200–2,000 inherited roots**, with **1,600** as the default inventory target.
+
+### Architectural commitments
+
+- Generation is architecture-driven rather than English-ontology-driven.
+- Semantic organization uses broad domains as a scaffold but derives lexical pressure from an explicit semantic concept network.
+- Lexical density is emergent and uneven; the stated centrality/network/frequency/cultural/grammatical weights are probabilistic priors, not quotas.
+- Lexical granularity is uneven, with motivated polysemy and no assumption that every English lexical item warrants an independent root.
+- Root families begin around event/process-centered semantic structures and can later undergo specialization, reanalysis, lexicalization, and semantic drift.
+- Family size is centrality-driven and long-tailed, targeting approximately the established 55% simple-root baseline.
+- Lexicalization is mixed: polysemy, conversion, derivation, independent roots, compounds, and lexicalized formations remain competing outcomes.
+- Historical opacity is explicitly modeled rather than forcing modern families to remain synchronically transparent.
+- Category neutrality remains the default for roots.
+- Sound symbolism is only a weak probabilistic prior and cannot override stronger semantic, phonological, derivational, or lexical constraints.
+- Generation is hybrid: hard architectural constraints are deterministic; semantic selection and lexical-history outcomes are probabilistic but reproducible from an explicit seed and versioned parameter/input data.
+
+### Generator boundary
+
+The present implementation target is **inherited-root generation only**. It must produce experimental candidate inventory data without automatically changing canonical `LEXICON.tsv`.
+
+The generator must consume structured architectural inputs rather than infer arbitrary rules from prose. `GRAMMAR.md` remains authoritative for the human-readable phonology and morphology; any structured generator input must remain reconcilable with it.
+
+### Current language-specific hard inputs
+
+The generator is constrained by the current grammar's established architecture:
+
+- phoneme inventory and orthography;
+- root-shape targets `C 15% / VC 25% / CVC 60%`;
+- `CVCC` only through `CVC + C`;
+- newly generated VC/CVC roots exclude final `h` and `j`;
+- stem-grade mechanics where generated citation/nonfinite and inflected forms are simulated;
+- collision rejection and repository/schema validation;
+- category-neutral roots by default.
+
+The generator may use the current semantic architecture—especially event/process structure, relational frames, convergence/divergence, participant structure, acquisition/transfer, containment, position/support, association, and state transition—as semantic utility inputs, but must not encode those meanings as mandatory lexical categories.
+
+### Output provenance
+
+Every generation run must retain:
+
+- random seed;
+- generator version;
+- architecture version;
+- input-data version;
+- parameter profile.
+
+A given architecture + parameter profile + seed must reproduce the same candidate set.
+
+Generated material begins as **experimental candidates**. Frequency, model confidence, family size, or statistical fit alone never establishes a lexical entry.
+
+### Implementation sequence
+
+`structured architecture input → semantic concept graph → centrality/connectivity → lexical pressure → semantic centers → phonological candidates → family alternatives → lexicalization/historical outcomes → semantic curation → experimental output → repository validation`
+
+No 1,600-root inventory is to be generated merely to satisfy the target count. The target controls scale; semantic coherence and architectural constraints control acceptance.
