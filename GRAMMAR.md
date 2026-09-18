@@ -363,7 +363,9 @@ When several relational NPs are eligible, selection proceeds by:
 
 The working hierarchy is **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**.
 
-APPL selection occurs before object indexing. The selected participant is promoted into core argument structure, after which the single object slot is assigned to that participant. APPL therefore does not create a second object-indexing position.
+APPL selection occurs before object indexing. Once selected, the applied relational participant occupies the single object-index position. The lexical patient/theme remains an overt ABS core participant and is not separately indexed in these APPL constructions. The object slot therefore does not function as a general competition among all core arguments; it is the single participant-index position used by the APPL-promoted relational argument.
+
+The hierarchy is evaluated only over participants that are actually eligible for APPL. A lexical patient/theme is not an APPL candidate merely because it is already a core argument. Multiple relational NPs may therefore coexist, but only one is promoted and indexed; unselected relational NPs remain ordinary case-marked relations.
 
 With stative predicates, APPL is available only where the predicate independently licenses an affected participant. Direction and aspect remain independent of APPL.
 

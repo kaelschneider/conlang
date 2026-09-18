@@ -587,7 +587,7 @@ Required audit targets:
 
 This is the highest-priority task because the grammar is now ahead of the corpus.
 
-**2 — Argument-structure / multi-complement validation.**
+**2 — Argument-structure / multi-complement validation — COMPLETE FOR THE CURRENT EXPERIMENTAL SYSTEM.**
 
 Use matched construction-first tests to validate the already-settled hierarchy in actual clauses:
 
@@ -603,7 +603,7 @@ Test especially:
 - ordinary 3P animate, 3P inanimate, LOCAL, and OBV object indexing;
 - discourse-priority and same-rank tie cases.
 
-The purpose is no longer to choose the hierarchy; that decision is already settled. The purpose is to establish its concrete morphosyntactic behavior and discover interactions the current abstract description does not yet capture.
+The hierarchy is retained. `E-0122`–`E-0131` now establish its tested morphosyntactic behavior, including APPL vs. non-APPL, multi-complement selection, same-rank tie resolution, and the current object-index realizations. Rigid multi-complement ordering remains outside the promoted core pending the full relational-construction matrix.
 
 **3 — Full relational construction matrix.**
 
@@ -658,7 +658,7 @@ Do not treat the relational system as fully canonical across the repository unti
 
 1. `GRAMMAR.md` and `EXAMPLES.tsv` agree on case inventory and segmentation;
 2. APPL `-ka-` is represented consistently in tested examples;
-3. multi-complement/object-index behavior has passed matched construction tests;
+3. multi-complement/object-index behavior has passed matched construction tests for the current experimental system;
 4. the four-frame × three-direction relational matrix has no unexplained contradictions;
 5. historical analyses remain distinct from synchronic productive rules.
 
@@ -695,6 +695,23 @@ Added six examples (`E-0116`–`E-0121`) after testing stacked-case composition 
 The experimental seven-value case inventory is now canonical in `GRAMMAR.md`; the former PATH case is absorbed into COM/ASSOCIATIVE.
 
 No new lexicon entries were required; the six examples are reference-valid and segmentation/gloss aligned.
+## Argument-structure and multi-complement validation — 2026-09-18
+
+Added matched experimental examples `E-0122`–`E-0131` to test the already-settled APPL hierarchy and its concrete clause behavior.
+
+Results:
+
+- In lexical-patient + recipient + beneficiary clauses, the recipient is selected and receives the single object index even when the beneficiary is ordered first. This confirms that semantic rank, not linear order, controls selection across different-ranked APPL candidates.
+- A pure event-setting relation does not become APPL-eligible merely because additional relational NPs are present. Three relational NPs can coexist with one APPL.
+- The APPL/non-APPL contrast is now explicit: `O-LOC + i-VERB` remains a non-applied goal-oriented relation, while `O-LOC + i-VERB-APPL` promotes that participant and indexes it.
+- Same-rank beneficiary ties behave as specified: discourse prominence selects the applied participant; when discourse does not distinguish the candidates, linear order is the final fallback.
+- Object-index behavior is exercised for LOCAL (`n-`), ordinary 3P animate (`m-`), ordinary 3P inanimate (`Ø`), and OBV (`v-`). The `m-` and `v-` tests use a vowel-initial stem so that no unestablished consonant-initial boundary repair is asserted.
+- The lexical patient/theme is not an object-index competitor in these APPL constructions. The working role hierarchy therefore remains intact, but its APPL-selection domain is now explicit in `G-MORPH-06A`.
+
+Multi-complement **ordering itself is not promoted to a rigid clause-wide rule**. The tests establish that APPL selection survives changes in relational-NP order, while neutral examples continue to place the lexical theme before relational complements. Further ordering work belongs in the full relational-construction matrix rather than being inferred from these ten examples alone.
+
+A remaining morphophonological gap is explicit: only `n + C → enC` is established for object-slot boundary repair. `m-`, `v-`, `s-`, and `r-` before consonant-initial stems remain unestablished and must not be generated as canonical surface forms until tested.
+
 ## TAM interaction and construction-first corpus stress test — 2026-09-17
 
 Added 39 experimental examples (`E-0083`–`E-0121`).
