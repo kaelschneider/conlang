@@ -41,8 +41,8 @@ Both persistent branches were checked after the recent relational, corpus, synta
 **`developmental`**
 
 - 98 lexical rows
-- 257 example rows
-- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 127 experimental, 115 deprecated
+- 258 example rows
+- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 128 experimental, 115 deprecated
 - no duplicate IDs
 - no broken lexical references
 - no broken grammar references
@@ -171,10 +171,10 @@ These are reconciled developmental analyses, not yet promoted to `main`. The sel
 
 The reconciled syntax layer was checked against the current repository data:
 
-- 257 example rows are present in `EXAMPLES.tsv`, with IDs remaining unique.
+- 258 example rows are present in `EXAMPLES.tsv`, with IDs remaining unique.
 - The E-0242–E-0258 syntax examples have ten TSV fields, no surface-form hyphens, primary stress in IPA, and grammar/lexical references resolving to existing sections and entries.
 - E-0251–E-0254 were reconciled so passive finite forms use the ordinary REALIS stem `ku` rather than the nonfinite stem `ka`.
-- E-0255 tests comparison + IRREALIS; E-0256 tests comparison inside ordinary nominalized/dependent morphology; E-0257 tests passive + IRREALIS; E-0258 tests passive coordination without any CONJ inflection.
+- E-0255 tests comparison + IRREALIS; E-0256 tests comparison inside ordinary nominalized/dependent morphology; E-0257 tests passive + IRREALIS; E-0258 tests passive coordination without any CONJ inflection; E-0259 tests PASS + AUX/DERIV ordering.
 - `G-MORPH-06B`, `G-SYN-18`, `G-SYN-19`, and `G-SYN-20` are unique grammar-section identifiers.
 - No lexical additions were required; all new probes reuse established roots and lexemes.
 - Full runtime project validation remains separate from this static checkpoint because the repository's current workflow does not provide a general validation job on `developmental`.
