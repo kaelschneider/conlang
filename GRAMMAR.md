@@ -558,6 +558,10 @@ A stem grade is then added after the root or derived root:
 
 The root-shape distribution is a generation target, not a claim that the modern lexicon must exactly match these percentages.
 
+### Root-final phonotactic filter
+
+The lexical generator excludes `h` and `j` from root-final position in generated VC/CVC roots. This is a root-generation constraint, not a statement that `h` or `j` cannot occur word-finally in historical material or in other synchronically derived forms. The existing stable one-segment roots `h` and `j` are retained as established historical roots; the restriction applies to newly generated multi-segment roots.
+
 ### Lexical category and family formation
 
 Roots are category-neutral by default. A minority may have weak noun- or verb-oriented biases. Root shape has only a weak statistical correlation with lexical category; shape is not a categorical noun/verb marker.
