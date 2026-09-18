@@ -125,6 +125,10 @@ After pushing any repository change, re-read `STATUS.md` against the resulting r
 
 ## Design principles
 
+### Corpus construction
+
+Do not treat English sentence lists as the primary generator of example sentences. For corpus growth, begin from the language's own productive construction inventory, semantic relations, discourse contrasts, and valency possibilities; use English only as a translation or approximate semantic label. Prefer matched construction-first sets that reveal what the language packages together or keeps distinct, especially where case, verbal direction, converbial relations, information structure, or lexicalized semantic extension create meanings not predicted by a one-to-one English mapping.
+
 ### Naturalism
 
 Prefer interacting systems with plausible acquisition, processing, lexicalization, analogy, and historical development. Rare features are fine when their consequences are coherent. Do not add isolated exotic features to increase typological novelty.
