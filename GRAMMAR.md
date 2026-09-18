@@ -786,7 +786,20 @@ Plural case developments include established `mente > mende` and `menta > menda`
 
 ### G-SYN-06 — Questions
 
-Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku kerande kutye?`
+Polar interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku kerande kutye?`.
+
+Content questions use members of the unified **ha-he-hu** interrogative family. The interrogative expression remains in its ordinary constituent position and takes the same nominal case morphology as a non-interrogative NP. Verbal `-y-` remains present in content questions.
+
+| Form | Core domain | Constructional extensions |
+|---|---|---|
+| `ha` | person / animate entity | WHO; ordinary case distinguishes relational roles |
+| `he` | non-person entity / thing | WHAT; `he-te` = WHERE |
+| `hu` | circumstance / situation | `hu-te` = WHEN; `hu-me` = HOW; `hu-se` = WHY |
+
+`he-te` is interpreted as WHERE through LOC: the interrogated entity is a spatial landmark/reference. `hu-te` is interpreted as WHEN through LOC applied to a circumstance/time frame. `hu-me` is HOW through COM/ASSOCIATIVE manner/means, while `hu-se` is WHY through GEN identifying relation to the relevant circumstance/ground.
+
+The family is deliberately visually and morphologically coherent while remaining compositional: **WH root identifies the interrogative domain; ordinary case identifies the relation**. No dedicated WH case paradigm exists.
+
 
 ### G-SYN-07 — Negation
 
@@ -830,6 +843,28 @@ Modal auxiliaries carry ordinary finite morphology; the lexical complement appea
 The initial modal inventory is `kera` NECESSITY, `ure` POSSIBILITY, `nete` INTENTION/VOLITION, and `hi` EPISTEMIC/EVIDENTIAL UNCERTAINTY.
 
 By default, modal meaning scopes over negation. Exact negative-complement morphology under a modal auxiliary remains an explicit stress-test question.
+
+
+
+### G-SYN-15 — Content questions
+
+Content questions use `ha`, `he`, and `hu` as a single interrogative pronoun family.
+
+`ha` = PERSON/ANIMATE domain; `he` = THING/NON-PERSON domain; `hu` = CIRCUMSTANCE domain.
+
+The interrogative pronoun occupies the ordinary constituent position of the questioned argument or relational NP and bears ordinary case. It is not obligatorily fronted.
+
+Canonical constructional readings include:
+
+`ha-ku` = who-ERG;
+`ha` = who (ABS/zero case);
+`he` = what (ABS/zero case);
+`he-te` = where;
+`hu-te` = when;
+`hu-me` = how;
+`hu-se` = why.
+
+The verbal interrogative `-y-` remains obligatory in content questions. Thus content-question status is marked twice only in the sense that the WH pronoun identifies the interrogated semantic domain while `-y-` identifies the clause as interrogative; these are distinct grammatical functions.
 
 
 
