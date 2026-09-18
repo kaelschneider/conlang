@@ -1,6 +1,6 @@
 generator:
   name: inherited-root-generator
-  version: "0.1.2"
+  version: "0.2.0"
   architecture_version: "2026-09-18.semantic-architecture.v3.root-shape-architecture"
   parameter_profile: "default-1600-forest-reciprocal-event-relational-roots-v3"
   status_policy: "experimental-candidate"
