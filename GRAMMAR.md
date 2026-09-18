@@ -858,6 +858,22 @@ Canonical constructional readings include:
 
 The verbal interrogative `-y-` remains obligatory in content questions. The WH expression identifies the interrogated semantic domain, while `-y-` identifies the clause as interrogative; these are distinct grammatical functions.
 
+### G-SYN-16 — Impersonal predicates
+
+A restricted class of finite predicates may occur in genuinely subjectless clauses. These clauses have no syntactic S argument and do not use a dummy pronoun. Instead, the finite predicate carries the dedicated impersonal agreement marker `-v-`.
+
+The initial semantic class is weather and ambient predicates such as RAIN and ambient COLD. The construction is constructionally productive, but lexical extension is licensed by semantic class rather than automatically available to every predicate.
+
+Ordinary case-marked NPs may occur as non-controller participants with an impersonal predicate. They retain their ordinary nominal case and do not become S merely because the clause lacks a subject.
+
+Direction, negation, tense, aspect, interrogation, and other verbal morphology remain available to impersonal predicates. The impersonal agreement marker occupies the ordinary agreement position in the right-edge verbal template.
+
+The working form is:
+
+`STEM (AUX/DERIV) APPL -v- (NEG) (DISCOURSE) TENSE (ASPECT)`
+
+Examples include `iruvi` ‘it is raining’, `iruva` ‘it rained’, `surte iruvi` ‘it is raining at the place’, and `surci petuvi` ‘it is cold inside the domain’.
+
 ### G-SYN-17 — Secondary predication
 
 Secondary predication is productive for both **depictive** and **resultative** relations and is distinct from ordinary finite predication and participial relative clauses.
