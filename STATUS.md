@@ -505,13 +505,27 @@ Results:
 This audit is evidence about constructional coverage, not a promotion of any new lexical valencies or grammatical rules. No new lexicon entries or grammar rules were added.
 
 
+## Stacked-case stress test — 2026-09-18
+
+Added six examples (`E-0116`–`E-0121`) after testing stacked-case composition with verbal direction.
+
+- `E-0116` promotes **CONTAINMENT → LOC** as productive within the experimental model.
+- `E-0117` promotes **GEN → CONTAINMENT** as productive within the experimental model.
+- `E-0118` promotes **GEN → LOC** as productive within the experimental model.
+- `E-0119` retains **POSITION → LOC** as an unresolved semantic/productivity test.
+- `E-0120` retains **COM → LOC** as an unresolved route/medium test.
+- `E-0121` retains **GEN → CONTAINMENT → LOC** as a recursive three-case test.
+
+The promotion is structural only. The unresolved `STATUS.md` versus `GRAMMAR.md` GEN/PATH inventory conflict remains unchanged, and the corpus uses `GRAMMAR.md`'s authoritative surface exponents.
+
+No new lexicon entries were required; the six examples are reference-valid and segmentation/gloss aligned.
 ## TAM interaction and construction-first corpus stress test — 2026-09-17
 
-Added 33 experimental examples (`E-0083`–`E-0115`).
+Added 39 experimental examples (`E-0083`–`E-0121`).
 
 - The five AUX/DERIV values were exhaustively crossed with NONPAST/PAST and IMPERFECTIVE/PERFECT, yielding a complete 20-cell finite TAM matrix. Every cell is morphologically formable under the current verb template.
 - PERFECT combines without special allomorphy after both NONPAST and PAST, and progressive, continuative, habitual, inchoative, and change-of-state morphology remain available with PERFECT. Their semantic compatibility varies by context, but no grammatical incompatibility was found.
-- Additional tests cover NEG + PROGRESSIVE + PERFECT, NEG + INTERROGATIVE + PERFECT, directional TRANSFER, directional-COM benefactive/malefactive readings, the LOCAL-recipient dative-like construction, secondary predication with a resultative participle, content nominalization, case-based temporal subordination, switch-reference, and GEN+LOC stacking.
+- Additional tests cover NEG + PROGRESSIVE + PERFECT, NEG + INTERROGATIVE + PERFECT, directional TRANSFER, directional-COM benefactive/malefactive readings, the LOCAL-recipient dative-like construction, secondary predication with a resultative participle, content nominalization, case-based temporal subordination, switch-reference, and the newly tested productive/retained stacked-case constructions.
 - The construction-first examples show why the language should not be modeled as English predicate + translated arguments: TRANSFER plus `i-/a-`, case stacking, converbial case choice, and COM direction can organize meanings in ways not captured by one-to-one English lexical glosses.
 - Remaining exact syntax/valency gaps are not papered over: imperative/hortative, modal/necessitative/ability, comparison, passive, content-question syntax, impersonal finite predicates, and fully specified secondary predication/direct-speech syntax still require dedicated design work.
 
