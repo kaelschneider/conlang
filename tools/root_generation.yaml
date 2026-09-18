@@ -1,6 +1,6 @@
 generator:
   name: inherited-root-generator
-  version: "0.1.1"
+  version: "0.1.2"
   architecture_version: "2026-09-18.semantic-architecture.v2.cultural-profile"
   parameter_profile: "default-1600-forest-reciprocal-event-relational"
   status_policy: "experimental-candidate"
@@ -20,6 +20,9 @@ phonology:
     C: 0.15
     VC: 0.25
     CVC: 0.60
+  root_shape_fallbacks:
+    - CVCV
+    - CVCVC
   root_final_exclude:
     VC: [h, j]
     CVC: [h, j]
