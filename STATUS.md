@@ -121,26 +121,21 @@ The 20-question morphology/syntax pass resolved the following structural points:
 
 ## Known inconsistencies / cleanup needed
 
-The conditioned historical system is documented in `GRAMMAR.md`, including the resolved OPEN/CLOSED × F_F/F_B/B_F/B_B matrix. Existing lexical and example forms have been checked against the resolved stress and historical rules; no lexical/example rewrite was required by this pass.
+The conditioned historical system is documented in `GRAMMAR.md`, including the resolved OPEN/CLOSED × F_F/F_B/B_F/B_B matrix. The principal lexical and example forms have been reconciled against the current grammar.
 
 The earlier regression forms (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms) remain useful diagnostic evidence for historical strata and conditioning rather than being declared exceptions.
 
-Zero-marked verbal objects are now canonically NLOC by default; overt LOCAL `n-` should be used when discourse accessibility/salience makes the object local. Local `n-` retains the established surface repair `n + C → enC` before consonant-initial verb stems.
+Zero-marked verbal objects are canonically NLOC by default; overt LOCAL `n-` is used when discourse accessibility/salience makes the object local. Local `n-` retains the established surface repair `n + C → enC` before consonant-initial verb stems.
 
 ## Open questions
 
-### Morphology
-- Q-021: exact conditioning of the `menme` / `menra` reduced surface variants
-- Q-022: distribution and status of formal `sese` versus reduced `sa/si` pronoun variants
-
-### Syntax
-- None among the previously identified core-design questions; information structure is established as constituent-order plus prosodic prominence.
+None among the current core grammar decisions. Residual lexical creation/testing may add entries as needed, but no unresolved grammatical parameter from the recovery audits remains open.
 
 ## Immediate testing priorities
 
-1. Test the nominalizer + case family (`keranu`, `keranka`, `kerande`) against additional lexical examples.
-2. Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched examples.
-3. Test the remaining pronoun and phonetic variants against additional matched examples.
+1. Validate the modified `LEXICON.tsv` against `SCHEMA.json` and check all affected IPA/derivation fields against `GRAMMAR.md`.
+2. Test the nominalizer family (`keranu`, `keranka`, `kerande`) with additional examples.
+3. Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched examples.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
