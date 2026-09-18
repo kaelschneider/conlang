@@ -79,7 +79,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Tense: `-i-` nonpast, `-a-` past
 - Aspect: `Ø` imperfective, `-n` perfect
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
-- Common-noun number is restricted rather than obligatory; animate nouns have productive `-n` plural and inanimate nouns have productive `-i` plural; an archaic dual survives in conventionalized natural-pair nouns
+- Common-noun number is restricted rather than obligatory; animate nouns have productive `-i` plural and inanimate nouns have productive `-n` plural; an archaic dual survives in conventionalized natural-pair nouns
 - Dedicated verbal applicatives eliminated
 - COM `-me` has association/accompaniment as its core reading; instrumental use is contextual and means-like; `i-` + COM yields benefactive when the associated participant benefits, and `a-` + COM yields malefactive when the associated participant is harmed or opposed
 - Restricted but productive GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
@@ -108,7 +108,7 @@ The 20-question morphology/syntax pass resolved the following structural points:
 - Split-S: 1st/2nd-person S is agentive; 3rd-person S is conditioned by animacy and volitionality. Agentive S and A take ERG; patientive S and O take ABS.
 - Finite agreement indexes the semantic agent when one exists; otherwise a stative or otherwise agentless S controls agreement. Agreement remains person-only.
 - Verbal object status is discourse-based: LOCAL `n-` is marked, while zero is NLOC by default.
-- Common-noun number is restricted rather than obligatory; an archaic dual survives in conventionalized natural-pair nouns.
+- Common-noun number is restricted rather than obligatory; animate nouns have productive `-i` plural and inanimate nouns have productive `-n` plural; an archaic dual survives in conventionalized natural-pair nouns.
 - GEN possessors are prenominal. GEN + LOC/SUPER/INE stacking is productive within its established semantic domain but is not freely extended to arbitrary case combinations.
 - A small, historically derived postposition class may coexist with case morphology.
 - Negation is a verbal suffix in the right-edge inflectional zone: after AGENT and before optional DISCOURSE/TENSE/ASPECT. The exponent is a dedicated short CV/VC form; its exact phonological shape remains a separate lexicalization detail. No negative stem grade is used.
