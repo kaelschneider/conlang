@@ -584,13 +584,17 @@ The following is the current **lexical-generation model** derived from the morph
 
 ### Root inventory
 
-Basic lexical roots are generated in three shapes:
+Basic lexical roots prefer three short shapes:
 
 | Root shape | Target frequency |
 |---|---:|
 | C | 15% |
 | VC | 25% |
 | CVC | 60% |
+
+These percentages are generation preferences rather than an exact requirement for every inventory. Under the current consonant inventory, the short-shape space is finite, so the inherited-root generator uses a capacity-aware expansion layer for the 1,200–2,000-root target: `CVCV` is the first fallback shape, and `CVCVC` is used only when the `CVCV` space is insufficient. These are sequences of ordinary syllables conforming to surface `(C)V(C)`; they do not create a new syllable type.
+
+The generator caps each short-shape target at its available unique-form capacity and redistributes the remainder to the configured fallback shapes. This avoids duplicate candidates and avoids silently relaxing the phonotactic inventory.
 
 `CVCC` is not an independent root shape. It is derived by adding a consonant to a CVC root:
 
