@@ -129,6 +129,17 @@ Added three experimental regression examples to `EXAMPLES.tsv`:
 
 All three examples pass structural/schema-field checks, ID and cross-file reference checks, IPA/stress checks, and segmentation/gloss alignment. The family remains experimentally tested; no new productive morphology is promoted beyond the existing grammar.
 
+## Productive morphology, converb, and information-structure testing — 2026-09-17
+
+Added seven experimental regression examples to `EXAMPLES.tsv`:
+
+- `E-0014`–`E-0016` test productive agentive `-ri`, patientive `-na`, and resultative `-mu` participles in attributive/relative use.
+- `E-0017`–`E-0018` form a matched same-subject / switch-reference converb pair using nominalization plus PATH; the switch-reference member uses an overt GEN-marked nominalized subject.
+- `E-0019` tests clause-initial topicalization without changing the object's case or the agent's ERG marking.
+- `E-0020` is a matched information-structure case with the same segmental sequence but narrow contrastive focus assigned prosodically to the immediately preverbal subject.
+
+All seven examples remain `experimental` and do not promote any additional grammar. Structural validation, lexical/grammar reference resolution, IPA/stress checks, and segmentation/gloss alignment pass for the new material.
+
 ## Known inconsistencies / cleanup needed
 
 The conditioned historical system is documented in `GRAMMAR.md`, including the resolved OPEN/CLOSED × F_F/F_B/B_F/B_B matrix. The principal lexical and example forms have been reconciled against the current grammar.
@@ -144,8 +155,9 @@ None among the current core grammar decisions. Residual lexical creation/testing
 ## Immediate testing priorities
 
 1. **Completed 2026-09-17:** Validate `LEXICON.tsv` against `SCHEMA.json` and check all affected IPA/derivation fields against `GRAMMAR.md`; the blank-row defect was removed and the complete populated file now passes structural validation.
-2. Test the nominalizer family (`keranu`, `keranka`, `kerande`) with additional examples.
-3. Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched examples.
+2. **Completed 2026-09-17:** Test the nominalizer family (`keranu`, `keranka`, `kerande`) with additional examples.
+3. **Completed 2026-09-17:** Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched experimental examples.
+4. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
