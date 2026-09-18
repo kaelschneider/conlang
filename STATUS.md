@@ -117,7 +117,7 @@ The 20-question morphology/syntax pass resolved the following structural points:
 - The productive derivational core remains compact, while older derivational strata may be partially productive, lexicalized, or opaque; deeper historical layering is permitted through reanalysis rather than unrestricted synchronic stacking.
 - Converbs are nominalization + case. Same-subject continuity is unmarked; an overt GEN-marked nominalized subject marks switch-reference. Case meanings remain broadly polyfunctional.
 - Finite relative clauses use a gap. Coordination is primarily juxtaposition, with a small secondary conjunction class.
-- Information structure remains the main unresolved syntactic domain.
+- Information structure is established as constituent-order plus prosodic prominence: topics may occur clause-initially; narrow/contrastive focus favors the immediately preverbal position.
 
 ## Known inconsistencies / cleanup needed
 
@@ -131,15 +131,17 @@ Zero-marked verbal objects are now canonically NLOC by default; overt LOCAL `n-`
 
 ### Morphology
 - Q-020: exact productive plural exponent and surviving conventionalized dual inventory
+- Q-021: exact conditioning of the `menme` / `menra` reduced surface variants
+- Q-022: distribution and status of formal `sese` versus reduced `sa/si` pronoun variants
 
 ### Syntax
-- None among the previously identified core-design questions; information structure is now established as constituent-order plus prosodic prominence.
+- None among the previously identified core-design questions; information structure is established as constituent-order plus prosodic prominence.
 
 ## Immediate testing priorities
 
 1. Test the nominalizer + case family (`keranu`, `keranka`, `kerande`) against additional lexical examples.
-2. Test productive participles and converb/switch-reference constructions with matched examples.
-3. Determine the productive common-noun plural exponent and document the surviving archaic dual set.
+2. Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched examples.
+3. Determine the productive common-noun plural exponent, dual inventory, and remaining pronoun/phonetic variants.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
@@ -159,4 +161,4 @@ Key decisions:
 - The working added-consonant prior for CVCC is t:4, k:4, n:3, p:2, m:2, s:2, r:2.
 - The LLM is used as semantic curator/critic, not as the primary phonological word-form generator.
 
-These generation decisions do not by themselves promote unresolved morphology such as `-te-` to rule status. The productive participles `-ri`, `-na`, and `-mu` are now established independently by the morphology/syntax pass. Existing lexical entries are not retroactively reclassified from this generation model alone.
+These generation decisions do not by themselves determine the status of individual grammatical exponents. The productive participles `-ri`, `-na`, and `-mu`, and semantically restricted productive `-te-` change-of-state morphology, are established independently by the morphology/syntax pass. Existing lexical entries are not retroactively reclassified from this generation model alone.
