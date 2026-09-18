@@ -84,7 +84,7 @@ Traditional terms such as LOCATIVE, ALLATIVE, ABLATIVE, INESSIVE, ILLATIVE, ELAT
 
 ### Experimental applicative
 
-One general applicative is proposed.
+One general applicative is proposed and **promoted as a single productive operation within the experimental system**.
 
 **APPL = add the participant expressed by a relational NP to the verb's core argument structure.**
 
@@ -92,7 +92,7 @@ It does not intrinsically mean dative, benefactive, malefactive, locative, instr
 
 The applicative exponent is **not yet selected**.
 
-One APPL normally adds one relational participant. Unrestricted APPL stacking is not established.
+One APPL adds one relational participant. **Unrestricted APPL stacking is rejected.** Multiple APPLs are not established as a productive mechanism. When more than one relational NP could supply the applied participant, the remaining open issue is how the language selects among those candidates.
 
 ### Experimental object indexing
 
@@ -167,7 +167,7 @@ The four productive relational frames are:
 - `COM + i- + APPL`: convergent associated core participant; beneficiary-type readings may arise
 - `COM + a- + APPL`: divergent/adversely oriented associated core participant; maleficiary-type readings may arise
 
-Benefactive and malefactive are constructional interpretations of COM plus direction plus APPL, not separate morphemes.
+Benefactive and malefactive are constructional interpretations of COM plus direction plus APPL, not separate morphemes. APPL remains a single productive operation; it does not license unrestricted stacking.
 
 ### Experimental case stacking
 
@@ -215,7 +215,7 @@ A single APPL adds one relational participant. When several relational NPs are p
 2. semantic argument hierarchy resolves competing candidates;
 3. word order/discourse resolves genuine ties.
 
-Unrestricted APPL-to-all or arbitrary APPL stacking is not established.
+Unrestricted APPL-to-all or arbitrary APPL stacking is rejected. Multiple-candidate APPL selection remains unresolved.
 
 ### Experimental stative and aspect interaction
 
@@ -312,10 +312,20 @@ The following have been promoted within this experimental model:
 
 The following remain to be tested before any possible canonical promotion:
 
-1. **stacked case + APPL**
+1. **multiple-candidate APPL selection**
 2. **OBV/discourse behavior**
 
 No changes to `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv` are made by this experimental record.
+
+## Stacked case + APPL decision — 2026-09-18
+
+The stacked-case + APPL stress test is resolved within the experimental relational system:
+
+- **Single APPL is productive.** One APPL may promote one relational participant into the verb's core argument structure.
+- **Unrestricted APPL stacking is rejected.** The system does not permit arbitrary multiple APPL operations.
+- **Multiple-candidate APPL selection remains open.** When multiple relational NPs are simultaneously eligible, the criteria for choosing which one is applied remain to be specified/tested.
+
+The result does not select an APPL exponent and does not promote the experimental relational system into canonical grammar.
 
 ## 10-question phonological recovery audit — 2026-09-17
 
