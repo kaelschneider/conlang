@@ -763,7 +763,7 @@ Status: canonical where stated; residual lexical/phonetic edge cases remain in `
 
 ### G-SYN-01 — Basic word order
 
-Declarative clauses use SOV order.
+Declarative clauses use SOV order. In clauses without a syntactic subject, overt relational or other non-controller phrases precede the predicate according to their ordinary constituent position; no dummy subject is inserted.
 
 ### G-SYN-02 — Noun phrase modifier order
 
@@ -771,7 +771,7 @@ Attributive modifiers precede the noun: `sare kerande` = 'large container'. Here
 
 ### G-SYN-03 — Predicative statives
 
-A stative predicate follows its subject: `Kerande sarui` = 'the container is large'.
+A stative predicate follows its subject: `Kerande sarui` = 'the container is large'. Some semantically licensed ambient statives may instead use the subjectless impersonal construction in G-SYN-16.
 
 ### G-SYN-04 — Alignment
 
@@ -781,30 +781,19 @@ Agentive S and A take ERG; patientive S and O take ABS. The split therefore has 
 
 ### G-SYN-05 — Pronouns
 
-Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
+Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number; subjectless impersonal clauses instead use dedicated impersonal agreement.
 
-Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`; `menra` is retained as a historical former-PATH form for the phonological regression and may surface as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants. `sese` is retained under prominence; `sa` is the ordinary unstressed reduction, while `si` represents a more extreme reduction favored in very weak or clitic-like positions.
+Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue.
 
 ### G-SYN-06 — Questions
 
-Polar interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku kerande kutye?`.
+Polar interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku kerande kutye?`
 
-Content questions use members of the unified **ha-he-hu** interrogative family. The interrogative expression remains in its ordinary constituent position and takes the same nominal case morphology as a non-interrogative NP. Verbal `-y-` remains present in content questions.
-
-| Form | Core domain | Constructional extensions |
-|---|---|---|
-| `ha` | person / animate entity | WHO; ordinary case distinguishes relational roles |
-| `he` | non-person entity / thing | WHAT; `he-te` = WHERE |
-| `hu` | circumstance / situation | `hu-te` = WHEN; `hu-me` = HOW; `hu-se` = WHY |
-
-`he-te` is interpreted as WHERE through LOC: the interrogated entity is a spatial landmark/reference. `hu-te` is interpreted as WHEN through LOC applied to a circumstance/time frame. `hu-me` is HOW through COM/ASSOCIATIVE manner/means, while `hu-se` is WHY through GEN identifying relation to the relevant circumstance/ground.
-
-The family is deliberately visually and morphologically coherent while remaining compositional: **WH root identifies the interrogative domain; ordinary case identifies the relation**. No dedicated WH case paradigm exists.
-
+Content questions use the unified interrogative family described in G-SYN-15; the WH expression remains in its ordinary constituent position and verbal `-y-` remains present.
 
 ### G-SYN-07 — Negation
 
-Negation is verbal morphology in the right-edge inflectional zone. Its slot is after AGENT and before optional DISCOURSE, TENSE, and ASPECT. The exponent is invariant `-su-`; it has no negative stem grade or special agreement/tense allomorphy.
+Negation is verbal morphology in the right-edge inflectional zone. Its slot is after AGENT (ordinary agreement or impersonal agreement) and before optional DISCOURSE, TENSE, and ASPECT. The exponent is invariant `-su-`; it has no negative stem grade or special agreement/tense allomorphy.
 
 ### G-SYN-08 — Relative clauses
 
@@ -822,12 +811,14 @@ Nominal relations are primarily expressed through case morphology. A small indep
 
 GEN-marked possessors precede the head noun and participate in the general prenominal modifier order. Overt subjects of nominalized clauses are also GEN-marked.
 
-
 ### G-SYN-12 — Coordination
 
 Independent clauses are normally coordinated by juxtaposition. A small closed set of conjunctions is available where overt coordination is useful, especially for contrast, additive linkage, or discourse clarity. Conjunctions are secondary to juxtaposition and are not the primary mechanism for subordination.
 
 ### G-SYN-13 — Information structure
+
+Neutral declaratives retain SOV order. A discourse topic may be placed at the left edge of the clause without changing its grammatical role. Narrow or contrastive focus favors the immediately preverbal position and receives prosodic prominence. No dedicated topic or focus particle is required; information-structural effects are expressed through constituent order plus prosody.
+
 ### G-SYN-14 — Imperatives and modality
 
 Imperative mood is expressed by verbal `ka-` after any directional prefix and before the object slot. Imperatives suppress ordinary person agreement; the addressee is normally implicit. The default imperative uses the citation/nonfinite stem.
@@ -843,9 +834,27 @@ Modal auxiliaries carry ordinary finite morphology; the lexical complement appea
 
 The initial modal inventory is `kera` NECESSITY, `ure` POSSIBILITY, `nete` INTENTION/VOLITION, and `hi` EPISTEMIC/EVIDENTIAL UNCERTAINTY.
 
-By default, modal meaning scopes over negation. Exact negative-complement morphology under a modal auxiliary remains an explicit stress-test question.
+Modal meaning scopes over negation by default. NEG on the nonfinite lexical complement gives modal > negation; NEG on the finite modal auxiliary gives negation > modal, as documented in the active modal probes.
 
+### G-SYN-15 — Content questions
 
+Content questions use `ha`, `he`, and `hu` as a single interrogative pronoun family.
+
+`ha` = PERSON/ANIMATE domain; `he` = THING/NON-PERSON domain; `hu` = CIRCUMSTANCE domain.
+
+The interrogative pronoun occupies the ordinary constituent position of the questioned argument or relational NP and bears ordinary case. It is not obligatorily fronted.
+
+Canonical constructional readings include:
+
+`ha-ku` = who-ERG;  
+`ha` = who (ABS/zero case);  
+`he` = what (ABS/zero case);  
+`he-te` = where;  
+`hu-te` = when;  
+`hu-me` = how;  
+`hu-se` = why.
+
+The verbal interrogative `-y-` remains obligatory in content questions. The WH expression identifies the interrogated semantic domain, while `-y-` identifies the clause as interrogative; these are distinct grammatical functions.
 
 ### G-SYN-16 — Impersonal predicates
 
@@ -862,27 +871,3 @@ The working form is:
 `STEM (AUX/DERIV) APPL -v- (NEG) (DISCOURSE) TENSE (ASPECT)`
 
 Examples include `iruvi` ‘it is raining’, `iruva` ‘it rained’, `surte iruvi` ‘it is raining at the place’, and `surci petuvi` ‘it is cold inside the domain’.
-
-### G-SYN-15 — Content questions
-
-Content questions use `ha`, `he`, and `hu` as a single interrogative pronoun family.
-
-`ha` = PERSON/ANIMATE domain; `he` = THING/NON-PERSON domain; `hu` = CIRCUMSTANCE domain.
-
-The interrogative pronoun occupies the ordinary constituent position of the questioned argument or relational NP and bears ordinary case. It is not obligatorily fronted.
-
-Canonical constructional readings include:
-
-`ha-ku` = who-ERG;
-`ha` = who (ABS/zero case);
-`he` = what (ABS/zero case);
-`he-te` = where;
-`hu-te` = when;
-`hu-me` = how;
-`hu-se` = why.
-
-The verbal interrogative `-y-` remains obligatory in content questions. Thus content-question status is marked twice only in the sense that the WH pronoun identifies the interrogated semantic domain while `-y-` identifies the clause as interrogative; these are distinct grammatical functions.
-
-
-
-Neutral declaratives retain SOV order. A discourse topic may be placed at the left edge of the clause without changing its grammatical role. Narrow or contrastive focus favors the immediately preverbal position and receives prosodic prominence. No dedicated topic or focus particle is required; information-structural effects are expressed through constituent order plus prosody.
