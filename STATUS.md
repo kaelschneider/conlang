@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-17  
-**Phase:** Core grammar established; lexical/semantic edge cases and common-noun plural morphology remain under testing  
+**Phase:** Core grammar established; residual lexical/phonetic edge cases remain under testing  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -72,14 +72,14 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Stem grades: `-a-` NONFINITE, `-e-` LINKING/ATTRIBUTIVE, `-u-` REALIS, `-i-` IRREALIS
 - Direction: `i-` toward, `a-` away, `Ø` neutral; direction is verbal rather than nominal
 - Object slot: `n-` local, `Ø` nonlocal, `s-` reflexive, `r-` reciprocal; LOCAL/NLOC is distinct from nominal LOC (`-te`)
-- AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative; `-te-` remains ANALYZED/unresolved
+- AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative, and semantically restricted productive `-te-` change-of-state / transformative
 - NEG is the invariant suffix `-su-` after AGENT and before optional DISCOURSE/TENSE/ASPECT; no special NEG allomorphy is established
 - Agreement: `-k-` 1, `-t-` 2, `-p-` 3; person-only
 - Discourse: `-h-` exclamative, `-y-` interrogative
 - Tense: `-i-` nonpast, `-a-` past
 - Aspect: `Ø` imperfective, `-n` perfect
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
-- Common-noun number is restricted rather than obligatory; an archaic dual survives in conventionalized natural-pair nouns
+- Common-noun number is restricted rather than obligatory; animate nouns have productive `-n` plural and inanimate nouns have productive `-i` plural; an archaic dual survives in conventionalized natural-pair nouns
 - Dedicated verbal applicatives eliminated
 - COM `-me` has association/accompaniment as its core reading; instrumental use is contextual and means-like; `i-` + COM yields benefactive when the associated participant benefits, and `a-` + COM yields malefactive when the associated participant is harmed or opposed
 - Restricted but productive GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
@@ -130,7 +130,6 @@ Zero-marked verbal objects are now canonically NLOC by default; overt LOCAL `n-`
 ## Open questions
 
 ### Morphology
-- Q-020: exact productive plural exponent and surviving conventionalized dual inventory
 - Q-021: exact conditioning of the `menme` / `menra` reduced surface variants
 - Q-022: distribution and status of formal `sese` versus reduced `sa/si` pronoun variants
 
@@ -141,7 +140,7 @@ Zero-marked verbal objects are now canonically NLOC by default; overt LOCAL `n-`
 
 1. Test the nominalizer + case family (`keranu`, `keranka`, `kerande`) against additional lexical examples.
 2. Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched examples.
-3. Determine the productive common-noun plural exponent, dual inventory, and remaining pronoun/phonetic variants.
+3. Test the remaining pronoun and phonetic variants against additional matched examples.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
