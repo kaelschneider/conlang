@@ -444,36 +444,67 @@ Nominal case establishes a relational frame; direction is verbal and supplies th
 
 The ordinary construction is `O-CASE (i-/a-) VERB`. The noun retains its case suffix; direction remains verbal.
 
+Each relational frame can, where the lexical predicate licenses the relation, combine with the single productive APPL. APPL adds the relational participant to the verb's core argument structure; the selected participant then occupies the single object-index position. The full frame × direction × APPL space is productive at the constructional level, subject to lexical semantic licensing.
+
 #### LOC series
 
 `O-te` anchors the event at/by a landmark. `O-te i-VERB` orients the event toward the landmark; `O-te a-VERB` orients it away from the landmark.
 
-A recipient/goal construction uses the LOC frame together with the single productive APPL. The recipient is promoted into core argument structure and then receives the single object index:
+With APPL:
 
-| Object index | Construction | Function |
+| Direction | Construction | Function |
 |---|---|---|
-| `n-` | `O-te i-n-VERB-APPL` | 1P/2P recipient |
-| `m-` | `O-te i-m-VERB-APPL` | ordinary 3P animate recipient |
-| `Ø` | `O-te i-VERB-APPL` | ordinary 3P inanimate recipient |
-| `v-` | `O-te i-v-VERB-APPL` | obviative recipient |
+| neutral | `O-te Ø-VERB-APPL` | the landmark is promoted as a core participant; the relation remains statically anchored |
+| toward | `O-te i-VERB-APPL` | the landmark is promoted as a convergent goal/reference |
+| away | `O-te a-VERB-APPL` | the landmark is promoted as a divergent source/reference |
 
-Here `APPL` is the productive `-ka-` suffix in the verbal template. The object index precedes the verb stem; before consonant-initial stems, `n-` surfaces as `en-`. Bare `O-te i-VERB` remains the non-applied allative/goal-oriented construction; recipient promotion is signaled by APPL rather than by a separate case.
+The neutral construction does not require a directed transition: direction is absent while the LOC relation supplies the anchoring frame. In the away construction, the promoted landmark is construed as the source/reference from which the event diverges.
+
+Object-index realization follows the general object-slot inventory in G-MORPH-05. Thus an ordinary 3P animate landmark uses `m-`, while an ordinary 3P inanimate landmark uses zero.
+
+Bare `O-te i-VERB` remains the non-applied allative/goal-oriented construction; recipient/landmark promotion is signaled by APPL rather than by a separate case.
 
 #### CONTAINMENT series
 
 `O-ci` expresses a relation within a bounded domain. `O-ci i-VERB` orients an event into the domain; `O-ci a-VERB` orients it out of the domain.
 
-With APPL, `O-ci i-VERB-ka-...` promotes the relational participant into the core argument structure when the predicate licenses that relation.
+With APPL:
+
+| Direction | Construction | Function |
+|---|---|---|
+| neutral | `O-ci VERB-APPL` | the bounded domain itself is promoted as a core participant without directional change |
+| toward | `O-ci i-VERB-APPL` | the relevant participant/domain relation converges into the bounded domain |
+| away | `O-ci a-VERB-APPL` | the relevant participant/domain relation diverges out of the bounded domain |
+
+The neutral APPL construction therefore treats the bounded domain as an argument-bearing relational participant while retaining the static containment relation.
 
 #### POSITION series
 
 `O-ta` expresses a positional, contact, or support configuration. `O-ta i-VERB` establishes or enters the configuration; `O-ta a-VERB` leaves or terminates it.
 
+With APPL:
+
+| Direction | Construction | Function |
+|---|---|---|
+| neutral | `O-ta VERB-APPL` | the participant in the existing support/contact configuration is promoted without directed change |
+| toward | `O-ta i-VERB-APPL` | the participant enters or establishes the support/contact configuration |
+| away | `O-ta a-VERB-APPL` | the participant leaves or terminates the support/contact configuration |
+
+The vector is constructionally independent of APPL: APPL adds the participant, while `i-` and `a-` specify the direction of change relative to the POSITION frame.
+
 #### COM / ASSOCIATIVE series
 
 `O-me` expresses association or accompaniment. With a means-, instrument-, medium-, or route-like participant, the same case supports those contextual interpretations.
 
-`O-me i-VERB` gives convergent association; when APPL promotes the associated participant, a beneficiary reading may result. `O-me a-VERB` gives divergent association; when APPL promotes the associated participant, an affected participant and malefactive reading may result.
+With APPL:
+
+| Direction | Construction | Function |
+|---|---|---|
+| neutral | `O-me VERB-APPL` | the associated participant is promoted as a core participant without inherent benefit/harm or directed divergence/convergence |
+| toward | `O-me i-VERB-APPL` | the associated participant is promoted with convergent orientation; beneficiary-type readings may arise |
+| away | `O-me a-VERB-APPL` | the associated participant is promoted with divergent orientation; maleficiary-type readings may arise |
+
+Neutral COM APPL therefore remains semantically associative rather than automatically benefactive or malefactive. Directional COM extensions remain constructional consequences of the independent vector.
 
 #### Case stacking
 
