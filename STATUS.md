@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-17  
-**Phase:** Core morphology and syntax established; lexical/semantic edge cases remain under testing  
+**Phase:** Core grammar established; lexical/semantic edge cases and common-noun plural morphology remain under testing  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -73,7 +73,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Direction: `i-` toward, `a-` away, `Ø` neutral; direction is verbal rather than nominal
 - Object slot: `n-` local, `Ø` nonlocal, `s-` reflexive, `r-` reciprocal; LOCAL/NLOC is distinct from nominal LOC (`-te`)
 - AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative; `-te-` remains ANALYZED/unresolved
-- NEG is a suffixal polarity exponent after AGENT and before optional DISCOURSE/TENSE/ASPECT; its exact short CV/VC form remains unselected
+- NEG is the invariant suffix `-su-` after AGENT and before optional DISCOURSE/TENSE/ASPECT; no special NEG allomorphy is established
 - Agreement: `-k-` 1, `-t-` 2, `-p-` 3; person-only
 - Discourse: `-h-` exclamative, `-y-` interrogative
 - Tense: `-i-` nonpast, `-a-` past
@@ -81,7 +81,7 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
 - Common-noun number is restricted rather than obligatory; an archaic dual survives in conventionalized natural-pair nouns
 - Dedicated verbal applicatives eliminated
-- COM `-me` has a core association/accompaniment reading with contextual instrumental, benefactive, and malefactive extensions; `i-` marks the benefactive directional construction and `a-` marks the malefactive directional construction
+- COM `-me` has association/accompaniment as its core reading; instrumental use is contextual and means-like; `i-` + COM yields benefactive when the associated participant benefits, and `a-` + COM yields malefactive when the associated participant is harmed or opposed
 - Restricted but productive GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
 - LOC + verbal direction has two distinct constructions: ALL (`O-te i-VERB`) and DAT-like (`O-te i-(LOCAL/NLOC)-VERB`); NLOC DAT-like is zero-marked and therefore segmentally identical to ALL
 - Converbs are nominalization + case; same-subject continuity is unmarked and overt GEN-marking marks switch-reference
@@ -112,7 +112,8 @@ The 20-question morphology/syntax pass resolved the following structural points:
 - GEN possessors are prenominal. GEN + LOC/SUPER/INE stacking is productive within its established semantic domain but is not freely extended to arbitrary case combinations.
 - A small, historically derived postposition class may coexist with case morphology.
 - Negation is a verbal suffix in the right-edge inflectional zone: after AGENT and before optional DISCOURSE/TENSE/ASPECT. The exponent is a dedicated short CV/VC form; its exact phonological shape remains a separate lexicalization detail. No negative stem grade is used.
-- `-ri`, `-na`, and `-mu` are productive agentive, patientive, and resultative participles.
+- `-ri`, `-na`, and `-mu` are productive agentive, patientive, and resultative participles
+- AUX/DERIV `-te-` is synchronically productive but semantically restricted as a change-of-state / transformative marker.
 - The productive derivational core remains compact, while older derivational strata may be partially productive, lexicalized, or opaque; deeper historical layering is permitted through reanalysis rather than unrestricted synchronic stacking.
 - Converbs are nominalization + case. Same-subject continuity is unmarked; an overt GEN-marked nominalized subject marks switch-reference. Case meanings remain broadly polyfunctional.
 - Finite relative clauses use a gap. Coordination is primarily juxtaposition, with a small secondary conjunction class.
@@ -129,19 +130,16 @@ Zero-marked verbal objects are now canonically NLOC by default; overt LOCAL `n-`
 ## Open questions
 
 ### Morphology
-- Q-019: exact discourse conditions favoring COM accompaniment, instrumental, benefactive, and malefactive readings
-- Q-014: exact phonological fusion and independent exponent boundaries in `kera + -nu + -te > kerande`
-- Q-016: exact semantic value and productivity of AUX/DERIV `-te-`
-- NEG: exact phonological exponent form remains to be selected; syntactic position is established.
+- Q-020: exact productive plural exponent and surviving conventionalized dual inventory
 
 ### Syntax
-- Q-013: information-structure mechanisms
+- None among the previously identified core-design questions; information structure is now established as constituent-order plus prosodic prominence.
 
 ## Immediate testing priorities
 
-1. Test the nominalizer + case structure underlying `kerande`.
-2. Test the productive participles and converb/switch-reference system with matched examples.
-3. Develop information-structure and discourse tests; do not promote a construction from frequency alone.
+1. Test the nominalizer + case family (`keranu`, `keranka`, `kerande`) against additional lexical examples.
+2. Test productive participles and converb/switch-reference constructions with matched examples.
+3. Determine the productive common-noun plural exponent and document the surviving archaic dual set.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
