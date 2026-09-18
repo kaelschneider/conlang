@@ -1,6 +1,6 @@
 # Status
 
-**Last updated:** 2026-09-17  
+**Last updated:** 2026-09-18  
 **Phase:** Core grammar established; remaining work is validation, corpus growth, and lexical expansion  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
@@ -11,6 +11,300 @@
 - `EXAMPLES.tsv` — example and test corpus
 - `SCHEMA.json` — structural validation schema
 - `AGENTS.md` — repository maintenance instructions
+
+## Experimental relational case / directional / applicative system — 2026-09-18
+
+**Status: EXPERIMENTAL.** This section records the current working system developed for continued testing. It is intentionally **not canonical** and does not replace the morphology, syntax, lexicon, or examples currently established in `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv`. The experiment is isolated on branch `experimental-relational-case-system`; `main` remains unchanged.
+
+### Experimental architecture
+
+Working clause template:
+
+`NOUN-[NUMBER]-[CASE] DIRECTIONAL-[OBJECT]-VERB-[APPL/DERIVATION]-[AUX1]-[SUBJECT]-[TENSE]-[NEG/DISCOURSE]-[ASPECT]`
+
+Semantic order:
+
+`CASE → relational frame → DIRECTIONAL → event vector → APPL → core-argument addition → OBJECT → participant indexing → VERB → event structure → ASPECT → temporal contour`
+
+The system is intended for an SOV language with active-stative / ERG-ABS alignment and substantial historical fusion.
+
+### Experimental nominal case inventory
+
+Seven case values are proposed: six overt cases plus ABS zero.
+
+| Case | Form | Core meaning |
+|---|---:|---|
+| ABS | `Ø` | unmarked patient/theme; patientive S |
+| ERG | `-ku` | agent/controller; agentive S |
+| LOC | `-te` | spatial landmark/reference |
+| CONTAINMENT | `-ci` | bounded interior/domain |
+| POSITION | `-ta` | positional/contact/support configuration |
+| COM / ASSOCIATIVE | `-me` | association, accompaniment, medium, instrument, route |
+| GEN | `-ra` | inherent/identifying relation between one nominal entity and another |
+
+GEN is deliberately distinct from COM. GEN is noun-to-noun and covers possession, kinship, part-whole, attribution, origin, material/composition, and related identifying relations. COM is event-oriented association and can extend to accompaniment, means/instrument, and route/medium.
+
+The experimental system therefore **absorbs PATH into COM/ASSOCIATIVE** and does not posit a separate PATH case.
+
+### Experimental number
+
+Number remains independent of case and precedes case:
+
+`NOUN-[NUMBER]-[CASE]`
+
+| Noun class | Plural |
+|---|---|
+| Animate | `-i` |
+| Inanimate | `-n` |
+
+An archaic dual remains a possible lexicalized residue but is not part of the productive system.
+
+### Experimental directional system
+
+`i-`, `a-`, and zero form a general relational-vector opposition:
+
+| Form | Core contribution |
+|---|---|
+| `Ø` | relation holds without directed change |
+| `i-` | convergence / increasing orientation toward the relational frame |
+| `a-` | divergence / decreasing orientation away from the relational frame |
+
+This is not restricted to physical motion. It can orient communication, perception, influence, possession/control change, association, inclusion/exclusion, acquisition/relinquishment, and state transition.
+
+The directional remains invariant in semantic principle across the four spatial/relational frames:
+
+| Base frame | `Ø` | `i-` | `a-` |
+|---|---|---|---|
+| LOC | at/by frame | toward frame | away/from frame |
+| CONTAINMENT | within domain | into domain | out of domain |
+| POSITION | configuration holds | into/establish configuration | out of/terminate configuration |
+| COM | association | convergent association | divergent association |
+
+Traditional terms such as LOCATIVE, ALLATIVE, ABLATIVE, INESSIVE, ILLATIVE, ELATIVE, SUPERESSIVE, SUBLATIVE, DELATIVE, COMITATIVE, INSTRUMENTAL, and PERLATIVE are descriptive labels for recurring interpretations, not basic morpheme meanings.
+
+### Experimental applicative
+
+One general applicative is proposed.
+
+**APPL = add the participant expressed by a relational NP to the verb's core argument structure.**
+
+It does not intrinsically mean dative, benefactive, malefactive, locative, instrumental, or any other semantic role.
+
+The applicative exponent is **not yet selected**.
+
+One APPL normally adds one relational participant. Unrestricted APPL stacking is not established.
+
+### Experimental object indexing
+
+The object slot is reorganized around LOCAL vs. NONLOCAL:
+
+| Object status | Form | Meaning |
+|---|---:|---|
+| LOCAL | `-n-` | 1P or 2P |
+| 3P.ANIMATE | `-m-` | ordinary nonlocal animate |
+| 3P.INANIMATE | `Ø` | ordinary nonlocal inanimate |
+| OBV | `-v-` | obviative/further nonlocal |
+| RECIP | `-r-` | reciprocal |
+| REFL | `-s-` | reflexive |
+
+Historical proposal for the LOCAL form:
+
+`*-nk > *-ŋ- > -n-`  
+`*-nt > -n-`
+
+Historical proposal for 3P animate:
+
+`*-np > -m-`
+
+LOCAL intentionally merges 1P and 2P. Speaker vs. addressee is resolved by discourse rather than by separate object morphology.
+
+OBV is primarily a discourse-status category rather than a simple fourth person.
+
+### Experimental object hierarchy
+
+When an ordinary lexical patient and applicatively added participants coexist, the working hierarchy is:
+
+**patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**
+
+The applicative adds a core participant but does not automatically displace the lexical patient from the object slot.
+
+RECIP and REFL are special coreference constructions rather than ordinary competing semantic roles.
+
+### Experimental relational constructions
+
+The four productive relational frames are:
+
+**LOC**
+
+- `LOC + Ø`: event anchored at/by the landmark
+- `LOC + i-`: event converges toward the landmark
+- `LOC + a-`: event diverges from the landmark
+- `LOC + i- + APPL`: convergent landmark becomes a core participant
+- `LOC + a- + APPL`: divergent landmark becomes a core participant
+
+**CONTAINMENT**
+
+- `CONTAINMENT + Ø`: relation within bounded domain
+- `CONTAINMENT + i-`: convergence into domain
+- `CONTAINMENT + a-`: divergence out of domain
+- `CONTAINMENT + Ø + APPL`: domain becomes a core participant
+- `CONTAINMENT + i- + APPL`: participant enters/is brought into domain
+- `CONTAINMENT + a- + APPL`: participant exits/is removed from domain
+
+**POSITION**
+
+- `POSITION + Ø`: positional/contact configuration holds
+- `POSITION + i-`: enter/establish configuration
+- `POSITION + a-`: leave/terminate configuration
+- `POSITION + i- + APPL`: participant enters/establishes configuration
+- `POSITION + a- + APPL`: participant leaves/terminates configuration
+
+**COM / ASSOCIATIVE**
+
+- `COM + Ø`: association/accompaniment; contextually means/instrument/route
+- `COM + i-`: convergent association
+- `COM + a-`: divergent association
+- `COM + i- + APPL`: convergent associated core participant; beneficiary-type readings may arise
+- `COM + a- + APPL`: divergent/adversely oriented associated core participant; maleficiary-type readings may arise
+
+Benefactive and malefactive are constructional interpretations of COM plus direction plus APPL, not separate morphemes.
+
+### Experimental case stacking
+
+Case stacking is restricted and compositional. The working principle is:
+
+> **Inner case constructs a relational domain; outer case relates that constructed domain to something else.**
+
+Promoted productive stacks:
+
+| Stack | Function |
+|---|---|
+| **CONTAINMENT → LOC** | locate a region/place within the bounded domain |
+| **POSITION → LOC** | locate a positional/configurational relation |
+| **COM(PATH/MEDIUM) → LOC** | locate a point/event along or via a route/medium |
+| **GEN → outer spatial/relational case** | a genitive nominal relation becomes the referent of a higher relation |
+
+Repeated identical cases are normally redundant and are not promoted. ERG does not freely stack.
+
+### Experimental multiple relational NPs and scope
+
+Multiple relational NPs are permitted. Each can establish an independent relation to the event.
+
+This is distinct from case stacking:
+
+- **case stacking** = one NP carries nested relational relations
+- **multiple relational NPs** = several NPs independently relate to the event
+
+There is one clause-level directional. It can orient all compatible relational frames simultaneously.
+
+A single APPL adds one relational participant. When several relational NPs are present, the preferred analysis is:
+
+1. the OBJ index identifies the participant targeted for indexing;
+2. semantic argument hierarchy resolves competing candidates;
+3. word order/discourse resolves genuine ties.
+
+Unrestricted APPL-to-all or arbitrary APPL stacking is not established.
+
+### Experimental stative and aspect interaction
+
+The directional system has been promoted beyond physical motion.
+
+With stative predicates:
+
+| Direction | IMPERFECTIVE | PERFECT |
+|---|---|---|
+| `Ø` | state/relation ongoing | state/relation established/relevant |
+| `i-` | convergence toward/entry into the relation ongoing | convergence completed/attained |
+| `a-` | divergence from/withdrawal from the relation ongoing | divergence completed/terminated |
+
+The directional does not become an inchoative or terminative marker. Aspect remains independently responsible for temporal contour.
+
+Thus:
+
+> `i-` + stative = orientation toward establishment of the state/relation
+
+> `a-` + stative = orientation toward withdrawal from the state/relation
+
+### Experimental event-boundary analysis
+
+No BOUNDARY or TERMINATIVE case is currently proposed.
+
+Event boundaries are distributed across existing morphology:
+
+- **Case** defines the relevant spatial/relational frame.
+- **Directional** defines orientation toward/away from that frame.
+- **Verb** defines event structure such as trajectory, approach, endpoint attainment, crossing, or departure.
+- **Aspect** defines temporal presentation/completion.
+
+Abstract event schemas under test include:
+
+- **MOVE** — trajectory, endpoint unspecified
+- **APPROACH** — convergence without required attainment
+- **REACH** — endpoint attained
+- **PASS** — reference crossed
+- **LEAVE** — departure from a source relation
+- **BEGIN** — onset
+- **END** — cessation
+- **REMAIN** — persistence
+
+This supports deriving boundary and endpoint interpretations without adding a new nominal case.
+
+### Experimental stative/dynamic generalization
+
+The directional opposition is treated as a general relational-vector system, not as a motion-only prefix system:
+
+> `i-` = convergence / increasing orientation toward the relational frame
+
+> `a-` = divergence / decreasing orientation away from the relational frame
+
+With stative predicates, directional morphology may construe transition toward or away from a state; it does not itself encode aspect or inchoativity.
+
+### Experimental causative argument structure
+
+For:
+
+> **CAUSER causes CAUSEE to act on PATIENT**
+
+the working structure is:
+
+> **CAUSER-ERG CAUSEE-ERG PATIENT-ABS**
+
+when the causee remains agentive.
+
+Hierarchy:
+
+> **CAUSER > CAUSEE > PATIENT**
+
+The causer always controls the SUBJECT index. An agentive causee outranks the patient for the single OBJ index.
+
+If the caused participant is non-agentive, it does not retain ERG; ABS is the current default candidate.
+
+No dedicated causee case is proposed.
+
+### Experimental status and remaining tests
+
+The following have been promoted within this experimental model:
+
+- general relational-vector direction
+- single general applicative
+- LOCAL vs. NONLOCAL object-index organization
+- OBV `-v-`
+- patient > recipient/goal > beneficiary/maleficiary > other applied participant hierarchy
+- four spatial/relational base frames
+- COM absorbing PATH/medium
+- no BOUNDARY case
+- stative × directional × aspect interaction
+- agentive-causee causative hierarchy
+- restricted productive case stacking
+- multiple relational NPs with one clause-level directional
+
+The following remain to be tested before any possible canonical promotion:
+
+1. **stacked case + directional**
+2. **stacked case + APPL**
+3. **OBV/discourse behavior**
+
+No changes to `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv` are made by this experimental record.
 
 ## 10-question phonological recovery audit — 2026-09-17
 
