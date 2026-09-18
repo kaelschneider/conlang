@@ -90,13 +90,13 @@ One general applicative is proposed and **promoted as a single productive operat
 
 It does not intrinsically mean dative, benefactive, malefactive, locative, instrumental, or any other semantic role.
 
-The applicative exponent is **not yet selected**.
+The productive applicative exponent is **`-ka-`**, selected as a verbal suffix immediately after AUX/DERIV and before AGENT.
 
 One APPL adds one relational participant. **Unrestricted APPL stacking is rejected.** Multiple APPLs are not established as a productive mechanism. When more than one relational NP could supply the applied participant, the remaining open issue is how the language selects among those candidates.
 
 ### Experimental object indexing
 
-The object slot is reorganized around LOCAL vs. NONLOCAL:
+The object slot is reorganized around participant status:
 
 | Object status | Form | Meaning |
 |---|---:|---|
@@ -126,7 +126,7 @@ When an ordinary lexical patient and applicatively added participants coexist, t
 
 **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**
 
-The applicative adds a core participant but does not automatically displace the lexical patient from the object slot.
+APPL selection precedes object indexing: the selected relational participant is promoted into core argument structure and receives the single object index.
 
 RECIP and REFL are special coreference constructions rather than ordinary competing semantic roles.
 
@@ -560,6 +560,18 @@ None among the current core grammar decisions. Residual lexical creation/testing
 5. **Completed 2026-09-18:** Stress-test OBV/discourse behavior, including proximate selection, persistence, reassignment, multiple OBV participants, animacy effects, focus/topic interaction, and grammatical-role independence.
 6. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
 
+### Relational-system roadmap — 2026-09-18
+
+The experimental relational system is now being integrated into the grammar. The remaining roadmap is:
+
+**A — Case-space reconciliation — completed.** Adopt the reorganized seven-value semantic inventory: ABS, ERG, LOC, CONTAINMENT, POSITION, COM/ASSOCIATIVE, and GEN; absorb the former PATH domain into COM/ASSOCIATIVE.
+
+**B — APPL/object architecture — completed.** Canonicalize `-ka-` as the productive APPL suffix; place it after AUX/DERIV and before AGENT; use the single object-index slot for the APPL-selected participant.
+
+**C — Argument-hierarchy stress test — next.** Build matched tests with multiple eligible relational NPs, especially transitive clauses containing patient/theme + recipient/goal + beneficiary/maleficiary, and test the hierarchy, discourse tie-breaking, object indexing, direction, and APPL with statives where the predicate independently licenses an affected participant.
+
+**D — Construction-first corpus redevelopment — following C.** Redevelop the regression corpus from language-internal construction schemas rather than English sentence translation, systematically crossing CASE × DIRECTION × APPL × ARGUMENT STRUCTURE and retaining English only as a translation/paraphrase layer.
+
 ## Leipzig valency-frame coverage audit — 2026-09-17
 
 The 70-frame Leipzig Valency Classes sample was tested against the current grammar as a constructional coverage audit. The source defines valency in terms of argument roles, coding properties, behavioral properties, and cross-clausal behavior; this pass focuses on whether the listed role frames can be expressed with the current case, direction, object-slot, agreement, and clause-combining systems.
@@ -590,7 +602,7 @@ Added six examples (`E-0116`–`E-0121`) after testing stacked-case composition 
 - `E-0120` retains **COM → LOC** as an unresolved route/medium test.
 - `E-0121` retains **GEN → CONTAINMENT → LOC** as a recursive three-case test.
 
-The promotion is structural only. The unresolved `STATUS.md` versus `GRAMMAR.md` GEN/PATH inventory conflict remains unchanged, and the corpus uses `GRAMMAR.md`'s authoritative surface exponents.
+The experimental seven-value case inventory is now reflected in `GRAMMAR.md`; the former PATH case is absorbed into COM/ASSOCIATIVE.
 
 No new lexicon entries were required; the six examples are reference-valid and segmentation/gloss aligned.
 ## TAM interaction and construction-first corpus stress test — 2026-09-17
