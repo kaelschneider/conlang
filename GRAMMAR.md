@@ -894,19 +894,3 @@ By default, the secondary predicate follows its target directly and precedes the
 The construction may describe a participant's state during the main event (depictive) or a state resulting from the main event (resultative). A resultative secondary predicate may target either a subject or another core participant where the lexical semantics support that reading.
 
 Secondary predication is independent of APPL. An APPL-selected relational participant continues to occupy the single object-index position, while a secondary predicate may independently target another core participant. Secondary predicates do not compete for object indexing and do not trigger APPL selection.
-
-### G-SYN-16 — Impersonal predicates
-
-A restricted class of finite predicates may occur in genuinely subjectless clauses. These clauses have no syntactic S argument and do not use a dummy pronoun. Instead, the finite predicate carries the dedicated impersonal agreement marker `-v-`.
-
-The initial semantic class is weather and ambient predicates such as RAIN and ambient COLD. The construction is constructionally productive, but lexical extension is licensed by semantic class rather than automatically available to every predicate.
-
-Ordinary case-marked NPs may occur as non-controller participants with an impersonal predicate. They retain their ordinary nominal case and do not become S merely because the clause lacks a subject.
-
-Direction, negation, tense, aspect, interrogation, and other verbal morphology remain available to impersonal predicates. The impersonal agreement marker occupies the ordinary agreement position in the right-edge verbal template.
-
-The working form is:
-
-`STEM (AUX/DERIV) APPL -v- (NEG) (DISCOURSE) TENSE (ASPECT)`
-
-Examples include `iruvi` ‘it is raining’, `iruva` ‘it rained’, `surte iruvi` ‘it is raining at the place’, and `surci petuvi` ‘it is cold inside the domain’.
