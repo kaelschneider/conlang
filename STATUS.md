@@ -1083,3 +1083,17 @@ The profile does **not** require words for particular cultural items, force one-
 
 The semantic graph now contains **133 declared nodes and 160 declared relations**. The generator version/architecture/profile identifiers were advanced to `0.1.1`, `2026-09-18.semantic-architecture.v2.cultural-profile`, and `default-1600-forest-reciprocal-event-relational`.
 
+
+## Mood and modality architecture — design resolved, exponents pending — 2026-09-18
+
+The next independent syntax layer is now constrained by the user's selected architecture:
+
+- Imperative is a **productive dedicated prefix construction**. The selected prefix is `ka-`, distinct in position and function from the APPL suffix `-ka-`.
+- Imperative stem-grade alternation remains **optional and construction-sensitive**, rather than an obligatory second imperative marker. No independent imperative stem grade is canonized yet.
+- Hortative uses the same imperative construction; overt 1PL subject is available where pragmatic clarity or contrast requires it.
+- Prohibitive is compositional **NEG + imperative**; no separate prohibitive exponent is introduced.
+- Modality is **clause-level by default** through particles/auxiliaries. Verbal modal morphology may arise later for tighter scope or lexicalized constructions, but no modal affix is canonized yet.
+- The initial modal semantic inventory is **necessity, possibility, intention/volition, and evidential/epistemic uncertainty**.
+- Modal scope is expected to be compositional: modality scopes over negation by default, while inverse scope remains available where independently licensed.
+
+Two implementation details remain pending consultation: imperative agreement behavior and the exact structural position/form inventory of modal particles/auxiliaries.
