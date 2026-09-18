@@ -133,7 +133,7 @@ validation:
     vowels: "a e i u"
     consonants: "p t k m n s h w j r"
     root_shapes: "| C | 15% |"
-    final_exclusion_phrase: "exclude `h` and `j` from root-final position"
+    final_exclusion_phrase: "The lexical generator excludes `h` and `j` from root-final position"
 
 output:
   json_description: "Full machine-readable candidate records with generation provenance."
