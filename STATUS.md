@@ -41,8 +41,8 @@ Both persistent branches were checked after the recent relational, corpus, synta
 **`developmental`**
 
 - 98 lexical rows
-- 253 example rows
-- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 123 experimental, 115 deprecated
+- 257 example rows
+- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 127 experimental, 115 deprecated
 - no duplicate IDs
 - no broken lexical references
 - no broken grammar references
@@ -140,7 +140,7 @@ Static configuration and grammar-anchor checks are consistent with the current f
 
 ## Independent syntax pass — 2026-09-18
 
-The three remaining independent-syntax gaps were completed as working developmental constructions and added to the regression corpus.
+The three remaining independent-syntax gaps were completed as working developmental constructions, then reconciled to the selected 2026-09-18 decisions and interaction-tested in the regression corpus.
 
 ### Finite speech complements
 
@@ -165,21 +165,23 @@ The three remaining independent-syntax gaps were completed as working developmen
 - Formal identity between passive `-na-` and patientive participle `-na` is retained as a naturalistic morphological relationship, but the two functions remain distinct synchronically.
 - PASS + APPL remains a targeted interaction test rather than an established productive combination.
 
-These are working developmental analyses, not yet promoted to `main`.
+These are reconciled developmental analyses, not yet promoted to `main`. The selected constructional choices are settled for the current developmental grammar; PASS + APPL remains explicitly unresolved rather than being promoted by extrapolation.
 
 ### Validation checkpoint — 2026-09-18
 
-The new syntax layer was checked against the current repository data after the three commits above:
+The reconciled syntax layer was checked against the current repository data:
 
-- 253 example rows are present in `EXAMPLES.tsv`, with IDs remaining unique.
-- The new E-0242–E-0254 examples all have ten TSV fields, no surface-form hyphens, primary stress in IPA, and grammar/lexical references resolving to existing sections and entries.
+- 257 example rows are present in `EXAMPLES.tsv`, with IDs remaining unique.
+- The E-0242–E-0258 syntax examples have ten TSV fields, no surface-form hyphens, primary stress in IPA, and grammar/lexical references resolving to existing sections and entries.
+- E-0251–E-0254 were reconciled so passive finite forms use the ordinary REALIS stem `ku` rather than the nonfinite stem `ka`.
+- E-0255 tests comparison + IRREALIS; E-0256 tests comparison inside ordinary nominalized/dependent morphology; E-0257 tests passive + IRREALIS; E-0258 tests passive coordination without any CONJ inflection.
 - `G-MORPH-06B`, `G-SYN-18`, `G-SYN-19`, and `G-SYN-20` are unique grammar-section identifiers.
 - No lexical additions were required; all new probes reuse established roots and lexemes.
 - Full runtime project validation remains separate from this static checkpoint because the repository's current workflow does not provide a general validation job on `developmental`.
 
 ## Open questions
 
-The settled relational architecture and the three completed syntax analyses should not be reopened without contradictory evidence.
+The settled relational architecture and the three completed syntax analyses should not be reopened without contradictory evidence. The selected speech, comparison, dependency, and passive analyses are reconciled; only PASS + APPL remains an explicit voice-interaction question.
 
 Current open work is concentrated in:
 
@@ -197,7 +199,7 @@ Unresolved lexical questions should not be converted into new universal case fra
 
 **2 — Lexical valency / construction coverage.** Continue matched probes for under-specified lexical predicates and fill genuine semantic gaps before adding new roots.
 
-**3 — Independent syntax.** Working analyses for finite speech complements, comparison, and passive are now in place. Stress-test their interactions, especially PASS + APPL, before promotion.
+**3 — Cross-domain syntax stress testing.** Finite speech complements, comparison, and passive are reconciled. The remaining syntax-specific open issue is PASS + APPL, which stays unresolved until a matched argument-structure test can distinguish its possible outcomes.
 
 **4 — Promotion review.** Re-run cross-domain contradiction checks, preserve historical/deprecated analyses, and promote only constructions with sufficient independent corpus support.
 
