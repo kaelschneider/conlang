@@ -181,6 +181,25 @@ None among the current core grammar decisions. Residual lexical creation/testing
 4. **Completed 2026-09-17:** Stress-test the OPEN/CLOSED × F_F/F_B/B_F/B_B historical matrix across all 24 cells and reconcile the attested diagnostic forms.
 5. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
 
+## Leipzig valency-frame coverage audit — 2026-09-17
+
+The 70-frame Leipzig Valency Classes sample was tested against the current grammar as a constructional coverage audit. The source defines valency in terms of argument roles, coding properties, behavioral properties, and cross-clausal behavior; this pass focuses on whether the listed role frames can be expressed with the current case, direction, object-slot, agreement, and clause-combining systems. citeturn572354search0
+
+Results:
+
+- No listed frame is categorically impossible under the current system.
+- Core S/A, transitive A–P, locative, source, instrument, surface, reflexive/reciprocal, and recipient/goal patterns are structurally expressible with existing morphology.
+- Recipient/goal frames (`show`, `give`, `send`, `tell`, `ask`) can use LOC plus verbal direction/dative-like object-slot marking while the theme remains an overt ABS NP. The relative ordering of multiple non-subject NPs is not yet established.
+- Experiencer predicates (`like`, `fear`, `smell`, `see`) are expressible, but their choice between ERG experiencer + ABS stimulus and another alignment requires lexical testing; the grammar does not assign all experiencers one universal case.
+- `rain` requires an explicit decision about default 3rd-person agreement on an impersonal finite verb, since finite verbs require person agreement but no dummy subject construction is currently documented.
+- `talk`, `think about`, `search for`, and similar semantically oblique complements can be lexicalized as ordinary ABS objects or use existing COM/PATH/LOC relations, but the exact lexical selection is not yet established.
+- `say` can use an ABS nominalized complement plus a LOC recipient, but finite speech-complement syntax has not yet been directly tested.
+- `name` can be represented by a recipient/goal analysis (`X-LOC` + `Y-ABS`), but an object-complement naming construction is not yet established.
+- `build ... out of`, `fill ... with`, and the inverse `load L with T` frame are expressible through existing case resources only with construction-specific semantic interpretations; these should receive targeted corpus tests before being treated as established.
+
+This audit is evidence about constructional coverage, not a promotion of any new lexical valencies or grammatical rules. No new lexicon entries or grammar rules were added.
+
+
 ## Lexical root generation pass — 2026-09-17
 
 Added 50 experimental lexical roots (`L-0037`–`L-0086`) to `LEXICON.tsv`.
