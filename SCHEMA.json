@@ -176,6 +176,7 @@
             "NUM",
             "INTJ",
             "PART",
+            "AUX",
             "—"
           ],
           "description": "Part-of-speech tag. Lowercase values are preferred; existing uppercase values and — are accepted for compatibility with the current repository."
@@ -385,9 +386,10 @@
             "stable",
             "analyzed",
             "experimental",
-            "unresolved"
+            "unresolved",
+            "deprecated"
           ],
-          "description": "Current development status. 'stable' is retained as a legacy repository value; 'established' is preferred."
+          "description": "Current development status. 'stable' is retained as a legacy repository value; 'established' is preferred; 'deprecated' is retained for superseded regression/provenance examples."
         },
         "notes": {
           "type": "string",
