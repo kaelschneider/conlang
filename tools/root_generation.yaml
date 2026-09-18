@@ -164,7 +164,7 @@ validation:
     vowels: "a e i u"
     consonants: "p t k m n s h w j r"
     root_shapes: "Inherited lexical roots use a mixed mono-/disyllabic shape system."
-    final_exclusion_phrase: "Newly generated roots exclude `h` and `j` from every syllable-final consonant position"
+    final_exclusion_phrase: "Newly generated roots exclude `h` and `j` from **every syllable-final consonant position**"
 
 output:
   json_description: "Full machine-readable candidate records with generation provenance."
