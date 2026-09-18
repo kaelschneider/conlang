@@ -181,6 +181,21 @@ None among the current core grammar decisions. Residual lexical creation/testing
 4. **Completed 2026-09-17:** Stress-test the OPEN/CLOSED × F_F/F_B/B_F/B_B historical matrix across all 24 cells and reconcile the attested diagnostic forms.
 5. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
 
+## Corpus growth pass — 2026-09-17
+
+Added sixteen experimental regression examples (`E-0021`–`E-0036`) to extend matched coverage without adding lexical entries or changing canonical grammar:
+
+- `E-0021`–`E-0025` test the productive AUX/DERIV series (`-re-`, `-ke-`, `-me-`, `-se-`) plus a past/nonpast progressive contrast.
+- `E-0026` tests the semantically restricted productive change-of-state `-te-`.
+- `E-0027`–`E-0028` test invariant right-edge NEG placement and NEG + interrogative stacking, including the established `yi > ye` repair.
+- `E-0029` tests overt LOCAL object marking and the established `n + C > enC` boundary repair.
+- `E-0030`–`E-0031` form a matched directional-COM benefactive/malefactive pair.
+- `E-0032`–`E-0033` form a matched same-subject/switch-reference PATH-converb pair with a directional finite main clause.
+- `E-0034` tests clause-initial subject topicalization without changing grammatical marking; `E-0035` tests narrow contrastive object focus in the immediately preverbal position.
+- `E-0036` tests animate `-i` and inanimate `-n` plural marking before nominal case, with unchanged person-only verbal agreement.
+
+All sixteen examples remain `experimental`; they add regression evidence but do not promote any new rule.
+
 ## Lexical derivation generation decisions — 2026-09-17
 
 The lexical-generation strategy was parameterized through the 20-question morphology/lexicon design pass. The resulting model is documented in `GRAMMAR.md` as ANALYZED methodology rather than promoted as additional synchronic grammar.
