@@ -225,6 +225,10 @@ The directional opposition is also treated as a source for **metaphorical and co
 Future root batches must test semantically central candidates against neutral, `i-`, and `a-` frames where their valency permits, then consider plausible metaphorical extensions licensed by the same semantic frame. Roots that duplicate a useful directional construction should be avoided unless lexicalization or semantic specialization supplies an independent motivation. This does not retroactively reclassify the 50 roots already added in `L-0037`–`L-0086`; those remain experimental candidates.
 
 
+## Root-final generation filter — 2026-09-17
+
+The lexical generator now blocks `h` and `j` from root-final position in newly generated VC/CVC roots. The six affected experimental roots were replaced without changing their IDs or semantic glosses: `ah → pas`, `muh → muk`, `jeh → jek`, `kah → kat`, `haj → han`, `pej → pet`. The established one-segment roots `h` and `j` remain valid historical roots; the new filter applies only to newly generated multi-segment roots.
+
 ## Lexical root generation pass — 2026-09-17
 
 Added 50 experimental lexical roots (`L-0037`–`L-0086`) to `LEXICON.tsv`.
