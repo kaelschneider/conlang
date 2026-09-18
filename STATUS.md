@@ -1140,6 +1140,16 @@ The modal exponent selection and first implementation pass are complete:
 - Modal particles are clause-initial and have broad scope.
 - Modal auxiliaries are immediately preverbal to the lexical predicate, after overt arguments/relational phrases.
 - Direction and relational case remain properties of the lexical predicate/relational frame rather than being absorbed into the modal auxiliary.
-- Modal meaning scopes over negation by default, but the formal expression of a **negated lexical complement under a modal auxiliary** remains unresolved and will be tested separately.
+- Modal meaning scopes over negation by default. This is now implemented compositionally: NEG on the nonfinite lexical complement gives modal > negation, while NEG on the finite modal auxiliary gives negation > modal.
 
 Active probes: **E-0215–E-0221**.
+
+## Modal negation scope closure — 2026-09-18
+
+The selected strategy is implemented and stress-tested:
+
+- `MOD + STEM-NEG-NFIN` expresses modal > negation (`MUST [not X]`).
+- `MOD-NEG + STEM-NFIN` expresses negation > modal (`NOT [must X]`).
+- No dedicated scope morpheme is introduced.
+
+Matched examples: **E-0222–E-0223**.
