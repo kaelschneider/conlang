@@ -868,3 +868,43 @@ Sound shape may bias candidate meanings where a plausible association is cultura
 A sound-symbolic association may influence candidate ranking, but semantic-family coherence, phonological legality, derivational behavior, frequency, and lexical collision checks remain stronger constraints.
 
 This audit does not establish any new synchronic sound-meaning rule.
+## Lexical-class generation and neutral probe inventory — 2026-09-18
+
+The lexical-class design pass is resolved as follows:
+
+- Nominal probes are selected through a balanced semantic/referential matrix rather than by frequency alone.
+- The nominal matrix deliberately contrasts person/animate, animal, plant, natural object, artifact/tool, bounded enclosure, substance/mass, food/material, body/object of manipulation, place/region/domain, abstract/eventive nominal, and relationally dependent entity.
+- `kerande` CONTAINER remains a specialized noun but is no longer the default or principal nominal probe.
+- Category-neutral roots remain the default starting point. Noun/verb/adjective/adverb behavior may emerge through zero conversion, derivation, semantic specialization, and lexicalization.
+- Stative/adjectival probes will cover dimension, temperature, physical property, age/state, quantity, evaluation, disposition, and sensory quality rather than relying on `sara` BE.BIG alone.
+- Dedicated lexical classes are minimized; additional parts of speech arise where semantic, derivational, or historical evidence supports them.
+- Sound symbolism is a weak probabilistic prior: broad phonetic/root-shape associations may break ties when assigning candidate meanings, but never determine meaning or override semantic-family coherence, phonological legality, derivational compatibility, frequency, or lexical evidence.
+
+### Current neutral verbal probe inventory
+
+The construction-first verbal core is:
+
+`L-0002 TRANSFER; L-0005 MOVE; L-0003 HOLD/RETAIN; L-0009 REMAIN/STAY; L-0006 PERCEIVE; L-0007 SAY; L-0041 HEAR; L-0075 THINK; L-0076 WORK/ACT; L-0037 SLEEP; L-0077 MAKE/CREATE; L-0042 OPEN; L-0052 CLOSE; L-0066 WRITE; L-0067 READ; L-0064 WASH; L-0065 COOK`.
+
+Strongly directionally or endpoint-fixed predicates remain available as diagnostic predicates rather than being used as the primary neutral probes: `ENTER, FALL, RISE, PUT, GIVE, TAKE`, and similar lexicalized predicates.
+
+### Current nominal probe anchors
+
+Existing vocabulary already supplies useful nominal anchors across several semantic domains:
+
+| Semantic role | Current anchor | Status |
+|---|---|---|
+| plant | `L-0050 et` TREE | experimental |
+| natural object | `L-0051 at` STONE | experimental |
+| substance/mass | `L-0040 am` WATER | experimental |
+| natural phenomenon/material-like entity | `L-0043 ir` RAIN; `L-0072 rir` SNOW | experimental |
+| bounded enclosure | `L-0032 kerande` CONTAINER | stable, specialized |
+| natural spatial/domain concept | `L-0081 mam` SHADE | experimental |
+| fire/elemental entity | `L-0049 ek` FIRE | experimental |
+| human/animate participant | `L-0036 keranka` CARRIER | stable, specialized |
+
+The current anchors are deliberately not treated as a complete nominal probe lexicon. Genuine gaps remain for a semantically neutral PERSON/HUMAN noun, ANIMAL noun, TOOL/ARTIFACT noun, BODY-PART noun, and a more neutral PLACE/DOMAIN noun. These gaps should be filled through new root generation or justified semantic extension rather than by overusing `CONTAINER`.
+
+### Other lexical-class probe policy
+
+Category-neutral roots may supply nominal, verbal, and stative uses where the semantic relationship is natural. Eventive nominal uses, result/product nouns, abstract nouns, and sensory-property nouns should be especially useful for testing derivation and conversion. The corpus should distinguish ordinary lexical category flexibility from productive morphological nominalization, rather than treating every noun-like interpretation as evidence of a dedicated noun-forming rule.
