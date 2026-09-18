@@ -988,3 +988,39 @@ Generated material begins as **experimental candidates**. Frequency, model confi
 `structured architecture input → semantic concept graph → centrality/connectivity → lexical pressure → semantic centers → phonological candidates → family alternatives → lexicalization/historical outcomes → semantic curation → experimental output → repository validation`
 
 No 1,600-root inventory is to be generated merely to satisfy the target count. The target controls scale; semantic coherence and architectural constraints control acceptance.
+
+
+## Inherited-root generator implementation — 2026-09-18
+
+The first implementation layer of the inherited-root lexical generator is now present under `tools/`:
+
+- `tools/generate_roots.py` — reproducible semantic-family and phonological candidate generator
+- `tools/root_generation.yaml` — versioned semantic seed graph, parameter profile, phonological inputs, lexicalization priors, family model, and validation anchors
+
+The implementation follows the design-resolved specification without generating or mutating the canonical 1,600-root lexicon automatically.
+
+### Implemented behavior
+
+- explicit seed-controlled reproducibility;
+- grammar reconciliation against the current hard architectural anchors;
+- semantic graph centrality and weighted lexical pressure;
+- sparse event/process-centered seed graph;
+- soft domain-balance pressure rather than rigid domain quotas;
+- long-tailed family-size planning with centrality-sensitive growth;
+- uneven lexicalization profiles by semantic distance;
+- category-neutral default with weak semantic category biases;
+- weak sound-symbolic ranking effect;
+- exact root-shape allocation for requested inventory size;
+- root-final `h/j` exclusion for generated VC/CVC roots;
+- collision rejection against the current lexical inventory and within the generation run;
+- machine-readable JSON output plus human-auditable TSV output;
+- generation provenance including seed and version/input hashes;
+- experimental-candidate status rather than automatic lexicon promotion.
+
+### Repository validation state
+
+Connector-level structural checks pass for the new configuration and generator interfaces: the semantic graph contains **124 declared nodes and 129 declared relations**, with no unresolved graph references or duplicate graph-node IDs; required generator functions and CLI parameters are present.
+
+A local Python smoke test could not be executed in the repository sandbox because external GitHub network resolution is unavailable there. Runtime execution should therefore be performed in a Python environment with **PyYAML** installed before using the generator for candidate production.
+
+The next implementation task is to execute the generator at small seeded counts, inspect semantic/family distributions and phonological output, then tune parameters only where the empirical output contradicts the design specification.
