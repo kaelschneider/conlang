@@ -1024,3 +1024,42 @@ Connector-level structural checks pass for the new configuration and generator i
 A local Python smoke test could not be executed in the repository sandbox because external GitHub network resolution is unavailable there. Runtime execution should therefore be performed in a Python environment with **PyYAML** installed before using the generator for candidate production.
 
 The next implementation task is to execute the generator at small seeded counts, inspect semantic/family distributions and phonological output, then tune parameters only where the empirical output contradicts the design specification.
+
+## Adopted cultural / environmental worldview profile — 2026-09-18
+
+The cultural profile selected in the 10-question design pass is now adopted as a **generator-level semantic pressure**, not as a vocabulary quota or grammatical constraint.
+
+### Adopted profile
+
+**Forest-oriented, seasonally mobile, reciprocity-centered, practically experiential, and strongly relational/event-centered.**
+
+The selected dimensions are:
+
+- forest ecology;
+- embedded reciprocity;
+- semi-sedentary / seasonally mobile settlement;
+- mixed gathering, cultivation, fishing/hunting, and craft;
+- kin-linked but flexible local communities;
+- contextual/relational possession rather than a strongly abstract ownership ontology;
+- cyclical + event-based time;
+- strong but gradient animacy;
+- direct practical and witnessed knowledge;
+- relations/processes prioritized over isolated entities.
+
+### Generator implementation
+
+The generator configuration now contains the adopted `forest_reciprocal_event_relational` cultural profile.
+
+The profile acts through four soft mechanisms:
+
+1. **semantic-node pressure** — ecological, spatial, social, relational, processual, experiential, and subsistence concepts receive weighted salience adjustments;
+2. **relational connectivity** — relations associated with ecology, movement, exchange, perception, social connection, acquisition, and temporal recurrence receive additional semantic pressure;
+3. **lexicalization bias** — event/process and relational centers receive modestly increased polysemy/derivation pressure, while acquisition/possession and experiential-knowledge domains receive context-sensitive lexicalization pressure;
+4. **explicit seed-network expansion** — a small ecology/social cluster now connects forest, river, gathering, cultivation, fishing, reciprocity, stewardship, craft, and seasonal habitation to the pre-existing semantic graph.
+
+The cultural pressure is explicitly bounded (`pressure_scale: 0.60`) so that semantic coherence, graph connectivity, phonological legality, derivational compatibility, and frequency remain stronger determinants than any single worldview preference.
+
+The profile does **not** require words for particular cultural items, force one-to-one lexical distinctions, impose grammatical categories, or determine individual word meanings. Its intended effect is cumulative: the generated lexicon should show a detectable ecological/social/ontological bias while retaining historical contingency, uneven granularity, motivated polysemy, and independently generated vocabulary.
+
+The semantic graph now contains **133 declared nodes and 160 declared relations**. The generator version/architecture/profile identifiers were advanced to `0.1.1`, `2026-09-18.semantic-architecture.v2.cultural-profile`, and `default-1600-forest-reciprocal-event-relational`.
+
