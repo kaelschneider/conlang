@@ -625,20 +625,97 @@ Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as e
 
 **4 — Construction-first corpus redevelopment.**
 
-After migration and argument-structure validation, expand the corpus from language-internal schemas rather than translated English sentence lists.
+After migration and argument-structure validation, rebuild the corpus in **layers**, moving from constructional meaning to lexical restriction, multi-participant interaction, discourse behavior, and finally lexicalization evidence. Generate examples from language-internal schemas; English remains a translation/paraphrase layer and is never the primary generator.
 
-Priority construction families:
+### Layer 1 — Construction inventory
 
-- spatial/relational vector constructions;
-- beneficiary/maleficiary and recipient constructions;
+Define a finite set of construction schemas before generating large numbers of sentences. Each schema records the relational frame or syntactic configuration, available direction (`Ø / i- / a-`), APPL licensing, expected semantic roles, object-index behavior, permitted case stacking, and relevant TAM/converb/information-structure dimensions.
+
+Initial families:
+
+- LOC / CONTAINMENT / POSITION / COM relational frames;
+- recipient / goal;
+- benefactive / malefactive;
+- associative / instrumental / medium / route;
+- productive case stacking;
 - converbial relations;
-- stative → directional state-transition readings;
-- case stacking;
-- information-structure contrasts;
-- causative argument structure;
-- secondary predication.
+- stative + directional;
+- causative;
+- secondary predication;
+- topic / focus configurations.
 
-English should remain the translation/paraphrase layer rather than the source of the construction itself.
+### Layer 2 — Neutral lexical probes
+
+For each construction, select a small set of **semantically flexible verbs** whose lexical semantics do not already force the target interpretation. These are probes for what the construction itself contributes.
+
+Prioritize TRANSFER-type, general motion/change, placement/positioning, neutral interaction, and semantically light stative predicates. Cross each probe with the construction's meaningful alternatives, especially `Ø / i- / a-` and APPL vs. non-APPL, using matched sets that change one structural variable at a time.
+
+Record the resulting interpretation without assuming that the English gloss is the lexical meaning. The diagnostic question is: **what meaning comes from the construction that the neutral verb does not supply by itself?**
+
+### Layer 3 — Lexically constrained predicates
+
+Re-test the same schemas with verbs whose lexical valency strongly favors particular participants or relations.
+
+Priority classes:
+
+- ordinary transitive verbs;
+- recipient/goal verbs;
+- experiencer verbs;
+- perception/cognition verbs;
+- speech/communication verbs;
+- source/material verbs;
+- placement/removal verbs.
+
+Record where lexical valency restricts, redirects, or blocks a construction. Do not force a construction merely because an English translation makes it seem appropriate.
+
+### Layer 4 — Stative and abstract extension
+
+Apply the construction families to stative and non-motion predicates where the relational frame is semantically licensed.
+
+Test `Ø` state/relation, `i-` orientation toward establishment or attainment, `a-` orientation toward withdrawal or termination, and imperfective vs. perfect. APPL is used only where the predicate independently licenses an affected participant.
+
+This layer tests whether relational direction has genuinely generalized beyond physical motion rather than merely receiving metaphorical translations.
+
+### Layer 5 — Multi-construction and argument competition
+
+Combine independently established constructions and test their interaction rather than designing them simultaneously around a desired translation.
+
+Build matched clauses containing patient + recipient, patient + beneficiary/maleficiary, recipient + beneficiary, three non-subject participants, multiple eligible relational NPs, stacked relational NPs, and APPL alongside lexical arguments.
+
+Cross these with LOCAL / 3P.ANIMATE / 3P.INANIMATE / OBV indexing and the established APPL selection hierarchy. Use same-rank discourse contexts to test the discourse tie-breaker.
+
+### Layer 6 — Discourse and information structure
+
+Re-test the established constructions under neutral discourse, established vs. new participants, topic shift, contrastive focus, proximate vs. OBV status, competing salient relational participants, and same-rank APPL candidates.
+
+Separate grammatical contribution from discourse conditioning. A reading that appears only under a special discourse context should not automatically become a lexical or grammatical meaning.
+
+### Layer 7 — Lexicalization and diachronic follow-up
+
+Track repeated corpus patterns for possible conventionalization:
+
+- constructional meanings becoming specialized;
+- verbs acquiring construction-specific valency;
+- relational readings developing conventional metaphorical meanings;
+- fossilized case stacks or verbal complexes;
+- emerging postpositions or other secondary morphology.
+
+Frequency alone is not promotion evidence. Record such patterns as **ANALYZED** or **EXPERIMENTAL** first and test them independently before changing canonical grammar.
+
+### Corpus-generation protocol
+
+For each family, use the sequence:
+
+**schema → neutral lexical probes → matched contrasts → lexically constrained predicates → multi-construction combinations → discourse variants → lexicalization candidates**
+
+A construction family is not adequately tested because one translated sentence works. Targeted coverage should include its positive, negative, contrastive, and boundary cases, and every example should be traceable to the construction schema that motivated it.
+
+The corpus therefore serves four purposes simultaneously:
+
+1. regression testing of established grammar;
+2. diagnosis of constructional semantics;
+3. accumulation of evidence for lexical valency;
+4. evidence for discourse behavior and lexicalization.
 
 **5 — Remaining independent syntax gaps.**
 
