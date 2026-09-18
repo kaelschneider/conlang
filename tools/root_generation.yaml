@@ -132,8 +132,8 @@ validation:
   grammar_anchors:
     vowels: "a e i u"
     consonants: "p t k m n s h w j r"
-    root_shapes: "C 15% / VC 25% / CVC 60%"
-    final_exclusion_phrase: "exclude `h` and `j` from root-final position"
+    root_shapes: "Basic lexical roots are generated in three shapes:"
+    final_exclusion_phrase: "The lexical generator excludes `h` and `j` from root-final position in generated VC/CVC roots."
 
 output:
   json_description: "Full machine-readable candidate records with generation provenance."
