@@ -593,7 +593,7 @@ The experimental modal inventory is:
 
 Modal auxiliary clauses retain ordinary verbal direction and relational structure on the nonfinite lexical predicate. Object indexing and APPL remain associated with the clause's lexical argument structure; their interaction with modal auxiliaries is a dedicated stress-test area rather than an automatic reassignment.
 
-Modal meaning scopes over negation by default. The formal realization of a negated lexical complement under a modal auxiliary is not yet canonical and remains a scope/negation stress-test question.
+Modal meaning scopes over negation by default. When a lexical complement is negated, NEG precedes the nonfinite/citation ending on that complement (`STEM-NEG-NFIN`), yielding modal > negation by default. NEG on the finite modal auxiliary instead yields negation of the modal proposition (`NEG > MOD`). Thus the two scope readings are compositionally distinguishable without a new scope morpheme.
 
 Modal auxiliaries and particles form no single transparent synchronic paradigm. Their partially related forms reflect independent grammaticalization histories; sound symbolism may bias future lexicalized modal developments only weakly.
 ### G-MORPH-15 — Converbs, participles, and nominalization
