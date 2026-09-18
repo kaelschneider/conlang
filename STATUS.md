@@ -133,7 +133,7 @@ None among the current core grammar decisions. Residual lexical creation/testing
 
 ## Immediate testing priorities
 
-1. Validate the modified `LEXICON.tsv` against `SCHEMA.json` and check all affected IPA/derivation fields against `GRAMMAR.md`.
+1. **Completed 2026-09-17:** Validate `LEXICON.tsv` against `SCHEMA.json` and check all affected IPA/derivation fields against `GRAMMAR.md`; the blank-row defect was removed and the complete populated file now passes structural validation.
 2. Test the nominalizer family (`keranu`, `keranka`, `kerande`) with additional examples.
 3. Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched examples.
 
