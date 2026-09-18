@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: "Number of candidate roots to generate (1200-2000)"
+        description: "Number of candidate roots to generate (1200-5000)"
         required: true
-        default: "1600"
+        default: "4000"
         type: string
       seed:
         description: "Deterministic generator seed"
