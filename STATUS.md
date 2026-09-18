@@ -67,36 +67,39 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Stress is rightmost-heavy otherwise penultimate; IPA must mark primary stress with `ˈ`
 
 ### Morphology
-- Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
-- Finite verbs require person agreement
+- Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
+- Finite verbs require person agreement; agreement follows the semantic agent where one exists and otherwise the stative/agentless S
 - Stem grades: `-a-` NONFINITE, `-e-` LINKING/ATTRIBUTIVE, `-u-` REALIS, `-i-` IRREALIS
 - Direction: `i-` toward, `a-` away, `Ø` neutral; direction is verbal rather than nominal
 - Object slot: `n-` local, `Ø` nonlocal, `s-` reflexive, `r-` reciprocal; LOCAL/NLOC is distinct from nominal LOC (`-te`)
 - AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative; `-te-` remains ANALYZED/unresolved
+- NEG is a suffixal polarity exponent after AGENT and before optional DISCOURSE/TENSE/ASPECT; its exact short CV/VC form remains unselected
 - Agreement: `-k-` 1, `-t-` 2, `-p-` 3; person-only
 - Discourse: `-h-` exclamative, `-y-` interrogative
 - Tense: `-i-` nonpast, `-a-` past
 - Aspect: `Ø` imperfective, `-n` perfect
 - Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
+- Common-noun number is restricted rather than obligatory; an archaic dual survives in conventionalized natural-pair nouns
 - Dedicated verbal applicatives eliminated
 - COM `-me` has a core association/accompaniment reading with contextual instrumental, benefactive, and malefactive extensions; `i-` marks the benefactive directional construction and `a-` marks the malefactive directional construction
-- Restricted GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
+- Restricted but productive GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
 - LOC + verbal direction has two distinct constructions: ALL (`O-te i-VERB`) and DAT-like (`O-te i-(LOCAL/NLOC)-VERB`); NLOC DAT-like is zero-marked and therefore segmentally identical to ALL
-- Converbs are nominalization + case; same-subject/switch-reference unresolved
-- Participles `-ri`, `-na`, `-mu` remain ANALYZED
+- Converbs are nominalization + case; same-subject continuity is unmarked and overt GEN-marking marks switch-reference
+- Participles `-ri`, `-na`, `-mu` are productive agentive, patientive, and resultative forms
 - `-nu` nominalizer; `keranu`, `keranka`, `kerande` working family
 
 ### Syntax
 - Declarative SOV
 - Attributive modifiers precede nouns
 - Stative predicate follows subject
-- Active-stative / Split-S analysis under testing
+- Active-stative / Split-S: 1st/2nd-person S is agentive; 3rd-person S is conditioned by animacy and volitionality
 - Established pronouns include `ne`, `se`, `er`, `men`, `sen`, `en`; ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, `enku`
 - Questions use verbal `-y-`
-- Participial relatives precede the noun; finite relative clauses follow the noun
-- Converbs and nominalized clauses are intended primary clause-combining strategy
-- Independent adposition system unresolved
-- Genitive position unresolved
+- Participial relatives precede the noun; finite relative clauses follow the noun and use a gap
+- Converbs and nominalized clauses are the primary strategy for subordination and clause chaining
+- Independent coordination is primarily juxtaposed, with a small secondary conjunction class
+- A small independent postposition class may coexist with case morphology
+- GEN-marked possessors precede the head noun
 
 ## Morphology and syntax resolution — 2026-09-17
 
