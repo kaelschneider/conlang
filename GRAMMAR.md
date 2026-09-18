@@ -597,6 +597,14 @@ For the `CVC + C → CVCC` pathway, the added consonant is drawn from a restrict
 
 The set is a generation prior, not a claim that every listed consonant is a synchronically productive suffix. The added consonant may acquire weak functional associations statistically, but no consonant is assigned a fixed one-to-one derivational meaning. Historical associations may later account for recurring distributions.
 
+### Directional semantics in lexical generation
+
+Root generation must account for the independent semantic contribution of verbal direction. `i-` expresses movement toward/goalward and `a-` movement away/sourceward, so roots should not be selected solely for an English gloss when a directional contrast can supply a more natural lexical organization.
+
+Prefer roots whose semantic frame combines productively with direction. In particular, a general transfer relation is more useful than a root whose lexical meaning already fixes one endpoint relation such as GIVE: a transfer root can yield toward-recipient, away-source, or neutral transfer readings through `i-`, `a-`, or zero direction. Likewise, motion-oriented roots should leave directional meaning available for composition rather than redundantly lexicalizing a single direction.
+
+During candidate-family generation, test semantically central roots with at least the neutral, `i-`, and `a-` directional frames where the root's valency permits them. Penalize roots that duplicate a productive directional construction unless lexicalization or semantic specialization provides a plausible historical motivation. This is a lexical-generation heuristic, not a new rule of synchronic morphology.
+
 ### Candidate-family generation and lexicalization
 
 The generator should normally produce approximately 2–4 potential derivatives per root. These are candidates, not automatic lexical entries.
