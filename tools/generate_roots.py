@@ -687,20 +687,6 @@ def generate_candidates(
 
     while len(candidates) < target and attempts < max_attempts:
         attempts += 1
-        remaining_shapes = []
-        remaining_shape_weights = []
-        current_by_shape = defaultdict(int)
-        for candidate in candidates:
-            current_by_shape[candidate["root_shape"]] += 1
-        domain_bias = config["phonology"].get("domain_shape_bias", {}).get(node.domains[0], {})
-        for shape, target_count in shape_targets.items():
-            remaining = target_count - current_by_shape[shape]
-            if remaining > 0:
-                remaining_shapes.append(shape)
-                remaining_shape_weights.append(
-                    remaining * float(domain_bias.get(shape, 1.0))
-                )
-        shape = random_weighted(rng, remaining_shapes, remaining_shape_weights)
 
         weights = []
         for family, base_weight in zip(families, family_weights_base):
@@ -719,6 +705,24 @@ def generate_candidates(
         ]
         family = random_weighted(rng, eligible_families, eligible_weights)
         node = nodes[family["center"]]
+
+        # Apply the small semantic-domain shape bias only after the selected
+        # semantic center is known; global shape targets remain the constraint.
+        domain_bias = config["phonology"].get("domain_shape_bias", {}).get(node.domains[0], {})
+        remaining_shapes = []
+        remaining_shape_weights = []
+        current_by_shape = defaultdict(int)
+        for candidate in candidates:
+            current_by_shape[candidate["root_shape"]] += 1
+        for shape, target_count in shape_targets.items():
+            remaining = target_count - current_by_shape[shape]
+            if remaining > 0:
+                remaining_shapes.append(shape)
+                remaining_shape_weights.append(
+                    remaining * float(domain_bias.get(shape, 1.0))
+                )
+        shape = random_weighted(rng, remaining_shapes, remaining_shape_weights)
+
         features = set(node.features)
 
         # Two-step families inherit the second target's conceptual feature when available.
