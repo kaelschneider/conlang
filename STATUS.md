@@ -445,23 +445,23 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Stress is rightmost-heavy otherwise penultimate; IPA must mark primary stress with `ˈ`
 
 ### Morphology
-- Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
+- Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
 - Finite verbs require person agreement; agreement follows the semantic agent where one exists and otherwise the stative/agentless S
 - Stem grades: `-a-` NONFINITE, `-e-` LINKING/ATTRIBUTIVE, `-u-` REALIS, `-i-` IRREALIS
 - Direction: `i-` toward, `a-` away, `Ø` neutral; direction is verbal rather than nominal
-- Object slot: `n-` local, `Ø` nonlocal, `s-` reflexive, `r-` reciprocal; LOCAL/NLOC is distinct from nominal LOC (`-te`)
+- Object slot: `n-` 1P/2P, `m-` ordinary 3P animate, `Ø` ordinary 3P inanimate, `v-` obviative, `s-` reflexive, `r-` reciprocal; object indexing is distinct from nominal LOC (`-te`)
 - AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative, and semantically restricted productive `-te-` change-of-state / transformative
 - NEG is the invariant suffix `-su-` after AGENT and before optional DISCOURSE/TENSE/ASPECT; no special NEG allomorphy is established
 - Agreement: `-k-` 1, `-t-` 2, `-p-` 3; person-only
 - Discourse: `-h-` exclamative, `-y-` interrogative
 - Tense: `-i-` nonpast, `-a-` past
 - Aspect: `Ø` imperfective, `-n` perfect
-- Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
+- Seven base nominal cases: ABS, ERG, LOC, CONTAINMENT, POSITION, COM/ASSOCIATIVE, GEN; the former PATH domain is absorbed into COM/ASSOCIATIVE
 - Common-noun number is restricted rather than obligatory; animate nouns have productive `-i` plural and inanimate nouns have productive `-n` plural; an archaic dual survives in conventionalized natural-pair nouns
-- Dedicated verbal applicatives eliminated
+- APPL `-ka-` is a single productive verbal suffix after AUX/DERIV and before AGENT
 - COM `-me` has association/accompaniment as its core reading; instrumental use is contextual and means-like; `i-` + COM yields benefactive when the associated participant benefits, and `a-` + COM yields malefactive when the associated participant is harmed or opposed
-- Restricted but productive GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
-- LOC + verbal direction has two distinct constructions: ALL (`O-te i-VERB`) and DAT-like (`O-te i-(LOCAL/NLOC)-VERB`); NLOC DAT-like is zero-marked and therefore segmentally identical to ALL
+- Restricted productive case stacking: CONTAINMENT→LOC, GEN→CONTAINMENT, and GEN→LOC; reversed order, repeated identical case, and free ERG stacking are not productive
+- LOC + verbal direction has distinct allative and recipient/goal constructions; recipient/goal uses the single object-index slot and may be zero-marked for ordinary 3P inanimate recipients
 - Converbs are nominalization + case; same-subject continuity is unmarked and overt GEN-marking marks switch-reference
 - Participles `-ri`, `-na`, `-mu` are productive agentive, patientive, and resultative forms
 - `-nu` nominalizer; `keranu` is productive, `keranka` is lexicalized, and `kerande` is a partially fossilized lexicalized nominal
@@ -545,7 +545,7 @@ The conditioned historical system is documented in `GRAMMAR.md`, including the r
 
 The earlier regression forms (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms) remain useful diagnostic evidence for historical strata and conditioning rather than being declared exceptions.
 
-Zero-marked verbal objects are canonically NLOC by default; overt LOCAL `n-` is used when discourse accessibility/salience makes the object local. Local `n-` retains the established surface repair `n + C → enC` before consonant-initial verb stems.
+The object slot distinguishes `n-` (1P/2P), `m-` (ordinary 3P animate), `Ø` (ordinary 3P inanimate), and `v-` (OBV), with `s-` and `r-` reserved for reflexive/reciprocal constructions. `n-` retains the established surface repair `n + C → enC` before consonant-initial verb stems.
 
 ## Open questions
 
@@ -602,7 +602,7 @@ Added six examples (`E-0116`–`E-0121`) after testing stacked-case composition 
 - `E-0120` retains **COM → LOC** as an unresolved route/medium test.
 - `E-0121` retains **GEN → CONTAINMENT → LOC** as a recursive three-case test.
 
-The experimental seven-value case inventory is now reflected in `GRAMMAR.md`; the former PATH case is absorbed into COM/ASSOCIATIVE.
+The experimental seven-value case inventory is now canonical in `GRAMMAR.md`; the former PATH case is absorbed into COM/ASSOCIATIVE.
 
 No new lexicon entries were required; the six examples are reference-valid and segmentation/gloss aligned.
 ## TAM interaction and construction-first corpus stress test — 2026-09-17
