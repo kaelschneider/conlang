@@ -507,9 +507,9 @@ Some grammatical functions arise compositionally from existing cases and other e
 |---|---|---|
 | PART | GEN (`-ra`) | partitive use in divisible/mass contexts |
 | ESSIVE | LOC (`-te`) + stative predicate | being at/in a state or location |
-| TRANSLATIVE | ESSIVE + `i-ra` | become / come into a state |
+| TRANSLATIVE | LOC (`-te`) + `i-` + stative predicate | becoming / coming into a state or relation |
 
-The dative-like construction is distinct from the allative: allative describes movement to a location, while the dative-like construction introduces a recipient/goal participant through the verbal object slot. Its LOCAL/NLOC distinction is defined in G-MORPH-12.
+The dative-like construction is distinct from the allative: allative describes orientation toward a location, while the dative-like construction introduces a recipient/goal participant through the verbal object slot. Its object-index realization is defined in G-MORPH-12.
 
 `COMP` is not treated as a separate constructional function here because ordinary accompaniment is the core function of COM and is described under G-MORPH-13.
 
@@ -517,7 +517,7 @@ The dative-like construction is distinct from the allative: allative describes m
 
 Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. Same-subject continuity is the unmarked interpretation. An overt GEN-marked subject inside the nominalized clause marks a switch to a different subject. This gives an explicit switch-reference contrast without a dedicated switch-reference affix.
 
-The case inventory used with nominalized clauses is semantically broad: case meaning remains recognizable, while temporal, causal, purposive, manner/means, and related readings are supplied by constructional context. Independent conjunctions are not the primary strategy for subordination or clause chaining.
+The productive converb relations use LOC, CONTAINMENT, POSITION, and COM/ASSOCIATIVE; case meaning remains recognizable while temporal, causal, purposive, manner/means, and related readings arise from constructional context. Independent conjunctions are not the primary strategy for subordination or clause chaining.
 
 Participles are productive and are formed from the nonfinite/citation stem:
 
