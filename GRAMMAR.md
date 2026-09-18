@@ -519,7 +519,7 @@ Participles are productive and are formed from the nonfinite/citation stem:
 - `keranka` = carrier / person associated with carrying
 - `kerande` = container / place, instrument, or means associated with carrying
 
-`kerande` remains the canonical CONTAINER lexeme. Its historical pathway is `kera + -nu + -te > keranute > kerante > kerande`: the `-nu-te` sequence undergoes vowel syncope (`keranute > kerante`) followed by localized post-nasal voicing (`nt > nd`). The historical contraction was productive in the nominalizer-plus-LOC environment, but the modern form is partially fossilized: `keranu` is an independent lexical nominal, while the final `-de` is a fossilized locative component in `kerande` rather than a freely productive synchronic suffix.
+`kerande` remains the canonical CONTAINER lexeme. Its historical pathway is `kera + -nu + -te > keranute > kerante > kerande`: the `-nu-te` sequence undergoes vowel syncope (`keranute > kerante`) followed by localized post-nasal voicing (`nt > nd`). The historical contraction was productive in the nominalizer-plus-LOC environment, but the modern result is partially fossilized. `keranu` remains a productive nominalization rather than a required lexical entry; `keranka` is a lexicalized carrier noun. The final `-de` in `kerande` preserves a weak semantic association with LOC but is not a freely productive synchronic suffix.
 
 ### G-MORPH-16 — Established complex verbal forms
 
@@ -529,7 +529,7 @@ Participles are productive and are formed from the nonfinite/citation stem:
 
 `ku-t-y-i > kutyi > kutye` demonstrates interrogative `-y-` plus NONPAST `-i`, with phonological repair because `-yi` is prohibited.
 
-`hukka < hu-k-h-a` is an established example of the discourse slot; its exact lexical/derivational interpretation remains tied to the relevant root history.
+`hukka < hu-k-h-a` is a lexicalized verbal derivative preserving productive `-h-` EXCL morphology; its lexicalized meaning is fixed, while the historical segmentation remains transparent enough to identify the discourse exponent.
 
 ## Lexical derivation and generation model — ANALYZED
 
@@ -658,7 +658,7 @@ Agentive S and A take ERG; patientive S and O take ABS. The split therefore has 
 
 Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
 
-Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants: the full form is retained under prominence, while reduction is favored in unstressed or clitic-like use.
+Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants. `sese` is retained under prominence; `sa` is the ordinary unstressed reduction, while `si` represents a more extreme reduction favored in very weak or clitic-like positions.
 
 ### G-SYN-06 — Questions
 
