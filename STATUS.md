@@ -209,13 +209,17 @@ This is distinct from case stacking:
 
 There is one clause-level directional. It can orient all compatible relational frames simultaneously.
 
-A single APPL adds one relational participant. When several relational NPs are present, the preferred analysis is:
+A single APPL adds one relational participant. When several relational NPs are simultaneously eligible, selection proceeds in this order:
 
-1. the OBJ index identifies the participant targeted for indexing;
-2. semantic argument hierarchy resolves competing candidates;
-3. word order/discourse resolves genuine ties.
+1. semantic argument hierarchy selects among different-ranked candidates;
+2. discourse prominence resolves genuine same-rank ties;
+3. linear word order resolves any remaining genuine tie.
 
-Unrestricted APPL-to-all or arbitrary APPL stacking is rejected. Multiple-candidate APPL selection remains unresolved.
+APPL selection precedes OBJ indexing: the selected relational participant is first promoted into the core argument structure, after which the single OBJ slot is assigned.
+
+The current hierarchy remains **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**. A pure relational setting does not become APPL-eligible merely by being a relational NP.
+
+Unrestricted APPL-to-all or arbitrary APPL stacking is rejected. Multiple-candidate APPL selection is now resolved within the experimental model.
 
 ### Experimental stative and aspect interaction
 
@@ -312,8 +316,7 @@ The following have been promoted within this experimental model:
 
 The following remain to be tested before any possible canonical promotion:
 
-1. **multiple-candidate APPL selection**
-2. **OBV/discourse behavior**
+1. **OBV/discourse behavior**
 
 No changes to `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv` are made by this experimental record.
 
@@ -326,6 +329,21 @@ The stacked-case + APPL stress test is resolved within the experimental relation
 - **Multiple-candidate APPL selection remains open.** When multiple relational NPs are simultaneously eligible, the criteria for choosing which one is applied remain to be specified/tested.
 
 The result does not select an APPL exponent and does not promote the experimental relational system into canonical grammar.
+
+## Multiple-candidate APPL selection decision — 2026-09-18
+
+The selection test is resolved within the experimental relational system:
+
+- **Semantic hierarchy is the primary selector.** Among simultaneously eligible relational NPs, the higher-ranked semantic argument is selected.
+- **Discourse prominence resolves genuine same-rank ties.**
+- **Linear word order resolves only remaining genuine ties.**
+- **APPL selection precedes OBJ indexing.** The selected relational participant is promoted first; the resulting core arguments then compete for the single OBJ slot under the established hierarchy.
+
+The working selection hierarchy remains:
+
+> **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**
+
+A relational NP that functions only as an event setting/domain is not automatically APPL-eligible.
 
 ## 10-question phonological recovery audit — 2026-09-17
 
