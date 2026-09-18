@@ -277,7 +277,7 @@ The language has compact, consonant-heavy morphology with historically fused/red
 
 Finite verbs follow:
 
-`(DIRECTION) (IMPERATIVE) (OBJECT) STEM (AUX/DERIV) VOICE APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
+`(DIRECTION) (IMPERATIVE) (OBJECT) STEM (AUX/DERIV) VOICE APPL AGR (NEG) (DISCOURSE) TENSE (ASPECT)`
 
 NEG is the invariant suffix `-su-` in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. It is a dedicated polarity exponent (`NEG`). Negation does not alter stem grade, direction, object status, or the positions of discourse, tense, or aspect.
 
@@ -369,9 +369,9 @@ The hierarchy is evaluated only over participants that are actually eligible for
 
 With stative predicates, APPL is available only where the predicate independently licenses an affected participant. Direction and aspect remain independent of APPL.
 
-APPL follows the complete AUX/DERIV material and precedes AGENT:
+APPL follows the complete AUX/DERIV material and precedes finite person agreement:
 
-`STEM (AUX/DERIV) APPL AGENT`
+`STEM (AUX/DERIV) APPL AGR`
 
 No APPL-specific allomorphy is currently established.
 
@@ -381,9 +381,11 @@ The productive passive voice is marked by `-na-` in a dedicated VOICE slot after
 
 PASS promotes the lexical patient/theme to the clause's ABS S argument. The promoted patient controls ordinary person agreement under the normal active-stative / Split-S alignment. The former agent is demoted out of the core argument structure and may be omitted or expressed as a COM-marked NP. The passive patient is therefore not represented by the ordinary object-index slot.
 
-The initial productive template is:
+PASS does not reset or bypass ordinary stem-grade selection: a finite passive uses the normal stem grade selected by the clause. For example, HOLD uses the REALIS stem `ku` in ordinary realis finite forms, so its basic passive is `ku-na-p-i` (`kunapi`), while the corresponding IRREALIS form is `ki-na-p-i` (`kinapi`).
 
-`STEM (AUX/DERIV) VOICE APPL AGENT`
+The voice operation therefore occupies only the VOICE slot in the ordinary finite template:
+
+`STEM (AUX/DERIV) VOICE APPL AGR (NEG) (DISCOURSE) TENSE (ASPECT)`
 
 A passive clause normally has no indexed object. PASS + APPL interaction is not yet established as an independent productive combination; it remains a targeted stress-test case rather than an automatic extension of either rule.
 
@@ -807,7 +809,7 @@ Content questions use the unified interrogative family described in G-SYN-15; th
 
 ### G-SYN-07 — Negation
 
-Negation is verbal morphology in the right-edge inflectional zone. Its slot is after AGENT (ordinary agreement or impersonal agreement) and before optional DISCOURSE, TENSE, and ASPECT. The exponent is invariant `-su-`; it has no negative stem grade or special agreement/tense allomorphy.
+Negation is verbal morphology in the right-edge inflectional zone. Its slot is after AGR (ordinary person agreement or impersonal agreement) and before optional DISCOURSE, TENSE, and ASPECT. The exponent is invariant `-su-`; it has no negative stem grade or special agreement/tense allomorphy.
 
 ### G-SYN-08 — Relative clauses
 
@@ -815,7 +817,7 @@ Participial relatives precede the noun; finite relative clauses follow the noun.
 
 ### G-SYN-09 — Clause combining
 
-Converbs and nominalized clauses are the primary strategy for subordination and clause chaining. Same-subject continuity is unmarked; an overt GEN-marked subject in the nominalized clause marks switch-reference. Case meanings remain broadly polyfunctional across converbial relations.
+Converbs and nominalized clauses are the primary strategy for subordination and clause chaining. Same-subject continuity is unmarked; an overt GEN-marked subject in the nominalized clause marks switch-reference. Case meanings remain broadly polyfunctional across converbial relations. There is no dedicated verbal CONJ stem grade or inflectional CONJ suffix; the dependent morphology is supplied by ordinary nominalization plus case.
 
 ### G-SYN-10 — Adpositions
 
@@ -827,7 +829,7 @@ GEN-marked possessors precede the head noun and participate in the general preno
 
 ### G-SYN-12 — Coordination
 
-Independent clauses are normally coordinated by juxtaposition. A small closed set of conjunctions is available where overt coordination is useful, especially for contrast, additive linkage, or discourse clarity. Conjunctions are secondary to juxtaposition and are not the primary mechanism for subordination.
+Independent clauses are normally coordinated by juxtaposition. A small closed set of conjunctions is available where overt coordination is useful, especially for contrast, additive linkage, or discourse clarity. Conjunctions are secondary to juxtaposition and are not the primary mechanism for subordination. These conjunctions are lexical/syntactic coordinators, not a verbal CONJ inflectional category; no special CONJ stem or suffix is established.
 
 ### G-SYN-13 — Information structure
 
@@ -945,7 +947,7 @@ A superlative uses the same system with a plural or otherwise set-valued standar
 
 The standard does not become an indexed object merely because it is the comparison standard. APPL, if ever combined with comparison, must be separately licensed; comparison itself does not trigger APPL promotion.
 
-Comparison remains compatible with the ordinary finite morphology of the gradable predicate. Since property concepts are verbal in the current system, the same comparison architecture applies across the gradable predicate inventory without introducing an adjective-specific inflectional paradigm.
+Comparison remains compatible with the ordinary finite morphology of the gradable predicate. The same COM + direction relation may also occur inside an ordinary nominalized/converbial dependent clause: nominalization plus case supplies the dependent morphology, while comparison itself remains unchanged. No comparative-dependent or CONJ exponent is added. Since property concepts are verbal in the current system, the same comparison architecture applies across the gradable predicate inventory without introducing an adjective-specific inflectional paradigm.
 
 
 ### G-SYN-20 — Passive voice
@@ -954,7 +956,9 @@ The productive passive promotes the lexical patient/theme to ABS S and demotes t
 
 The basic passive pattern is:
 
-`PATIENT-ABS (AGENT-COM) STEM-PASS-AGREEMENT-TENSE (ASPECT)`
+`PATIENT-ABS (AGENT-COM) STEM (AUX/DERIV) PASS APPL AGR (NEG) (DISCOURSE) TENSE (ASPECT)`
+
+The stem uses the normal finite grade for the clause; PASS itself does not force the citation/nonfinite form.
 
 The agent is optional. When overt, it is expressed with COM/ASSOCIATIVE `-me`, yielding an agent-like instrumental/associative interpretation. No separate agentive case is introduced.
 
