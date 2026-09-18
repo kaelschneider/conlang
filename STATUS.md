@@ -1153,3 +1153,19 @@ The selected strategy is implemented and stress-tested:
 - No dedicated scope morpheme is introduced.
 
 Matched examples: **E-0222–E-0223**.
+
+## Content-question system — 2026-09-18
+
+The content-question architecture is now implemented:
+
+- unified interrogative family: `ha` WHO/person-animate, `he` WHAT/non-person entity, `hu` circumstance;
+- ordinary nominal case morphology applies directly to WH expressions;
+- WH expressions remain in situ by default;
+- verbal `-y-` remains the general interrogative clause marker for both polar and content questions;
+- `he-te` = WHERE;
+- `hu-te` = WHEN;
+- `hu-me` = HOW;
+- `hu-se` = WHY;
+- no dedicated WH case paradigm is introduced.
+
+Active probes: **E-0224–E-0230**. The family is visually unified while remaining compositional: WH root identifies the interrogative domain; ordinary case identifies the relational interpretation.
