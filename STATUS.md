@@ -41,8 +41,8 @@ Both persistent branches were checked after the recent relational, corpus, synta
 **`developmental`**
 
 - 98 lexical rows
-- 258 example rows
-- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 128 experimental, 115 deprecated
+- 268 example rows
+- example status distribution: 9 stable, 3 analyzed, 3 unresolved, 138 experimental, 115 deprecated
 - no duplicate IDs
 - no broken lexical references
 - no broken grammar references
@@ -83,6 +83,7 @@ The current `developmental` grammar is organized around:
 - finite speech complements as zero-complementizer finite ABS content clauses, with optional LOC addressees
 - comparison as COM-marked standard + verbal direction on gradable predicates, including equative, superior, inferior, and set-based superlative readings
 - passive as finite `-na-` voice, promoting the patient to ABS S and optionally demoting the agent to COM
+- PASS + APPL as a productive composition: PASS promotes the patient to ABS S and agreement control; APPL independently promotes one remaining eligible relational participant to the single object-index slot; the existing APPL hierarchy and tie-break rules remain unchanged
 
 The relational system is fully integrated into the current `developmental` description, but remains developmental until independently promoted to `main`.
 
@@ -163,29 +164,30 @@ The three remaining independent-syntax gaps were completed as working developmen
 - The agent is optional; when overt, it is COM-marked and therefore demoted from core argument structure.
 - The promoted passive patient is not represented in the ordinary object-index slot.
 - Formal identity between passive `-na-` and patientive participle `-na` is retained as a naturalistic morphological relationship, but the two functions remain distinct synchronically.
-- PASS + APPL remains a targeted interaction test rather than an established productive combination.
+- PASS + APPL is now a settled productive composition, supported by matched recipient, beneficiary/maleficiary, hierarchy, additional-relation, inanimate-index, tie-break, and AUX/DERIV probes.
 
-These are reconciled developmental analyses, not yet promoted to `main`. The selected constructional choices are settled for the current developmental grammar; PASS + APPL remains explicitly unresolved rather than being promoted by extrapolation.
+These are reconciled developmental analyses, not yet promoted to `main`. The selected constructional choices are settled for the current developmental grammar, including PASS + APPL; the broader voice system remains a future question beyond this passive composition.
 
 ### Validation checkpoint — 2026-09-18
 
 The reconciled syntax layer was checked against the current repository data:
 
-- 258 example rows are present in `EXAMPLES.tsv`, with IDs remaining unique.
-- The E-0242–E-0258 syntax examples have ten TSV fields, no surface-form hyphens, primary stress in IPA, and grammar/lexical references resolving to existing sections and entries.
+- 268 example rows are present in `EXAMPLES.tsv`, with IDs remaining unique.
+- The E-0242–E-0269 syntax examples have ten TSV fields, no surface-form hyphens, primary stress in IPA, and grammar/lexical references resolving to existing sections and entries.
 - E-0251–E-0254 were reconciled so passive finite forms use the ordinary REALIS stem `ku` rather than the nonfinite stem `ka`.
 - E-0255 tests comparison + IRREALIS; E-0256 tests comparison inside ordinary nominalized/dependent morphology; E-0257 tests passive + IRREALIS; E-0258 tests passive coordination without any CONJ inflection; E-0259 tests PASS + AUX/DERIV ordering.
+- E-0260–E-0269 test PASS + APPL across LOC recipient, overt agent, COM benefactive/malefactive, APPL hierarchy, reversed order, additional relations, inanimate indexing, same-rank tie-breaking, and PASS + APPL + AUX/DERIV.
 - `G-MORPH-06B`, `G-SYN-18`, `G-SYN-19`, and `G-SYN-20` are unique grammar-section identifiers.
 - No lexical additions were required; all new probes reuse established roots and lexemes.
 - Full runtime project validation remains separate from this static checkpoint because the repository's current workflow does not provide a general validation job on `developmental`.
 
 ## Open questions
 
-The settled relational architecture and the three completed syntax analyses should not be reopened without contradictory evidence. The selected speech, comparison, dependency, and passive analyses are reconciled; only PASS + APPL remains an explicit voice-interaction question.
+The settled relational architecture and the completed syntax analyses should not be reopened without contradictory evidence. The selected speech, comparison, dependency, passive, and PASS + APPL analyses are reconciled. Remaining voice work concerns broader cross-domain stress tests rather than the basic PASS + APPL interaction.
 
 Current open work is concentrated in:
 
-1. PASS + APPL interaction and other cross-domain voice stress tests
+1. Other cross-domain voice stress tests beyond the now-settled PASS + APPL composition
 2. whether a small independent adposition class should be developed
 3. lexical coverage for NAME and FILL/LOAD
 4. runtime evaluation of generated-root output and parameter tuning based on observed distributions
