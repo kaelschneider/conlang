@@ -175,16 +175,28 @@ Case stacking is restricted and compositional. The working principle is:
 
 > **Inner case constructs a relational domain; outer case relates that constructed domain to something else.**
 
-Promoted productive stacks:
+Promoted productive core after the stacking stress test:
 
-| Stack | Function |
-|---|---|
-| **CONTAINMENT → LOC** | locate a region/place within the bounded domain |
-| **POSITION → LOC** | locate a positional/configurational relation |
-| **COM(PATH/MEDIUM) → LOC** | locate a point/event along or via a route/medium |
-| **GEN → outer spatial/relational case** | a genitive nominal relation becomes the referent of a higher relation |
+| Stack | Function | Status |
+|---|---|---|
+| **CONTAINMENT → LOC** | locate a region/place within the bounded domain | promoted |
+| **GEN → CONTAINMENT** | construct a bounded domain belonging to/defined by X | promoted |
+| **GEN → LOC** | locate something in/at X's domain | promoted |
 
-Repeated identical cases are normally redundant and are not promoted. ERG does not freely stack.
+The promotion is structural. The experimental `STATUS.md` inventory still conflicts with the case inventory in `GRAMMAR.md` (`GEN = -ra` here versus `GEN = -se` and `PATH = -ra` there); that conflict remains unresolved. Corpus forms therefore follow `GRAMMAR.md`'s currently authoritative surface inventory rather than silently resolving the discrepancy.
+
+Retained experimental tests:
+
+| Stack | What it tests | Status |
+|---|---|---|
+| **POSITION → LOC** | locating a positional/contact configuration | experimental |
+| **COM → LOC** | locating a point/event along a route or medium | experimental |
+| **GEN → CONTAINMENT → LOC** | recursive compositional stacking | experimental |
+| reversed case order | whether stacking is semantically ordered rather than freely permutable | unresolved test |
+| repeated identical case | whether formally possible repetition has any productive meaning | unresolved test |
+| **ERG** stacking | whether core-agent marking can participate in nested relations | unresolved test |
+
+Repeated identical cases are not promoted; unrestricted stacking remains unsupported. ERG does not freely stack.
 
 ### Experimental multiple relational NPs and scope
 
@@ -300,9 +312,8 @@ The following have been promoted within this experimental model:
 
 The following remain to be tested before any possible canonical promotion:
 
-1. **stacked case + directional**
-2. **stacked case + APPL**
-3. **OBV/discourse behavior**
+1. **stacked case + APPL**
+2. **OBV/discourse behavior**
 
 No changes to `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv` are made by this experimental record.
 
