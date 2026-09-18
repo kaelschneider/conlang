@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Relational grammar integrated and matrix-tested; lexicon semantic audit and first construction-first corpus rebuild completed; cultural semantic profile adopted for the inherited-root generator; active work is seeded generator validation, lexical valency/construction coverage, and independent syntax validation
+**Phase:** Relational grammar integrated and matrix-tested; lexicon semantic audit and first construction-first corpus rebuild completed; cultural semantic profile adopted; inherited-root shape architecture refined; active work is seeded generator validation, lexical valency/construction coverage, and independent syntax validation
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -1097,3 +1097,18 @@ The next independent syntax layer is now constrained by the user's selected arch
 - Modal scope is expected to be compositional: modality scopes over negation by default, while inverse scope remains available where independently licensed.
 
 Two implementation details remain pending consultation: imperative agreement behavior and the exact structural position/form inventory of modal particles/auxiliaries.
+
+## Inherited-root shape architecture refinement — 2026-09-18
+
+The inherited-root generator now uses the adopted mono-/disyllabic shape architecture selected in the five-question refinement:
+
+- explicit primary shapes: `V, C, CV, VC, CVC, VCV, CVCV`;
+- global base distribution: `0.25 / 0.50 / 2.00 / 2.00 / 15.25 / 8.00 / 72.00%`;
+- short-root core: 20% at the default 1,600-root scale;
+- small semantic-domain shape biases are allowed without replacing the global distribution;
+- `CVCVC` is the only explicit emergency fallback when the target exceeds primary-shape capacity;
+- `h/j` are excluded from every configured syllable-coda position;
+- no silently invented fallback shape is permitted.
+
+This is a lexical-root architecture change and is therefore reflected in both `GRAMMAR.md` and the generator configuration. `CVCV` must be interpreted as a genuine inherited root shape when it is a root candidate, while `CVC + stem vowel → CVCV` remains an independent morphological process.
+
