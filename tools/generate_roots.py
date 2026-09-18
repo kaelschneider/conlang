@@ -24,7 +24,7 @@ from typing import Any
 
 import yaml
 
-GENERATOR_VERSION = "0.1.0"
+GENERATOR_VERSION = "0.1.2"
 
 
 @dataclass(frozen=True)
@@ -60,12 +60,22 @@ def require_keys(data: dict[str, Any], keys: list[str], label: str) -> None:
         raise ValueError(f"{label}: missing required keys: {', '.join(missing)}")
 
 
-def read_tsv_forms(path: Path) -> set[str]:
+def read_tsv_forms(path: Path, config: dict[str, Any]) -> set[str]:
+    """Read lexical forms and normalize project orthography to phonological symbols."""
+    reverse_orthography = {
+        orth: phoneme
+        for phoneme, orth in config["phonology"]["orthography"].items()
+    }
     with path.open("r", encoding="utf-8", newline="") as fh:
         reader = csv.DictReader(fh, delimiter="\t")
         if "form" not in (reader.fieldnames or []):
             raise ValueError(f"{path}: missing 'form' column")
-        return {row["form"].strip() for row in reader if row.get("form", "").strip()}
+        forms = set()
+        for row in reader:
+            form = row.get("form", "").strip()
+            if form:
+                forms.add("".join(reverse_orthography.get(ch, ch) for ch in form))
+        return forms
 
 
 def read_grammar(path: Path) -> str:
@@ -100,9 +110,18 @@ def validate_config(config: dict[str, Any]) -> None:
     if abs(sum(shapes.values()) - 1.0) > 1e-9:
         raise ValueError("root-shape weights must sum to 1.0")
     excluded = config["phonology"]["root_final_exclude"]
-    for shape in ("VC", "CVC"):
-        if set(excluded.get(shape, [])) - set(config["phonology"]["consonants"]):
+    for shape, phonemes in excluded.items():
+        if set(phonemes) - set(config["phonology"]["consonants"]):
             raise ValueError(f"unknown final-exclusion phoneme in {shape}")
+    primary_shapes = set(shapes)
+    fallback_shapes = config["phonology"].get("root_shape_fallbacks", [])
+    if len(set(fallback_shapes)) != len(fallback_shapes):
+        raise ValueError("root_shape_fallbacks must not contain duplicates")
+    if primary_shapes.intersection(fallback_shapes):
+        raise ValueError("root_shape_fallbacks must be distinct from configured root_shapes")
+    for shape in [*primary_shapes, *fallback_shapes]:
+        if not shape or any(symbol not in {"C", "V"} for symbol in shape):
+            raise ValueError(f"unsupported root-shape skeleton: {shape!r}")
     if config["sound_symbolism"]["deterministic_mapping_forbidden"] is not True:
         raise ValueError("deterministic sound symbolism must remain forbidden")
     profile = config["cultural_profile"]
@@ -433,29 +452,22 @@ def sound_symbolic_score(form: str, semantic_features: set[str], config: dict[st
     return score / applicable
 
 
-def generate_forms_for_shape(shape: str, rng: random.Random, config: dict[str, Any], count: int) -> list[str]:
+def legal_form_pool(shape: str, config: dict[str, Any]) -> set[str]:
+    """Enumerate all legal phonological forms for a configured C/V skeleton."""
+    import itertools
+
     vowels = list(config["phonology"]["vowels"])
     consonants = list(config["phonology"]["consonants"])
-    weights = config["phonology"]["phoneme_weights"]
-    forms: list[str] = []
-    for _ in range(count):
-        if shape == "C":
-            forms.append(random_weighted(rng, consonants, [weights[c] for c in consonants]))
-        elif shape == "VC":
-            allowed_final = [c for c in consonants if c not in config["phonology"]["root_final_exclude"]["VC"]]
-            forms.append(
-                random_weighted(rng, vowels, [weights[v] for v in vowels])
-                + random_weighted(rng, allowed_final, [weights[c] for c in allowed_final])
-            )
-        elif shape == "CVC":
-            allowed_final = [c for c in consonants if c not in config["phonology"]["root_final_exclude"]["CVC"]]
-            forms.append(
-                random_weighted(rng, consonants, [weights[c] for c in consonants])
-                + random_weighted(rng, vowels, [weights[v] for v in vowels])
-                + random_weighted(rng, allowed_final, [weights[c] for c in allowed_final])
-            )
-        else:
-            raise ValueError(f"unsupported root shape: {shape}")
+    choices = [consonants if symbol == "C" else vowels for symbol in shape]
+    if any(not choice for choice in choices):
+        raise ValueError(f"no phonemes available for root shape {shape!r}")
+
+    excluded = set(config["phonology"]["root_final_exclude"].get(shape, []))
+    forms: set[str] = set()
+    for parts in itertools.product(*choices):
+        if shape.endswith("C") and parts[-1] in excluded:
+            continue
+        forms.add("".join(parts))
     return forms
 
 
@@ -465,17 +477,18 @@ def choose_root_form(
     rng: random.Random,
     config: dict[str, Any],
     used_forms: set[str],
+    legal_forms: set[str],
     candidate_pool_size: int = 32,
 ) -> str:
-    candidates = []
-    attempts = 0
-    while len(candidates) < candidate_pool_size and attempts < candidate_pool_size * 5:
-        attempts += 1
-        form = generate_forms_for_shape(shape, rng, config, 1)[0]
-        if form not in used_forms and form not in candidates:
-            candidates.append(form)
-    if not candidates:
+    available = list(legal_forms - used_forms)
+    if not available:
         raise RuntimeError(f"phonological space exhausted for shape {shape}")
+    if len(available) > candidate_pool_size:
+        candidates = rng.sample(available, candidate_pool_size)
+    else:
+        rng.shuffle(available)
+        candidates = available
+
     effect = float(config["sound_symbolism"]["maximum_effect_on_rank"])
     scored = []
     for form in candidates:
@@ -490,9 +503,44 @@ def orthographic(form: str, config: dict[str, Any]) -> str:
     return "".join(mapping.get(ch, ch) for ch in form)
 
 
-def allocate_shape_targets(total: int, config: dict[str, Any]) -> dict[str, int]:
-    return largest_remainder_counts(total, config["phonology"]["root_shapes"])
+def allocate_shape_targets(
+    total: int,
+    config: dict[str, Any],
+    used_forms: set[str],
+) -> tuple[dict[str, int], dict[str, int]]:
+    """Allocate configured targets, cap finite shapes, then fill from fallback shapes."""
+    configured_targets = largest_remainder_counts(total, config["phonology"]["root_shapes"])
+    targets: dict[str, int] = {}
+    remaining = 0
 
+    all_shapes = [
+        *config["phonology"]["root_shapes"].keys(),
+        *config["phonology"].get("root_shape_fallbacks", []),
+    ]
+    capacities = {
+        shape: len(legal_form_pool(shape, config) - used_forms)
+        for shape in all_shapes
+    }
+
+    for shape, requested in configured_targets.items():
+        assigned = min(requested, capacities[shape])
+        targets[shape] = assigned
+        remaining += requested - assigned
+
+    for shape in config["phonology"].get("root_shape_fallbacks", []):
+        if remaining <= 0:
+            break
+        assigned = min(remaining, capacities[shape])
+        targets[shape] = assigned
+        remaining -= assigned
+
+    if remaining:
+        raise RuntimeError(
+            "phonological space exhausted before reaching target; "
+            f"{remaining} roots remain after capacity-aware shape allocation"
+        )
+
+    return targets, configured_targets
 
 def quantile_bucket(value: float, buckets: list[dict[str, Any]]) -> dict[str, Any]:
     for bucket in buckets:
@@ -602,11 +650,18 @@ def generate_candidates(
     if not families:
         raise ValueError("semantic graph produced no family seeds")
 
-    shape_targets = allocate_shape_targets(target, config)
     domain_counts: dict[str, int] = defaultdict(int)
     used_forms = set(existing_forms)
     candidates: list[dict[str, Any]] = []
     family_counts: dict[str, int] = defaultdict(int)
+
+    shape_targets, configured_shape_targets = allocate_shape_targets(
+        target, config, used_forms
+    )
+    shape_form_pools = {
+        shape: legal_form_pool(shape, config)
+        for shape in shape_targets
+    }
 
     family_sizes = plan_family_sizes(families, centrality, config, target, rng)
     family_remaining = dict(family_sizes)
@@ -649,7 +704,9 @@ def generate_candidates(
         for neighbor_id in family["neighbors"]:
             features.update(nodes[neighbor_id].features)
 
-        form = choose_root_form(features, shape, rng, config, used_forms)
+        form = choose_root_form(
+            features, shape, rng, config, used_forms, shape_form_pools[shape]
+        )
         used_forms.add(form)
         ortho = orthographic(form, config)
 
@@ -716,6 +773,9 @@ def generate_candidates(
         },
         "architecture": {
             "root_shapes": config["phonology"]["root_shapes"],
+            "realized_shape_targets": shape_targets,
+            "configured_shape_targets": configured_shape_targets,
+            "root_shape_fallbacks": config["phonology"].get("root_shape_fallbacks", []),
             "root_final_exclude": config["phonology"]["root_final_exclude"],
             "semantic_pressure_weights": config["semantic_pressure"],
             "semantic_graph_nodes": len(nodes),
@@ -796,7 +856,7 @@ def main() -> int:
 
     existing_forms = set()
     if config["validation"]["reject_existing_lexicon_collisions"]:
-        existing_forms = read_tsv_forms(args.lexicon)
+        existing_forms = read_tsv_forms(args.lexicon, config)
 
     nodes, edges, _ = parse_graph(config)
     result = generate_candidates(config, nodes, edges, args.seed, target, existing_forms)
