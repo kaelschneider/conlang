@@ -5,6 +5,30 @@ Maintenance guide for contributors and coding agents. Not part of the language d
 
 ## Branch policy
 
+## Generator/tooling policy
+
+The repository may contain a small `tools/` directory for reproducible generation and validation utilities that support the language-development workflow.
+
+The inherited-root lexical generator is maintained as:
+
+- `tools/generate_roots.py` — executable generator for inherited-root semantic/phonological candidate generation
+- `tools/root_generation.yaml` — versioned parameter profile and language-specific generator inputs
+
+These files are **development tooling and configuration**, not authoritative grammar or lexicon sources. Their outputs must not silently overwrite `LEXICON.tsv`, `GRAMMAR.md`, or `EXAMPLES.tsv`.
+
+### Generator maintenance rules
+
+- `tools/generate_roots.py` must consume structured inputs rather than scrape or infer arbitrary grammar rules from prose.
+- Language-specific hard constraints must remain reconcilable with `GRAMMAR.md`; conflicting assumptions must cause validation failure or an explicitly documented warning, not silent fallback to obsolete values.
+- Probabilistic parameters belong in `tools/root_generation.yaml` rather than being scattered as unexplained constants in the generator.
+- Generation must accept an explicit random seed and record generator version, architecture version, input-data version, and parameter profile in generated metadata or run output.
+- A fixed seed + unchanged inputs + unchanged generator version/parameter profile must reproduce the same candidate set.
+- Generated roots are experimental candidates by default. They require semantic curation and repository validation before any entry is added to `LEXICON.tsv`.
+- The generator must reject phonologically illegal roots and obvious lexical collisions rather than repairing them silently.
+- Changes to generator hard constraints, parameter semantics, output schema, or architecture inputs require corresponding updates to `STATUS.md` and the applicable validation documentation.
+- Do not introduce generated convenience files or cached outputs into the repository unless explicitly required by the generator workflow; reproducible source inputs and code should remain authoritative.
+- The `tools/` directory may contain supporting generator/validation code only when its purpose is documented and its inputs/outputs are deterministic and reviewable.
+
 This repository uses two persistent development branches:
 
 - `main` — canonical, reconciled project state. Established grammar, lexicon, examples, and documentation belong here.
