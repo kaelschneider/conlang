@@ -316,8 +316,6 @@ The following have been promoted within this experimental model:
 
 The following remain to be tested before any possible canonical promotion:
 
-1. **OBV/discourse behavior**
-
 No changes to `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv` are made by this experimental record.
 
 ## Stacked case + APPL decision — 2026-09-18
@@ -531,7 +529,8 @@ None among the current core grammar decisions. Residual lexical creation/testing
 2. **Completed 2026-09-17:** Test the nominalizer family (`keranu`, `keranka`, `kerande`) with additional examples.
 3. **Completed 2026-09-17:** Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched experimental examples.
 4. **Completed 2026-09-17:** Stress-test the OPEN/CLOSED × F_F/F_B/B_F/B_B historical matrix across all 24 cells and reconcile the attested diagnostic forms.
-5. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
+5. **Completed 2026-09-18:** Stress-test OBV/discourse behavior, including proximate selection, persistence, reassignment, multiple OBV participants, animacy effects, focus/topic interaction, and grammatical-role independence.
+6. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
 
 ## Leipzig valency-frame coverage audit — 2026-09-17
 
