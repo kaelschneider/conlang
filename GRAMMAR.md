@@ -611,6 +611,8 @@ Participles are productive and are formed from the nonfinite/citation stem:
 | `-na` | patientive participle | `PAT.PTCP` |
 | `-mu` | resultative participle | `RES.PTCP` |
 
+In secondary predication, the existing participles are reused rather than creating a dedicated secondary-predicate morphology. Depictive predicates normally use `-ri` when their predicand is construed agentively and `-na` when it is construed patientively. Resultative predicates use `-mu`. These choices reflect the semantic relation of the secondary predicate to its target rather than simply grammatical subject/object status.
+
 `-nu` is the recovered nominalizer. The working derivational family is:
 
 - `keranu` = carrying / carrying event
