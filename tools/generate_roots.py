@@ -552,22 +552,19 @@ def allocate_shape_targets(
         ]
         if not eligible:
             break
-        weights = [
-            max(0.001, float(primary[shape]) * (capacities[shape] - targets[shape]))
-            for shape in eligible
-        ]
-        weight_total = sum(weights)
-        normalized = {
-            shape: weight / weight_total
-            for shape, weight in zip(eligible, weights)
-        }
-        # Deterministic proportional allocation; largest-remainder preserves
-        # the configured short-root bias as far as finite capacities allow.
-        extra_total = min(overflow, sum(capacities[s] - targets[s] for s in eligible))
-        extra = largest_remainder_counts(extra_total, normalized)
-        for shape, amount in extra.items():
-            targets[shape] += amount
-            overflow -= amount
+        # Fill one legal primary slot at a time. This is deliberately simple:
+        # it guarantees that no redistribution step can overshoot a finite
+        # phonological capacity.
+        shape = max(
+            eligible,
+            key=lambda s: (
+                float(primary[s]) * (capacities[s] - targets[s]),
+                float(primary[s]),
+                s,
+            ),
+        )
+        targets[shape] += 1
+        overflow -= 1
 
     # Fallback shapes are an emergency tier: they are considered only after
     # every legal primary form has been exhausted.
