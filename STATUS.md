@@ -221,6 +221,34 @@ The current hierarchy remains **patient/theme > recipient/goal > beneficiary/mal
 
 Unrestricted APPL-to-all or arbitrary APPL stacking is rejected. Multiple-candidate APPL selection is now resolved within the experimental model.
 
+### Experimental converb system — 2026-09-18
+
+The converb test is promoted within the experimental relational system. Converbial clauses continue to be formed by verbal nominalization plus case; the case supplies the subordinate relational frame.
+
+Four case-based converb relations are productive:
+
+| Converb case | Productive relation |
+|---|---|
+| **LOC `-te`** | event situated relative to a spatial/relational frame; supports situative/temporal overlap |
+| **CONTAINMENT `-ci`** | event within a bounded domain; directional forms support entry into or exit from that domain |
+| **POSITION `-ta`** | event in a positional/contact/support configuration |
+| **COM / ASSOCIATIVE `-me`** | association, accompaniment, means, medium, route, or co-participation |
+
+The experimental directional system remains active inside converbal morphology. Direction is therefore expressed on the subordinate verb before nominalization:
+
+> **`DIRECTIONAL–VERB–NMLZ–CASE`**
+
+For each productive converb frame:
+
+- `Ø` = the subordinate event holds in the case-defined relation;
+- `i-` = the subordinate event converges toward / increasingly orients into the case-defined relation;
+- `a-` = the subordinate event diverges from / increasingly orients away from the case-defined relation.
+
+A directional may instead occur only in the finite main clause, and subordinate and main clauses may independently carry directionals. Nominalization does not neutralize the relational-vector contribution of the subordinate verb.
+
+**GEN `-ra` on the nominalized clause is not promoted as a general converb relation.** GEN remains available for the overt subject of a nominalized clause where it marks switch-reference, as established by the nominalization system. Bare ABS nominalization remains available for content/event nominalization rather than functioning as a general converb relation; ERG is likewise not a general converb relation.
+
+The promoted system therefore supports productive LOC, CONTAINMENT, POSITION, and COM converbs, each with independent `Ø / i- / a-` directional combinations. This promotion remains experimental and does not alter canonical `GRAMMAR.md`.
 ### Experimental stative and aspect interaction
 
 The directional system has been promoted beyond physical motion.
