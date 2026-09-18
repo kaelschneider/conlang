@@ -607,11 +607,15 @@ The active corpus has been reconciled with the reorganized seven-value case syst
 
 The active corpus now includes relational, argument-structure, information-structure, causative, participial, converbial, and core syntax coverage. Further construction-first growth continues as targeted valency gaps are discovered.
 
-**5 — Remaining independent syntax gaps — NEXT MAJOR GRAMMATICAL LAYER.**
+**5 — Remaining independent syntax gaps — CURRENT: IMPERSONAL PREDICATES COMPLETE.**
 
-Priority remains:
+The currently resolved sequence is:
 
-`imperative/hortative → modality → content questions → impersonal predicates → secondary predication → finite speech complements → comparison → passive`
+`imperative/hortative → modality → content questions → impersonal predicates`
+
+The next independent syntax targets are:
+
+`secondary predication → finite speech complements → comparison → passive`
 
 These should be designed and tested only after lexical valency distinctions are sufficiently understood.
 
@@ -640,7 +644,7 @@ Results:
 - Core S/A, transitive A–P, locative, source, instrument, surface, reflexive/reciprocal, and recipient/goal patterns are structurally expressible with existing morphology.
 - Recipient/goal frames (`show`, `give`, `send`, `tell`, `ask`) can use LOC plus verbal direction/dative-like object-slot marking while the theme remains an overt ABS NP. The relative ordering of multiple non-subject NPs is not yet established.
 - Experiencer predicates (`like`, `fear`, `smell`, `see`) are expressible, but their choice between ERG experiencer + ABS stimulus and another alignment requires lexical testing; the grammar does not assign all experiencers one universal case.
-- `rain` requires an explicit decision about default 3rd-person agreement on an impersonal finite verb, since finite verbs require person agreement but no dummy subject construction is currently documented.
+- `rain` is now covered by a genuinely subjectless finite construction with dedicated impersonal agreement `-v-`; the construction initially targets weather/ambient predicates and permits ordinary case-marked participants.
 - `talk`, `think about`, `search for`, and similar semantically oblique complements can be lexicalized as ordinary ABS objects or use existing COM/PATH/LOC relations, but the exact lexical selection is not yet established.
 - `say` can use an ABS nominalized complement plus a LOC recipient, but finite speech-complement syntax has not yet been directly tested.
 - `name` can be represented by a recipient/goal analysis (`X-LOC` + `Y-ABS`), but an object-complement naming construction is not yet established.
@@ -688,7 +692,7 @@ Added 39 experimental examples (`E-0083`–`E-0121`).
 - PERFECT combines without special allomorphy after both NONPAST and PAST, and progressive, continuative, habitual, inchoative, and change-of-state morphology remain available with PERFECT. Their semantic compatibility varies by context, but no grammatical incompatibility was found.
 - Additional tests cover NEG + PROGRESSIVE + PERFECT, NEG + INTERROGATIVE + PERFECT, directional TRANSFER, directional-COM benefactive/malefactive readings, the LOCAL-recipient dative-like construction, secondary predication with a resultative participle, content nominalization, case-based temporal subordination, switch-reference, and the newly tested productive/retained stacked-case constructions.
 - The construction-first examples show why the language should not be modeled as English predicate + translated arguments: TRANSFER plus `i-/a-`, case stacking, converbial case choice, and COM direction can organize meanings in ways not captured by one-to-one English lexical glosses.
-- Remaining exact syntax/valency gaps are not papered over: imperative/hortative, modal/necessitative/ability, comparison, passive, content-question syntax, impersonal finite predicates, and fully specified secondary predication/direct-speech syntax still require dedicated design work.
+- Remaining exact syntax/valency gaps are not papered over: comparison, passive, impersonal finite predicate follow-up testing, and fully specified secondary predication/direct-speech syntax still require dedicated design work.
 
 The corpus remains somewhat English-centered because many examples retain English-style event descriptions. Future corpus growth should therefore begin from language-internal construction schemas and semantic contrasts, using English only as a translation/paraphrase layer.
 
@@ -710,7 +714,7 @@ Using `✓` for a construction directly supported by the current grammar, `△` 
 - `△` 86 / 218: structurally possible but not yet canonically specified.
 - `✗` 50 / 218: not currently expressible as that exact construction without adding grammar; most meanings remain paraphrasable.
 
-The principal coverage gaps are imperative/hortative morphology, modal/necessitative/ability constructions, comparative and superlative degree, passive voice, exact content-question syntax, impersonal finite predicates, multiple-complement ordering, nominal/secondary predication, and several spatial/temporal relational constructions. These are testing priorities rather than automatic grammar changes.
+The principal remaining coverage gaps are comparative and superlative degree, passive voice, secondary/nominal predication, exact finite speech-complement syntax, and several lexical/relational edge cases. These are testing priorities rather than automatic grammar changes.
 
 Strongly supported areas include SOV argument structure, ERG/ABS alignment, GEN possession, LOC/SUPER/INE/PATH/COM relations, verbal direction, productive TAM/AUX morphology, reflexive direct objects, participial relatives, finite gap relatives, juxtaposed coordination, switch-reference converbs, and directional recipient/benefactive constructions.
 
@@ -1084,7 +1088,7 @@ The profile does **not** require words for particular cultural items, force one-
 The semantic graph now contains **133 declared nodes and 160 declared relations**. The generator version/architecture/profile identifiers are now `0.2.0`, `2026-09-18.semantic-architecture.v3.root-shape-architecture`, and `default-1600-forest-reciprocal-event-relational-roots-v3`.
 
 
-## Mood and modality architecture — imperative resolved; modality pending exponents — 2026-09-18
+## Mood and modality architecture — resolved — 2026-09-18
 
 The next independent syntax layer is now constrained by the user's selected architecture:
 
@@ -1096,7 +1100,7 @@ The next independent syntax layer is now constrained by the user's selected arch
 - The initial modal semantic inventory is **necessity, possibility, intention/volition, and evidential/epistemic uncertainty**.
 - Modal scope is expected to be compositional: modality scopes over negation by default, while inverse scope remains available where independently licensed.
 
-Two implementation details remain pending consultation: imperative agreement behavior and the exact structural position/form inventory of modal particles/auxiliaries.
+The implementation details are resolved: imperative agreement is suppressed; modal auxiliaries carry ordinary finite morphology while lexical complements remain nonfinite; `hi` is the current broad-scope epistemic/evidential particle.
 
 ## Inherited-root shape architecture refinement — 2026-09-18
 
@@ -1169,3 +1173,15 @@ The content-question architecture is now implemented:
 - no dedicated WH case paradigm is introduced.
 
 Active probes: **E-0224–E-0230**. The family is visually unified while remaining compositional: WH root identifies the interrogative domain; ordinary case identifies the relational interpretation.
+
+## Impersonal finite predicates — 2026-09-18
+
+The impersonal architecture is now implemented and exercised in the active corpus:
+
+- genuinely subjectless finite clauses are allowed;
+- ordinary person agreement is replaced by a dedicated working impersonal marker `-v-`;
+- the initial lexical/semantic class is weather and ambient predicates, with constructional productivity licensed by semantic class;
+- ordinary case-marked NPs remain available as non-controller participants and do not become S;
+- tense, aspect, negation, direction, and other verbal morphology remain structurally independent of impersonal agreement.
+
+Active probes: **E-0231–E-0235**. The working impersonal exponent is explicitly experimental; no historical source is claimed yet.
