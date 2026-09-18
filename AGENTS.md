@@ -151,6 +151,19 @@ After pushing any repository change, re-read `STATUS.md` against the resulting r
 
 Do not treat English sentence lists as the primary generator of example sentences. For corpus growth, begin from the language's own productive construction inventory, semantic relations, discourse contrasts, and valency possibilities; use English only as a translation or approximate semantic label. Prefer matched construction-first sets that reveal what the language packages together or keeps distinct, especially where case, verbal direction, converbial relations, information structure, or lexicalized semantic extension create meanings not predicted by a one-to-one English mapping.
 
+### Lexicon semantic auditing and probe generation
+
+Treat the lexicon as a semantic system rather than a list of English glosses.
+
+- Audit existing roots for semantic center, polysemy, specialization, lexicalization, and constructional neutrality before using them as corpus probes.
+- Do not flatten specialized vocabulary into generic meanings merely to increase constructional coverage.
+- Build separate probe inventories for major open lexical classes, including verbs, nominals, statives/adjectives, and other productive lexical categories. Probe inventories should be semantically balanced across the constructions they are intended to test.
+- Nominal probes must vary referential type and relational behavior; no single artifact such as CONTAINER should become the default object, setting, or relational anchor.
+- Generate category-neutral roots first unless the language has an established category bias; determine lexical-category bias from semantic behavior, derivation, lexicalization, and frequency rather than root shape alone.
+- Use light sound symbolism as a weak probabilistic prior in semantic candidate selection. Sound shape may bias meanings when phonetically and culturally plausible, but it must never impose deterministic sound-to-meaning correspondences or override semantic-family coherence, phonological legality, derivational compatibility, or lexical evidence.
+- Keep neutral probes distinct from diagnostic predicates whose lexical semantics already encode direction, endpoint, transfer, or other target meanings. Diagnostic predicates should be introduced deliberately after the construction has been tested with neutral material.
+- Construction-first corpus growth should expose genuine semantic gaps and should trigger lexical expansion only when the existing probe inventories cannot test a construction cleanly.
+
 ### Naturalism
 
 Prefer interacting systems with plausible acquisition, processing, lexicalization, analogy, and historical development. Rare features are fine when their consequences are coherent. Do not add isolated exotic features to increase typological novelty.
