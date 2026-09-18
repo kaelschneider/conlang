@@ -584,17 +584,23 @@ The following is the current **lexical-generation model** derived from the morph
 
 ### Root inventory
 
-Basic lexical roots prefer three short shapes:
+Inherited lexical roots use a mixed mono-/disyllabic shape system. The base distribution below is global; semantic-domain shape biases may make small local deviations in which semantic centers receive which shapes, while capacity-aware allocation preserves the global target as far as legal capacity permits.
 
-| Root shape | Target frequency |
+| Root shape | Base frequency |
 |---|---:|
-| C | 15% |
-| VC | 25% |
-| CVC | 60% |
+| V | 0.25% |
+| C | 0.50% |
+| CV | 2.00% |
+| VC | 2.00% |
+| CVC | 15.25% |
+| VCV | 8.00% |
+| CVCV | 72.00% |
 
-These percentages are generation preferences rather than an exact requirement for every inventory. Under the current consonant inventory, the short-shape space is finite, so the inherited-root generator uses a capacity-aware expansion layer for the 1,200–2,000-root target: `CVCV` is the first fallback shape, and `CVCVC` is used only when the `CVCV` space is insufficient. These are sequences of ordinary syllables conforming to surface `(C)V(C)`; they do not create a new syllable type.
+Thus, at the default 1,600-root target, **20% of roots are short/monosyllabic shapes** and the remainder are disyllabic. Short forms are deliberately preserved as a compact lexical core rather than exhausted indiscriminately.
 
-The generator caps each short-shape target at its available unique-form capacity and redistributes the remainder to the configured fallback shapes. This avoids duplicate candidates and avoids silently relaxing the phonotactic inventory.
+The inherited-root generator treats `V, C, CV, VC, CVC, VCV,` and `CVCV` as explicit legal root shapes. `CVCV` is a genuine two-syllable inherited root shape here; this is distinct from the separate morphological process `CVC + stem vowel → CVCV`, which produces the same surface sequence from a shorter root.
+
+When the configured target exceeds the capacity of a primary root shape, the generator redistributes only the shortfall into explicitly configured fallback shapes. The current emergency fallback is `CVCVC`, still composed of ordinary `(C)V(C)` syllables. No unconfigured shape is ever introduced silently.
 
 `CVCC` is not an independent root shape. It is derived by adding a consonant to a CVC root:
 
@@ -607,11 +613,14 @@ A stem grade is then added after the root or derived root:
 - `CVC + stem vowel → CVCV`
 - `CVC + C + stem vowel → CVCCV`
 
-The root-shape distribution is a generation target, not a claim that the modern lexicon must exactly match these percentages.
+### Syllable-final phonotactic filter
 
-### Root-final phonotactic filter
+Newly generated roots exclude `h` and `j` from **every syllable-final consonant position**. This is a root-generation constraint, not a universal ban on `h` or `j` in word-final or derived forms.
 
-The lexical generator excludes `h` and `j` from root-final position in generated VC/CVC roots. This is a root-generation constraint, not a statement that `h` or `j` cannot occur word-finally in historical material or in other synchronically derived forms. The existing stable one-segment roots `h` and `j` are retained as established historical roots; the restriction applies to newly generated multi-segment roots.
+For ordinary root shapes, this affects the coda of `VC` and `CVC`. If the emergency `CVCVC` fallback is used, both coda positions are restricted. The two-syllable `CV.CV` and `V.CV` shapes have no syllable-final consonant and therefore impose no additional exclusion.
+
+The established historical one-segment roots `h` and `j` remain unaffected.
+
 
 ### Lexical category and family formation
 
