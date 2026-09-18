@@ -1,8 +1,8 @@
 generator:
   name: inherited-root-generator
-  version: "0.1.0"
-  architecture_version: "2026-09-18.semantic-architecture.v1"
-  parameter_profile: "default-1600"
+  version: "0.1.1"
+  architecture_version: "2026-09-18.semantic-architecture.v2.cultural-profile"
+  parameter_profile: "default-1600-forest-reciprocal-event-relational"
   status_policy: "experimental-candidate"
 
 inventory:
@@ -163,9 +163,123 @@ output:
     - generation_seed
     - generation_version
 
+cultural_profile:
+  name: forest_reciprocal_event_relational
+  status: adopted
+  description: >-
+    Forest-oriented, seasonally mobile, reciprocity-centered, practically
+    experiential, and strongly relational/event-centered. The profile is a
+    soft semantic pressure: it shapes graph salience, relational connectivity,
+    family opportunity, and lexicalization context without imposing vocabulary
+    quotas, grammatical rules, or deterministic lexical meanings.
+  pressure_scale: 0.60
+  weighting:
+    domain: 0.35
+    feature: 0.25
+    node: 0.25
+    relation: 0.15
+  domain_multipliers:
+    living: 1.18
+    physical: 1.12
+    space: 1.18
+    motion_change: 1.16
+    social: 1.20
+    relations: 1.22
+    acquisition: 1.15
+    events: 1.14
+    perception: 1.12
+    cognition: 1.08
+    communication: 1.10
+    making: 1.08
+    food: 1.12
+    qualities: 1.02
+    abstract: 0.98
+  feature_multipliers:
+    animate: 1.06
+    social: 1.12
+    material: 1.06
+    continuity_change: 1.10
+    state: 1.05
+    liquid_substance: 1.08
+    endpoint_fixed: 1.04
+    space: 1.12
+  node_multipliers:
+    forest: 1.35
+    wood: 1.28
+    plant: 1.20
+    animal: 1.16
+    water: 1.22
+    river: 1.24
+    place: 1.18
+    path: 1.20
+    season: 1.16
+    move: 1.14
+    remain: 1.15
+    obtain: 1.14
+    perceive: 1.12
+    see: 1.10
+    hear: 1.10
+    smell: 1.12
+    exchange: 1.26
+    share: 1.24
+    receive: 1.18
+    give: 1.16
+    help: 1.20
+    trust: 1.16
+    join: 1.14
+    meet: 1.14
+    reciprocity: 1.32
+    stewardship: 1.28
+    gathering: 1.22
+    fishing: 1.18
+    cultivation: 1.12
+    craft: 1.14
+    tool: 1.10
+    build: 1.10
+    food: 1.14
+    fire: 1.12
+    seasonal_settlement: 1.18
+  relation_multipliers:
+    social: 1.18
+    relation: 1.20
+    living: 1.15
+    change: 1.12
+    acquisition: 1.16
+    perception: 1.12
+    communication: 1.10
+    state: 1.08
+    material: 1.08
+    space: 1.15
+    time: 1.14
+    origin: 1.10
+    endpoint: 1.06
+  lexicalization_bias:
+    event_process_center_bonus: 1.16
+    relational_polysemy_bonus: 1.14
+    possession_contextualization: 1.12
+    experiential_knowledge_bonus: 1.12
+  worldview:
+    subsistence: [gathering, cultivation, fishing, hunting, craft]
+    settlement: semi_sedentary_seasonally_mobile
+    social_organization: kin_linked_flexible_local_communities
+    possession: contextual_relational
+    time: cyclical_event_based
+    animacy: strong_gradient
+    knowledge: direct_practical_witnessed
+    ontology: relations_processes_over_isolated_entities
+
 semantic_graph:
   nodes:
     - {id: person, label: person/human, domains: [living, social], features: [animate, social], salience: 1.00, frequency: 0.95, cultural: 0.95, grammatical: 0.95}
+    - {id: forest, label: forest/woodland, domains: [living, physical, space], features: [living, material, space], salience: 0.86, frequency: 0.72, cultural: 1.00, grammatical: 0.82}
+    - {id: river, label: river/stream, domains: [physical, space, motion_change], features: [liquid_substance, space, continuity_change], salience: 0.82, frequency: 0.68, cultural: 0.92, grammatical: 0.88}
+    - {id: gathering, label: gathering/collecting, domains: [acquisition, living, events], features: [material, continuity_change], salience: 0.78, frequency: 0.60, cultural: 0.92, grammatical: 0.90}
+    - {id: cultivation, label: cultivation/growing_crops, domains: [living, making, events], features: [living, material, continuity_change], salience: 0.68, frequency: 0.50, cultural: 0.80, grammatical: 0.78}
+    - {id: fishing, label: fishing, domains: [food, living, acquisition], features: [animate, material, continuity_change], salience: 0.66, frequency: 0.48, cultural: 0.82, grammatical: 0.78}
+    - {id: reciprocity, label: reciprocity/mutual_exchange, domains: [social, relations, acquisition], features: [social, continuity_change], salience: 0.84, frequency: 0.64, cultural: 1.00, grammatical: 0.96}
+    - {id: stewardship, label: stewardship/care-for, domains: [social, relations, living], features: [social, state], salience: 0.70, frequency: 0.48, cultural: 0.92, grammatical: 0.88}
+    - {id: craft, label: craft/making_by_hand, domains: [making, material, social], features: [material, impact_manipulation], salience: 0.72, frequency: 0.54, cultural: 0.84, grammatical: 0.86}
+    - {id: seasonal_settlement, label: seasonal_habitation/camp, domains: [space, social, events], features: [space, state], salience: 0.68, frequency: 0.48, cultural: 0.84, grammatical: 0.84}
     - {id: animal, label: animal, domains: [living], features: [animate], salience: 0.92, frequency: 0.88, cultural: 0.75, grammatical: 0.85}
     - {id: plant, label: plant, domains: [living, physical], features: [living, material], salience: 0.88, frequency: 0.80, cultural: 0.80, grammatical: 0.75}
     - {id: growth, label: growth/increase, domains: [living, motion_change], features: [continuity_change], salience: 0.90, frequency: 0.88, cultural: 0.78, grammatical: 0.95}
@@ -303,6 +417,37 @@ semantic_graph:
 
   relations:
     - [person, social, meet]
+    - [forest, ecology, plant]
+    - [forest, ecology, animal]
+    - [forest, material, wood]
+    - [forest, space, place]
+    - [river, material, water]
+    - [river, space, path]
+    - [river, change, move]
+    - [gathering, acquisition, obtain]
+    - [gathering, living, plant]
+    - [gathering, material, food]
+    - [cultivation, living, plant]
+    - [cultivation, making, food]
+    - [fishing, material, water]
+    - [fishing, acquisition, obtain]
+    - [fishing, material, food]
+    - [reciprocity, social, exchange]
+    - [reciprocity, social, share]
+    - [reciprocity, acquisition, give]
+    - [reciprocity, acquisition, receive]
+    - [reciprocity, relation, help]
+    - [stewardship, living, forest]
+    - [stewardship, living, plant]
+    - [stewardship, living, animal]
+    - [stewardship, relation, place]
+    - [craft, making, tool]
+    - [craft, material, wood]
+    - [craft, making, build]
+    - [seasonal_settlement, space, place]
+    - [seasonal_settlement, time, season]
+    - [seasonal_settlement, state, remain]
+    - [seasonal_settlement, change, move]
     - [person, social, trust]
     - [person, social, help]
     - [animal, living, person]
