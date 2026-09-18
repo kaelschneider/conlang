@@ -200,6 +200,14 @@ Results:
 This audit is evidence about constructional coverage, not a promotion of any new lexical valencies or grammatical rules. No new lexicon entries or grammar rules were added.
 
 
+## New-root grammar testing — 2026-09-17
+
+Added 46 experimental examples (`E-0037`–`E-0082`) testing all 50 new roots `L-0037`–`L-0086` in actual grammatical environments. Coverage includes intransitive and transitive predicates, stative predicates, nominal use of category-neutral roots, LOC/INE/SUPER case frames, verbal direction, ordinary COM accompaniment, directional-COM benefactive and malefactive readings, and several provisional valency frames.
+
+All 50 new roots occur in at least one new example. The corpus deliberately retains experimental status where a root's exact lexical valency or semantic complement relation is not yet established, notably experiencer predicates, speech targets, `think about`, and multiple-complement ordering. No new grammatical rule was promoted from these tests.
+
+A stricter IPA pass also corrected finite-form stress so the heavy VC/CVC root syllable receives primary stress under the current rightmost-heavy rule, with directional prefixes remaining unstressed. The complete modified `EXAMPLES.tsv` passed field-count, ID uniqueness, grammar-reference, lexicon-reference, and segmentation/gloss alignment checks.
+
 ## Fiziwig syntax-test audit — 2026-09-17
 
 The 218-sentence Fiziwig/Conlang Syntax Test Cases list was audited against the current grammar. The mirrored list describes itself as a culled set of 218 sentences chosen to test distinct syntactic principles rather than repeated vocabulary patterns.
