@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Relational grammar integrated; lexicon semantic audit completed; neutral probe inventories established; first construction-first corpus rebuild completed; APPL matrix coverage is complete; remaining work is independent syntax coverage, unresolved stacking tests, and lexical family expansion  
+**Phase:** Relational grammar integrated and matrix-tested; lexicon semantic audit and first construction-first corpus rebuild completed; active work is lexical valency/construction coverage and independent syntax validation
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -564,103 +564,52 @@ The object slot distinguishes `n-` (1P/2P), `m-` (ordinary 3P animate), `Ø` (or
 
 ## Open questions
 
-There are no unresolved core parameters among the relational-system decisions already tested. The remaining uncertainties are **integration or construction-level tests**, not reasons to reopen the settled architecture.
+There are no unresolved core parameters among the relational-system decisions already tested. The remaining uncertainties are **lexical or construction-level tests**, not reasons to reopen the settled relational architecture.
 
-The main integration issue is that `GRAMMAR.md` now contains the reorganized seven-value case system and productive APPL `-ka-`, while `EXAMPLES.tsv` still contains examples written against earlier case semantics and therefore requires systematic migration rather than selective patching.
+Current open areas are concentrated in lexical valency and in a small set of independent syntax families. In particular, the corpus still needs targeted evidence for exact speech-complement behavior, naming, filling/loading, material/source relations, and the remaining non-relational clause systems. Genuine lexical gaps are not to be converted into grammatical rules merely to make an English test sentence expressible.
 
 ## Relational-system roadmap — 2026-09-18
 
-The relational system has moved from architectural design into **integration and validation**. The roadmap is now:
+The relational system has moved from architectural design into **validated constructional coverage**. The original roadmap is retained here as a state record, with completed phases updated rather than treated as pending.
 
-**1 — Corpus migration and grammar reconciliation — NEXT.**
+**1 — Corpus migration and grammar reconciliation — COMPLETE.**
 
-Bring `EXAMPLES.tsv` into alignment with the current `GRAMMAR.md` without changing established IDs or inventing new evidence.
-
-Required audit targets:
-
-- replace obsolete GEN/PATH/SUPER/INE analyses with the current seven-value system;
-- identify examples whose **surface segmentation, gloss, translation, or IPA** changes under the new case inventory;
-- add APPL `-ka-` only where the construction actually licenses an applied participant;
-- distinguish ordinary relational NPs from APPL-selected core participants;
-- preserve examples whose historical form is opaque when the modern analysis is still adequately documented;
-- mark genuinely new constructions `experimental` rather than silently promoting them.
-
-This is the highest-priority task because the grammar is now ahead of the corpus.
+The active corpus has been reconciled with the reorganized seven-value case system, productive APPL, current object indexing, and the COM/ASSOCIATIVE replacement for the former PATH domain. Historical/deprecated material remains explicitly marked for provenance.
 
 **2 — Argument-structure / multi-complement validation — COMPLETE FOR THE CURRENT EXPERIMENTAL SYSTEM.**
 
-Use matched construction-first tests to validate the already-settled hierarchy in actual clauses:
+`E-0122`–`E-0131` established the APPL hierarchy, candidate selection, tie-breaking, object-index realizations, and the APPL/non-APPL distinction.
 
-`patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant`
+**3 — Full relational construction matrix — COMPLETE FOR THE CURRENT EXPERIMENTAL SYSTEM.**
 
-Test especially:
+`E-0188`–`E-0194` closed the seven previously untested `CASE × DIRECTION × APPL` cells. The four productive relational frames now have explicit neutral, `i-`, `a-`, and APPL behavior, with lexical semantic licensing remaining the normal constraint.
 
-- lexical patient + recipient/goal;
-- lexical patient + beneficiary/maleficiary;
-- recipient + beneficiary;
-- three relational NPs;
-- APPL vs. non-APPL contrasts;
-- ordinary 3P animate, 3P inanimate, LOCAL, and OBV object indexing;
-- discourse-priority and same-rank tie cases.
+**4 — Construction-first corpus redevelopment — COMPLETE FOR THE CURRENT LAYER.**
 
-The hierarchy is retained. `E-0122`–`E-0131` now establish its tested morphosyntactic behavior, including APPL vs. non-APPL, multi-complement selection, same-rank tie resolution, and the current object-index realizations. Rigid multi-complement ordering remains outside the promoted core pending the full relational-construction matrix.
+The active corpus now includes relational, argument-structure, information-structure, causative, participial, converbial, and core syntax coverage. Further construction-first growth continues as targeted valency gaps are discovered.
 
-**3 — Full relational construction matrix.**
+**5 — Remaining independent syntax gaps — NEXT MAJOR GRAMMATICAL LAYER.**
 
-Build a compact regression matrix crossing:
-
-`CASE × DIRECTION × APPL × ARGUMENT STRUCTURE`
-
-for the four productive relational frames:
-
-`LOC × CONTAINMENT × POSITION × COM`
-
-Include neutral, convergent `i-`, and divergent `a-` readings, plus stative and dynamic predicates. Add targeted case-stacking tests for the three promoted stacks:
-
-`CONTAINMENT → LOC`  
-`GEN → CONTAINMENT`  
-`GEN → LOC`
-
-Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as explicit boundary tests rather than silently promoting them.
-
-**4 — Construction-first corpus redevelopment.**
-
-After migration and argument-structure validation, expand the corpus from language-internal schemas rather than translated English sentence lists.
-
-Priority construction families:
-
-- spatial/relational vector constructions;
-- beneficiary/maleficiary and recipient constructions;
-- converbial relations;
-- stative → directional state-transition readings;
-- case stacking;
-- information-structure contrasts;
-- causative argument structure;
-- secondary predication.
-
-English should remain the translation/paraphrase layer rather than the source of the construction itself.
-
-**5 — Remaining independent syntax gaps.**
-
-Only after the relational architecture is stable, address the largest non-relational coverage gaps from the prior Fiziwig/Leipzig audits:
+Priority remains:
 
 `imperative/hortative → modality → content questions → impersonal predicates → secondary predication → finite speech complements → comparison → passive`
 
-Multiple-complement ordering should be handled in step 2 because it directly interacts with APPL and object indexing.
+These should be designed and tested only after lexical valency distinctions are sufficiently understood.
 
-**6 — Lexical valency and family expansion.**
+**6 — Lexical valency and family expansion — CURRENT.**
 
-Reclassify or expand experimental lexical entries only after the new constructions are exercised. Prioritize roots whose semantic frames reveal useful contrasts between neutral, toward, and away direction, and roots needed for currently under-tested valencies such as experiencer, speech, search, naming, filling/loading, and material/source relations.
+Run construction-first tests on neutral and diagnostic predicates whose argument structures remain under-specified. Priorities are experiencer, speech, search/hunt, acquisition, naming, filling/loading, and material/source relations. New lexicon should be added only for genuine semantic gaps.
 
-### Promotion gate
+### Current promotion gate
 
-Do not treat the relational system as fully canonical across the repository until:
+Before the relational system is promoted wholesale across the repository:
 
-1. `GRAMMAR.md` and `EXAMPLES.tsv` agree on case inventory and segmentation;
-2. APPL `-ka-` is represented consistently in tested examples;
-3. multi-complement/object-index behavior has passed matched construction tests for the current experimental system;
-4. the four-frame × three-direction relational matrix has no unexplained contradictions;
-5. historical analyses remain distinct from synchronic productive rules.
+1. `GRAMMAR.md` and active `EXAMPLES.tsv` must agree on case inventory and segmentation;
+2. APPL `-ka-` must be represented consistently;
+3. multi-complement/object-index behavior must remain consistent across additional valency frames;
+4. the four-frame × three-direction relational matrix must remain contradiction-free;
+5. historical analyses must remain distinct from synchronic productive rules;
+6. lexical valency tests must not silently establish universal case frames from single predicates.
 
 ## Leipzig valency-frame coverage audit — 2026-09-17
 
