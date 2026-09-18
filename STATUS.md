@@ -201,7 +201,7 @@ Unresolved lexical questions should not be converted into new universal case fra
 
 **2 — Lexical valency / construction coverage.** Continue matched probes for under-specified lexical predicates and fill genuine semantic gaps before adding new roots.
 
-**3 — Cross-domain syntax stress testing.** Finite speech complements, comparison, and passive are reconciled. The remaining syntax-specific open issue is PASS + APPL, which stays unresolved until a matched argument-structure test can distinguish its possible outcomes.
+**3 — Cross-domain syntax stress testing.** Finite speech complements, comparison, passive, and PASS + APPL are reconciled. Remaining work is broader voice/construction interaction testing before promotion.
 
 **4 — Promotion review.** Re-run cross-domain contradiction checks, preserve historical/deprecated analyses, and promote only constructions with sufficient independent corpus support.
 
