@@ -365,7 +365,7 @@ The working hierarchy is **patient/theme > recipient/goal > beneficiary/malefici
 
 APPL selection occurs before object indexing. Once selected, the applied relational participant occupies the single object-index position. The lexical patient/theme remains an overt ABS core participant and is not separately indexed in these APPL constructions. The object slot therefore does not function as a general competition among all core arguments; it is the single participant-index position used by the APPL-promoted relational argument.
 
-The hierarchy is evaluated only over participants that are actually eligible for APPL. A lexical patient/theme is not an APPL candidate merely because it is already a core argument. Multiple relational NPs may therefore coexist, but only one is promoted and indexed; unselected relational NPs remain ordinary case-marked relations.
+The hierarchy is evaluated only over participants that are actually eligible for APPL. A lexical patient/theme is not an APPL candidate merely because it is already a core argument. Multiple relational NPs may therefore coexist, but only one is promoted and indexed; unselected relational NPs remain ordinary case-marked relations. In a passive clause, the lexical patient/theme is removed from the APPL candidate pool because PASS has already promoted it to ABS S. APPL then selects among the remaining eligible relational participants using the same hierarchy and tie-break rules as in an active clause.
 
 With stative predicates, APPL is available only where the predicate independently licenses an affected participant. Direction and aspect remain independent of APPL.
 
@@ -387,7 +387,7 @@ The voice operation therefore occupies only the VOICE slot in the ordinary finit
 
 `STEM (AUX/DERIV) VOICE APPL AGR (NEG) (DISCOURSE) TENSE (ASPECT)`
 
-A passive clause normally has no indexed object. PASS + APPL interaction is not yet established as an independent productive combination; it remains a targeted stress-test case rather than an automatic extension of either rule.
+A passive clause normally has no indexed object unless APPL independently promotes an eligible relational participant. In PASS + APPL, the applied participant occupies the single object-index position; the passive patient remains ABS S and does not receive object indexing. Only one APPL operation is permitted, and any additional relational NPs remain unselected and retain their ordinary case marking. The former agent may simultaneously be expressed as a COM-marked NP. PASS does not alter APPL's semantic hierarchy, direction, or object-index inventory.
 
 ### G-MORPH-07 — Agreement
 
@@ -964,7 +964,7 @@ The agent is optional. When overt, it is expressed with COM/ASSOCIATIVE `-me`, y
 
 Passive suppresses the ordinary object-indexing relation for the promoted patient: the patient is now S rather than O. The passive marker remains present even when the agent is omitted, preventing ordinary intransitive clauses from being reanalyzed as passive solely through argument omission.
 
-Direction, negation, interrogation, tense, and aspect remain available because PASS is a voice operation rather than a replacement for the ordinary verbal inflectional zones. The initial passive implementation does not establish productive PASS + APPL stacking; that interaction remains a later stress test.
+Direction, negation, interrogation, tense, aspect, and AUX/DERIV morphology remain available because PASS is a voice operation rather than a replacement for the ordinary verbal inflectional zones. PASS + APPL is likewise compositional: PASS promotes the lexical patient to S, while APPL independently promotes one remaining eligible relational participant to the object-index slot.
 
 The formal identity of passive `-na-` with patientive participle `-na` is retained as a naturalistic morphological relationship, but the two functions remain distinct in synchrony: `-na` PAT.PTCP is nonfinite/attributive or secondary-predicate morphology, whereas `-na` PASS is finite voice morphology.
 
