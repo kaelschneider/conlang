@@ -1084,7 +1084,7 @@ The profile does **not** require words for particular cultural items, force one-
 The semantic graph now contains **133 declared nodes and 160 declared relations**. The generator version/architecture/profile identifiers are now `0.2.0`, `2026-09-18.semantic-architecture.v3.root-shape-architecture`, and `default-1600-forest-reciprocal-event-relational-roots-v3`.
 
 
-## Mood and modality architecture — design resolved, exponents pending — 2026-09-18
+## Mood and modality architecture — imperative resolved; modality pending exponents — 2026-09-18
 
 The next independent syntax layer is now constrained by the user's selected architecture:
 
@@ -1112,3 +1112,18 @@ The inherited-root generator now uses the adopted mono-/disyllabic shape archite
 
 This is a lexical-root architecture change and is therefore reflected in both `GRAMMAR.md` and the generator configuration. `CVCV` must be interpreted as a genuine inherited root shape when it is a root candidate, while `CVC + stem vowel → CVCV` remains an independent morphological process.
 
+
+## Imperative implementation — 2026-09-18
+
+The imperative architecture selected in consultation is now implemented in GRAMMAR.md and exercised in EXAMPLES.tsv:
+
+- dedicated prefix `ka-`;
+- position after any directional prefix and before the ordinary object slot;
+- default citation/nonfinite stem;
+- ordinary person agreement suppressed;
+- hortative reuses the imperative with an overt 1PL subject when pragmatically needed;
+- prohibitive is compositional NEG + IMP;
+- directional imperative remains compositional (`i-ka-…`, `a-ka-…`);
+- APPL remains a separate suffixal operation and is not conflated with imperative `ka-`.
+
+Active probes: **E-0209–E-0214**. Validation passes with no broken lexical/grammar references, duplicate IDs, or TSV structural errors.
