@@ -12,6 +12,25 @@
 - `SCHEMA.json` — structural validation schema
 - `AGENTS.md` — repository maintenance instructions
 
+## Inherited-root generator phonological-capacity correction — 2026-09-18
+
+The first successful workflow parameterization at 1,600 roots reached phonological generation and exposed a structural capacity error.
+
+The configured short-root preference was C = 15%, VC = 25%, CVC = 60%. Under the current phoneme inventory (/p t k m n s h w j r/) and the generated-root final filter, the unique-form capacities are 10 C forms, 32 VC forms, and 320 CVC forms before existing-lexicon collisions. The established lexicon already occupies the one-segment root set, so the original target allocation could not produce 1,600 unique candidates.
+
+The repair preserves the short-root preference rather than allowing uncontrolled homophony or relaxing the phonotactics. `tools/generate_roots.py` now:
+
+- normalizes orthographic v/y to phonological w/j for collision checks;
+- enumerates the finite legal form space for each configured root shape;
+- caps primary-shape targets at their available unique-form capacity;
+- redistributes unmet demand to configured fallback shapes;
+- uses CVCV first and CVCVC only when CVCV is insufficient;
+- samples from the remaining legal pool, eliminating false exhaustion caused by repeated random sampling near capacity.
+
+CVCV and CVCVC are sequences of ordinary `(C)V(C)` syllables, not new syllable types. CVCC remains a derived CVC extension rather than an independent root shape.
+
+Generator version is now 0.1.2. Generated candidates remain experimental and are not written automatically to `LEXICON.tsv`.
+
 ## Corpus migration / grammar reconciliation — 2026-09-18
 
 The corpus has now been reconciled with the integrated relational grammar.
