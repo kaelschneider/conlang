@@ -944,3 +944,18 @@ This closes the previously untested frame × direction × APPL cells. The result
 
 The seven new active examples are **E-0188–E-0194**. APPL remains a single productive operation; unrestricted APPL stacking remains rejected.
 
+
+## Active syntax coverage pass — 2026-09-18
+
+The active corpus now contains direct evidence for the previously underrepresented core syntax constructions:
+
+- **G-SYN-06 / G-SYN-07:** question and negation morphology
+- **G-SYN-05:** plural pronouns with person-only verbal agreement
+- **G-SYN-11:** prenominal GEN possession
+- **G-SYN-08:** finite postnominal relative clause with a gap
+- **G-SYN-13:** topic-left and narrow-focus/preverbal information structure
+- **G-SYN-12:** clause juxtaposition as the default coordination strategy
+
+The current active corpus still has no dedicated **G-SYN-10 adposition** example because the grammar only permits a small independent postposition class historically derived from relational expressions; no such adposition is presently established in the lexicon. This remains an intentional lexical/grammatical open area rather than a corpus omission.
+
+New active examples: **E-0195–E-0202**.
