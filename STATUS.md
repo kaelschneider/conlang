@@ -125,6 +125,21 @@ The 10-question matrix refinement retained the current 24-cell outcomes. The dec
 
 The F_B `k` retention and CLOSED F_F/F_B `k` retention are treated as language-specific conditioning effects within the historical system, not as universal phonetic implications.
 
+## OPEN/CLOSED × vowel-transition matrix testing — 2026-09-17
+
+The refined matrix was stress-tested across all 24 cells using diagnostic historical forms representing each OPEN/CLOSED × F_F/F_B/B_F/B_B combination for `p`, `t`, and `k`.
+
+Results:
+
+- All 24 cells have defined outcomes.
+- B_F `t/k` consistently bypass ordinary weakening through pre-/i/ palatalization.
+- No CLOSED cell produces greater weakening than its corresponding OPEN cell.
+- All currently attested diagnostic forms (`rupi`, `ku-p-i`, `reruka`, `reruta`, `rerupa`, `mente`, `menta`, `neku`, `seku`, `keka`) match their assigned matrix cells.
+- OPEN F_B `k` retention and CLOSED F_F/F_B `k` retention remain distinct conditioning effects rather than a universal lenition hierarchy.
+- The resulting system remains historical rather than a productive synchronic alternation.
+
+The 24-cell diagnostic set is a validation test, not additional corpus evidence, so no synthetic forms were added to `EXAMPLES.tsv`.
+
 ## Nominalizer family testing — 2026-09-17
 
 Added three experimental regression examples to `EXAMPLES.tsv`:
@@ -163,7 +178,8 @@ None among the current core grammar decisions. Residual lexical creation/testing
 1. **Completed 2026-09-17:** Validate `LEXICON.tsv` against `SCHEMA.json` and check all affected IPA/derivation fields against `GRAMMAR.md`; the blank-row defect was removed and the complete populated file now passes structural validation.
 2. **Completed 2026-09-17:** Test the nominalizer family (`keranu`, `keranka`, `kerande`) with additional examples.
 3. **Completed 2026-09-17:** Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched experimental examples.
-4. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
+4. **Completed 2026-09-17:** Stress-test the OPEN/CLOSED × F_F/F_B/B_F/B_B historical matrix across all 24 cells and reconcile the attested diagnostic forms.
+5. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
 
 ## Lexical derivation generation decisions — 2026-09-17
 
