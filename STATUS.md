@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Relational grammar integrated; lexicon semantic audit completed; neutral probe inventories established; first construction-first corpus rebuild completed; remaining work is full relational matrix expansion, independent syntax coverage, and lexical family expansion  
+**Phase:** Relational grammar integrated; lexicon semantic audit completed; neutral probe inventories established; first construction-first corpus rebuild completed; APPL matrix coverage is complete; remaining work is independent syntax coverage, unresolved stacking tests, and lexical family expansion  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -923,3 +923,24 @@ The first corpus redevelopment pass is complete after the semantic audit.
 ### Current rebuild boundary
 
 The first rebuild establishes a balanced active probe corpus but does not claim to exhaust every remaining construction family. The next corpus layer should complete the full `CASE × DIRECTION × APPL × ARGUMENT STRUCTURE` matrix, then add matched coverage for information structure, causative argument structure, and secondary predication before promotion review.
+
+## CASE × DIRECTION × APPL matrix closure — 2026-09-18
+
+The remaining seven APPL cells identified in the construction-first coverage audit have now been resolved and instantiated in the active corpus.
+
+### Resolved constructional parameters
+
+- **LOC + Ø + APPL:** the landmark is promoted as a core participant while the spatial relation remains statically anchored.
+- **LOC + a- + APPL:** the promoted landmark is construed as a source/reference from which the event diverges.
+- **CONTAINMENT + Ø + APPL:** the bounded domain itself becomes a core participant without directional change.
+- **POSITION + Ø + APPL:** the participant in an existing support/contact configuration is promoted without directed change.
+- **POSITION + i- + APPL:** the promoted participant enters or establishes the support/contact configuration.
+- **POSITION + a- + APPL:** the promoted participant leaves or terminates the support/contact configuration.
+- **COM + Ø + APPL:** the associated participant is promoted without inherent benefit/harm or directional interpretation.
+
+This closes the previously untested frame × direction × APPL cells. The resulting architecture is now consistently:
+
+**CASE = relational frame → DIRECTION = relational vector → APPL = valency promotion → OBJECT = participant indexing**
+
+The seven new active examples are **E-0188–E-0194**. APPL remains a single productive operation; unrestricted APPL stacking remains rejected.
+
