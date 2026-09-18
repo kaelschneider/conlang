@@ -24,7 +24,7 @@ from typing import Any
 
 import yaml
 
-GENERATOR_VERSION = "0.2.0"
+GENERATOR_VERSION = "0.3.0"
 
 
 @dataclass(frozen=True)
@@ -524,45 +524,96 @@ def allocate_shape_targets(
     config: dict[str, Any],
     used_forms: set[str],
 ) -> tuple[dict[str, int], dict[str, int]]:
-    """Allocate configured targets, cap finite shapes, then fill from fallback shapes."""
-    configured_targets = largest_remainder_counts(total, config["phonology"]["root_shapes"])
-    targets: dict[str, int] = {}
-    remaining = 0
+    """Allocate configured targets, then exhaust primary capacity before fallback."""
+    primary = config["phonology"]["root_shapes"]
+    fallbacks = config["phonology"].get("root_shape_fallbacks", [])
+    configured_targets = largest_remainder_counts(total, primary)
 
-    all_shapes = [
-        *config["phonology"]["root_shapes"].keys(),
-        *config["phonology"].get("root_shape_fallbacks", []),
-    ]
     capacities = {
         shape: len(legal_form_pool(shape, config) - used_forms)
-        for shape in all_shapes
+        for shape in [*primary.keys(), *fallbacks]
     }
+    targets = {shape: 0 for shape in [*primary.keys(), *fallbacks]}
 
+    # First honor the requested primary distribution wherever capacity permits.
+    overflow = 0
     for shape, requested in configured_targets.items():
         assigned = min(requested, capacities[shape])
         targets[shape] = assigned
-        remaining += requested - assigned
+        overflow += requested - assigned
 
-    for shape in config["phonology"].get("root_shape_fallbacks", []):
-        if remaining <= 0:
+    # Any displaced primary allocation is redistributed across still-available
+    # primary forms. This prevents the fallback from being used merely because
+    # the dominant CVCV pool hit its finite capacity.
+    while overflow:
+        eligible = [
+            shape for shape in primary
+            if targets[shape] < capacities[shape]
+        ]
+        if not eligible:
             break
-        assigned = min(remaining, capacities[shape])
-        targets[shape] = assigned
-        remaining -= assigned
+        weights = [
+            max(0.001, float(primary[shape]) * (capacities[shape] - targets[shape]))
+            for shape in eligible
+        ]
+        # Deterministic proportional allocation; largest-remainder preserves
+        # the configured short-root bias as far as finite capacities allow.
+        extra_total = min(overflow, sum(capacities[s] - targets[s] for s in eligible))
+        extra = largest_remainder_counts(extra_total, dict(zip(eligible, weights)))
+        for shape, amount in extra.items():
+            targets[shape] += amount
+            overflow -= amount
 
-    if remaining:
+    # Fallback shapes are an emergency tier: they are considered only after
+    # every legal primary form has been exhausted.
+    for shape in fallbacks:
+        if overflow <= 0:
+            break
+        available = capacities[shape] - targets[shape]
+        assigned = min(overflow, available)
+        targets[shape] += assigned
+        overflow -= assigned
+
+    if overflow:
         raise RuntimeError(
             "phonological space exhausted before reaching target; "
-            f"{remaining} roots remain after capacity-aware shape allocation"
+            f"{overflow} roots remain after primary and fallback capacity"
         )
 
-    return targets, configured_targets
+    return {shape: count for shape, count in targets.items() if count}, configured_targets
 
 def quantile_bucket(value: float, buckets: list[dict[str, Any]]) -> dict[str, Any]:
     for bucket in buckets:
         if value <= float(bucket["centrality_max"]):
             return bucket
     return buckets[-1]
+
+
+def make_singleton_families(
+    nodes: dict[str, Node],
+    centrality: dict[str, float],
+    count: int,
+    rng: random.Random,
+) -> list[dict[str, Any]]:
+    """Create independent singleton-family opportunities for the candidate pool."""
+    if count <= 0:
+        return []
+    node_ids = list(nodes)
+    weights = [max(0.001, centrality[node_id] + 0.05) for node_id in node_ids]
+    families: list[dict[str, Any]] = []
+    for index in range(1, count + 1):
+        center = random_weighted(rng, node_ids, weights)
+        families.append({
+            "family_id": f"F-S-{index:04d}-{center}",
+            "center": center,
+            "relations": [],
+            "neighbors": [],
+            "distance": "very_close",
+            "affinity": centrality[center],
+            "family_stage_bias": "initial",
+            "singleton_family": True,
+        })
+    return families
 
 
 def plan_family_sizes(
@@ -572,57 +623,55 @@ def plan_family_sizes(
     target: int,
     rng: random.Random,
 ) -> dict[str, int]:
-    """Assign long-tailed family sizes, then reconcile exactly to the target root count."""
-    buckets = config["family_model"]["family_size_buckets"]
-    sizes: dict[str, int] = {}
+    """Make an exact singleton-root share and a long-tailed non-singleton remainder."""
+    singleton_target = round(target * float(config["family_model"]["simple_root_baseline"]))
+    multi_target = target - singleton_target
+    sizes: dict[str, int] = {
+        family["family_id"]: 1 for family in families if family.get("singleton_family")
+    }
 
-    for family in families:
-        c = centrality[family["center"]]
-        bucket = quantile_bucket(c, buckets)
-        if rng.random() < float(bucket["simple_probability"]):
-            size = 1
-        else:
-            lo = int(bucket["size_min"])
-            hi = int(bucket["size_max"])
-            size = rng.randint(lo, hi)
-        sizes[family["family_id"]] = size
-
-    # Reconcile the stochastic family-size draw with the requested total while
-    # preserving each bucket's intended minimum/maximum range.
-    minimum_total = len(families)
-    if target < minimum_total:
+    multi_families = [f for f in families if not f.get("singleton_family")]
+    if len(sizes) != singleton_target:
         raise RuntimeError(
-            f"target {target} is smaller than the number of semantic families {minimum_total}"
+            f"singleton-family plan has {len(sizes)} roots; expected {singleton_target}"
         )
+    if multi_target == 0:
+        return sizes
 
-    while sum(sizes.values()) < target:
+    if not multi_families:
+        raise RuntimeError("no non-singleton family opportunities are available")
+
+    # A typical non-singleton family is roughly three members; use that as a
+    # planning prior, then let centrality-weighted growth create the long tail.
+    family_count = min(len(multi_families), max(1, round(multi_target / 3.0)))
+    ranked = sorted(
+        multi_families,
+        key=lambda f: (centrality[f["center"]] + rng.random() * 0.05),
+        reverse=True,
+    )
+    selected = ranked[:family_count]
+
+    for family in selected:
+        sizes[family["family_id"]] = 2
+
+    assigned = 2 * family_count
+    while assigned < multi_target:
         eligible = []
         weights = []
-        for family in families:
-            bucket = quantile_bucket(centrality[family["center"]], buckets)
-            cap = int(bucket["size_max"])
+        for family in selected:
+            bucket = quantile_bucket(centrality[family["center"]], config["family_model"]["family_size_buckets"])
             current = sizes[family["family_id"]]
+            cap = int(bucket["size_max"])
             if current < cap:
                 eligible.append(family)
-                # Central families are more likely to grow additional members.
+                # Central families and high-end buckets receive more opportunity
+                # to become large, producing a natural long tail.
                 weights.append(max(0.01, centrality[family["center"]] + 0.05))
         if not eligible:
             raise RuntimeError("family-size capacity exhausted before reaching target")
         family = random_weighted(rng, eligible, weights)
         sizes[family["family_id"]] += 1
-
-    while sum(sizes.values()) > target:
-        eligible = []
-        weights = []
-        for family in families:
-            current = sizes[family["family_id"]]
-            if current > 1:
-                eligible.append(family)
-                weights.append(max(0.01, 1.05 - centrality[family["center"]]))
-        if not eligible:
-            raise RuntimeError("cannot reduce family sizes to target without empty families")
-        family = random_weighted(rng, eligible, weights)
-        sizes[family["family_id"]] -= 1
+        assigned += 1
 
     return sizes
 
@@ -665,6 +714,9 @@ def generate_candidates(
     families = make_family_seeds(nodes, edges, centrality)
     if not families:
         raise ValueError("semantic graph produced no family seeds")
+
+    singleton_target = round(target * float(config["family_model"]["simple_root_baseline"]))
+    families.extend(make_singleton_families(nodes, centrality, singleton_target, rng))
 
     domain_counts: dict[str, int] = defaultdict(int)
     used_forms = set(existing_forms)
@@ -772,6 +824,8 @@ def generate_candidates(
             },
             "probe_role": probe,
             "family_id": family["family_id"],
+            "family_size": family_sizes[family["family_id"]],
+            "family_member_index": family_counts[family["family_id"]],
             "family_stage": stage,
             "lexicalization_status": "candidate",
             "category_behavior": category,
@@ -805,7 +859,10 @@ def generate_candidates(
             "semantic_pressure_weights": config["semantic_pressure"],
             "semantic_graph_nodes": len(nodes),
             "semantic_graph_edges": len(edges),
-            "semantic_graph_families": len(families),
+            "semantic_graph_families": len(make_family_seeds(nodes, edges, centrality)),
+            "candidate_family_opportunities": len(families),
+            "singleton_family_target": singleton_target,
+            "historical_drift_stage": "separate_stage_not_generated_here",
         },
         "candidate_count": len(candidates),
         "shape_counts": {
