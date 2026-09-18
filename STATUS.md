@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Relational grammar integrated; corpus migration reconciled; remaining work is constructional validation, syntax coverage, and lexical expansion  
+**Phase:** Relational grammar integrated; lexicon semantic audit completed; neutral probe inventories established; first construction-first corpus rebuild completed; remaining work is full relational matrix expansion, independent syntax coverage, and lexical family expansion  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -829,7 +829,7 @@ The current verbal probe core is centered on:
 
 Predicates with strongly directional or endpoint-fixed semantics such as `ENTER`, `FALL`, `RISE`, `PUT`, `GIVE`, and `TAKE` are retained as **diagnostic predicates**, not excluded from the language.
 
-## Lexical-class generation strategy — pending consultation
+## Lexical-class generation strategy — 2026-09-18
 
 The same audit logic will be extended to nominals and other lexical classes. The intended procedure is:
 
@@ -859,7 +859,7 @@ The same audit logic will be extended to nominals and other lexical classes. The
 - abstract/eventive nominal;
 - relationally dependent entity.
 
-The exact inventory and category balance remain pending consultation.
+The five principal nominal probe gaps identified in the audit are now filled by `L-0087`–`L-0091`: `ren` PERSON/HUMAN, `mur` ANIMAL, `tak` TOOL/ARTIFACT, `nim` BODY PART, and `sur` PLACE/DOMAIN. These remain experimental, category-neutral roots.
 
 ### Sound-symbolism policy — provisional
 
@@ -908,3 +908,18 @@ The current anchors are deliberately not treated as a complete nominal probe lex
 ### Other lexical-class probe policy
 
 Category-neutral roots may supply nominal, verbal, and stative uses where the semantic relationship is natural. Eventive nominal uses, result/product nouns, abstract nouns, and sensory-property nouns should be especially useful for testing derivation and conversion. The corpus should distinguish ordinary lexical category flexibility from productive morphological nominalization, rather than treating every noun-like interpretation as evidence of a dedicated noun-forming rule.
+## Construction-first corpus rebuild — 2026-09-18
+
+The first corpus redevelopment pass is complete after the semantic audit.
+
+- The five new nominal probes `ren, mur, tak, nim, sur` are exercised across core transitivity, relational cases, direction, APPL, stacking, stative/dynamic predicates, derivation, and clause combining.
+- The prior 115 experimental example rows are retained as `deprecated` regression/provenance material rather than treated as the active construction corpus. The nine stable examples and three analyzed/three unresolved rows remain preserved.
+- 56 new active experimental examples (`E-0132`–`E-0187`, excluding the removed malformed probe) form the first construction-first corpus layer.
+- The new corpus deliberately reduces dependence on `kerande` CONTAINER and distributes nominal roles across human, animal, artifact, body-part, place/domain, substance, and natural referents.
+- Construction generation begins from the language-internal system: relational frame, directional vector, APPL eligibility, argument hierarchy, case stacking, converb relation, stative interaction, and information-structural contrasts. English remains a translation/paraphrase layer.
+- Neutral probes are used first; strongly directional or endpoint-fixed predicates remain diagnostic rather than serving as the default evidence for constructional meaning.
+- Sound symbolism is applied only as a weak probabilistic prior in lexical assignment; no deterministic sound-to-meaning rule has been introduced.
+
+### Current rebuild boundary
+
+The first rebuild establishes a balanced active probe corpus but does not claim to exhaust every remaining construction family. The next corpus layer should complete the full `CASE × DIRECTION × APPL × ARGUMENT STRUCTURE` matrix, then add matched coverage for information structure, causative argument structure, and secondary predication before promotion review.
