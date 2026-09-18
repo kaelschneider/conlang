@@ -218,9 +218,11 @@ No grammar rule was inferred merely to make the English test sentences translata
 
 ## Lexical generation refinement — 2026-09-17
 
-The lexical-generation methodology now explicitly evaluates the semantic contribution of verbal direction. Roots should be chosen so that `i-` and `a-` can contribute productive toward/away or goal/source meanings during lexical derivation. A general TRANSFER-type root is therefore preferable to a semantically endpoint-fixed root such as GIVE when both can occupy the same lexical domain: the former preserves neutral, toward-recipient, and away-source derivational space.
+The lexical-generation methodology explicitly evaluates both the literal and metaphorical semantic contribution of verbal direction. Roots should be chosen so that `i-` and `a-` can contribute productive toward/away or goal/source meanings during lexical derivation. A general TRANSFER-type root is therefore preferable to a semantically endpoint-fixed root such as GIVE when both can occupy the same lexical domain: the former preserves neutral, toward-recipient, and away-source derivational space.
 
-Future root batches must test semantically central candidates against neutral, `i-`, and `a-` frames where their valency permits. Root candidates that merely duplicate a directional construction should be avoided unless lexicalization or semantic specialization supplies an independent motivation. This does not retroactively reclassify the 50 roots already added in `L-0037`–`L-0086`; those remain experimental candidates.
+The directional opposition is also treated as a source for **metaphorical and constructional semantic extension**. The toward/away schema may motivate readings involving benefit/detriment, support/opposition, acquisition/disposition, inclusion/exclusion, initiation/completion, and related domains when the lexical semantics and construction support the mapping. The established COM pattern provides a model: `O-me + i-VERB` is benefactive when O benefits, while `O-me + a-VERB` is malefactive when O is harmed or opposed. Such meanings are constructional or lexicalized extensions, not automatic free meanings of `i-` and `a-`.
+
+Future root batches must test semantically central candidates against neutral, `i-`, and `a-` frames where their valency permits, then consider plausible metaphorical extensions licensed by the same semantic frame. Roots that duplicate a useful directional construction should be avoided unless lexicalization or semantic specialization supplies an independent motivation. This does not retroactively reclassify the 50 roots already added in `L-0037`–`L-0086`; those remain experimental candidates.
 
 
 ## Lexical root generation pass — 2026-09-17
