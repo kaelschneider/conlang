@@ -2,13 +2,13 @@ id	form	ipa	type	pos	gloss	derived_from	status	notes
 L-0001	p	/ˈp/	root	—	break / bite	—	stable	historical root; modern evidence apa
 L-0002	t	/ˈt/	root	—	transfer	—	stable	historical root; modern evidence ita, da, teta
 L-0003	k	/ˈk/	root	—	hold	—	stable	root underlying modern ka and inflected ku/kui
-L-0004	v	/ˈw/	root	—	grow	—	stable	orthographic v represents /w/; modern va 'grow'
-L-0005	r	/ˈr/	root	—	go	—	stable	modern ra 'go'; rera 'turn'
-L-0006	j	/ˈj/	root	—	see / know	—	stable	modern ya 'see/know'
-L-0007	h	/ˈh/	root	—	say / blow	—	stable	modern ha 'say/blow'; source of exclamative -h-
+L-0004	v	/ˈw/	root	—	grow / increase	—	stable	orthographic v represents /w/; modern va 'grow'; broader increase sense adopted for neutral semantic analysis
+L-0005	r	/ˈr/	root	—	move / go	—	stable	modern ra 'go'; rera 'turn'; MOVE is the broader semantic center for constructional probing
+L-0006	j	/ˈj/	root	—	perceive / see / know	—	stable	modern ya 'see/know'; PERCEIVE is the broader semantic center while the historical polysemy is retained
+L-0007	h	/ˈh/	root	—	say / blow	—	stable	modern ha 'say/blow'; SAY is the neutral probe sense; BLOW remains a lexicalized sense; source of exclamative -h-
 L-0008	s	/ˈs/	root	—	cut / remove	—	stable	modern sa 'cut/remove'
-L-0009	m	/ˈm/	root	—	live / dwell / stay	—	stable	modern ma 'live/dwell/stay'
-L-0010	n	/ˈn/	root	—	get / find	—	stable	modern na 'get/find'; nena 'receive/acquire'
+L-0009	m	/ˈm/	root	—	remain / stay / live / dwell	—	stable	modern ma 'live/dwell/stay'; REMAIN/STAY is the broader semantic center
+L-0010	n	/ˈn/	root	—	obtain / acquire / get / find	—	stable	modern na 'get/find'; nena 'receive/acquire'; OBTAIN/ACQUIRE is the broader semantic center
 L-0011	apa	/ˈapa/	lexeme	V	eat	L-0001	stable	historical development a-pa > apa
 L-0012	ita	/ˈita/	lexeme	V	give	L-0002	stable	historical development from *t
 L-0013	ada	/ˈada/	lexeme	V	take	L-0002	stable	historical development ata > ada > da
@@ -16,14 +16,14 @@ L-0014	da	/ˈda/	lexeme	V	take	L-0013	stable	modern outcome of ada
 L-0015	teta	/ˈteta/	lexeme	V	put / set	L-0002	stable	derived from *t
 L-0016	ka	/ˈka/	lexeme	V	hold	L-0003	stable	canonical citation/nonfinite form; realis/nonpast forms include ku and kui
 L-0017	keka	/ˈkeka/	lexeme	V	keep	L-0003	stable	derived from *k
-L-0018	va	/ˈwa/	lexeme	V	grow	L-0004	stable	modern basic grow stem
-L-0019	ra	/ˈra/	lexeme	V	go	L-0005	stable	modern basic go stem
+L-0018	va	/ˈwa/	lexeme	V	grow / increase	L-0004	stable	modern basic grow stem; broader INCREASE sense adopted for neutral semantic analysis
+L-0019	ra	/ˈra/	lexeme	V	move / go	L-0005	stable	modern basic go stem; MOVE is the broader semantic center
 L-0020	rera	/ˈrera/	lexeme	V	turn	L-0005	stable	derived from *r
-L-0021	ya	/ˈja/	lexeme	V	see / know	L-0006	stable	orthographic y corresponds to historical *j
+L-0021	ya	/ˈja/	lexeme	V	perceive / see / know	L-0006	stable	orthographic y corresponds to historical *j; PERCEIVE is the broader semantic center
 L-0022	ha	/ˈha/	lexeme	V	say / blow	L-0007	stable	modern basic stem
 L-0023	sa	/ˈsa/	lexeme	V	cut / remove	L-0008	stable	modern basic stem
-L-0024	ma	/ˈma/	lexeme	V	live / dwell / stay	L-0009	stable	modern basic stem
-L-0025	na	/ˈna/	lexeme	V	get / find	L-0010	stable	modern basic stem
+L-0024	ma	/ˈma/	lexeme	V	remain / stay / live / dwell	L-0009	stable	modern basic stem; REMAIN/STAY is the broader semantic center
+L-0025	na	/ˈna/	lexeme	V	obtain / acquire / get / find	L-0010	stable	modern basic stem; OBTAIN/ACQUIRE is the broader semantic center
 L-0026	nena	/ˈnena/	lexeme	V	receive / acquire	L-0010	stable	derived from *n
 L-0027	ne	/ˈne/	pronoun	PRON	1SG	—	stable	established through finite clauses
 L-0028	se	/ˈse/	pronoun	PRON	2SG	—	stable	established through finite clauses
