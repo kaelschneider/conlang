@@ -345,6 +345,25 @@ The working selection hierarchy remains:
 
 A relational NP that functions only as an event setting/domain is not automatically APPL-eligible.
 
+## OBV/discourse behavior decision — 2026-09-18
+
+The OBV/discourse stress test is resolved within the experimental relational/object system:
+
+- **OBV is a discourse-status category, not a fourth person.** It distinguishes a discourse-peripheral/further-nonlocal 3P participant from the currently proximate or otherwise more prominent participant.
+- **Animacy supplies a strong hierarchy bias.** Among eligible 3P participants, animate participants are preferentially available to the proximate/OBV contrast, but discourse prominence can override the animacy bias.
+- **Initial status is discourse-driven.** A discourse context may establish one participant as proximate without a rigid first-mention, subject, or agent rule.
+- **Newness is a defeasible OBV bias.** A newly introduced participant commonly enters as OBV when an established discourse center already exists, but immediate topical or focal prominence can make the new participant proximate instead.
+- **OBV can persist across clauses.** An OBV participant normally retains that status while remaining backgrounded within the same discourse segment.
+- **Topic shifts can reassign status.** A previously OBV participant can become proximate when it becomes the new discourse center; the former proximate may consequently become OBV.
+- **Multiple OBV participants are permitted.** The system is not limited to a single proximate-vs-obviative pair, and OBV does not require exactly two 3P participants.
+- **OBV is independent of grammatical role.** Subject/object status does not mechanically determine proximate vs. OBV; grammatical role may interact with discourse prominence rather than replacing it.
+- **Contrastive focus can override prior OBV status.** Strong new discourse prominence can promote an OBV participant to proximate status.
+- **Topic/focus word order does not itself assign OBV.** Clause-initial topicalization or immediately preverbal focus can signal information structure without mechanically changing the object's discourse status.
+- **Genuine same-rank ties remain secondary.** When discourse prominence does not distinguish candidates, an independently motivated semantic/grammatical hierarchy may break the tie; linear order is only a final fallback. No new fixed ranking is introduced solely for OBV.
+- **A solitary 3P participant may still be OBV.** OBV does not require a simultaneously competing proximate 3P participant, although contrast with an established discourse center is a major licensing environment.
+
+This preserves a genuinely discourse-sensitive obviation system while keeping semantic/participant hierarchy primary where an independent hierarchy already exists. The result remains experimental and does not by itself promote the -v- exponent into canonical GRAMMAR.md.
+
 ## 10-question phonological recovery audit — 2026-09-17
 
 1. **Generalized weakening:** each `>` is a successive historical stage. The designed regression forms are to be explained by general historical developments, not isolated example-specific rules.
