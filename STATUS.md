@@ -119,6 +119,12 @@ The 20-question morphology/syntax pass resolved the following structural points:
 - Finite relative clauses use a gap. Coordination is primarily juxtaposition, with a small secondary conjunction class.
 - Information structure is established as constituent-order plus prosodic prominence: topics may occur clause-initially; narrow/contrastive focus favors the immediately preverbal position.
 
+## OPEN/CLOSED × vowel-transition matrix refinement — 2026-09-17
+
+The 10-question matrix refinement retained the current 24-cell outcomes. The decisions establish: OPEN vs. CLOSED is a primary conditioning factor; F_F/F_B/B_F/B_B remain independent conditioning classes; pre-/i/ palatalization has priority in B_F for `t/k`; OPEN F_B retains `k`; OPEN `p` in B_F/B_B reaches `Ø` through `h`; `t` stops at `d`; CLOSED B_B `t` still weakens to `d`; CLOSED `p` in B_F/B_B reaches `h`; CLOSED `k` in F_F/F_B remains `k`; and the matrix is historical rather than a productive synchronic alternation.
+
+The F_B `k` retention and CLOSED F_F/F_B `k` retention are treated as language-specific conditioning effects within the historical system, not as universal phonetic implications.
+
 ## Nominalizer family testing — 2026-09-17
 
 Added three experimental regression examples to `EXAMPLES.tsv`:
