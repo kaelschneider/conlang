@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-09-18  
 
-**Phase:** Relational grammar and the current construction-first corpus layer are validated; active work is generator runtime validation, lexical valency/construction coverage, and remaining independent syntax.  
+**Phase:** Relational grammar and the current construction-first corpus layer are validated; finite speech complements, comparison, and passive are now working developmental constructions. Active work is cross-domain stress testing, generator runtime validation, lexical valency/construction coverage, and promotion review.  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Branch state
@@ -166,6 +166,16 @@ The three remaining independent-syntax gaps were completed as working developmen
 - PASS + APPL remains a targeted interaction test rather than an established productive combination.
 
 These are working developmental analyses, not yet promoted to `main`.
+
+### Validation checkpoint — 2026-09-18
+
+The new syntax layer was checked against the current repository data after the three commits above:
+
+- 253 example rows are present in `EXAMPLES.tsv`, with IDs remaining unique.
+- The new E-0242–E-0254 examples all have ten TSV fields, no surface-form hyphens, primary stress in IPA, and grammar/lexical references resolving to existing sections and entries.
+- `G-MORPH-06B`, `G-SYN-18`, `G-SYN-19`, and `G-SYN-20` are unique grammar-section identifiers.
+- No lexical additions were required; all new probes reuse established roots and lexemes.
+- Full runtime project validation remains separate from this static checkpoint because the repository's current workflow does not provide a general validation job on `developmental`.
 
 ## Open questions
 
