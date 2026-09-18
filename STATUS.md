@@ -200,6 +200,18 @@ Results:
 This audit is evidence about constructional coverage, not a promotion of any new lexical valencies or grammatical rules. No new lexicon entries or grammar rules were added.
 
 
+## TAM interaction and construction-first corpus stress test — 2026-09-17
+
+Added 33 experimental examples (`E-0083`–`E-0115`).
+
+- The five AUX/DERIV values were exhaustively crossed with NONPAST/PAST and IMPERFECTIVE/PERFECT, yielding a complete 20-cell finite TAM matrix. Every cell is morphologically formable under the current verb template.
+- PERFECT combines without special allomorphy after both NONPAST and PAST, and progressive, continuative, habitual, inchoative, and change-of-state morphology remain available with PERFECT. Their semantic compatibility varies by context, but no grammatical incompatibility was found.
+- Additional tests cover NEG + PROGRESSIVE + PERFECT, NEG + INTERROGATIVE + PERFECT, directional TRANSFER, directional-COM benefactive/malefactive readings, the LOCAL-recipient dative-like construction, secondary predication with a resultative participle, content nominalization, case-based temporal subordination, switch-reference, and GEN+LOC stacking.
+- The construction-first examples show why the language should not be modeled as English predicate + translated arguments: TRANSFER plus `i-/a-`, case stacking, converbial case choice, and COM direction can organize meanings in ways not captured by one-to-one English lexical glosses.
+- Remaining exact syntax/valency gaps are not papered over: imperative/hortative, modal/necessitative/ability, comparison, passive, content-question syntax, impersonal finite predicates, and fully specified secondary predication/direct-speech syntax still require dedicated design work.
+
+The corpus remains somewhat English-centered because many examples retain English-style event descriptions. Future corpus growth should therefore begin from language-internal construction schemas and semantic contrasts, using English only as a translation/paraphrase layer.
+
 ## New-root grammar testing — 2026-09-17
 
 Added 46 experimental examples (`E-0037`–`E-0082`) testing all 50 new roots `L-0037`–`L-0086` in actual grammatical environments. Coverage includes intransitive and transitive predicates, stative predicates, nominal use of category-neutral roots, LOC/INE/SUPER case frames, verbal direction, ordinary COM accompaniment, directional-COM benefactive and malefactive readings, and several provisional valency frames.
