@@ -3,6 +3,28 @@ Maintenance guide for contributors and coding agents. Not part of the language d
 
 **Do not add, remove, rename, move, split, or merge files or directories unless explicitly instructed to change repository structure.** No convenience files, no derived-note files, no self-directed reorganization. This rule has no exceptions elsewhere in this document.
 
+## Branch policy
+
+This repository uses two persistent development branches:
+
+- `main` — canonical, reconciled project state. Established grammar, lexicon, examples, and documentation belong here.
+- `developmental` — active working state. Experimental analyses, corpus expansion, testing, and pending reconciliations are developed here before promotion to `main`.
+
+Do not create or maintain additional long-lived branches for individual grammar domains, experiments, schema changes, or other workstreams. Do not create branches named after features or experiments.
+
+Experimental status is recorded in `STATUS.md` and, where appropriate, in the authoritative files themselves; Git branches are not a substitute for linguistic status tracking.
+
+When beginning ordinary project work, use `developmental`. Do not create a new branch unless the task explicitly requires a temporary, short-lived branch.
+
+Normal workflow:
+
+1. Work on `developmental`.
+2. Test and reconcile changes there.
+3. Promote reconciled changes from `developmental` to `main`.
+4. Keep `main` internally coherent and usable as the current canonical description.
+
+Historical branches may be retained only when explicitly required for provenance; otherwise, obsolete branches should be deleted after their useful changes have been incorporated or their history is otherwise preserved.
+
 ## Files
 
 | File | Authority |
