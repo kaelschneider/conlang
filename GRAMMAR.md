@@ -858,6 +858,27 @@ Canonical constructional readings include:
 
 The verbal interrogative `-y-` remains obligatory in content questions. The WH expression identifies the interrogated semantic domain, while `-y-` identifies the clause as interrogative; these are distinct grammatical functions.
 
+### G-SYN-17 — Secondary predication
+
+Secondary predication is productive for both **depictive** and **resultative** relations and is distinct from ordinary finite predication and participial relative clauses.
+
+The secondary predicate is expressed by an existing participle:
+
+- agent-oriented depictive: `-ri`;
+- patient-oriented depictive: `-na`;
+- resultative: `-mu`.
+
+The predicand remains an ordinary NP with its normal case and agreement behavior. No dedicated secondary-predication case, agreement series, or object slot is introduced.
+
+By default, the secondary predicate follows its target directly and precedes the main predicate. In neutral SOV clauses this yields:
+
+`S SEC O V` for a subject-oriented secondary predicate, and  
+`S O SEC V` for an object-oriented secondary predicate.
+
+The construction may describe a participant's state during the main event (depictive) or a state resulting from the main event (resultative). A resultative secondary predicate may target either a subject or another core participant where the lexical semantics support that reading.
+
+Secondary predication is independent of APPL. An APPL-selected relational participant continues to occupy the single object-index position, while a secondary predicate may independently target another core participant. Secondary predicates do not compete for object indexing and do not trigger APPL selection.
+
 ### G-SYN-16 — Impersonal predicates
 
 A restricted class of finite predicates may occur in genuinely subjectless clauses. These clauses have no syntactic S argument and do not use a dummy pronoun. Instead, the finite predicate carries the dedicated impersonal agreement marker `-v-`.
