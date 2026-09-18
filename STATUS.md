@@ -1081,7 +1081,7 @@ The cultural pressure is explicitly bounded (`pressure_scale: 0.60`) so that sem
 
 The profile does **not** require words for particular cultural items, force one-to-one lexical distinctions, impose grammatical categories, or determine individual word meanings. Its intended effect is cumulative: the generated lexicon should show a detectable ecological/social/ontological bias while retaining historical contingency, uneven granularity, motivated polysemy, and independently generated vocabulary.
 
-The semantic graph now contains **133 declared nodes and 160 declared relations**. The generator version/architecture/profile identifiers were advanced to `0.1.1`, `2026-09-18.semantic-architecture.v2.cultural-profile`, and `default-1600-forest-reciprocal-event-relational`.
+The semantic graph now contains **133 declared nodes and 160 declared relations**. The generator version/architecture/profile identifiers are now `0.2.0`, `2026-09-18.semantic-architecture.v3.root-shape-architecture`, and `default-1600-forest-reciprocal-event-relational-roots-v3`.
 
 
 ## Mood and modality architecture — design resolved, exponents pending — 2026-09-18
