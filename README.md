@@ -7,19 +7,19 @@ A naturalistic a priori constructed language project. The language is developed 
 The current language can be described as a **head-final, predominantly agglutinative language with substantial historical fusion and reduction**. Its grammatical profile includes:
 
 - **Basic clause order:** SOV.
-- **Alignment:** active-stative / Split-S analysis, with the exact conditioning of person, animacy, and volitionality still under testing.
-- **Nominal morphology:** eight basic cases—ABS, ERG, GEN, LOC, SUPER, INE, PATH, and COM—used for core argument marking and spatial/relational functions.
-- **Verbal morphology:** finite verbs require person agreement. Person contrasts are 1/2/3, without a singular/plural distinction in the agreement markers.
+- **Alignment:** active-stative / Split-S; 1st/2nd-person S is agentive, while 3rd-person S is split by animacy and volitionality.
+- **Nominal morphology:** eight basic cases—ABS, ERG, GEN, LOC, SUPER, INE, PATH, and COM—used for core argument marking and spatial/relational functions; noun number is restricted, with an archaic dual surviving in natural-pair nouns.
+- **Verbal morphology:** finite verbs require person agreement. Person contrasts are 1/2/3, without a singular/plural distinction in the agreement markers; NEG occupies the right-edge inflectional zone after agreement.
 - **Direction:** verbal `i-` marks movement toward/goalward and `a-` movement away/sourceward. Directional constructions retain the noun's case morphology.
 - **Object status:** the verbal object slot distinguishes LOCAL (`n-`) from NLOC (`Ø`), with additional reflexive and reciprocal values. Before consonant-initial stems, LOCAL `n-` surfaces as `en-` by `n + C → enC`.
 - **TAM and verbal categories:** stem grades distinguish NONFINITE, LINKING, REALIS, and IRREALIS; tense distinguishes NONPAST and PAST; aspect distinguishes IMPERFECTIVE and PERFECT.
 - **Case constructions:** spatial cases participate in directional constructions; LOC plus verbal direction also supports a distinct dative-like construction through the object slot.
 - **COM semantics:** `-me` has association/accompaniment as its core value, with contextual instrumental use; `O-me + i-VERB` has a benefactive reading and `O-me + a-VERB` a malefactive reading.
-- **Clause combining:** nominalization plus case is the intended basis for converbial constructions.
+- **Clause combining:** nominalization plus case is the basis for converbial constructions; same-subject continuity is unmarked and an overt GEN-marked nominalized subject marks switch-reference. Coordination is primarily by juxtaposition, with a small secondary conjunction class.
 - **Prosody:** stress is predictable and weight-sensitive.
 - **Phonology and historical development:** a four-vowel system, a ten-consonant synchronic inventory, context-dependent orthographic `c`, and a layered history of palatalization, consonant weakening, sequence repair, and cluster reduction.
 
-The language is intended to exhibit ordinary historical consequences—fusion, reduction, lexicalization, analogy, and semantic specialization—rather than a perfectly regular synchronically transparent system.
+The language is intended to exhibit ordinary historical consequences—fusion, reduction, lexicalization, analogy, semantic specialization, and stratified derivational productivity—rather than a perfectly regular synchronically transparent system.
 
 ### Orthography
 
