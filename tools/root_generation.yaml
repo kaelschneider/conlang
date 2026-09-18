@@ -1,8 +1,8 @@
 generator:
   name: inherited-root-generator
   version: "0.1.2"
-  architecture_version: "2026-09-18.semantic-architecture.v2.cultural-profile"
-  parameter_profile: "default-1600-forest-reciprocal-event-relational"
+  architecture_version: "2026-09-18.semantic-architecture.v3.root-shape-architecture"
+  parameter_profile: "default-1600-forest-reciprocal-event-relational-roots-v3"
   status_policy: "experimental-candidate"
 
 inventory:
@@ -17,15 +17,44 @@ phonology:
     w: v
     j: y
   root_shapes:
-    C: 0.15
-    VC: 0.25
-    CVC: 0.60
+    V: 0.0025
+    C: 0.0050
+    CV: 0.0200
+    VC: 0.0200
+    CVC: 0.1525
+    VCV: 0.0800
+    CVCV: 0.7200
   root_shape_fallbacks:
-    - CVCV
     - CVCVC
+  root_shape_coda_indices:
+    V: []
+    C: []
+    CV: []
+    VC: [1]
+    CVC: [2]
+    VCV: []
+    CVCV: []
+    CVCVC: [2, 4]
+  shape_bias_mode: global_with_small_domain_bias
+  domain_shape_bias:
+    living: {V: 1.00, C: 1.00, CV: 1.02, VC: 1.00, CVC: 1.00, VCV: 1.04, CVCV: 0.99, CVCVC: 1.00}
+    physical: {V: 0.98, C: 1.00, CV: 1.00, VC: 1.02, CVC: 1.00, VCV: 0.98, CVCV: 1.00, CVCVC: 1.00}
+    space: {V: 1.00, C: 0.98, CV: 1.00, VC: 1.02, CVC: 1.00, VCV: 1.02, CVCV: 0.99, CVCVC: 1.00}
+    motion_change: {V: 0.98, C: 0.98, CV: 1.00, VC: 1.00, CVC: 0.98, VCV: 1.05, CVCV: 1.00, CVCVC: 1.00}
+    perception: {V: 1.02, C: 1.00, CV: 1.03, VC: 1.00, CVC: 0.98, VCV: 1.04, CVCV: 0.99, CVCVC: 1.00}
+    cognition: {V: 1.00, C: 1.00, CV: 1.02, VC: 1.00, CVC: 0.98, VCV: 1.02, CVCV: 1.00, CVCVC: 1.00}
+    communication: {V: 1.00, C: 0.98, CV: 1.02, VC: 1.00, CVC: 0.99, VCV: 1.03, CVCV: 1.00, CVCVC: 1.00}
+    social: {V: 1.00, C: 0.98, CV: 1.02, VC: 1.00, CVC: 0.99, VCV: 1.03, CVCV: 1.00, CVCVC: 1.00}
+    relations: {V: 1.00, C: 0.98, CV: 1.00, VC: 1.02, CVC: 0.99, VCV: 1.03, CVCV: 1.00, CVCVC: 1.00}
+    acquisition: {V: 0.98, C: 0.98, CV: 1.00, VC: 1.02, CVC: 1.00, VCV: 1.03, CVCV: 1.00, CVCVC: 1.00}
+    events: {V: 0.98, C: 0.98, CV: 1.00, VC: 1.00, CVC: 0.98, VCV: 1.04, CVCV: 1.01, CVCVC: 1.00}
+    food: {V: 1.00, C: 1.00, CV: 1.02, VC: 1.00, CVC: 1.00, VCV: 1.03, CVCV: 0.99, CVCVC: 1.00}
+    making: {V: 0.98, C: 0.98, CV: 1.00, VC: 1.02, CVC: 1.00, VCV: 1.00, CVCV: 1.00, CVCVC: 1.00}
   root_final_exclude:
     VC: [h, j]
     CVC: [h, j]
+    CVCV: [h, j]
+    CVCVC: [h, j]
   phoneme_weights:
     a: 1.0
     e: 1.0
