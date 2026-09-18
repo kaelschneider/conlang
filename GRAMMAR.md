@@ -261,9 +261,11 @@ The language has compact, consonant-heavy morphology with historically fused/red
 
 Finite verbs follow:
 
-`(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (DISCOURSE) TENSE (ASPECT)`
+`(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
 
-There is no dedicated verbal applicative slot. Finite verbs require an AGENT/person agreement marker.
+NEG is a suffixal polarity exponent in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. Its exact phonological exponent is a dedicated short CV/VC form and remains a separate lexicalization detail. Negation does not alter stem grade, direction, object status, or the positions of tense and aspect.
+
+There is no dedicated verbal applicative slot. Finite verbs require a person-agreement marker. The agreement controller is the semantic agent where an agentive argument exists; in agentless/stative predicates, the single S argument controls agreement.
 
 ### G-MORPH-03 — Stem grades
 
@@ -328,7 +330,7 @@ AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur
 | 2 | `-t-` | `2` |
 | 3 | `-p-` | `3` |
 
-Agreement is person-only: the markers do not distinguish singular from plural. Finite verbs require one person marker. Number is expressed independently, including by pronouns.
+Agreement is person-only: the markers do not distinguish singular from plural. Finite verbs require one person marker. Agreement follows the semantic agent when an agentive argument exists; a stative or otherwise agentless single S argument controls agreement. Number is expressed independently, including by pronouns.
 
 The 3rd-person marker `-p-` participates in the established historical development to `kui` and related forms; the full conditioned historical system is documented in `GRAMMAR.md`.
 
@@ -349,7 +351,9 @@ The 3rd-person marker `-p-` participates in the established historical developme
 
 `Ø` = imperfective (`IPFV`); `-n` = perfect (`PRF`).
 
-### G-MORPH-11 — Nominal case system
+### G-MORPH-11 — Nominal number and case
+
+Common nouns do not obligatorily inflect for number. A restricted productive plural category is available where overt number is useful. An archaic dual survives in a lexicalized set of conventionalized natural-pair nouns. The exact productive plural exponent and surviving dual forms remain to be established.
 
 The basic nominal case inventory comprises eight cases:
 
@@ -430,7 +434,7 @@ GEN may combine with a restricted set of spatial cases:
 | `GEN + SUPER` | on X's surface / domain | established |
 | `GEN + INE` | inside X's domain | established |
 
-These stacked constructions are not assumed to be freely productive over all nominal cases. Productivity limits remain under testing.
+These stacked constructions are productive within the established GEN + LOC/SUPER/INE domain when their compositional spatial relation is appropriate. They do not generalize freely to arbitrary case combinations.
 
 ### G-MORPH-13 — COM constructions and semantic extensions
 
@@ -474,15 +478,17 @@ The dative-like construction is distinct from the allative: allative describes m
 
 ### G-MORPH-15 — Converbs, participles, and nominalization
 
-Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. The inventory of case-to-relation mappings and same-subject versus switch-reference behavior remains unresolved. Independent conjunctions are not currently established as the primary clause-combining strategy.
+Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. Same-subject continuity is the unmarked interpretation. An overt GEN-marked subject inside the nominalized clause marks a switch to a different subject. This gives an explicit switch-reference contrast without a dedicated switch-reference affix.
 
-Participial morphology is analyzed as follows, but has not yet been promoted to full rule-level canon:
+The case inventory used with nominalized clauses is semantically broad: case meaning remains recognizable, while temporal, causal, purposive, manner/means, and related readings are supplied by constructional context. Independent conjunctions are not the primary strategy for subordination or clause chaining.
 
-| Form | Function | Status |
+Participles are productive and are formed from the nonfinite/citation stem:
+
+| Form | Function | Leipzig gloss |
 |---|---|---|
-| `-ri` | agentive participle | ANALYZED |
-| `-na` | patientive participle | ANALYZED |
-| `-mu` | resultative participle | ANALYZED |
+| `-ri` | agentive participle | `AG.PTCP` |
+| `-na` | patientive participle | `PAT.PTCP` |
+| `-mu` | resultative participle | `RES.PTCP` |
 
 `-nu` is the recovered nominalizer. The working derivational family is:
 
@@ -539,7 +545,7 @@ Potential derivations are generated for all root shapes. Derivational productivi
 
 ### Productive derivation
 
-The productive derivational core is intended to remain compact, with approximately four to five productive mechanisms. The system is mixed: derivation may be category-changing or meaning-extending, and formal mechanisms need not all have the same historical origin.
+The productive derivational core remains compact, with approximately four to five synchronically productive mechanisms. The system is mixed: derivation may be category-changing or meaning-extending, and formal mechanisms need not all have the same historical origin. Older derivational strata coexist with this core and may survive as partially productive, lexically restricted, or opaque patterns.
 
 The following principles are established for generation:
 
@@ -548,9 +554,9 @@ The following principles are established for generation:
 3. `CVC + C → CVCC` is primarily associated with event/action verbalization, while individual lexicalized derivatives may develop more specific meanings or secondary functions.
 4. Derivational mechanisms are mostly category-oriented, but historical/semantic strata may overlap and produce non-identical functions.
 5. Zero derivation/conversion remains available, especially for closely related noun/verb pairs.
-6. Derivations may normally compose to two layers; unrestricted stacking is not the default.
+6. Synchronically productive derivations normally compose to at most two layers; unrestricted stacking is not the default. Older lexicalized forms may preserve deeper historical layering through reanalysis or fusion.
 
-No new overt derivational exponent is asserted here. `-nu`, `-ri`, `-na`, and `-mu` retain their statuses in G-MORPH-17 and are not promoted to productive rule by this model.
+This generation model does not by itself promote unresolved morphology such as `-te-` to productive status. The participles `-ri`, `-na`, and `-mu` are productive by the current morphological canon, independently of the generation model.
 
 ### Added-consonant derivation
 
@@ -621,13 +627,15 @@ A stative predicate follows its subject: `Kerande sarui` = 'the container is lar
 
 ### G-SYN-04 — Alignment
 
-The language is analyzed as active-stative / Split-S. Speech-act participants are strongly agentive; among third persons, animacy and volitionality condition the alignment pattern. Exact conditioning remains unresolved.
+The language has an active-stative / Split-S alignment. Speech-act-participant S arguments (1st/2nd person) pattern agentively. Third-person S is agentive when animacy and volitionality support an agentive interpretation and patientive otherwise.
+
+Agentive S and A take ERG; patientive S and O take ABS. The split therefore has a person-conditioned core and an animacy/volitionality-conditioned third-person extension.
 
 ### G-SYN-05 — Pronouns
 
 Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
 
-Plural case developments include established `mente > mende` and `menta > menda`. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/`; their conditioning remains unresolved. Formal `sese` and reduced `sa/si` variants remain unresolved in distribution.
+Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; an archaic dual survives in conventionalized natural-pair nouns. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/`; their conditioning remains unresolved. Formal `sese` and reduced `sa/si` variants remain unresolved in distribution.
 
 ### G-SYN-06 — Questions
 
@@ -635,20 +643,25 @@ Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku ke
 
 ### G-SYN-07 — Negation
 
-Negation is verbal morphology, but the marker and template position remain unresolved.
+Negation is verbal morphology in the right-edge inflectional zone. Its slot is after AGENT and before optional DISCOURSE, TENSE, and ASPECT. The exponent is a dedicated short CV/VC form; its exact phonological shape remains to be selected.
 
 ### G-SYN-08 — Relative clauses
 
-Participial relatives precede the noun; finite relative clauses follow the noun.
+Participial relatives precede the noun; finite relative clauses follow the noun. Finite relatives use a gap for the relativized argument rather than a dedicated relative pronoun or obligatory resumptive.
 
 ### G-SYN-09 — Clause combining
 
-Converbs and nominalized clauses are the primary intended strategy for clause combining. Independent conjunctions are not currently established as the primary strategy.
+Converbs and nominalized clauses are the primary strategy for subordination and clause chaining. Same-subject continuity is unmarked; an overt GEN-marked subject in the nominalized clause marks switch-reference. Case meanings remain broadly polyfunctional across converbial relations.
 
 ### G-SYN-10 — Adpositions
 
-Nominal relations are primarily expressed through case morphology. An independent adposition system is unresolved.
+Nominal relations are primarily expressed through case morphology. A small independent postposition class may coexist with case; these adpositions are expected to arise historically from nouns or case-bearing relational expressions and need not duplicate the core case inventory.
 
 ### G-SYN-11 — Genitives
 
-Genitive position is unresolved.
+GEN-marked possessors precede the head noun and participate in the general prenominal modifier order. Overt subjects of nominalized clauses are also GEN-marked.
+
+
+### G-SYN-12 — Coordination
+
+Independent clauses are normally coordinated by juxtaposition. A small closed set of conjunctions is available where overt coordination is useful, especially for contrast, additive linkage, or discourse clarity. Conjunctions are secondary to juxtaposition and are not the primary mechanism for subordination.
