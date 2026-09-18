@@ -200,6 +200,29 @@ Results:
 This audit is evidence about constructional coverage, not a promotion of any new lexical valencies or grammatical rules. No new lexicon entries or grammar rules were added.
 
 
+## Fiziwig syntax-test audit — 2026-09-17
+
+The 218-sentence Fiziwig/Conlang Syntax Test Cases list was audited against the current grammar. The mirrored list describes itself as a culled set of 218 sentences chosen to test distinct syntactic principles rather than repeated vocabulary patterns. citeturn782544view0
+
+Using `✓` for a construction directly supported by the current grammar, `△` for a meaning/construction expressible with existing resources but requiring an unestablished lexical or constructional decision, and `✗` for the exact construction requiring a currently absent grammatical resource, the audit yields:
+
+- `✓` 82 / 218: directly supported.
+- `△` 86 / 218: structurally possible but not yet canonically specified.
+- `✗` 50 / 218: not currently expressible as that exact construction without adding grammar; most meanings remain paraphrasable.
+
+The principal coverage gaps are imperative/hortative morphology, modal/necessitative/ability constructions, comparative and superlative degree, passive voice, exact content-question syntax, impersonal finite predicates, multiple-complement ordering, nominal/secondary predication, and several spatial/temporal relational constructions. These are testing priorities rather than automatic grammar changes.
+
+Strongly supported areas include SOV argument structure, ERG/ABS alignment, GEN possession, LOC/SUPER/INE/PATH/COM relations, verbal direction, productive TAM/AUX morphology, reflexive direct objects, participial relatives, finite gap relatives, juxtaposed coordination, switch-reference converbs, and directional recipient/benefactive constructions.
+
+No grammar rule was inferred merely to make the English test sentences translatable. The audit concerns constructional capacity, not English word-order imitation.
+
+## Lexical generation refinement — 2026-09-17
+
+The lexical-generation methodology now explicitly evaluates the semantic contribution of verbal direction. Roots should be chosen so that `i-` and `a-` can contribute productive toward/away or goal/source meanings during lexical derivation. A general TRANSFER-type root is therefore preferable to a semantically endpoint-fixed root such as GIVE when both can occupy the same lexical domain: the former preserves neutral, toward-recipient, and away-source derivational space.
+
+Future root batches must test semantically central candidates against neutral, `i-`, and `a-` frames where their valency permits. Root candidates that merely duplicate a directional construction should be avoided unless lexicalization or semantic specialization supplies an independent motivation. This does not retroactively reclassify the 50 roots already added in `L-0037`–`L-0086`; those remain experimental candidates.
+
+
 ## Lexical root generation pass — 2026-09-17
 
 Added 50 experimental lexical roots (`L-0037`–`L-0086`) to `LEXICON.tsv`.
