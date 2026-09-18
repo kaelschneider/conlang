@@ -287,6 +287,18 @@ semantic_graph:
     - {id: fruit, label: fruit, domains: [food, plant], features: [living, material], salience: 0.72, frequency: 0.54, cultural: 0.78, grammatical: 0.70}
     - {id: tool, label: tool/artifact, domains: [physical, making], features: [impact_manipulation], salience: 0.88, frequency: 0.74, cultural: 0.88, grammatical: 0.94}
     - {id: container, label: container/enclosure, domains: [physical, space, making], features: [space, impact_manipulation], salience: 0.68, frequency: 0.54, cultural: 0.78, grammatical: 0.86}
+    - {id: group, label: group/collective, domains: [social], features: [social], salience: 0.62, frequency: 0.48, cultural: 0.78, grammatical: 0.82}
+    - {id: orientation, label: orientation/direction, domains: [space, motion_change, relations], features: [continuity_change], salience: 0.62, frequency: 0.48, cultural: 0.70, grammatical: 0.84}
+    - {id: support, label: support/help, domains: [relations, social], features: [social, state], salience: 0.70, frequency: 0.60, cultural: 0.78, grammatical: 0.88}
+    - {id: harm, label: harm/detriment, domains: [relations, social], features: [social, change], salience: 0.66, frequency: 0.54, cultural: 0.76, grammatical: 0.88}
+    - {id: possession, label: possession/state-of-having, domains: [acquisition, relations], features: [state], salience: 0.76, frequency: 0.66, cultural: 0.78, grammatical: 0.90}
+    - {id: bind, label: binding/connection, domains: [making, relations], features: [continuity_change], salience: 0.62, frequency: 0.48, cultural: 0.68, grammatical: 0.82}
+    - {id: remove, label: removal, domains: [making, change], features: [impact_manipulation, change], salience: 0.68, frequency: 0.56, cultural: 0.70, grammatical: 0.86}
+    - {id: product, label: made/product outcome, domains: [making, physical], features: [material, change], salience: 0.72, frequency: 0.58, cultural: 0.76, grammatical: 0.86}
+    - {id: structure, label: structure/constructed form, domains: [making, physical], features: [material, space], salience: 0.64, frequency: 0.50, cultural: 0.70, grammatical: 0.82}
+    - {id: object, label: object/entity, domains: [physical], features: [material], salience: 0.78, frequency: 0.74, cultural: 0.76, grammatical: 0.90}
+    - {id: size, label: size/dimension, domains: [qualities], features: [size_strength], salience: 0.72, frequency: 0.66, cultural: 0.70, grammatical: 0.82}
+    - {id: event, label: event/occurrence, domains: [events, abstract], features: [change], salience: 0.90, frequency: 0.80, cultural: 0.82, grammatical: 0.96}
 
   relations:
     - [person, social, meet]
