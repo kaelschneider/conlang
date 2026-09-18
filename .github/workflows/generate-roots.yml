@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: "Number of candidate roots to generate"
+        description: "Number of candidate roots to generate (1200-2000)"
         required: true
-        default: "200"
+        default: "1600"
         type: string
       seed:
         description: "Deterministic generator seed"
@@ -30,6 +30,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install generator dependency
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install generator dependency
         run: python -m pip install --disable-pip-version-check pyyaml
       - name: Generate root candidates
         run: |
@@ -37,7 +41,7 @@ jobs:
       - name: Upload generated candidates
         uses: actions/upload-artifact@v4
         with:
-          name: root-candidates-${{ inputs.count }}-${{ inputs.seed }}
+          name: root-candidates-${{ inputs.count }}-${{ inputs.seed }}"
           path: |
             root-candidates.json
             root-candidates.tsv
