@@ -423,9 +423,9 @@ The experimental nominal case inventory contains seven values, six overt and ABS
 | CONTAINMENT | `-ci` | bounded interior / domain | relational | `CONTAIN` |
 | POSITION | `-ta` | positional / contact / support configuration | relational | `POSITION` |
 | COM / ASSOCIATIVE | `-me` | association / accompaniment / means / medium / route | relational | `COM` |
-| GEN | `-ra` | identifying relation between nominals | relational | `GEN` |
+| GEN | `-se` | identifying relation between nominals | relational | `GEN` |
 
-GEN is a noun-to-noun relation covering possession, kinship, part-whole, attribution, origin, material/composition, and related identifying relations. COM is event-oriented association and is distinct from GEN.
+GEN is a noun-to-noun relation covering possession, kinship, part-whole, attribution, origin, material/composition, and related identifying relations. The productive GEN exponent is `-se`, consistent with the established pronominal pattern `se-se`; the former PATH exponent `-ra` is not a synchronic case exponent. Former PATH meanings are represented by COM/ASSOCIATIVE `-me`. COM is event-oriented association and is distinct from GEN.
 
 The former PATH domain is absorbed into COM/ASSOCIATIVE and is not a separate synchronic case. Traditional labels such as ALLATIVE, ABLATIVE, INESSIVE, ILLATIVE, SUPERESSIVE, SUBLATIVE, DELATIVE, COMITATIVE, INSTRUMENTAL, and PERLATIVE describe recurring constructional interpretations rather than additional case morphemes.
 
@@ -494,8 +494,8 @@ COM (`-me`) is the core event-oriented associative case. It covers association a
 | Direction | Construction | Typical interpretation |
 |---|---|---|
 | neutral | `O-me VERB` | accompaniment / association; means or medium where licensed |
-| toward | `O-me i-VERB` | convergent association; benefactive when APPL promotes a beneficiary |
-| away | `O-me a-VERB` | divergent association; malefactive when APPL promotes an affected participant |
+| toward | `O-me i-VERB` | convergent association; with APPL, the selected associated participant may be promoted as beneficiary |
+| away | `O-me a-VERB` | divergent association; with APPL, the selected associated participant may be promoted as maleficiary |
 
 Benefactive and malefactive are constructional interpretations of COM + direction + APPL; they are not separate case morphemes. Direction remains the general relational vector, and APPL remains the independent valency operation.
 
@@ -505,7 +505,7 @@ Some grammatical functions arise compositionally from existing cases and other e
 
 | Function | Source construction | Interpretation |
 |---|---|---|
-| PART | GEN (`-ra`) | partitive use in divisible/mass contexts |
+| PART | GEN (`-se`) | partitive use in divisible/mass contexts |
 | ESSIVE | LOC (`-te`) + stative predicate | being at/in a state or location |
 | TRANSLATIVE | LOC (`-te`) + `i-` + stative predicate | becoming / coming into a state or relation |
 
@@ -686,7 +686,7 @@ Agentive S and A take ERG; patientive S and O take ABS. The split therefore has 
 
 Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
 
-Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants. `sese` is retained under prominence; `sa` is the ordinary unstressed reduction, while `si` represents a more extreme reduction favored in very weak or clitic-like positions.
+Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`; `menra` is retained as a historical former-PATH form for the phonological regression and may surface as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants. `sese` is retained under prominence; `sa` is the ordinary unstressed reduction, while `si` represents a more extreme reduction favored in very weak or clitic-like positions.
 
 ### G-SYN-06 — Questions
 

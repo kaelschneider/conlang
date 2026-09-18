@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Relational grammar integrated; remaining work is corpus migration, constructional validation, syntax coverage, and lexical expansion  
+**Phase:** Relational grammar integrated; corpus migration reconciled; remaining work is constructional validation, syntax coverage, and lexical expansion  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -12,6 +12,21 @@
 - `SCHEMA.json` — structural validation schema
 - `AGENTS.md` — repository maintenance instructions
 
+## Corpus migration / grammar reconciliation — 2026-09-18
+
+The corpus has now been reconciled with the integrated relational grammar.
+
+- The GEN/PATH surface-form conflict is resolved in favor of **GEN -se**, consistent with the established pronominal pattern sese and the pre-existing corpus. The former PATH exponent -ra is retired from synchronic case morphology; former PATH converbial/route meanings migrate to **COM/ASSOCIATIVE -me**.
+- Existing corpus glosses and notes using **INE** are migrated to **CONTAINMENT** (CONTAIN in Leipzig-style glosses), and **SUPER** to **POSITION**.
+- The five former PATH converb examples (E-0017, E-0018, E-0032, E-0033, E-0113) now use -me and are analyzed as COM/ASSOCIATIVE converbs.
+- E-0118 is corrected to a genuine **GEN → LOC** stack (-se-te); the previous unstacked GEN form did not instantiate the documented stack.
+- Benefactive, malefactive, and recipient examples using a promoted relational participant now use productive **APPL -ka-**. For the existing 2P examples, the promoted participant receives the **LOCAL n-/en-** object index, matching the current verb-template and APPL analysis.
+- The obsolete NLOC description in E-0027 is replaced by the current ordinary 3P-inanimate zero-index analysis; E-0029 and recipient examples use LOCAL explicitly to distinguish object indexing from nominal LOC case.
+- All 120 example IDs are preserved. No lexicon entries were added or changed.
+
+Validation checks on the migrated corpus: 120 rows retained; no stale PATH, INE, SUPER, or NLOC labels remain in segmentation/gloss/notes; segmentation/gloss word counts remain aligned; grammar references and lexical-entry references resolve against the branch; no duplicate IDs were introduced.
+
+This reconciliation treats GRAMMAR.md as authoritative for the resulting system while preserving the superseded PATH analysis in historical/status provenance where relevant.
 ## Experimental relational case / directional / applicative system — 2026-09-18
 
 **Status: EXPERIMENTAL.** This section records the current working system developed for continued testing. It is intentionally **not canonical** and does not replace the morphology, syntax, lexicon, or examples currently established in `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv`. The experiment is isolated on branch `experimental-relational-case-system`; `main` remains unchanged.
