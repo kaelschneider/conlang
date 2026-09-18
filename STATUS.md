@@ -202,7 +202,7 @@ This audit is evidence about constructional coverage, not a promotion of any new
 
 ## Fiziwig syntax-test audit — 2026-09-17
 
-The 218-sentence Fiziwig/Conlang Syntax Test Cases list was audited against the current grammar. The mirrored list describes itself as a culled set of 218 sentences chosen to test distinct syntactic principles rather than repeated vocabulary patterns. citeturn782544view0
+The 218-sentence Fiziwig/Conlang Syntax Test Cases list was audited against the current grammar. The mirrored list describes itself as a culled set of 218 sentences chosen to test distinct syntactic principles rather than repeated vocabulary patterns.
 
 Using `✓` for a construction directly supported by the current grammar, `△` for a meaning/construction expressible with existing resources but requiring an unestablished lexical or constructional decision, and `✗` for the exact construction requiring a currently absent grammatical resource, the audit yields:
 
