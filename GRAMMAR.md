@@ -263,7 +263,7 @@ Finite verbs follow:
 
 `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
 
-NEG is a suffixal polarity exponent in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. Its exact phonological exponent is a dedicated short CV/VC form and remains a separate lexicalization detail. Negation does not alter stem grade, direction, object status, or the positions of tense and aspect.
+NEG is the invariant suffix `-su-` in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. It is a dedicated polarity exponent (`NEG`). Negation does not alter stem grade, direction, object status, or the positions of discourse, tense, or aspect.
 
 There is no dedicated verbal applicative slot. Finite verbs require a person-agreement marker. The agreement controller is the semantic agent where an agentive argument exists; in agentless/stative predicates, the single S argument controls agreement.
 
@@ -318,9 +318,9 @@ The following light roots occur in the AUX/DERIV slot and take the linking `-e-`
 | `*k` | hold | `-ke-` | continuative | `CONT` |
 | `*m` | live / dwell / stay | `-me-` | habitual | `HAB` |
 | `*s` | cut / remove | `-se-` | inchoative | `INCH` |
-| `*t` | transfer | `-te-` | analyzed; semantic value unresolved | `TE` |
+| `*t` | transfer | `-te-` | change-of-state / transformative | `CHG` |
 
-AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur. `-we-` and productive `-w-` were considered during development but are dropped from the canonical system.
+AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur. `-te-` is synchronically productive but semantically restricted, favoring predicates involving a change into a new state or condition. `-we-` and productive `-w-` were considered during development but are dropped from the canonical system.
 
 ### G-MORPH-07 — Agreement
 
@@ -445,7 +445,7 @@ COM (`-me`) is a nominal case whose core meaning is **association / accompanimen
 | `O-me` | association | with / alongside O |
 | `O-me` + instrument context | means | with / using O |
 
-The distinction is contextual rather than a strict grammatical animacy split: animate nouns favor accompaniment, while tools and other inanimate nouns readily favor the instrumental/means reading.
+The distinction is contextual rather than a strict grammatical animacy split: animate nouns favor accompaniment, while tools and other inanimate nouns readily favor the instrumental/means reading. The instrumental interpretation requires the COM-marked participant to function as a means, tool, or other means-like entity in the event; animacy alone does not determine the reading.
 
 With directional morphology, the direction remains on the finite verb and `-me` continues to mark the associated participant:
 
@@ -457,8 +457,8 @@ With directional morphology, the direction remains on the finite verb and `-me` 
 
 Thus:
 
-`O-me` + `i-VERB` → **benefactive**  
-`O-me` + `a-VERB` → **malefactive**
+`O-me` + `i-VERB` → **benefactive** when O is an intended beneficiary whose interests or welfare are advanced by the event.  
+`O-me` + `a-VERB` → **malefactive** when O is a participant whose interests are harmed or opposed by the event.
 
 `i-` and `a-` do not alter the COM suffix or introduce applicative morphology. Benefactive and malefactive meanings are constructional extensions of COM plus verbal direction. Instrumental/means remains a contextual reading of neutral COM and is not assigned to the directional opposition.
 
@@ -496,7 +496,7 @@ Participles are productive and are formed from the nonfinite/citation stem:
 - `keranka` = carrier / person associated with carrying
 - `kerande` = container / place, instrument, or means associated with carrying
 
-`kerande` remains the canonical CONTAINER lexeme. Its synchronic analysis is `kera + -nu + -te` with surface fusion/reduction; the exact independent exponent boundaries and phonological pathway remain unresolved.
+`kerande` remains the canonical CONTAINER lexeme. Its historical pathway is `kera + -nu + -te > keranute > kerante > kerande`: the `-nu-te` sequence undergoes vowel syncope (`keranute > kerante`) followed by localized post-nasal voicing (`nt > nd`). The historical contraction was productive in the nominalizer-plus-LOC environment, but the modern form is partially fossilized: `keranu` is an independent lexical nominal, while the final `-de` is a fossilized locative component in `kerande` rather than a freely productive synchronic suffix.
 
 ### G-MORPH-16 — Established complex verbal forms
 
@@ -643,7 +643,7 @@ Interrogation is marked by verbal `-y-` in the discourse slot. Example: `Seku ke
 
 ### G-SYN-07 — Negation
 
-Negation is verbal morphology in the right-edge inflectional zone. Its slot is after AGENT and before optional DISCOURSE, TENSE, and ASPECT. The exponent is a dedicated short CV/VC form; its exact phonological shape remains to be selected.
+Negation is verbal morphology in the right-edge inflectional zone. Its slot is after AGENT and before optional DISCOURSE, TENSE, and ASPECT. The exponent is invariant `-su-`; it has no negative stem grade or special agreement/tense allomorphy.
 
 ### G-SYN-08 — Relative clauses
 
@@ -665,3 +665,7 @@ GEN-marked possessors precede the head noun and participate in the general preno
 ### G-SYN-12 — Coordination
 
 Independent clauses are normally coordinated by juxtaposition. A small closed set of conjunctions is available where overt coordination is useful, especially for contrast, additive linkage, or discourse clarity. Conjunctions are secondary to juxtaposition and are not the primary mechanism for subordination.
+
+### G-SYN-13 — Information structure
+
+Neutral declaratives retain SOV order. A discourse topic may be placed at the left edge of the clause without changing its grammatical role. Narrow or contrastive focus favors the immediately preverbal position and receives prosodic prominence. No dedicated topic or focus particle is required; information-structural effects are expressed through constituent order plus prosody.
