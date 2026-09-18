@@ -55,7 +55,7 @@ Seven case values are proposed: six overt cases plus ABS zero.
 | CONTAINMENT | `-ci` | bounded interior/domain |
 | POSITION | `-ta` | positional/contact/support configuration |
 | COM / ASSOCIATIVE | `-me` | association, accompaniment, medium, instrument, route |
-| GEN | `-ra` | inherent/identifying relation between one nominal entity and another |
+| GEN | `-se` | inherent/identifying relation between one nominal entity and another |
 
 GEN is deliberately distinct from COM. GEN is noun-to-noun and covers possession, kinship, part-whole, attribution, origin, material/composition, and related identifying relations. COM is event-oriented association and can extend to accompaniment, means/instrument, and route/medium.
 
@@ -345,7 +345,7 @@ No dedicated causee case is proposed.
 The following have been promoted within this experimental model:
 
 - general relational-vector direction
-- single general applicative
+- single general applicative (`-ka-`)
 - LOCAL vs. NONLOCAL object-index organization
 - OBV `-v-`
 - patient > recipient/goal > beneficiary/maleficiary > other applied participant hierarchy

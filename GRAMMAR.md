@@ -446,16 +446,16 @@ The ordinary construction is `O-CASE (i-/a-) VERB`. The noun retains its case su
 
 `O-te` anchors the event at/by a landmark. `O-te i-VERB` orients the event toward the landmark; `O-te a-VERB` orients it away from the landmark.
 
-A recipient/goal construction uses the LOC frame together with the single object slot:
+A recipient/goal construction uses the LOC frame together with the single productive APPL. The recipient is promoted into core argument structure and then receives the single object index:
 
 | Object index | Construction | Function |
 |---|---|---|
-| `n-` | `O-te i-n-VERB` | 1P/2P recipient |
-| `m-` | `O-te i-m-VERB` | ordinary 3P animate recipient |
-| `Ø` | `O-te i-VERB` | ordinary 3P inanimate recipient |
-| `v-` | `O-te i-v-VERB` | obviative recipient |
+| `n-` | `O-te i-n-VERB-APPL` | 1P/2P recipient |
+| `m-` | `O-te i-m-VERB-APPL` | ordinary 3P animate recipient |
+| `Ø` | `O-te i-VERB-APPL` | ordinary 3P inanimate recipient |
+| `v-` | `O-te i-v-VERB-APPL` | obviative recipient |
 
-The zero-marked recipient form can be segmentally identical to bare allative LOC; the distinction is syntactic and constructional rather than an additional case.
+Here `APPL` is the productive `-ka-` suffix in the verbal template. The object index precedes the verb stem; before consonant-initial stems, `n-` surfaces as `en-`. Bare `O-te i-VERB` remains the non-applied allative/goal-oriented construction; recipient promotion is signaled by APPL rather than by a separate case.
 
 #### CONTAINMENT series
 
@@ -471,7 +471,7 @@ With APPL, `O-ci i-VERB-ka-...` promotes the relational participant into the cor
 
 `O-me` expresses association or accompaniment. With a means-, instrument-, medium-, or route-like participant, the same case supports those contextual interpretations.
 
-`O-me i-VERB` gives convergent association and may yield a benefactive construction when APPL promotes the associated beneficiary; `O-me a-VERB` gives divergent association and may yield a malefactive construction when APPL promotes the affected participant.
+`O-me i-VERB` gives convergent association; when APPL promotes the associated participant, a beneficiary reading may result. `O-me a-VERB` gives divergent association; when APPL promotes the associated participant, an affected participant and malefactive reading may result.
 
 #### Case stacking
 
