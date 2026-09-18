@@ -1,7 +1,7 @@
 # Status
 
 **Last updated:** 2026-09-18  
-**Phase:** Core grammar established; remaining work is validation, corpus growth, and lexical expansion  
+**Phase:** Relational grammar integrated; corpus migration reconciled; remaining work is constructional validation, syntax coverage, and lexical expansion  
 **Repository structure:** Consolidated grammar source; minimal flat structure
 
 ## Canonical files
@@ -12,6 +12,21 @@
 - `SCHEMA.json` — structural validation schema
 - `AGENTS.md` — repository maintenance instructions
 
+## Corpus migration / grammar reconciliation — 2026-09-18
+
+The corpus has now been reconciled with the integrated relational grammar.
+
+- The GEN/PATH surface-form conflict is resolved in favor of **GEN -se**, consistent with the established pronominal pattern sese and the pre-existing corpus. The former PATH exponent -ra is retired from synchronic case morphology; former PATH converbial/route meanings migrate to **COM/ASSOCIATIVE -me**.
+- Existing corpus glosses and notes using **INE** are migrated to **CONTAINMENT** (CONTAIN in Leipzig-style glosses), and **SUPER** to **POSITION**.
+- The five former PATH converb examples (E-0017, E-0018, E-0032, E-0033, E-0113) now use -me and are analyzed as COM/ASSOCIATIVE converbs.
+- E-0118 is corrected to a genuine **GEN → LOC** stack (-se-te); the previous unstacked GEN form did not instantiate the documented stack.
+- Benefactive, malefactive, and recipient examples using a promoted relational participant now use productive **APPL -ka-**. For the existing 2P examples, the promoted participant receives the **LOCAL n-/en-** object index, matching the current verb-template and APPL analysis.
+- The obsolete NLOC description in E-0027 is replaced by the current ordinary 3P-inanimate zero-index analysis; E-0029 and recipient examples use LOCAL explicitly to distinguish object indexing from nominal LOC case.
+- All 120 example IDs are preserved. No lexicon entries were added or changed.
+
+Validation checks on the migrated corpus: 120 rows retained; no stale PATH, INE, SUPER, or NLOC labels remain in segmentation/gloss/notes; segmentation/gloss word counts remain aligned; grammar references and lexical-entry references resolve against the branch; no duplicate IDs were introduced.
+
+This reconciliation treats GRAMMAR.md as authoritative for the resulting system while preserving the superseded PATH analysis in historical/status provenance where relevant.
 ## Experimental relational case / directional / applicative system — 2026-09-18
 
 **Status: EXPERIMENTAL.** This section records the current working system developed for continued testing. It is intentionally **not canonical** and does not replace the morphology, syntax, lexicon, or examples currently established in `GRAMMAR.md`, `LEXICON.tsv`, or `EXAMPLES.tsv`. The experiment is isolated on branch `experimental-relational-case-system`; `main` remains unchanged.
@@ -40,7 +55,7 @@ Seven case values are proposed: six overt cases plus ABS zero.
 | CONTAINMENT | `-ci` | bounded interior/domain |
 | POSITION | `-ta` | positional/contact/support configuration |
 | COM / ASSOCIATIVE | `-me` | association, accompaniment, medium, instrument, route |
-| GEN | `-ra` | inherent/identifying relation between one nominal entity and another |
+| GEN | `-se` | inherent/identifying relation between one nominal entity and another |
 
 GEN is deliberately distinct from COM. GEN is noun-to-noun and covers possession, kinship, part-whole, attribution, origin, material/composition, and related identifying relations. COM is event-oriented association and can extend to accompaniment, means/instrument, and route/medium.
 
@@ -90,13 +105,13 @@ One general applicative is proposed and **promoted as a single productive operat
 
 It does not intrinsically mean dative, benefactive, malefactive, locative, instrumental, or any other semantic role.
 
-The applicative exponent is **not yet selected**.
+The productive applicative exponent is **`-ka-`**, selected as a verbal suffix immediately after AUX/DERIV and before AGENT.
 
 One APPL adds one relational participant. **Unrestricted APPL stacking is rejected.** Multiple APPLs are not established as a productive mechanism. When more than one relational NP could supply the applied participant, the remaining open issue is how the language selects among those candidates.
 
 ### Experimental object indexing
 
-The object slot is reorganized around LOCAL vs. NONLOCAL:
+The object slot is reorganized around participant status:
 
 | Object status | Form | Meaning |
 |---|---:|---|
@@ -126,7 +141,7 @@ When an ordinary lexical patient and applicatively added participants coexist, t
 
 **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**
 
-The applicative adds a core participant but does not automatically displace the lexical patient from the object slot.
+APPL selection precedes object indexing: the selected relational participant is promoted into core argument structure and receives the single object index.
 
 RECIP and REFL are special coreference constructions rather than ordinary competing semantic roles.
 
@@ -221,6 +236,34 @@ The current hierarchy remains **patient/theme > recipient/goal > beneficiary/mal
 
 Unrestricted APPL-to-all or arbitrary APPL stacking is rejected. Multiple-candidate APPL selection is now resolved within the experimental model.
 
+### Experimental converb system — 2026-09-18
+
+The converb test is promoted within the experimental relational system. Converbial clauses continue to be formed by verbal nominalization plus case; the case supplies the subordinate relational frame.
+
+Four case-based converb relations are productive:
+
+| Converb case | Productive relation |
+|---|---|
+| **LOC `-te`** | event situated relative to a spatial/relational frame; supports situative/temporal overlap |
+| **CONTAINMENT `-ci`** | event within a bounded domain; directional forms support entry into or exit from that domain |
+| **POSITION `-ta`** | event in a positional/contact/support configuration |
+| **COM / ASSOCIATIVE `-me`** | association, accompaniment, means, medium, route, or co-participation |
+
+The experimental directional system remains active inside converbal morphology. Direction is therefore expressed on the subordinate verb before nominalization:
+
+> **`DIRECTIONAL–VERB–NMLZ–CASE`**
+
+For each productive converb frame:
+
+- `Ø` = the subordinate event holds in the case-defined relation;
+- `i-` = the subordinate event converges toward / increasingly orients into the case-defined relation;
+- `a-` = the subordinate event diverges from / increasingly orients away from the case-defined relation.
+
+A directional may instead occur only in the finite main clause, and subordinate and main clauses may independently carry directionals. Nominalization does not neutralize the relational-vector contribution of the subordinate verb.
+
+**GEN `-ra` on the nominalized clause is not promoted as a general converb relation.** GEN remains available for the overt subject of a nominalized clause where it marks switch-reference, as established by the nominalization system. Bare ABS nominalization remains available for content/event nominalization rather than functioning as a general converb relation; ERG is likewise not a general converb relation.
+
+The promoted system therefore supports productive LOC, CONTAINMENT, POSITION, and COM converbs, each with independent `Ø / i- / a-` directional combinations. This promotion remains experimental and does not alter canonical `GRAMMAR.md`.
 ### Experimental stative and aspect interaction
 
 The directional system has been promoted beyond physical motion.
@@ -302,7 +345,7 @@ No dedicated causee case is proposed.
 The following have been promoted within this experimental model:
 
 - general relational-vector direction
-- single general applicative
+- single general applicative (`-ka-`)
 - LOCAL vs. NONLOCAL object-index organization
 - OBV `-v-`
 - patient > recipient/goal > beneficiary/maleficiary > other applied participant hierarchy
@@ -417,23 +460,23 @@ Agents must not add, remove, rename, move, split, merge, or otherwise alter repo
 - Stress is rightmost-heavy otherwise penultimate; IPA must mark primary stress with `ˈ`
 
 ### Morphology
-- Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
+- Finite verb template: `(DIRECTION) (OBJECT) STEM (AUX/DERIV) APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
 - Finite verbs require person agreement; agreement follows the semantic agent where one exists and otherwise the stative/agentless S
 - Stem grades: `-a-` NONFINITE, `-e-` LINKING/ATTRIBUTIVE, `-u-` REALIS, `-i-` IRREALIS
 - Direction: `i-` toward, `a-` away, `Ø` neutral; direction is verbal rather than nominal
-- Object slot: `n-` local, `Ø` nonlocal, `s-` reflexive, `r-` reciprocal; LOCAL/NLOC is distinct from nominal LOC (`-te`)
+- Object slot: `n-` 1P/2P, `m-` ordinary 3P animate, `Ø` ordinary 3P inanimate, `v-` obviative, `s-` reflexive, `r-` reciprocal; object indexing is distinct from nominal LOC (`-te`)
 - AUX/DERIV: `-re-` progressive, `-ke-` continuative, `-me-` habitual, `-se-` inchoative, and semantically restricted productive `-te-` change-of-state / transformative
 - NEG is the invariant suffix `-su-` after AGENT and before optional DISCOURSE/TENSE/ASPECT; no special NEG allomorphy is established
 - Agreement: `-k-` 1, `-t-` 2, `-p-` 3; person-only
 - Discourse: `-h-` exclamative, `-y-` interrogative
 - Tense: `-i-` nonpast, `-a-` past
 - Aspect: `Ø` imperfective, `-n` perfect
-- Eight base nominal cases: ABS, ERG, GEN, LOC, SUPER, INE, PATH, COM
+- Seven base nominal cases: ABS, ERG, LOC, CONTAINMENT, POSITION, COM/ASSOCIATIVE, GEN; the former PATH domain is absorbed into COM/ASSOCIATIVE
 - Common-noun number is restricted rather than obligatory; animate nouns have productive `-i` plural and inanimate nouns have productive `-n` plural; an archaic dual survives in conventionalized natural-pair nouns
-- Dedicated verbal applicatives eliminated
+- APPL `-ka-` is a single productive verbal suffix after AUX/DERIV and before AGENT
 - COM `-me` has association/accompaniment as its core reading; instrumental use is contextual and means-like; `i-` + COM yields benefactive when the associated participant benefits, and `a-` + COM yields malefactive when the associated participant is harmed or opposed
-- Restricted but productive GEN + spatial stacking: GEN+LOC, GEN+SUPER, GEN+INE
-- LOC + verbal direction has two distinct constructions: ALL (`O-te i-VERB`) and DAT-like (`O-te i-(LOCAL/NLOC)-VERB`); NLOC DAT-like is zero-marked and therefore segmentally identical to ALL
+- Restricted productive case stacking: CONTAINMENT→LOC, GEN→CONTAINMENT, and GEN→LOC; reversed order, repeated identical case, and free ERG stacking are not productive
+- LOC + verbal direction has distinct allative and recipient/goal constructions; recipient/goal uses the single object-index slot and may be zero-marked for ordinary 3P inanimate recipients
 - Converbs are nominalization + case; same-subject continuity is unmarked and overt GEN-marking marks switch-reference
 - Participles `-ri`, `-na`, `-mu` are productive agentive, patientive, and resultative forms
 - `-nu` nominalizer; `keranu` is productive, `keranka` is lexicalized, and `kerande` is a partially fossilized lexicalized nominal
@@ -517,20 +560,107 @@ The conditioned historical system is documented in `GRAMMAR.md`, including the r
 
 The earlier regression forms (`apa`, `ita`, `teta`, `keka`, `neku`, `seku`, `kerande-te`, and related forms) remain useful diagnostic evidence for historical strata and conditioning rather than being declared exceptions.
 
-Zero-marked verbal objects are canonically NLOC by default; overt LOCAL `n-` is used when discourse accessibility/salience makes the object local. Local `n-` retains the established surface repair `n + C → enC` before consonant-initial verb stems.
+The object slot distinguishes `n-` (1P/2P), `m-` (ordinary 3P animate), `Ø` (ordinary 3P inanimate), and `v-` (OBV), with `s-` and `r-` reserved for reflexive/reciprocal constructions. `n-` retains the established surface repair `n + C → enC` before consonant-initial verb stems.
 
 ## Open questions
 
-None among the current core grammar decisions. Residual lexical creation/testing may add entries as needed, but no unresolved grammatical parameter from the recovery audits remains open.
+There are no unresolved core parameters among the relational-system decisions already tested. The remaining uncertainties are **integration or construction-level tests**, not reasons to reopen the settled architecture.
 
-## Immediate testing priorities
+The main integration issue is that `GRAMMAR.md` now contains the reorganized seven-value case system and productive APPL `-ka-`, while `EXAMPLES.tsv` still contains examples written against earlier case semantics and therefore requires systematic migration rather than selective patching.
 
-1. **Completed 2026-09-17:** Validate `LEXICON.tsv` against `SCHEMA.json` and check all affected IPA/derivation fields against `GRAMMAR.md`; the blank-row defect was removed and the complete populated file now passes structural validation.
-2. **Completed 2026-09-17:** Test the nominalizer family (`keranu`, `keranka`, `kerande`) with additional examples.
-3. **Completed 2026-09-17:** Test productive participles, converb/switch-reference constructions, and information-structure contrasts with matched experimental examples.
-4. **Completed 2026-09-17:** Stress-test the OPEN/CLOSED × F_F/F_B/B_F/B_B historical matrix across all 24 cells and reconcile the attested diagnostic forms.
-5. **Completed 2026-09-18:** Stress-test OBV/discourse behavior, including proximate selection, persistence, reassignment, multiple OBV participants, animacy effects, focus/topic interaction, and grammatical-role independence.
-6. Continue corpus growth with additional matched tests for productive morphology, subordination, and discourse structure.
+## Relational-system roadmap — 2026-09-18
+
+The relational system has moved from architectural design into **integration and validation**. The roadmap is now:
+
+**1 — Corpus migration and grammar reconciliation — NEXT.**
+
+Bring `EXAMPLES.tsv` into alignment with the current `GRAMMAR.md` without changing established IDs or inventing new evidence.
+
+Required audit targets:
+
+- replace obsolete GEN/PATH/SUPER/INE analyses with the current seven-value system;
+- identify examples whose **surface segmentation, gloss, translation, or IPA** changes under the new case inventory;
+- add APPL `-ka-` only where the construction actually licenses an applied participant;
+- distinguish ordinary relational NPs from APPL-selected core participants;
+- preserve examples whose historical form is opaque when the modern analysis is still adequately documented;
+- mark genuinely new constructions `experimental` rather than silently promoting them.
+
+This is the highest-priority task because the grammar is now ahead of the corpus.
+
+**2 — Argument-structure / multi-complement validation.**
+
+Use matched construction-first tests to validate the already-settled hierarchy in actual clauses:
+
+`patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant`
+
+Test especially:
+
+- lexical patient + recipient/goal;
+- lexical patient + beneficiary/maleficiary;
+- recipient + beneficiary;
+- three relational NPs;
+- APPL vs. non-APPL contrasts;
+- ordinary 3P animate, 3P inanimate, LOCAL, and OBV object indexing;
+- discourse-priority and same-rank tie cases.
+
+The purpose is no longer to choose the hierarchy; that decision is already settled. The purpose is to establish its concrete morphosyntactic behavior and discover interactions the current abstract description does not yet capture.
+
+**3 — Full relational construction matrix.**
+
+Build a compact regression matrix crossing:
+
+`CASE × DIRECTION × APPL × ARGUMENT STRUCTURE`
+
+for the four productive relational frames:
+
+`LOC × CONTAINMENT × POSITION × COM`
+
+Include neutral, convergent `i-`, and divergent `a-` readings, plus stative and dynamic predicates. Add targeted case-stacking tests for the three promoted stacks:
+
+`CONTAINMENT → LOC`  
+`GEN → CONTAINMENT`  
+`GEN → LOC`
+
+Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as explicit boundary tests rather than silently promoting them.
+
+**4 — Construction-first corpus redevelopment.**
+
+After migration and argument-structure validation, expand the corpus from language-internal schemas rather than translated English sentence lists.
+
+Priority construction families:
+
+- spatial/relational vector constructions;
+- beneficiary/maleficiary and recipient constructions;
+- converbial relations;
+- stative → directional state-transition readings;
+- case stacking;
+- information-structure contrasts;
+- causative argument structure;
+- secondary predication.
+
+English should remain the translation/paraphrase layer rather than the source of the construction itself.
+
+**5 — Remaining independent syntax gaps.**
+
+Only after the relational architecture is stable, address the largest non-relational coverage gaps from the prior Fiziwig/Leipzig audits:
+
+`imperative/hortative → modality → content questions → impersonal predicates → secondary predication → finite speech complements → comparison → passive`
+
+Multiple-complement ordering should be handled in step 2 because it directly interacts with APPL and object indexing.
+
+**6 — Lexical valency and family expansion.**
+
+Reclassify or expand experimental lexical entries only after the new constructions are exercised. Prioritize roots whose semantic frames reveal useful contrasts between neutral, toward, and away direction, and roots needed for currently under-tested valencies such as experiencer, speech, search, naming, filling/loading, and material/source relations.
+
+### Promotion gate
+
+Do not treat the relational system as fully canonical across the repository until:
+
+1. `GRAMMAR.md` and `EXAMPLES.tsv` agree on case inventory and segmentation;
+2. APPL `-ka-` is represented consistently in tested examples;
+3. multi-complement/object-index behavior has passed matched construction tests;
+4. the four-frame × three-direction relational matrix has no unexplained contradictions;
+5. historical analyses remain distinct from synchronic productive rules.
 
 ## Leipzig valency-frame coverage audit — 2026-09-17
 
@@ -562,7 +692,7 @@ Added six examples (`E-0116`–`E-0121`) after testing stacked-case composition 
 - `E-0120` retains **COM → LOC** as an unresolved route/medium test.
 - `E-0121` retains **GEN → CONTAINMENT → LOC** as a recursive three-case test.
 
-The promotion is structural only. The unresolved `STATUS.md` versus `GRAMMAR.md` GEN/PATH inventory conflict remains unchanged, and the corpus uses `GRAMMAR.md`'s authoritative surface exponents.
+The experimental seven-value case inventory is now canonical in `GRAMMAR.md`; the former PATH case is absorbed into COM/ASSOCIATIVE.
 
 No new lexicon entries were required; the six examples are reference-valid and segmentation/gloss aligned.
 ## TAM interaction and construction-first corpus stress test — 2026-09-17

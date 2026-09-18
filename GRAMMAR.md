@@ -277,11 +277,11 @@ The language has compact, consonant-heavy morphology with historically fused/red
 
 Finite verbs follow:
 
-`(DIRECTION) (OBJECT) STEM (AUX/DERIV) AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
+`(DIRECTION) (OBJECT) STEM (AUX/DERIV) APPL AGENT (NEG) (DISCOURSE) TENSE (ASPECT)`
 
 NEG is the invariant suffix `-su-` in the right-edge inflectional zone, immediately after person agreement and before optional discourse marking. It is a dedicated polarity exponent (`NEG`). Negation does not alter stem grade, direction, object status, or the positions of discourse, tense, or aspect.
 
-There is no dedicated verbal applicative slot. Finite verbs require a person-agreement marker. The agreement controller is the semantic agent where an agentive argument exists; in agentless/stative predicates, the single S argument controls agreement.
+APPL is a dedicated verbal suffixal slot immediately after AUX/DERIV. Its productive exponent is `-ka-`. APPL adds one selected relational participant to the verb's core argument structure. It is available to overt relational NPs and to inherently relational arguments that are lexically licensed by the predicate. Finite verbs require a person-agreement marker. The agreement controller is the semantic agent where an agentive argument exists; in agentless/stative predicates, the single S argument controls agreement.
 
 ### G-MORPH-03 — Stem grades
 
@@ -313,16 +313,22 @@ Directional morphology is verbal. It is not a prefix attached to the noun. In ca
 
 ### G-MORPH-05 — Object slot
 
-There is exactly one object slot:
+There is exactly one object slot. In the experimental relational system, the slot is organized by participant status:
 
 | Marker | Function | Leipzig gloss |
 |---|---|---|
-| `n-` | local object | `LOC` |
-| `Ø` | nonlocal object | `NLOC` |
+| `n-` | 1P or 2P object | `LOCAL` |
+| `m-` | ordinary 3P animate object | `3P.ANIM` |
+| `Ø` | ordinary 3P inanimate object | `3P.INAN` |
+| `v-` | obviative object | `OBV` |
 | `s-` | reflexive | `REFL` |
 | `r-` | reciprocal | `RECP` |
 
-The overt object remains a separate noun phrase in SOV clauses. Nominal case suffixes likewise remain on the overt noun phrase. LOCAL/NLOC in this section refers to object status in the verbal object slot and is distinct from nominal LOC case (`-te`). The LOCAL marker `n-` is underlyingly consonant-initial; before a consonant-initial verb stem, `n- + C → enC` to avoid an onset cluster. Before a vowel-initial stem, `n-` remains `n-`.
+The overt object remains a separate noun phrase in SOV clauses, and the noun retains its nominal case suffix. Object indexing is distinct from nominal LOC case (`-te`). The LOCAL form intentionally merges 1P and 2P objects; speaker/addressee interpretation is recovered from discourse.
+
+The `n- + C → enC` repair remains productive before consonant-initial verb stems. Before vowel-initial stems, `n-` remains `n-`.
+
+OBV is a discourse-status category rather than a fourth person. When a third-person referent is obviative, `v-` replaces the ordinary third-person index rather than stacking with `m-`.
 
 ### G-MORPH-06 — AUX/DERIV
 
@@ -337,6 +343,35 @@ The following light roots occur in the AUX/DERIV slot and take the linking `-e-`
 | `*t` | transfer | `-te-` | change-of-state / transformative | `CHG` |
 
 AUX/DERIV morphology and final verbal aspect are separate slots and may co-occur. `-te-` is synchronically productive but semantically restricted, favoring predicates involving a change into a new state or condition. `-we-` and productive `-w-` were considered during development but are dropped from the canonical system.
+
+### G-MORPH-06A — Applicative
+
+The productive applicative exponent is `-ka-`.
+
+APPL is a single productive valency operation. It adds **one** relational participant to the verb's core argument structure; unrestricted APPL stacking is not productive.
+
+The APPL-selected participant must be either:
+
+- an overt relational NP marked by a productive relational case;
+- an inherently relational argument independently licensed by the lexical predicate.
+
+When several relational NPs are eligible, selection proceeds by:
+
+1. semantic argument hierarchy;
+2. discourse prominence for genuine same-rank ties;
+3. linear word order for any remaining genuine tie.
+
+The working hierarchy is **patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant**.
+
+APPL selection occurs before object indexing. The selected participant is promoted into core argument structure, after which the single object slot is assigned to that participant. APPL therefore does not create a second object-indexing position.
+
+With stative predicates, APPL is available only where the predicate independently licenses an affected participant. Direction and aspect remain independent of APPL.
+
+APPL follows the complete AUX/DERIV material and precedes AGENT:
+
+`STEM (AUX/DERIV) APPL AGENT`
+
+No APPL-specific allomorphy is currently established.
 
 ### G-MORPH-07 — Agreement
 
@@ -376,114 +411,93 @@ Common nouns do not obligatorily inflect for number. A restricted productive plu
 | Animate | `-i` | productive |
 | Inanimate | `-n` | productive |
 
-The distinction is grammaticalized but compatible with lexicalization and analogy, so borderline or culturally personified nouns may vary. Number morphology precedes nominal case suffixes. An archaic dual survives in a small lexicalized set of conventionalized natural-pair nouns. The dual is not synchronically productive; individual relic forms may retain a recognizable historical dual marker or be fully lexicalized.
+Number morphology precedes nominal case suffixes. An archaic dual survives in a small lexicalized set of conventionalized natural-pair nouns; it is not synchronically productive.
 
-The basic nominal case inventory comprises eight cases:
+The experimental nominal case inventory contains seven values, six overt and ABS zero:
 
-| Case | Suffix | Core meaning | Semantic domain | Leipzig gloss |
+| Case | Suffix | Core relational meaning | Semantic domain | Leipzig gloss |
 |---|---|---|---|---|
 | ABS | `Ø` | patient / S | core argument | `ABS` |
-| ERG | `-ku` | agent / A | core argument | `ERG` |
-| GEN | `-se` | possessor / dependent | relational | `GEN` |
-| LOC | `-te` | at / in / static | spatial | `LOC` |
-| SUPER | `-ta` | on / against / surface | spatial | `SUPER` |
-| INE | `-ci` | inside / containment | spatial | `INE` |
-| PATH | `-ra` | along / through / medium | spatial | `PATH` |
-| COM | `-me` | with / associate | participant | `COM` |
+| ERG | `-ku` | agent / controller | core argument | `ERG` |
+| LOC | `-te` | spatial landmark / reference frame | relational | `LOC` |
+| CONTAINMENT | `-ci` | bounded interior / domain | relational | `CONTAIN` |
+| POSITION | `-ta` | positional / contact / support configuration | relational | `POSITION` |
+| COM / ASSOCIATIVE | `-me` | association / accompaniment / means / medium / route | relational | `COM` |
+| GEN | `-se` | identifying relation between nominals | relational | `GEN` |
 
-These are the basic nominal cases. Additional semantic functions are constructional extensions of these cases rather than additional nominal cases.
+GEN is a noun-to-noun relation covering possession, kinship, part-whole, attribution, origin, material/composition, and related identifying relations. The productive GEN exponent is `-se`, consistent with the established pronominal pattern `se-se`; the former PATH exponent `-ra` is not a synchronic case exponent. Former PATH meanings are represented by COM/ASSOCIATIVE `-me`. COM is event-oriented association and is distinct from GEN.
 
-### G-MORPH-12 — Case composition and directional constructions
+The former PATH domain is absorbed into COM/ASSOCIATIVE and is not a separate synchronic case. Traditional labels such as ALLATIVE, ABLATIVE, INESSIVE, ILLATIVE, SUPERESSIVE, SUBLATIVE, DELATIVE, COMITATIVE, INSTRUMENTAL, and PERLATIVE describe recurring constructional interpretations rather than additional case morphemes.
 
-Nominal cases retain their ordinary suffixes when they participate in larger constructions. Direction is verbal: the finite verb carries `i-` toward/goalward or `a-` away/sourceward, while the noun retains its case suffix.
+### G-MORPH-12 — Relational frames, directional constructions, and case stacking
 
-The ordinary directional construction has no object-slot marking:
+Nominal case establishes a relational frame; direction is verbal and supplies the relational vector. The experimental system has four productive relational frames:
 
-`O-CASE i-VERB` → movement toward the case-marked spatial relation  
-`O-CASE a-VERB` → movement away from the case-marked spatial relation
+| Frame | `Ø` | `i-` | `a-` |
+|---|---|---|---|
+| LOC | relation holds at/by frame | convergence toward frame | divergence away from frame |
+| CONTAINMENT | relation holds within domain | convergence into domain | divergence out of domain |
+| POSITION | configuration holds | enter/establish configuration | leave/terminate configuration |
+| COM | association/accompaniment | convergent association | divergent association |
 
-The currently established spatial cases participating in directional constructions are LOC, SUPER, INE, and PATH. COM has its own specialized semantic pattern in G-MORPH-13. ABS, ERG, and GEN do not currently directionalize.
+The ordinary construction is `O-CASE (i-/a-) VERB`. The noun retains its case suffix; direction remains verbal.
 
 #### LOC series
 
-| Polarity | Construction | Function | Meaning |
-|---|---|---|---|
-| Ø | `O-te` | LOC | at / in |
-| i- | `O-te i-VERB` | ALL | to / toward |
-| a- | `O-te a-VERB` | ABL | from / away |
+`O-te` anchors the event at/by a landmark. `O-te i-VERB` orients the event toward the landmark; `O-te a-VERB` orients it away from the landmark.
 
-The **allative (ALL)** construction expresses movement toward the location itself. It does not by itself introduce a recipient or beneficiary.
+A recipient/goal construction uses the LOC frame together with the single productive APPL. The recipient is promoted into core argument structure and then receives the single object index:
 
-A distinct **dative-like (DAT-like)** construction uses the LOC noun phrase together with the verb's object slot. The object slot is interpreted as the recipient/goal participant:
+| Object index | Construction | Function |
+|---|---|---|
+| `n-` | `O-te i-n-VERB-APPL` | 1P/2P recipient |
+| `m-` | `O-te i-m-VERB-APPL` | ordinary 3P animate recipient |
+| `Ø` | `O-te i-VERB-APPL` | ordinary 3P inanimate recipient |
+| `v-` | `O-te i-v-VERB-APPL` | obviative recipient |
 
-| Object status | Construction | Function | Meaning |
-|---|---|---|---|
-| LOCAL | `O-te i-n-VERB` | DAT-like | to / for the local recipient |
-| NLOC | `O-te i-VERB` | DAT-like | to / for the nonlocal recipient |
+Here `APPL` is the productive `-ka-` suffix in the verbal template. The object index precedes the verb stem; before consonant-initial stems, `n-` surfaces as `en-`. Bare `O-te i-VERB` remains the non-applied allative/goal-oriented construction; recipient promotion is signaled by APPL rather than by a separate case.
 
-ALL and DAT-like are distinct constructions even where their surface segments coincide. ALL is `O-te i-VERB` with no object-slot value; DAT-like is `O-te i-(LOCAL/NLOC)-VERB` and introduces a recipient/goal participant through the object slot. Because NLOC is zero-marked, the NLOC DAT-like form is segmentally identical to ALL; the distinction is syntactic and semantic rather than an additional overt segment. This does not create a new nominal case.
+#### CONTAINMENT series
 
-#### SUPER series
+`O-ci` expresses a relation within a bounded domain. `O-ci i-VERB` orients an event into the domain; `O-ci a-VERB` orients it out of the domain.
 
-| Polarity | Construction | Function | Meaning |
-|---|---|---|---|
-| Ø | `O-ta` | SUPER | on / against |
-| i- | `O-ta i-VERB` | SUBLATIVE | onto / up to surface |
-| a- | `O-ta a-VERB` | DELATIVE | off / from surface |
+With APPL, `O-ci i-VERB-ka-...` promotes the relational participant into the core argument structure when the predicate licenses that relation.
 
-#### INE series
+#### POSITION series
 
-| Polarity | Construction | Function | Meaning |
-|---|---|---|---|
-| Ø | `O-ci` | INE | inside / within |
-| i- | `O-ci i-VERB` | ILLATIVE | into / in through |
-| a- | `O-ci a-VERB` | ELATIVE | out of |
+`O-ta` expresses a positional, contact, or support configuration. `O-ta i-VERB` establishes or enters the configuration; `O-ta a-VERB` leaves or terminates it.
 
-#### PATH series
+#### COM / ASSOCIATIVE series
 
-| Polarity | Construction | Function | Meaning |
-|---|---|---|---|
-| Ø | `O-ra` | PATH | along / through |
-| i- | `O-ra i-VERB` | PATH+i- | toward along / across |
-| a- | `O-ra a-VERB` | PATH+a- | away along / back |
+`O-me` expresses association or accompaniment. With a means-, instrument-, medium-, or route-like participant, the same case supports those contextual interpretations.
+
+`O-me i-VERB` gives convergent association; when APPL promotes the associated participant, a beneficiary reading may result. `O-me a-VERB` gives divergent association; when APPL promotes the associated participant, an affected participant and malefactive reading may result.
 
 #### Case stacking
 
-GEN may combine with a restricted set of spatial cases:
+Case stacking is restricted and compositional:
 
-| Stacking | Function | Status |
+> **The inner case constructs a relational domain; the outer case relates that constructed domain to something else.**
+
+| Stack | Function | Status |
 |---|---|---|
-| `GEN + LOC` | at / in X's domain | established |
-| `GEN + SUPER` | on X's surface / domain | established |
-| `GEN + INE` | inside X's domain | established |
+| `CONTAINMENT → LOC` | locate a region/place within the bounded domain | productive experimental |
+| `GEN → CONTAINMENT` | construct a bounded domain belonging to/defined by X | productive experimental |
+| `GEN → LOC` | locate something at/in X's relational domain | productive experimental |
 
-These stacked constructions are productive within the established GEN + LOC/SUPER/INE domain when their compositional spatial relation is appropriate. They do not generalize freely to arbitrary case combinations.
+Reversed case order is not productive. Repeated identical case is not productive. ERG does not freely participate in case stacking. Additional combinations remain constructional tests rather than part of the productive core.
 
 ### G-MORPH-13 — COM constructions and semantic extensions
 
-COM (`-me`) is a nominal case whose core meaning is **association / accompaniment**. It also supports an instrumental reading when the associated participant is a means, tool, or other inanimate entity. These are contextual readings of one case, not separate nominal cases.
+COM (`-me`) is the core event-oriented associative case. It covers association and accompaniment and can extend contextually to means/instrument and route/medium. The former PATH domain is therefore represented inside COM rather than by a separate case.
 
-| Construction | Core relation | Typical reading |
+| Direction | Construction | Typical interpretation |
 |---|---|---|
-| `O-me` | association | with / alongside O |
-| `O-me` + instrument context | means | with / using O |
+| neutral | `O-me VERB` | accompaniment / association; means or medium where licensed |
+| toward | `O-me i-VERB` | convergent association; with APPL, the selected associated participant may be promoted as beneficiary |
+| away | `O-me a-VERB` | divergent association; with APPL, the selected associated participant may be promoted as maleficiary |
 
-The distinction is contextual rather than a strict grammatical animacy split: animate nouns favor accompaniment, while tools and other inanimate nouns readily favor the instrumental/means reading. The instrumental interpretation requires the COM-marked participant to function as a means, tool, or other means-like entity in the event; animacy alone does not determine the reading.
-
-With directional morphology, the direction remains on the finite verb and `-me` continues to mark the associated participant:
-
-| Direction | Construction | Spatial relation | Constructional extension |
-|---|---|---|---|
-| neutral | `O-me VERB` | with / alongside O | accompaniment; instrumental/means where context permits |
-| toward | `O-me i-VERB` | toward O | **benefactive**: for / toward the benefit of O |
-| away | `O-me a-VERB` | away from O | **malefactive**: to / from O's detriment |
-
-Thus:
-
-`O-me` + `i-VERB` → **benefactive** when O is an intended beneficiary whose interests or welfare are advanced by the event.  
-`O-me` + `a-VERB` → **malefactive** when O is a participant whose interests are harmed or opposed by the event.
-
-`i-` and `a-` do not alter the COM suffix or introduce applicative morphology. Benefactive and malefactive meanings are constructional extensions of COM plus verbal direction. Instrumental/means remains a contextual reading of neutral COM and is not assigned to the directional opposition.
+Benefactive and malefactive are constructional interpretations of COM + direction + APPL; they are not separate case morphemes. Direction remains the general relational vector, and APPL remains the independent valency operation.
 
 ### G-MORPH-14 — Constructional extensions
 
@@ -493,9 +507,9 @@ Some grammatical functions arise compositionally from existing cases and other e
 |---|---|---|
 | PART | GEN (`-se`) | partitive use in divisible/mass contexts |
 | ESSIVE | LOC (`-te`) + stative predicate | being at/in a state or location |
-| TRANSLATIVE | ESSIVE + `i-ra` | become / come into a state |
+| TRANSLATIVE | LOC (`-te`) + `i-` + stative predicate | becoming / coming into a state or relation |
 
-The dative-like construction is distinct from the allative: allative describes movement to a location, while the dative-like construction introduces a recipient/goal participant through the verbal object slot. Its LOCAL/NLOC distinction is defined in G-MORPH-12.
+The dative-like construction is distinct from the allative: allative describes orientation toward a location, while the dative-like construction introduces a recipient/goal participant through the verbal object slot. Its object-index realization is defined in G-MORPH-12.
 
 `COMP` is not treated as a separate constructional function here because ordinary accompaniment is the core function of COM and is described under G-MORPH-13.
 
@@ -503,7 +517,7 @@ The dative-like construction is distinct from the allative: allative describes m
 
 Converbial clauses are analyzed through nominalization plus case; the case supplies the converbial relation. Same-subject continuity is the unmarked interpretation. An overt GEN-marked subject inside the nominalized clause marks a switch to a different subject. This gives an explicit switch-reference contrast without a dedicated switch-reference affix.
 
-The case inventory used with nominalized clauses is semantically broad: case meaning remains recognizable, while temporal, causal, purposive, manner/means, and related readings are supplied by constructional context. Independent conjunctions are not the primary strategy for subordination or clause chaining.
+The productive converb relations use LOC, CONTAINMENT, POSITION, and COM/ASSOCIATIVE; case meaning remains recognizable while temporal, causal, purposive, manner/means, and related readings arise from constructional context. Independent conjunctions are not the primary strategy for subordination or clause chaining.
 
 Participles are productive and are formed from the nonfinite/citation stem:
 
@@ -672,7 +686,7 @@ Agentive S and A take ERG; patientive S and O take ABS. The split therefore has 
 
 Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
 
-Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants. `sese` is retained under prominence; `sa` is the ordinary unstressed reduction, while `si` represents a more extreme reduction favored in very weak or clitic-like positions.
+Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`; `menra` is retained as a historical former-PATH form for the phonological regression and may surface as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants. `sese` is retained under prominence; `sa` is the ordinary unstressed reduction, while `si` represents a more extreme reduction favored in very weak or clitic-like positions.
 
 ### G-SYN-06 — Questions
 
