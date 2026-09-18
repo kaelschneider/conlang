@@ -1127,3 +1127,19 @@ The imperative architecture selected in consultation is now implemented in GRAMM
 - APPL remains a separate suffixal operation and is not conflated with imperative `ka-`.
 
 Active probes: **E-0209–E-0214**. Validation passes with no broken lexical/grammar references, duplicate IDs, or TSV structural errors.
+
+## Modal system implementation — 2026-09-18
+
+The modal exponent selection and first implementation pass are complete:
+
+- `kera` = NECESSITY / MUST, modal auxiliary, historically grammaticalized from the CARRY domain; synchronically homonymous with lexical `kera` CARRY.
+- `ure` = POSSIBILITY / MAY, modal auxiliary, grammaticalized from DREAM.
+- `nete` = INTENTION / INTEND, modal auxiliary, grammaticalized from THINK.
+- `hi` = EPISTEMIC / EVIDENTIAL UNCERTAINTY, clause-level particle, grammaticalized from SAY/BLOW.
+- Modal auxiliaries carry ordinary finite morphology; lexical complements remain in citation/nonfinite form.
+- Modal particles are clause-initial and have broad scope.
+- Modal auxiliaries are immediately preverbal to the lexical predicate, after overt arguments/relational phrases.
+- Direction and relational case remain properties of the lexical predicate/relational frame rather than being absorbed into the modal auxiliary.
+- Modal meaning scopes over negation by default, but the formal expression of a **negated lexical complement under a modal auxiliary** remains unresolved and will be tested separately.
+
+Active probes: **E-0215–E-0221**.
