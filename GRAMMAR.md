@@ -62,7 +62,7 @@ The matrix below is the concrete current system. It applies to historical single
 
 `PAL` is the independently ordered pre-/i/ pathway in G-PHON-05. The written `c` is retained in both outcomes, but its surface pronunciation depends on the historical source.
 
-This matrix is a concrete design completion of cells that are not all directly instantiated by the small current corpus. Attested developments constrain the cells containing `reruka`, `reruta`, `rerupa`, `rupi`, `mente`, and `menta`; unsupported cells are completed by extending the same consonant-specific stage logic without introducing a new lenition series.
+This matrix is a concrete design completion of cells that are not all directly instantiated by the small current corpus. Attested developments constrain the cells containing `reruka`, `reruta`, `rerupa`, `rupi`, `mente`, and `menta`; unsupported cells are completed by extending the same consonant-specific stage logic without introducing a new lenition series. In particular, OPEN F_B is an independent retention environment for `k`, while CLOSED F_F/F_B retention reflects the additional blocking effect of syllable closure; neither pattern is intended as a universal lenition hierarchy.
 
 ### G-PHON-05 — Historical sound laws and relative chronology
 
