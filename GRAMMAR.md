@@ -373,8 +373,8 @@ Common nouns do not obligatorily inflect for number. A restricted productive plu
 
 | Noun class | Plural exponent | Status |
 |---|---|---|
-| Animate | `-n` | productive |
-| Inanimate | `-i` | productive |
+| Animate | `-i` | productive |
+| Inanimate | `-n` | productive |
 
 The distinction is grammaticalized but compatible with lexicalization and analogy, so borderline or culturally personified nouns may vary. Number morphology precedes nominal case suffixes. An archaic dual survives in a small lexicalized set of conventionalized natural-pair nouns. The dual is not synchronically productive; individual relic forms may retain a recognizable historical dual marker or be fully lexicalized.
 
@@ -658,7 +658,7 @@ Agentive S and A take ERG; patientive S and O take ABS. The split therefore has 
 
 Established pronouns include `ne` (1SG), `se` (2SG), `er` (3SG), `men` (1PL), `sen` (2PL), and `en` (3PL). ERG forms include `neku`, `seku`, `erku`, `menku`, `senku`, and `enku`. Verbal agreement marks person but not number.
 
-Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-n`, while inanimate nouns use productive `-i`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants: the full form is retained under prominence, while reduction is favored in unstressed or clitic-like use.
+Plural case developments include established `mente > mende` and `menta > menda`. Common nouns have restricted productive number marking rather than obligatory number inflection; animate nouns use productive `-i`, while inanimate nouns use productive `-n`. An archaic dual survives in conventionalized natural-pair nouns as a nonproductive lexical residue. `menme` may surface as `/menme/` or `/mem:e/`, and `menra` as `/menra/` or `/men:a/` under prosodically conditioned reduction. Formal `sese` and reduced `sa/si` are likewise prosodically conditioned variants: the full form is retained under prominence, while reduction is favored in unstressed or clitic-like use.
 
 ### G-SYN-06 — Questions
 
