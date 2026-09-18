@@ -435,6 +435,68 @@ def quantile_bucket(value: float, buckets: list[dict[str, Any]]) -> dict[str, An
     return buckets[-1]
 
 
+def plan_family_sizes(
+    families: list[dict[str, Any]],
+    centrality: dict[str, float],
+    config: dict[str, Any],
+    target: int,
+    rng: random.Random,
+) -> dict[str, int]:
+    """Assign long-tailed family sizes, then reconcile exactly to the target root count."""
+    buckets = config["family_model"]["family_size_buckets"]
+    sizes: dict[str, int] = {}
+
+    for family in families:
+        c = centrality[family["center"]]
+        bucket = quantile_bucket(c, buckets)
+        if rng.random() < float(bucket["simple_probability"]):
+            size = 1
+        else:
+            lo = int(bucket["size_min"])
+            hi = int(bucket["size_max"])
+            size = rng.randint(lo, hi)
+        sizes[family["family_id"]] = size
+
+    # Reconcile the stochastic family-size draw with the requested total while
+    # preserving each bucket's intended minimum/maximum range.
+    minimum_total = len(families)
+    if target < minimum_total:
+        raise RuntimeError(
+            f"target {target} is smaller than the number of semantic families {minimum_total}"
+        )
+
+    while sum(sizes.values()) < target:
+        eligible = []
+        weights = []
+        for family in families:
+            bucket = quantile_bucket(centrality[family["center"]], buckets)
+            cap = int(bucket["size_max"])
+            current = sizes[family["family_id"]]
+            if current < cap:
+                eligible.append(family)
+                # Central families are more likely to grow additional members.
+                weights.append(max(0.01, centrality[family["center"]] + 0.05))
+        if not eligible:
+            raise RuntimeError("family-size capacity exhausted before reaching target")
+        family = random_weighted(rng, eligible, weights)
+        sizes[family["family_id"]] += 1
+
+    while sum(sizes.values()) > target:
+        eligible = []
+        weights = []
+        for family in families:
+            current = sizes[family["family_id"]]
+            if current > 1:
+                eligible.append(family)
+                weights.append(max(0.01, 1.05 - centrality[family["center"]]))
+        if not eligible:
+            raise RuntimeError("cannot reduce family sizes to target without empty families")
+        family = random_weighted(rng, eligible, weights)
+        sizes[family["family_id"]] -= 1
+
+    return sizes
+
+
 def root_distance(family_distance: str) -> str:
     return {
         "very_close": "very_close",
@@ -480,6 +542,8 @@ def generate_candidates(
     candidates: list[dict[str, Any]] = []
     family_counts: dict[str, int] = defaultdict(int)
 
+    family_sizes = plan_family_sizes(families, centrality, config, target, rng)
+    family_remaining = dict(family_sizes)
     family_weights_base = [max(0.001, f["affinity"]) for f in families]
     attempts = 0
     max_attempts = target * 50
@@ -498,13 +562,20 @@ def generate_candidates(
 
         weights = []
         for family, base_weight in zip(families, family_weights_base):
+            remaining = family_remaining[family["family_id"]]
+            if remaining <= 0:
+                weights.append(0.0)
+                continue
             node = nodes[family["center"]]
             penalty = domain_weight(node, domain_counts, len(candidates), config)
-            # Slightly discourage endlessly reusing a single family.
-            count_penalty = 1.0 / (1.0 + 0.18 * family_counts[family["family_id"]])
-            weights.append(base_weight * penalty * count_penalty)
+            weights.append(base_weight * penalty * remaining)
 
-        family = random_weighted(rng, families, weights)
+        eligible_families = [f for f in families if family_remaining[f["family_id"]] > 0]
+        eligible_weights = [
+            weights[i] for i, f in enumerate(families)
+            if family_remaining[f["family_id"]] > 0
+        ]
+        family = random_weighted(rng, eligible_families, eligible_weights)
         node = nodes[family["center"]]
         features = set(node.features)
 
@@ -526,8 +597,8 @@ def generate_candidates(
         semantic_neighbors = [nodes[n].label for n in family["neighbors"]]
         relations = list(family["relations"])
         family_counts[family["family_id"]] += 1
-        for domain in node.domains:
-            domain_counts[domain] += 1
+        family_remaining[family["family_id"]] -= 1
+        domain_counts[node.domains[0]] += 1
 
         root_index = len(candidates) + 1
         candidate = {
