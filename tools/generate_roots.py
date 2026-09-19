@@ -625,58 +625,108 @@ def plan_family_sizes(
     target: int,
     rng: random.Random,
 ) -> dict[str, int]:
-    """Make an exact singleton-root share and a long-tailed non-singleton remainder."""
-    singleton_target = round(target * float(config["family_model"]["simple_root_baseline"]))
+    """Allocate an exact singleton share and a capacity-safe long tail."""
+    singleton_target = round(
+        target * float(config["family_model"]["simple_root_baseline"])
+    )
     multi_target = target - singleton_target
-    sizes: dict[str, int] = {
-        family["family_id"]: 1 for family in families if family.get("singleton_family")
-    }
 
-    multi_families = [f for f in families if not f.get("singleton_family")]
-    if len(sizes) != singleton_target:
+    singleton_families = [
+        family for family in families if family.get("singleton_family")
+    ]
+    multi_families = [
+        family for family in families if not family.get("singleton_family")
+    ]
+    if len(singleton_families) != singleton_target:
         raise RuntimeError(
-            f"singleton-family plan has {len(sizes)} roots; expected {singleton_target}"
+            f"singleton-family plan has {len(singleton_families)} roots; "
+            f"expected {singleton_target}"
         )
+    if not multi_families and multi_target:
+        raise RuntimeError("no non-singleton family opportunities are available")
+
+    sizes: dict[str, int] = {
+        family["family_id"]: 1 for family in singleton_families
+    }
     if multi_target == 0:
         return sizes
 
-    if not multi_families:
-        raise RuntimeError("no non-singleton family opportunities are available")
+    buckets = config["family_model"]["family_size_buckets"]
 
-    # A typical non-singleton family is roughly three members; use that as a
-    # planning prior, then let centrality-weighted growth create the long tail.
-    family_count = min(len(multi_families), max(1, round(multi_target / 3.0)))
-    ranked = sorted(
-        multi_families,
-        key=lambda f: (centrality[f["center"]] + rng.random() * 0.05),
-        reverse=True,
-    )
-    selected = ranked[:family_count]
+    def family_cap(family: dict[str, Any]) -> int:
+        bucket = quantile_bucket(
+            centrality[family["center"]],
+            buckets,
+        )
+        return int(bucket["size_max"])
 
-    for family in selected:
+    # Use every coherent semantic-family opportunity. This avoids the previous
+    # failure mode where an arbitrary family-count cap selected too few families
+    # and exhausted their size maxima before reaching the requested candidate pool.
+    for family in multi_families:
         sizes[family["family_id"]] = 2
 
-    assigned = 2 * family_count
+    assigned = 2 * len(multi_families)
+    if assigned > multi_target:
+        # This should only occur for unusually small candidate pools. Drop the
+        # lowest-affinity multi families first, preserving singleton share.
+        removable = sorted(
+            multi_families,
+            key=lambda f: (centrality[f["center"]], rng.random()),
+        )
+        for family in removable:
+            if assigned <= multi_target:
+                break
+            del sizes[family["family_id"]]
+            assigned -= 2
+
+    total_capacity = sum(
+        family_cap(family)
+        for family in multi_families
+        if family["family_id"] in sizes
+    )
+    if total_capacity < multi_target:
+        raise RuntimeError(
+            "family-size capacity exhausted before reaching target: "
+            f"available capacity {total_capacity}, required {multi_target}"
+        )
+
+    # Grow families one member at a time. Centrality and upper-bucket membership
+    # influence growth, producing a long tail without fixing every family size.
     while assigned < multi_target:
-        eligible = []
-        weights = []
-        for family in selected:
-            bucket = quantile_bucket(centrality[family["center"]], config["family_model"]["family_size_buckets"])
-            current = sizes[family["family_id"]]
-            cap = int(bucket["size_max"])
-            if current < cap:
-                eligible.append(family)
-                # Central families and high-end buckets receive more opportunity
-                # to become large, producing a natural long tail.
-                weights.append(max(0.01, centrality[family["center"]] + 0.05))
+        eligible: list[dict[str, Any]] = []
+        weights: list[float] = []
+        for family in multi_families:
+            family_id = family["family_id"]
+            if family_id not in sizes:
+                continue
+            cap = family_cap(family)
+            current = sizes[family_id]
+            if current >= cap:
+                continue
+            bucket_index = next(
+                i for i, bucket in enumerate(buckets)
+                if centrality[family["center"]] <= float(bucket["centrality_max"])
+            )
+            bucket_bonus = 1.0 + 0.35 * bucket_index
+            remaining_capacity = cap - current
+            eligible.append(family)
+            weights.append(
+                max(0.01, centrality[family["center"]] + 0.05)
+                * bucket_bonus
+                * remaining_capacity
+            )
+
         if not eligible:
-            raise RuntimeError("family-size capacity exhausted before reaching target")
+            raise RuntimeError(
+                "family-size capacity exhausted before reaching target"
+            )
+
         family = random_weighted(rng, eligible, weights)
         sizes[family["family_id"]] += 1
         assigned += 1
 
     return sizes
-
 
 def root_distance(family_distance: str) -> str:
     return {
@@ -864,6 +914,7 @@ def generate_candidates(
             "semantic_graph_families": len(make_family_seeds(nodes, edges, centrality)),
             "candidate_family_opportunities": len(families),
             "singleton_family_target": singleton_target,
+            "multi_family_opportunities": len([f for f in families if not f.get("singleton_family")]),
             "historical_drift_stage": "separate_stage_not_generated_here",
         },
         "candidate_count": len(candidates),
