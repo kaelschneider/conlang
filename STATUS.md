@@ -664,16 +664,6 @@ A construction is ready for canonical promotion when:
 
 `argument structure ✓ → relational matrix → lexicon audit → construction-first corpus → independent syntax → lexical valency/families → cross-domain promotion review → lexicalization/diachronic follow-up`
 
-### Promotion gate
-
-Do not treat the relational system as fully canonical across the repository until:
-
-1. `GRAMMAR.md` and `EXAMPLES.tsv` agree on case inventory and segmentation;
-2. APPL `-ka-` is represented consistently in tested examples;
-3. multi-complement/object-index behavior has passed matched construction tests;
-4. the four-frame × three-direction relational matrix has no unexplained contradictions;
-5. historical analyses remain distinct from synchronic productive rules.
-
 ## Leipzig valency-frame coverage audit — 2026-09-17
 
 The 70-frame Leipzig Valency Classes sample was tested against the current grammar as a constructional coverage audit. The source defines valency in terms of argument roles, coding properties, behavioral properties, and cross-clausal behavior; this pass focuses on whether the listed role frames can be expressed with the current case, direction, object-slot, agreement, and clause-combining systems.
