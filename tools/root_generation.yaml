@@ -2,7 +2,7 @@ generator:
   name: inherited-root-generator
   version: "0.3.0"
   architecture_version: "2026-09-18.semantic-architecture.v4.candidate-pool"
-  parameter_profile: "candidate-pool-4000-forest-reciprocal-event-relational-roots-v4"
+  parameter_profile: "candidate-pool-4000-forest-reciprocal-event-relational-roots-v4-capacity1"
   status_policy: "experimental-candidate"
 
 inventory:
@@ -88,7 +88,7 @@ family_model:
   simple_root_baseline: 0.55
   family_size_buckets:
     - {centrality_max: 0.50, share: 0.50, simple_probability: 0.70, size_min: 1, size_max: 3}
-    - {centrality_max: 0.90, share: 0.40, simple_probability: 0.45, size_min: 2, size_max: 4}
+    - {centrality_max: 0.90, share: 0.40, simple_probability: 0.45, size_min: 2, size_max: 5}
     - {centrality_max: 0.98, share: 0.08, simple_probability: 0.20, size_min: 3, size_max: 6}
     - {centrality_max: 1.00, share: 0.02, simple_probability: 0.05, size_min: 5, size_max: 12}
   semantic_role_angles:
