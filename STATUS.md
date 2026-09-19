@@ -137,6 +137,8 @@ Current generation profile:
 - sound symbolism is a weak ranking prior; deterministic sound-to-meaning mapping is forbidden
 - generated candidates remain experimental and are never written automatically to `LEXICON.tsv`\n- the candidate pool deliberately overgenerates; human semantic curation is expected to reduce the pool toward the 1,600-root working target\n- the family model targets 55% of candidate roots as singleton families; the remaining roots are allocated to centrality-weighted non-singleton families with a long-tail size distribution\n- distant/very-distant semantic relationships are reserved for a separate historical-drift stage rather than being generated as direct semantic families
 
+Family-capacity correction — 2026-09-18: the 4,000-candidate candidate-pool target required more semantic-family capacity than the original bucket maxima permitted. The exact developmental graph currently yields 535 non-singleton family opportunities; increasing the lowest-centrality bucket maximum from 3 to 4 raises total family-size capacity from 1,678 to 2,196 without changing the 55% singleton baseline or the 12-member upper-tail ceiling. The parameter profile is therefore updated to record this capacity-balanced configuration. This is a generator-parameter correction only; it does not change the grammar's approximately 55% simple-root expectation.
+
 Static configuration and grammar-anchor checks are consistent with the current files. A runtime seeded generator smoke test has **not** been executed in this environment because the repository sandbox cannot resolve external GitHub access; candidate production therefore remains a separate runtime-validation step.
 
 ## Independent syntax pass — 2026-09-18
