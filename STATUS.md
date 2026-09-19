@@ -563,202 +563,106 @@ There are no unresolved core parameters among the relational-system decisions al
 
 The core relational morphology and argument-structure behavior are now reconciled between `GRAMMAR.md` and the tested corpus. Remaining work is construction-matrix expansion, semantic audit, and promotion of experimental constructions where independently justified.
 
-## Relational-system roadmap — 2026-09-18
+## Project roadmap — 2026-09-18
 
-The relational system has moved from architectural design into **integration and validation**. Argument/multi-complement validation is now complete.
+The project has moved beyond initial relational-system design. The current canonical grammar and corpus migration are reconciled, and the remaining work is primarily constructional validation, semantic calibration, syntax coverage, lexical development, and controlled promotion.
 
-**1 — Corpus migration and grammar reconciliation — COMPLETED.**
+**1 — Argument-structure / multi-complement validation — COMPLETED.**
 
-`EXAMPLES.tsv` now agrees with the current seven-value case system and productive APPL `-ka-`; the pre-existing 120 rows were retained and seven targeted argument-structure regression examples were added.
+The tested corpus now covers the settled APPL hierarchy, candidate-selection procedure, multiple relational NPs, lexical arguments plus APPL, and LOCAL / 3P.ANIMATE / 3P.INANIMATE / OBV object indexing. This decision is closed unless contradictory evidence emerges.
 
-**2 — Argument-structure / multi-complement validation — COMPLETED.**
+**2 — Full relational construction matrix — CURRENT.**
 
-The hierarchy and selection procedure have been tested in matched clauses: lexical theme + recipient, lexical theme + beneficiary, recipient + beneficiary, three relational NPs, APPL vs. non-APPL, 3P animate/OBV indexing, discourse-priority ties, and linear-order fallback.
-
-The working hierarchy remains:
-
-`patient/theme > recipient/goal > beneficiary/maleficiary > other applied participant`
-
-For APPL candidate selection, only eligible relational NPs compete; the lexical patient/theme remains an independent core argument when present. Once selected, the APPL participant receives the single object index.
-
-**3 — Full relational construction matrix — NEXT.**
-
-Build a compact regression matrix crossing:
+Complete the matched regression matrix crossing:
 
 `CASE × DIRECTION × APPL × ARGUMENT STRUCTURE`
 
-for the four productive relational frames:
+for:
 
 `LOC × CONTAINMENT × POSITION × COM`
 
-Include neutral, convergent `i-`, and divergent `a-` readings, stative and dynamic predicates, and the promoted case-stacking core:
+Test neutral `Ø`, convergent `i-`, and divergent `a-` readings with both dynamic and stative predicates, and verify interactions with object indexing, TAM, converbs, and information structure.
+
+The three promoted productive stacks remain:
 
 `CONTAINMENT → LOC`  
 `GEN → CONTAINMENT`  
 `GEN → LOC`
 
-Retain `POSITION → LOC`, `COM → LOC`, and recursive three-case stacking as explicit boundary tests rather than promoting them.
+`POSITION → LOC`, `COM → LOC`, and recursive three-case stacking remain boundary tests.
 
-**4 — Lexicon semantic reanalysis and audit.**
+**3 — Lexicon semantic reanalysis and audit — NEXT.**
 
-Before further construction-first corpus growth, reanalyze the lexicon as a **semantic system**, not merely as a list of English glosses. The purpose is to ensure that the corpus has enough generic/core predicates to expose constructional meaning without flattening genuinely specialized vocabulary.
+Before substantial new corpus generation, audit the lexicon as a semantic system rather than an English-gloss list.
 
-Audit each root/lexeme in layers:
+Use the six established audit layers:
 
-### Lexicon audit layer 1 — Semantic-frame reanalysis
+1. semantic-frame reanalysis;
+2. neutrality classification;
+3. inherited `*C` root repurposing;
+4. neutral construction-probe selection;
+5. semantic coverage-gap analysis;
+6. explicit lexical meaning → lexical valency → constructional contribution → discourse contribution separation.
 
-For each lexical item, identify the broadest defensible semantic frame, inherent participants, event structure, and likely relational affordances. Distinguish the lexical meaning from an English gloss that may be narrower than the intended root.
+Preserve specialized lexical items. Repurpose inherited roots only where a plausible semantic development supports it. Keep proposed changes `ANALYZED` or `EXPERIMENTAL` until independently tested.
 
-Record separately:
+**4 — Construction-first corpus redevelopment.**
 
-- core semantic frame;
-- inherent arguments/participants;
-- optional or construction-supplied participants;
-- event-boundary profile;
-- compatibility with `Ø / i- / a-`;
-- likely constructional extensions.
+After the lexicon audit, rebuild active corpus coverage from language-internal construction schemas rather than English sentence lists.
 
-### Lexicon audit layer 2 — Neutrality classification
+Use the sequence:
 
-Classify each item as **neutral/core**, **moderately specific**, or **lexically specific** for corpus purposes.
+`schema → neutral lexical probes → matched contrasts → lexically constrained predicates → multi-construction combinations → discourse variants → lexicalization candidates`
 
-Neutral/core items are preferred as diagnostic probes. Moderately specific items test lexical–constructional interaction. Lexically specific items remain necessary for testing lexical restriction and specialization.
+Prioritize relational frames, recipient/goal, benefactive/malefactive, associative/medium/route, case stacking, converbs, stative + direction, causative, secondary predication, and topic/focus configurations.
 
-Do not broaden a lexical item merely to make it useful as a probe.
+**5 — Remaining independent syntax gaps.**
 
-### Lexicon audit layer 3 — Inherited `*C` root repurposing
-
-Reconsider the inherited one-consonant roots as high-value candidates for semantic redesign. Their historical identity should be preserved, but their modern lexical meanings may be broadened or redirected where the evidence and intended semantic system support it.
-
-Particular attention should go to roots that could supply generic semantic primitives for transfer, holding, movement, perception/cognition, change, association, acquisition, or other high-frequency constructional domains.
-
-A repurposed `*C` root should retain its provenance and should not be reassigned solely because an English gloss would be more convenient. Record the old and proposed semantic readings during the audit before changing the canonical lexicon.
-
-### Lexicon audit layer 4 — Probe-set construction
-
-Select a deliberately small set of neutral/core probes covering the major constructional dimensions. Each probe should have enough semantic flexibility to be crossed with the constructions without already encoding their target interpretation.
-
-Prioritize generic domains such as TRANSFER, MOVE/CHANGE, HOLD/RETAIN, MAKE/BRING-ABOUT, PERCEIVE/COGNIZE, and REMAIN/BE, while retaining specialized verbs alongside them.
-
-### Lexicon audit layer 5 — Semantic coverage gaps
-
-Identify missing generic predicates that prevent clean testing of a construction family. Add or repurpose roots only where a genuine semantic gap exists.
-
-Prefer repurposing an existing inherited root over adding a new root when this yields a plausible, internally motivated semantic development. New roots remain available when the semantic gap cannot be filled naturally.
-
-### Lexicon audit layer 6 — Lexical/constructional separation
-
-For each audited item, explicitly distinguish:
-
-**lexical meaning → lexical valency → constructional contribution → discourse contribution**
-
-This prevents constructional meanings such as recipient, benefactive, malefactive, route, or state-transition from being silently built into lexical glosses.
-
-All changes remain **ANALYZED** or **EXPERIMENTAL** until tested in the corpus and independently promoted. Specialized lexical items are preserved rather than normalized into generic roots.
-
-**5 — Construction-first corpus redevelopment.**
-
-After the lexicon audit, rebuild the corpus in **layers**, moving from constructional meaning to lexical restriction, multi-participant interaction, discourse behavior, and finally lexicalization evidence. Generate examples from language-internal schemas; English remains a translation/paraphrase layer and is never the primary generator.
-
-### Layer 1 — Construction inventory
-
-Define a finite set of construction schemas before generating large numbers of sentences. Each schema records the relational frame or syntactic configuration, available direction (`Ø / i- / a-`), APPL licensing, expected semantic roles, object-index behavior, permitted case stacking, and relevant TAM/converb/information-structure dimensions.
-
-Initial families:
-
-- LOC / CONTAINMENT / POSITION / COM relational frames;
-- recipient / goal;
-- benefactive / malefactive;
-- associative / instrumental / medium / route;
-- productive case stacking;
-- converbial relations;
-- stative + directional;
-- causative;
-- secondary predication;
-- topic / focus configurations.
-
-### Layer 2 — Neutral lexical probes
-
-For each construction, select a small set of **semantically flexible verbs** from the audited neutral/core probe set. These are probes for what the construction itself contributes.
-
-Cross each probe with the construction's meaningful alternatives, especially `Ø / i- / a-` and APPL vs. non-APPL, using matched sets that change one structural variable at a time.
-
-Record the resulting interpretation without assuming that the English gloss is the lexical meaning. The diagnostic question is: **what meaning comes from the construction that the neutral verb does not supply by itself?**
-
-### Layer 3 — Lexically constrained predicates
-
-Re-test the same schemas with verbs whose lexical valency strongly favors particular participants or relations.
-
-Priority classes:
-
-- ordinary transitive verbs;
-- recipient/goal verbs;
-- experiencer verbs;
-- perception/cognition verbs;
-- speech/communication verbs;
-- source/material verbs;
-- placement/removal verbs.
-
-Record where lexical valency restricts, redirects, or blocks a construction. Do not force a construction merely because an English translation makes it seem appropriate.
-
-### Layer 4 — Stative and abstract extension
-
-Apply the construction families to stative and non-motion predicates where the relational frame is semantically licensed.
-
-Test `Ø` state/relation, `i-` orientation toward establishment or attainment, `a-` orientation toward withdrawal or termination, and imperfective vs. perfect. APPL is used only where the predicate independently licenses an affected participant.
-
-### Layer 5 — Multi-construction and argument competition
-
-Combine independently established constructions and test their interaction rather than designing them simultaneously around a desired translation.
-
-Build matched clauses containing patient + recipient, patient + beneficiary/maleficiary, recipient + beneficiary, three non-subject participants, multiple eligible relational NPs, stacked relational NPs, and APPL alongside lexical arguments.
-
-Cross these with LOCAL / 3P.ANIMATE / 3P.INANIMATE / OBV indexing and the established APPL selection hierarchy. Use same-rank discourse contexts to test the discourse tie-breaker.
-
-### Layer 6 — Discourse and information structure
-
-Re-test the established constructions under neutral discourse, established vs. new participants, topic shift, contrastive focus, proximate vs. OBV status, competing salient relational participants, and same-rank APPL candidates.
-
-Separate grammatical contribution from discourse conditioning. A reading that appears only under a special discourse context should not automatically become a lexical or grammatical meaning.
-
-### Layer 7 — Lexicalization and diachronic follow-up
-
-Track repeated corpus patterns for possible conventionalization:
-
-- constructional meanings becoming specialized;
-- verbs acquiring construction-specific valency;
-- relational readings developing conventional metaphorical meanings;
-- fossilized case stacks or verbal complexes;
-- emerging postpositions or other secondary morphology.
-
-Frequency alone is not promotion evidence. Record such patterns as **ANALYZED** or **EXPERIMENTAL** first and test them independently before changing canonical grammar.
-
-### Corpus-generation protocol
-
-For each family, use the sequence:
-
-**schema → neutral lexical probes → matched contrasts → lexically constrained predicates → multi-construction combinations → discourse variants → lexicalization candidates**
-
-A construction family is not adequately tested because one translated sentence works. Targeted coverage should include its positive, negative, contrastive, and boundary cases, and every example should be traceable to the construction schema that motivated it.
-
-The corpus therefore serves four purposes simultaneously:
-
-1. regression testing of established grammar;
-2. diagnosis of constructional semantics;
-3. accumulation of evidence for lexical valency;
-4. evidence for discourse behavior and lexicalization.
-
-**6 — Remaining independent syntax gaps.**
-
-Only after the relational architecture is stable, address the largest non-relational coverage gaps from the prior Fiziwig/Leipzig audits:
+Address the non-relational gaps identified by the earlier syntax audits:
 
 `imperative/hortative → modality → content questions → impersonal predicates → secondary predication → finite speech complements → comparison → passive`
 
-Multiple-complement ordering should be handled in step 2 because it directly interacts with APPL and object indexing.
+Each construction should be designed and tested independently before promotion, while checking interactions with the already-established relational and argument-structure systems.
 
 **6 — Lexical valency and family expansion.**
 
-Reclassify or expand experimental lexical entries only after the new constructions are exercised. Prioritize roots whose semantic frames reveal useful contrasts between neutral, toward, and away direction, and roots needed for currently under-tested valencies such as experiencer, speech, search, naming, filling/loading, and material/source relations.
+Use construction-first evidence to refine lexical frames and expand lexical families only where genuine semantic gaps or productive derivational opportunities exist.
+
+Priority areas include experiencer, speech/communication, search, naming, filling/loading, source/material, and other predicates whose valency interacts strongly with case or direction.
+
+**7 — Cross-domain interaction and promotion review.**
+
+Stress-test the resulting grammar across domains rather than promoting features from isolated examples. Check:
+
+- grammar ↔ lexicon consistency;
+- grammar ↔ corpus consistency;
+- lexical vs. constructional meaning;
+- discourse conditioning vs. grammatical marking;
+- synchrony vs. diachrony;
+- interaction among case, direction, APPL, voice, TAM, clause combining, and information structure.
+
+Promote only constructions with sufficient independent corpus support. Preserve deprecated or historical analyses where they remain useful for provenance.
+
+**8 — Lexicalization and diachronic follow-up.**
+
+Track repeated patterns for plausible conventionalization: construction-specific lexical meanings, fossilized case stacks, specialized directional readings, emerging postpositions, and partially opaque derivational families.
+
+Frequency alone is not promotion evidence. Treat emerging patterns as `ANALYZED` or `EXPERIMENTAL` until independently validated.
+
+### Promotion gate
+
+A construction is ready for canonical promotion when:
+
+1. the authoritative grammar, lexicon, and examples agree;
+2. the construction has matched positive, negative, contrastive, and boundary tests where applicable;
+3. lexical valency is distinguishable from constructional meaning;
+4. discourse effects are not being misanalyzed as obligatory grammar;
+5. historical explanations remain separate from productive synchronic rules;
+6. cross-domain interaction introduces no unexplained contradiction.
+
+### Immediate sequence
+
+`argument structure ✓ → relational matrix → lexicon audit → construction-first corpus → independent syntax → lexical valency/families → cross-domain promotion review → lexicalization/diachronic follow-up`
 
 ### Promotion gate
 
